@@ -150,12 +150,6 @@ $('.nav-mobile').click(function(){
 
 Again, as per my previous article on responsive navigation, this keeps animation down to a low, it sucks on mobile and instead of animation I've used a simple .toggle(); function, which essentially changes the styles from _display:none;_ to _display:block;_, in toggle fashion.
 
-{% highlight javascript %}
-$('.nav-mobile').click(function(){
-	$('.nav-list').toggle();
-});
-{% endhighlight %}
-
 The next part is where things get interesting and we need to [dynamically attach an event](http://toddmotto.com/attaching-event-handlers-to-dynamically-created-javascript-elements), to dynamically created markup. We can't simple run a click function on this, as the markup doesn't have event handlers attached. See above article link for a pure JavaScript way of doing this, but in this we're using jQuery, which is where the .on(); function sits quite nicely.
 
 First thing's first, the way we attach event handlers is to think _parent_ then _child_. So first we need to target the parent of wherever the dynamically created element will sit:
