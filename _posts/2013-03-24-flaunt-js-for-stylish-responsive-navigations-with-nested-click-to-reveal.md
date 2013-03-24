@@ -14,7 +14,7 @@ For instance, let's say 'Services' is a top level menu item, and the nested navi
 	<a href="//github.com/toddmotto/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Flaunt', 'Flaunt Fork']);">Fork</a>
 </div>
 
-Taking the same skeleton from my (earlier post on responsive navigation)[http://toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript/], Flaunt is a script built so you can flaunt awesomely clever design on your site in seconds, whilst overcoming design/functionality hurdles.
+Taking the same skeleton from my [earlier post on responsive navigation](http://toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript), Flaunt is a script built so you can flaunt awesomely clever design on your site in seconds, whilst overcoming design/functionality hurdles.
 
 ### HTML
 Let's establish the markup to see how Flaunt will benefit us:
@@ -156,7 +156,7 @@ $('.nav-mobile').click(function(){
 });
 {% endhighlight %}
 
-The next part is where things get interesting and we need to (dynamically attach an event)[http://toddmotto.com/attaching-event-handlers-to-dynamically-created-javascript-elements/], to dynamically created markup. We can't simple run a click function on this, as the markup doesn't have event handlers attached. See above article link for a pure JavaScript way of doing this, but in this we're using jQuery, which is where the .on(); function sits quite nicely.
+The next part is where things get interesting and we need to [dynamically attach an event](http://toddmotto.com/attaching-event-handlers-to-dynamically-created-javascript-elements), to dynamically created markup. We can't simple run a click function on this, as the markup doesn't have event handlers attached. See above article link for a pure JavaScript way of doing this, but in this we're using jQuery, which is where the .on(); function sits quite nicely.
 
 First thing's first, the way we attach event handlers is to think _parent_ then _child_. So first we need to target the parent of wherever the dynamically created element will sit:
 
