@@ -1,7 +1,7 @@
 /*
 	Flaunt.js v1.0.0
 	by Todd Motto: http://www.toddmotto.com
-	Latest version: https://github.com/toddmotto/flauntjs
+	Latest version: https://github.com/toddmotto/flaunt-js
 	
 	Copyright 2013 Todd Motto
 	Licensed under the MIT license
