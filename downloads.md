@@ -4,13 +4,13 @@ layout: page
 ---
 
 <div class="download-item">
-	<img src="/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
+	<img src="/img/downloads/flaunt-js.jpg" alt="Flaunt JS">
 	<div class="download-details">
-		<h2>Responsive Navigation</h2>
-		<h4>Using a fluid-width approach and utilising JavaScript and media queries, here's an iconic 'three-line' menu approach.</h4>
-		<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav', 'Responsive Nav Demo']);" target="_blank">Demo</a>
-		<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav', 'Responsive Nav Download']);">Download</a>
-		<a href="//toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript">[article]</a>
+		<h2>Flaunt JS</h2>
+		<h4>Overcoming responsive design issues with click-to-reveal stylish nested navigations.</h4>
+		<a href="//toddmotto.com/labs/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Flaunt, 'Flaunt Demo']);">Demo</a>
+		<a href="//toddmotto.com/labs/flaunt-js/flaunt-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Flaunt, 'Flaunt Download']);">Download</a>
+		<a href="//toddmotto.com/flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal">[article]</a>
 	</div>
 </div>
 <div class="download-item">
@@ -31,6 +31,16 @@ layout: page
 		<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
 		<a href="//toddmotto.com/labs/fluidvids/fluidvids.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
 		<a href="//toddmotto.com/fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js">[article]</a>
+	</div>
+</div>
+<div class="download-item">
+	<img src="/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
+	<div class="download-details">
+		<h2>Responsive Navigation</h2>
+		<h4>Using a fluid-width approach and utilising JavaScript and media queries, here's an iconic 'three-line' menu approach.</h4>
+		<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav', 'Responsive Nav Demo']);" target="_blank">Demo</a>
+		<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav', 'Responsive Nav Download']);">Download</a>
+		<a href="//toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript">[article]</a>
 	</div>
 </div>
 <div class="download-item">
