@@ -8,6 +8,8 @@ title: Building an HTML5 responsive menu with media queries and JavaScript
 
 Responsive navigation menus come in all different shapes and sizes, you might recall my post on [creating a dynamic select menu](http://toddmotto.com/creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript/) from an existing menu, which is one method. So let's visit another. The 'in-page' navigation.
 
+Edit: If you're looking for an even better responsive navigation that supports nested menus, check out my [Flaunt JS script](http://toddmotto.com/flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal).
+
 <div class="download-box">
 	<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav, 'Responsive Nav Demo']);">Demo</a>
 	<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav, 'Responsive Nav Download']);">Download</a>
