@@ -20,7 +20,7 @@ layout: page
 		<h4>The re-imagined expanding lightbox gallery, using HTML5 data-* attributes and responsive design.</h4>
 		<a href="//toddmotto.com/labs/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SuperBox, 'SuperBox Demo']);">Demo</a>
 		<a href="//toddmotto.com/labs/superbox/superbox.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SuperBox, 'SuperBox Download']);">Download</a>
-		<a href="//toddmotto.com/introducing-superbox-the-reimagined-lightbox-gallery/">[article]</a>
+		<a href="//toddmotto.com/introducing-superbox-the-reimagined-lightbox-gallery">[article]</a>
 	</div>
 </div>
 <div class="download-item">
@@ -34,6 +34,16 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
+	<img src="/img/downloads/svg-icons.jpg" alt="SVG Icons">
+	<div class="download-details">
+		<h2>Progressive SVG sprite icons</h2>
+		<h4>Retina-ready, progressively enhanced SVG sprite social icons, complete with PNG fallbacks.</h4>
+		<a href="//toddmotto.com/labs/svg-icons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SVG Icons, 'SVG Icons Demo']);">Demo</a>
+		<a href="//toddmotto.com/labs/svg-icons/svg-icons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SVG Icons, 'SVG Icons Download']);">Download</a>
+		<a href="//toddmotto.com/progressively-enhanced-svg-sprite-icons/">[article]</a>
+	</div>
+</div>
+<div class="download-item">
 	<img src="/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
 	<div class="download-details">
 		<h2>Responsive Navigation</h2>
@@ -43,16 +53,7 @@ layout: page
 		<a href="//toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript">[article]</a>
 	</div>
 </div>
-<div class="download-item">
-	<img src="/img/downloads/oocss-buttons.jpg" alt="Responsive Nav">
-	<div class="download-details">
-		<h2>OOCSS Button Kit</h2>
-		<h4>Utilising Object-Orientated CSS to create an effective button kit for any website.</h4>
-		<a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons', 'OOCSS Buttons Demo']);" target="_blank">Demo</a>
-		<a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons', 'OOCSS Buttons Download']);">Download</a>
-		<a href="//toddmotto.com/getting-started-with-object-orientated-css-oocss-creating-a-button-kit/">[article]</a>
-	</div>
-</div>
+
 <div class="download-item">
 	<img src="/img/downloads/select-nav-js.jpg" alt="Select Nav">
 	<div class="download-details">
@@ -71,6 +72,16 @@ layout: page
 		<a href="//toddmotto.com/labs/bouncethis/" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
 		<a href="//toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
 		<a href="//toddmotto.com/bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations">[article]</a>
+	</div>
+</div>
+<div class="download-item">
+	<img src="/img/downloads/oocss-buttons.jpg" alt="Responsive Nav">
+	<div class="download-details">
+		<h2>OOCSS Button Kit</h2>
+		<h4>Utilising Object-Orientated CSS to create an effective button kit for any website.</h4>
+		<a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons', 'OOCSS Buttons Demo']);" target="_blank">Demo</a>
+		<a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons', 'OOCSS Buttons Download']);">Download</a>
+		<a href="//toddmotto.com/getting-started-with-object-orientated-css-oocss-creating-a-button-kit">[article]</a>
 	</div>
 </div>
 <div class="download-item">
