@@ -122,9 +122,6 @@ p {
 	padding:40px;
 	background:#FFF;
 }
-.posts {
-	
-}
 .full-post {
 	min-height:600px;
 	background:#FFF;
@@ -261,10 +258,16 @@ iframe[src*="twitter"] {
 	margin:50px 0 0;
 }
 .social {
+	overflow:hidden;
 	padding:20px;
 	background:#F9F9F9;
 	border:1px solid #E5E5E5;
 	margin:30px 0 50px;
+}
+.social-button {
+	float:left;
+	width:100px;
+	height:20px;
 }
 .post-list {
 	margin:0 0 20px 25px;
