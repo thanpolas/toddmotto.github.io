@@ -5,6 +5,21 @@ layout: default
 		<article class="full-post">
 			<h1 class="full-title">{{ page.title }}</h1>
 			{{ content }}
+			
+			<div class="social">
+				<div class="social-button">
+					<div id="fb-root"></div>
+					<div class="fb-like" data-send="false" data-layout="button_count" 
+					data-width="1" data-show-faces="false" data-action="like"></div>
+				</div>
+				<div class="social-button">
+					<g:plusone size="medium"></g:plusone>
+				</div>
+				<div class="social-button">
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				</div>
+			</div>
+			
 			<div class="social">
 				<div class="addthis_toolbox addthis_default_style">
 					<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -31,5 +46,3 @@ layout: default
 				document.getElementsByTagName('head')[0].appendChild(dsq);
 			})();
 		</script>
-		
-		<script src="//s7.addthis.com/js/250/addthis_widget.js"></script>
