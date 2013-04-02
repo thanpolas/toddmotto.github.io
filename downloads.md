@@ -34,6 +34,16 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
+	<img src="/img/downloads/html5blank.jpg" alt="HTML5 Blank">
+	<div class="download-details">
+		<h2>HTML5 Blank</h2>
+		<h4>A powerful shell for rapidly deploying your WordPress projects. Recognised by Smashing Magazine, Adobe and .NET Magazine.</h4>
+		<a href="//demo.html5blank.com" target="_blank">Demo</a>
+		<a href="//github.com/toddmotto/html5blank/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 Blank Theme Download', 'HTML5 Blank Download']);">Download</a>
+		<a href="//toddmotto.com/html5-blank-rapid-wordpress-theme-development">[article]</a>
+	</div>
+</div>
+<div class="download-item">
 	<img src="/img/downloads/svg-icons.jpg" alt="SVG Icons">
 	<div class="download-details">
 		<h2>Progressive SVG sprite icons</h2>
@@ -43,17 +53,6 @@ layout: page
 		<a href="//toddmotto.com/progressively-enhanced-svg-sprite-icons/">[article]</a>
 	</div>
 </div>
-<div class="download-item">
-	<img src="/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
-	<div class="download-details">
-		<h2>Responsive Navigation</h2>
-		<h4>Using a fluid-width approach and utilising JavaScript and media queries, here's an iconic 'three-line' menu approach.</h4>
-		<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav', 'Responsive Nav Demo']);" target="_blank">Demo</a>
-		<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav', 'Responsive Nav Download']);">Download</a>
-		<a href="//toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript">[article]</a>
-	</div>
-</div>
-
 <div class="download-item">
 	<img src="/img/downloads/select-nav-js.jpg" alt="Select Nav">
 	<div class="download-details">
@@ -65,33 +64,13 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
-	<img src="/img/downloads/bounce-this.jpg" alt="BounceThis">
+	<img src="/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
 	<div class="download-details">
-		<h2>bounceThis</h2>
-		<h4>Super slick and sharp bouncing headers, mimics CSS3 keyframes, a cross-browser jQuery plugin.</h4>
-		<a href="//toddmotto.com/labs/bouncethis/" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
-		<a href="//toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
-		<a href="//toddmotto.com/bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations">[article]</a>
-	</div>
-</div>
-<div class="download-item">
-	<img src="/img/downloads/oocss-buttons.jpg" alt="Responsive Nav">
-	<div class="download-details">
-		<h2>OOCSS Button Kit</h2>
-		<h4>Utilising Object-Orientated CSS to create an effective button kit for any website.</h4>
-		<a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons', 'OOCSS Buttons Demo']);" target="_blank">Demo</a>
-		<a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons', 'OOCSS Buttons Download']);">Download</a>
-		<a href="//toddmotto.com/getting-started-with-object-orientated-css-oocss-creating-a-button-kit">[article]</a>
-	</div>
-</div>
-<div class="download-item">
-	<img src="/img/downloads/clickable-dropdown.jpg" alt="Clickable Dropdown">
-	<div class="download-details">
-		<h2>Clickable Dropdown</h2>
-		<h4>Flawless cross-browser clickable drop-down navigation, jQuery complete with CSS fallbacks. For websites, apps and more.</h4>
-		<a href="//toddmotto.com/labs/clickable-dropdown/" onclick="_gaq.push(['_trackEvent', 'Click', 'Clickable Dropdown Demo', 'Clickable Dropdown Demo Button']);">Demo</a>
-		<a href="//toddmotto.com/labs/clickable-dropdown/clickable-dropdown.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Clickable Dropdown Download', 'Clickable Dropdown Download Button']);">Download</a>
-		<a href="//toddmotto.com/flawless-clickable-drop-down-navigation">[article]</a>
+		<h2>Responsive Navigation</h2>
+		<h4>Using a fluid-width approach and utilising JavaScript and media queries, here's an iconic 'three-line' menu approach.</h4>
+		<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav', 'Responsive Nav Demo']);" target="_blank">Demo</a>
+		<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav', 'Responsive Nav Download']);">Download</a>
+		<a href="//toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript">[article]</a>
 	</div>
 </div>
 <div class="download-item">
@@ -125,6 +104,26 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
+	<img src="/img/downloads/oocss-buttons.jpg" alt="OOCSS Button Kit">
+	<div class="download-details">
+		<h2>OOCSS Button Kit</h2>
+		<h4>Utilising Object-Orientated CSS to create an effective button kit for any website.</h4>
+		<a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons', 'OOCSS Buttons Demo']);" target="_blank">Demo</a>
+		<a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons', 'OOCSS Buttons Download']);">Download</a>
+		<a href="//toddmotto.com/getting-started-with-object-orientated-css-oocss-creating-a-button-kit">[article]</a>
+	</div>
+</div>
+<div class="download-item">
+	<img src="/img/downloads/clickable-dropdown.jpg" alt="Clickable Dropdown">
+	<div class="download-details">
+		<h2>Clickable Dropdown</h2>
+		<h4>Flawless cross-browser clickable drop-down navigation, jQuery complete with CSS fallbacks. For websites, apps and more.</h4>
+		<a href="//toddmotto.com/labs/clickable-dropdown/" onclick="_gaq.push(['_trackEvent', 'Click', 'Clickable Dropdown Demo', 'Clickable Dropdown Demo Button']);">Demo</a>
+		<a href="//toddmotto.com/labs/clickable-dropdown/clickable-dropdown.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Clickable Dropdown Download', 'Clickable Dropdown Download Button']);">Download</a>
+		<a href="//toddmotto.com/flawless-clickable-drop-down-navigation">[article]</a>
+	</div>
+</div>
+<div class="download-item">
 	<img src="/img/downloads/imgshufflr.jpg" alt="imgShufflr">
 	<div class="download-details">
 		<h2>imgShufflr</h2>
@@ -145,16 +144,6 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
-	<img src="/img/downloads/html5blank.jpg" alt="HTML5 Blank">
-	<div class="download-details">
-		<h2>HTML5 Blank</h2>
-		<h4>A powerful shell for rapidly deploying your WordPress projects. Recognised by Smashing Magazine, Adobe and .NET Magazine.</h4>
-		<a href="//demo.html5blank.com" target="_blank">Demo</a>
-		<a href="//github.com/toddmotto/html5blank/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 Blank Theme Download', 'HTML5 Blank Download']);">Download</a>
-		<a href="//toddmotto.com/html5-blank-rapid-wordpress-theme-development">[article]</a>
-	</div>
-</div>
-<div class="download-item">
 	<img src="/img/downloads/hoverbox.jpg" alt="Hoverbox">
 	<div class="download-details">
 		<h2>jQuery Hover Box</h2>
@@ -172,6 +161,16 @@ layout: page
 		<a href="//toddmotto.com/labs/viewport-retina/" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo ViewPort Resizer', 'ViewPort Resizer Demo']);">Demo</a>
 		<a href="//toddmotto.com/labs/viewport-retina/viewport-retina.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download ViewPort Resizer', 'ViewPort Resizer Download']);">Download</a>
 		<a href="//toddmotto.com/viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget">[article]</a>
+	</div>
+</div>
+<div class="download-item">
+	<img src="/img/downloads/bounce-this.jpg" alt="BounceThis">
+	<div class="download-details">
+		<h2>bounceThis</h2>
+		<h4>Super slick and sharp bouncing headers, mimics CSS3 keyframes, a cross-browser jQuery plugin.</h4>
+		<a href="//toddmotto.com/labs/bouncethis/" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
+		<a href="//toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
+		<a href="//toddmotto.com/bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations">[article]</a>
 	</div>
 </div>
 <div class="download-item">
