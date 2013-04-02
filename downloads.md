@@ -38,7 +38,7 @@ layout: page
 	<div class="download-details">
 		<h2>HTML5 Blank</h2>
 		<h4>A powerful shell for rapidly deploying your WordPress projects. Recognised by Smashing Magazine, Adobe and .NET Magazine.</h4>
-		<a href="//demo.html5blank.com" target="_blank">Demo</a>
+		<a href="//html5blank.com" target="_blank">Visit</a>
 		<a href="//github.com/toddmotto/html5blank/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 Blank Theme Download', 'HTML5 Blank Download']);">Download</a>
 		<a href="//toddmotto.com/html5-blank-rapid-wordpress-theme-development">[article]</a>
 	</div>
@@ -78,7 +78,7 @@ layout: page
 	<div class="download-details">
 		<h2>Conditionizr</h2>
 		<h4>The conditional free legacy, retina, script and style loader. Enhance performance with dedicated loading, inspect element for Demo.</h4>
-		<a href="//conditionizr.com" onclick="_gaq.push(['_trackEvent', 'Click', 'conditionizr.com', 'conditionizr.com']);">Conditionizr</a>
+		<a href="//conditionizr.com" onclick="_gaq.push(['_trackEvent', 'Click', 'conditionizr.com', 'conditionizr.com']);">Visit</a>
 		<a href="//github.com/conditionizr/conditionizr/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Conditionizr', 'Conditionizr Download']);">Download</a>
 		<a href="//toddmotto.com/meet-conditionizr-the-conditional-free-legacy-retina-script-and-style-loader">[article]</a>
 	</div>
