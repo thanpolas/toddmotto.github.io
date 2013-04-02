@@ -203,6 +203,7 @@ iframe[src*="twitter"] {
 	margin:0 0 20px;
 	background:#444;
 	text-align:center;
+	height:118px;
 }
 .carbonad {
 	text-align:left;
@@ -210,6 +211,9 @@ iframe[src*="twitter"] {
 	border:0 !important;
 	width:320px !important;
 	background-color:#444 !important;
+}
+.item-fb {
+	height:71px;
 }
 #fb-root {
 	display:none;
