@@ -4,12 +4,12 @@ permalink: /raw-javascript-jquery-style-fadein-fadeout-functions-hugo-giraudel
 title: Raw JavaScript, jQuery-style fadeIn and fadeOut functions from @HugoGiraudel
 ---
 
+Today's article is from [Hugo Giraudel](http://hugogiraudel.com). For those who don't know Hugo, he describes himself as a CSS goblin and JavaScript dabbler. He's going to take you through some raw JavaScript, jQuery-style fadeIn and fadeOut functions - take it away!
+
 <div class="download-box">
 	<a href="//toddmotto.com/labs/javascript-fade" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JavaScript Fade, 'JavaScript Fade Demo']);">Demo</a>
 	<a href="//toddmotto.com/labs/javascript-fade/javascript-fade.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JavaScript Fade, 'JavaScript Fade Download']);">Download</a>
 </div>
-
-Today's article is from [Hugo Giraudel](http://hugogiraudel.com). For those who don't know Hugo, he describes himself as a CSS goblin and JavaScript dabbler. He's going to take you through some jQuery-style JavaScript functions - take it away!
 
 --
 
