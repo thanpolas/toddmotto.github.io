@@ -135,7 +135,7 @@ function fadeOut(ms, el) {
 Our function is finished. Here is how we can use it:
 
 {% highlight javascript %}
-var el = document.getElementById(‘myElement');
+var el = document.getElementById('myElement');
 el.onclick = function(e) {
 	fadeOut(750, this);
 }
@@ -276,7 +276,7 @@ function fade(type, ms, el) {
 Voila! We have a single function handling both fadeIn() and fadeOut().
 
 {% highlight javascript %}
-var el = document.getElementById(‘my-element');
+var el = document.getElementById('my-element');
 el.onclick = function(e) {
 	fade('out', 500, this);
 }
