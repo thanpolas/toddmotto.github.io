@@ -19,7 +19,7 @@ Every front-end developer has to use JavaScript, it's awesome, it's useful, it's
 
 But jQuery is frigging heavy - around 92kb minified. This is huge. Especially when you a developer includes it in their page to only write a few simple lines of code. I believe that's why Todd wrote [this article](http://toddmotto.com/creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass) a couple of weeks ago on how to create your own _addClass()_, _removeClass()_ and _toggleClass()_ functions.
 
-Well today, let's take this step further and create our very own fadeIn() and fadeOut() functions in order to avoid loading jQuery just for a little smoothy effect. I'm definitely not a JS hacker, so any code improvements are appreciated. If you feel like proposing something better, please do so! :)
+Well today, let's take this step further and create our very own _fadeIn()_ and _fadeOut()_ functions in order to avoid loading jQuery just for a little smoothy effect. I'm definitely not a JS hacker, so any code improvements are appreciated. If you feel like proposing something better, please do so! :)
 
 Let's start with the basics and understand jQuery's fadeIn() and fadeOut(). Both functions allow us to fade in or out an element's opacity and display method very smoothly, at a set duration (depending how quick you'd like the effect). We want our functions to do the same. When making an element disappear, we want it to be turned to 'display:none;' to remove it from the flow.
 
