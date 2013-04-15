@@ -190,7 +190,7 @@ Now, a few things depend on if the transition is in or out, like the default opa
 	
 {% highlight javascript %}
 function fade(type, ms, el) {
-	var isIn = (type == 'in'),
+	var isIn = type === 'in',
 		opacity = isIn ? 0 : 1,
 		interval = 50,
 		gap = interval / duration;
@@ -214,7 +214,7 @@ Do you remember we have to set the display to 'block' and the opacity to 0 if it
 
 {% highlight javascript %}
 function fade(type, ms, el) {
-	var isIn = (type == 'in'),
+	var isIn = type === 'in',
 		opacity = isIn ? 0 : 1,
 		interval = 50,
 		gap = interval / duration;
@@ -250,7 +250,7 @@ We still have two things left: if the opacity is below 0, we set the element to 
 
 {% highlight javascript %}
 function fade(type, ms, el) {
-	var isIn = (type == 'in'),
+	var isIn = type === 'in',
 		opacity = isIn ? 0 : 1,
 		interval = 50,
 		gap = interval / duration;
@@ -264,8 +264,8 @@ function fade(type, ms, el) {
 		opacity = isIn ? opacity + gap : opacity - gap;
 		el.style.opacity = opacity;
 		
-		if(opacity <= 0) { el.style.display = 'none' }
-		if(opacity <= 0 || opacity >= 1) { window.clearInterval(fading); }
+		if(opacity <= 0) el.style.display = 'none'
+		if(opacity <= 0 || opacity >= 1) window.clearInterval(fading);
 	}
 	
 	var fading = window.setInterval(func, interval);
@@ -300,27 +300,11 @@ el.style.filter = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + opacity +
 So everytime we change opacity, we have to use this. Not great huh? What about passing a flag to the function so that you can force IE support only when you really need it? Let's try it.
 
 {% highlight javascript %}
-function fade(type, ms, el, IEsupport) {
-	var isIn = (type == 'in'),
-		IE = IEsupport ? IEsupport : false,
+function fade(type, ms, el, IE) {
+	var isIn = type === 'in',
 		opacity = isIn ? 0 : 1,
 		interval = 50,
 		gap = interval / duration;
-		
-	...
-	
-}
-{% endhighlight %}
-
-Basically, this tells the function we want 'IE' to be a boolean. If 'IEsupport' has been set to 'true', 'IE' is true as well. Whatever else could it be, it's false. Then, we use the 'IE' boolean to add filters if required. Easy as a pie.
-
-{% highlight javascript %}
-function fade(type, el, duration, IEsupport) {
-    var isIn     = (type == 'in'),
-        IE       = (IEsupport) ? IEsupport : false,
-        opacity  = isIn ? 0 : 1,
-        interval = 50,
-        gap      = interval / duration;
         
     if(isIn) {
          el.style.display = 'block';
@@ -339,8 +323,8 @@ function fade(type, el, duration, IEsupport) {
             el.style.filter = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + opacity * 100 + ')';
         }
         
-        if(opacity <= 0 || opacity >= 1) { window.clearInterval(fading); }
-        if(opacity <= 0) { el.style.display = 'none'; }
+        if(opacity <= 0 || opacity >= 1) window.clearInterval(fading);
+        if(opacity <= 0) el.style.display = 'none';
     }
     
     var fading = window.setInterval(func, interval);
