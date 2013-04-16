@@ -17,13 +17,13 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header box">
+			<header class="header box" role="banner">
 				<div class="logo">
 					<a href="/">
 						<img src="/img/logo.svg" class="logo-img" alt="Logo">
 					</a>
 				</div>
-				<nav id="nav">
+				<nav id="nav" role="navigation">
 					<ul class="nav">
 						<li><a href="/">Latest</a></li>
 						<li><a href="/about">About</a></li>
@@ -34,11 +34,11 @@
 				</nav>
 			</header>
 			
-			<section class="main">
+			<section class="main" role="main">
 				{{ content }}
 			</section>
 			
-			<aside class="sidebar">
+			<aside class="sidebar" role="complementary">
 				<img src="/img/todd.jpg" alt="Todd Motto">
 				<p class="item">
 					Todd Motto. Front-end web developer. HTML5 and CSS3 lover, JavaScript and jQuery addict. 
@@ -61,7 +61,7 @@
 				</div>
 			</aside>
 			
-			<footer class="footer">
+			<footer class="footer" role="contentinfo">
 				&copy; {{ 'now' | date: "%Y" }} Todd Motto. 
 				Powered by <a href="//github.com/mojombo/jekyll">Jekyll</a>, 
 				site source code hosted on <a href="//github.com/toddmotto/toddmotto.github.com">GitHub</a>.
