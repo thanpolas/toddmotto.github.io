@@ -124,7 +124,7 @@ $('[data-js=send-email]').click(function(){
 Okay, so what have we achieved by doing this? We've separated CSS from JavaScript. I think that's pretty well done if you ask me. But why is this such a benefit?
 
 ### CSS isn't JavaScript
-?and JavaScript isn't CSS. The two are not the same, we shouldn't mix them. Separating the JavaScript selectors from CSS helps us in many ways, here's some killer examples:
+...and JavaScript isn't CSS. The two are not the same, we shouldn't mix them. Separating the JavaScript selectors from CSS helps us in many ways, here's some killer examples:
 
 - Change your CSS without worrying. Restructuring and recoding HTML/CSS is part of a developer's life. Now you can change your HTML/CSS all you like without changing a single line of JavaScript.
 
