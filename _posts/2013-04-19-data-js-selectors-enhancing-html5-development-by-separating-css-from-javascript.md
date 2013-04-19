@@ -33,7 +33,7 @@ Which then became this (a class defining and attributing a specific style):
 </style>
 {% endhighlight %}
 
-But I've started thinking about a cross-over from the above concept, and how scalable our websites _really_ are.
+But I've started thinking about a cross-over from the above concept, and how scalable our websites _really_ are when it comes to JavaScript selectors.
 
 ### The problem now
 When you really think about it, JavaScript is for DOM interactions, we grab an element and do something with it. But we haven't got an official method of actually doing this - at least not one that's been thought about properly.
