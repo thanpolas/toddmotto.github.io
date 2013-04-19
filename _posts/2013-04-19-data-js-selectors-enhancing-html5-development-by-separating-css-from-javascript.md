@@ -71,7 +71,7 @@ The main idea is; when writing JavaScript, imagine classes and IDs don't exist. 
 <a href="#" class="user" data-user="34321" data-name="David">Welcome, David.</a>
 {% endhighlight %}
 
-?and literally create some attributes on the fly. There is an argument that you shouldn't abuse HTML5 data-* attributes, but I don't think that's what we're doing with [data-js].
+...and literally create some attributes on the fly. There is an argument that you shouldn't abuse HTML5 data-* attributes, but I don't think that's what we're doing with [data-js].
 
 So why do I call it [data-js]? That's how we target the new development concept, here's the new HTML for that contact button earlier:
 
