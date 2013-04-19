@@ -26,6 +26,11 @@ Which then became this (a class defining and attributing a specific style):
 <div class="table-border">
 	<p>Oh hey.</p>
 </div>
+<style>
+.table-border {
+	border-top:1px solid #000;
+}
+</style>
 {% endhighlight %}
 
 But I've started thinking about a cross-over from the above concept, and how scalable our websites _really_ are.
