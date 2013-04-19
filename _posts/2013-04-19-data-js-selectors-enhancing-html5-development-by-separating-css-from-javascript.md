@@ -132,7 +132,7 @@ Okay, so what have we achieved by doing this? We've separated CSS from JavaScrip
 
 - "What does that class do again?" - how many classes have you removed before and it's broken some JavaScript. Removing classes because they might not be in use can be part of refactoring old code to create new. Do you really want to search through all your _.js_ files to check if the selector exists?
 
-- Using [data-js] attributes tells you a JavaScript event exists, you can't seriously remember what each class does? This increases development speed, you know the [data-js] selectors, you can locate them very easily in _.js_ files.
+- Using [data-js] attributes tells you a JavaScript event exists, you can't seriously remember what each class does with your current naming conventions. This increases development speed, you know the [data-js] selectors, you can locate them very easily in _.js_ files.
 
 - You're extending HTML. Just like we write CSS/JS patterns, we are writing a new HTML pattern, adding a dedicated JavaScript hook.
 
