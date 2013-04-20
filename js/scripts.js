@@ -7,9 +7,10 @@ var first = document.createElement('option');
 
 first.innerHTML = '- Navigation -';
 select.setAttribute('id', 'mobile');
+select.setAttribute('data-js', 'mobile')
 select.appendChild(first);
 
-var nav = document.getElementById('nav');
+var nav = document.querySelector('[data-js=nav]');
 var loadLinks = function(element, hyphen, level) {
 
 	var e = element;
@@ -40,7 +41,7 @@ loadLinks(nav, '- ', 0);
 
 nav.appendChild(select);
 
-var mobile = document.getElementById('mobile');
+var mobile = document.querySelector('[data-js=mobile]');
 
 if(mobile.addEventListener) {
 	mobile.addEventListener('change', function () {
