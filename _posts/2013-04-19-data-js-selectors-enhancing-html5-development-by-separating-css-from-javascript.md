@@ -168,4 +168,4 @@ We've separated CSS from JavaScript, which gives us a lot more flexibility and e
 This says there is JavaScript hooking into the data-*, it's a click event on the list element. So there is some correlation between it all, or some method in the madness.
 
 ### Demo
-For those of you who like a nice little demo, [here](http://jsfiddle.net/toddmotto/bK6ur) it is. Change the styles all you want, swap classes, ID's and completely transform the button - but of course using [data-js] it will still work flawlessly.
+For those of you who like a nice little demo, [here](http://jsfiddle.net/toddmotto/bK6ur) it is. Change the styles all you want, swap classes, ID's and completely transform the button - but of course using [data-js] it will still work flawlessly. My blog is now updated to use the [data-js] attribute methods for creating the responsive menu, check it out.
