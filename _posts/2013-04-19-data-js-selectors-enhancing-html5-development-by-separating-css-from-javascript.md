@@ -170,5 +170,22 @@ This says there is JavaScript hooking into the data-*, it's a click event on the
 ### Demo
 For those of you who like a nice little demo, [here](http://jsfiddle.net/toddmotto/bK6ur) it is. Change the styles all you want, swap classes, ID's and completely transform the button - but of course using [data-js] it will still work flawlessly. My blog is now updated to use the [data-js] attribute methods for creating the responsive menu, check it out.
 
+### Shortcut usage
+A great comment below from Kasper Mikiewicz on how to extend jQuery a little to create a nice [data-js] wrapper function!
+
+{% highlight javascript %}
+$.js = function(el){
+	return $('[data-js=' + el + ']')
+};
+{% endhighlight %}
+
+Simply include that in your scripts file, and use like this:
+
+{% highlight javascript %}
+$.js('click-lis').on('click', function() {
+	// Take it away!
+});
+{% endhighlight %}
+
 ### Getting [data-js] to work in XHTML documents
 Thanks to [Gabriele Romanatio](http://twitter.com/gabromanato) for looking into a [solution for XHTML documents](http://gabrieleromanato.name/jquery-making-html5-custom-data-attributes-work-in-XML) (XML usage in HTML), as data-* attributes are obviously only valid in HTML5 documents! Eat your heart out XML.
