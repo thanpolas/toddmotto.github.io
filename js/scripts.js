@@ -1,5 +1,3 @@
-document.documentElement.className += ' js';
-
 // Responsive, dynamic mobile navigation <select> in raw JS
 // toddmotto.com/creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript
 var select = document.createElement('select');
@@ -61,24 +59,6 @@ if(mobile.addEventListener) {
 var span = document.createElement('span');
 span.className = 'mobile';
 nav.appendChild(span);
-
-// SVG custom feature detection and svg to png fallback
-// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update
-function supportsSVG() {
-	return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;	
-}
-if (supportsSVG()) {
-	document.documentElement.className += ' svg';
-} else {
-	document.documentElement.className += ' no-svg';
-	var imgs = document.getElementsByTagName('img');
-	var dotSVG = /.*\.svg$/;
-	for (var i = 0; i != imgs.length; ++i) {
-		if(imgs[i].src.match(dotSVG)) {
-			imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-		}
-	}
-}
 
 // CarbonAds
 var z = document.createElement('script');

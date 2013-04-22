@@ -89,9 +89,18 @@ p {
 .logo {
 	float:left;
 }
+.logo a {
+	display:block;
+}
+.no-svg .logo-img,
 .logo-img {
+	background:url(../img/logo.png) no-repeat;
 	height:61px;
 	width:136px;
+}
+.svg .logo-img {
+	background:url(../img/logo.svg) no-repeat;
+	background-size:136px 61px;
 }
 .nav {
 	float:right;
