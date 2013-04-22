@@ -171,7 +171,7 @@ This says there is JavaScript hooking into the data-*, it's a click event on the
 For those of you who like a nice little demo, [here](http://jsfiddle.net/toddmotto/bK6ur) it is. Change the styles all you want, swap classes, ID's and completely transform the button - but of course using [data-js] it will still work flawlessly. My blog is now updated to use the [data-js] attribute methods for creating the responsive menu, check it out.
 
 ### Shortcut usage
-A great comment below from Kasper Mikiewicz on how to extend jQuery a little to create a nice [data-js] wrapper function!
+A great comment below from [Kasper Mikiewicz](http://twitter.com/Idered) on how to extend jQuery a little to create a nice [data-js] wrapper function!
 
 {% highlight javascript %}
 $.js = function(el){
