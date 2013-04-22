@@ -182,7 +182,7 @@ $.js = function(el){
 Simply include that in your scripts file, and use like this:
 
 {% highlight javascript %}
-$.js('click-lis').on('click', function() {
+$.js('click-list').on('click', function() {
 	// Take it away!
 });
 {% endhighlight %}
