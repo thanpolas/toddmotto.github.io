@@ -18,7 +18,7 @@ And back to AngularJS, I just love the way it works. It focuses on the view (bei
 </div>
 {% endhighlight %}
 
-The above may not look like much, but you can see I've binded 'ng-model' onto the input element, and can essentially mirror/call the model using double curly brackets _{{inputted}}_ - which means anything I type into the input will be reflected into the DOM too. Built into AngularJS are directives that get this to work obviously, but you can see the simplicity behind it, as well as the fact it's totally reusable on as many elements throughout the DOM as you need. So let's head that way. Enough with the UI components that need actual hard coding - let's create objects that are reusable.
+The above may not look like much, but you can see I've binded 'ng-model' onto the input element, and can essentially mirror/call the model using double curly brackets _&#123;&#123;inputted&#125;&#125;_ - which means anything I type into the input will be reflected into the DOM too. Built into AngularJS are directives that get this to work obviously, but you can see the simplicity behind it, as well as the fact it's totally reusable on as many elements throughout the DOM as you need. So let's head that way. Enough with the UI components that need actual hard coding - let's create objects that are reusable.
 
 <div class="download-box">
 	<a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
