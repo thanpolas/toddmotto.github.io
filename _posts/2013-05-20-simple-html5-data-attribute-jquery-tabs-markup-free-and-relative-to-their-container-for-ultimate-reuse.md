@@ -4,7 +4,7 @@ permalink: /simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-
 title: Simple HTML5 data-* jQuery tabs, markup free and relative to their container for ultimate re-use
 ---
 
-One of my favourite additions to the HTML5 spec is data-* attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
+One of my favourite additions to the HTML5 spec is data-&#42; attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
 
 Two things have inspired this post to create some mega simple tabbed content UI components, the first - Twitter Bootstrap. Twitter Bootstrap is used by so many people, but I really have no use for it other than pinching one of two of the jQuery plugins whilst working in development. The second reason for creating this is [AngularJS](//angularjs.org) from Google - a super intelligent web application framework that I am learning more and more of.
 
@@ -26,15 +26,15 @@ The above may not look like much, but you can see I've binded 'ng-model' onto th
 	<a href="//github.com/toddmotto/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Data Tabs', Data Tabs Fork']);">Fork</a>
 </div>
 
-### HTML5 data-* attributes
-AngularJS doesn't just use 'ng-*' prefixes to their binding, for validation purposes you can use data-ng-* to stay safe - and data attributes are the way to go here too. Let's create two types of data, a tab and the content:
+### HTML5 data-&#42; attributes
+AngularJS doesn't just use 'ng-&#42;' prefixes to their binding, for validation purposes you can use data-ng-&#42; to stay safe - and data attributes are the way to go here too. Let's create two types of data, a tab and the content:
 
 {% highlight html %}
 <a href="#" data-tab="">Tab</a>
 <div data-content="">Content</div>
 {% endhighlight %}
 
-This sets up the DOM for us to build upon. What I want to do next is essentially _match_ the tab clicked with the content box, so we need to pair the data-* attributes, however the developer decides to match them with naming conventions is up to them; this script should be really flexible as long as the data-* values pair:
+This sets up the DOM for us to build upon. What I want to do next is essentially _match_ the tab clicked with the content box, so we need to pair the data-&#42; attributes, however the developer decides to match them with naming conventions is up to them; this script should be really flexible as long as the data-&#42; values pair:
 
 {% highlight html %}
 <a href="#" data-tab="1">Tab</a>
@@ -57,7 +57,7 @@ $('[data-tab]').on('click', function (e) {
 })
 {% endhighlight %}
 
-You'll then see this logs the value inside the _data-tab_ attribute inside the console, step one is complete. Now step two, making it dynamically match by looking for the element's matching data-* pair:
+You'll then see this logs the value inside the _data-tab_ attribute inside the console, step one is complete. Now step two, making it dynamically match by looking for the element's matching data-&#42; pair:
 
 {% highlight javascript %}
 $(this).siblings('[data-content=' + $(this).data('tab') + ']')
@@ -101,10 +101,10 @@ $('[data-tab]').on('click', function (e) {
 {% endhighlight %}
 
 ### Ultimate re-use
-Because the script is setup to search for sibling selectors, feeding from a _$(this)_ element - it means we can have multiple tabs per page with the same data-* values!
+Because the script is setup to search for sibling selectors, feeding from a _$(this)_ element - it means we can have multiple tabs per page with the same data-&#42; values!
 
 ### Extending the tabs
-The tabs are setup to be totally markup free, and in true AngularJS fashion, you literally can just add more data-* attributes and let it do it all for you:
+The tabs are setup to be totally markup free, and in true AngularJS fashion, you literally can just add more data-&#42; attributes and let it do it all for you:
 
 {% highlight html %}
 <div class="tabs">
@@ -128,7 +128,7 @@ The tabs are setup to be totally markup free, and in true AngularJS fashion, you
 
 7, 8, 9, 10... and so on!
 
-Just add more data-* attributes and you're golden! :)
+Just add more data-&#42; attributes and you're golden! :)
 
 <div class="download-box">
 	<a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
