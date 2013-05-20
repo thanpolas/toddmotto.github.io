@@ -34,6 +34,16 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
+	<img src="/img/downloads/required.jpg" alt="Required Attribute Fallback">
+	<div class="download-details">
+		<h2>HTML5 'required' attribute jQuery fallback</h2>
+		<h4>A robust HTML5 'required' attribute fallback, client-side validation jQuery script.</h4>
+		<a href="//toddmotto.com/labs/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Required Fallback, 'Required Fallback Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/required-fallback/required-fallback.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Required Fallback, 'Required Fallback Download']);">Download</a>
+		<a href="//toddmotto.com/progressively-enhancing-html5-forms-creating-a-required-attribute-fallback-with-jquery">[article]</a>
+	</div>
+</div>
+<div class="download-item">
 	<img src="/img/downloads/html5blank.jpg" alt="HTML5 Blank">
 	<div class="download-details">
 		<h2>HTML5 Blank</h2>
