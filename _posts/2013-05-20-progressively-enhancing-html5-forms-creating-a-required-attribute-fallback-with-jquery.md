@@ -17,7 +17,7 @@ HTML5 required attributes are a fantastic addition to the HTML5 spec, they save 
 The required attribute is developer friendly. It's a boolean attribute too which means we don't need to supply it any data, it's either present or not. We can add it simply to form elements like so:
 
 {% highlight html %}
-&lt;input type="text" required&gt;
+<input type="text" required>
 {% endhighlight %}
 
 In browsers that support the attribute, you don't need to do anything when it comes to alerting users they haven't filled/checked in an input field (or textarea, radio buttons and so on...)
@@ -60,59 +60,59 @@ if (!supportsRequired) {
 This is easily done as you can see from the introduction, adding a required attribute to our markup is really simple (here I've created a quick form with some different input fields). The below fields include various input types: _text_, _email_, _tel_, _url_, _radio_, _checkbox_ as well as the _textarea_ element. Let's add the required attributes where appropriate (we only need to add the required attribute once to radio and checkboxes with the same _name_ attribute):
 
 {% highlight html %}
-&lt;form class="form" action="/" method="post"&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="name" class="form-label"&gt;Name *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;input id="name" name="name" placeholder="Please enter your name" type="text" required&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="email" class="form-label"&gt;Email *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;input id="email" name="email" placeholder="Please enter your email address" type="email" required&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="radio" class="form-label"&gt;Radio Buttons *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;span class="form-radios"&gt;Select 1: &lt;/span&gt;
-			&lt;input id="radio" name="radiobutton" value="selection-one" type="radio" required&gt;
-			&lt;span class="form-radios"&gt;Select 2: &lt;/span&gt;
-			&lt;input name="radiobutton" value="selection-two" type="radio"&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="checkbox" class="form-label"&gt;Checkboxes *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;span class="form-radios"&gt;Select 1: &lt;/span&gt;
-			&lt;input id="checkbox" name="checkbox" type="checkbox" required&gt;
-			&lt;span class="form-radios"&gt;Select 2: &lt;/span&gt;
-			&lt;input name="checkbox" type="checkbox"&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="tel" class="form-label"&gt;Telephone *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;input id="tel" name="telephone" placeholder="Please enter your number" type="tel" required&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="website" class="form-label"&gt;Website *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;input id="website" name="website" placeholder="Begin with http://" type="url" required&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;label for="message" class="form-label"&gt;Message *&lt;/label&gt;
-		&lt;div class="form-field"&gt;
-			&lt;textarea id="message" name="message" placeholder="Include all the details you can" required&gt;&lt;/textarea&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="form-row"&gt;
-		&lt;button name="submit" type="submit" class="form-submit"&gt;Send Email&lt;/button&gt;
-	&lt;/div&gt;
-&lt;/form&gt;
+<form class="form" action="/" method="post">
+	<div class="form-row">
+		<label for="name" class="form-label">Name *</label>
+		<div class="form-field">
+			<input id="name" name="name" placeholder="Please enter your name" type="text" required>
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="email" class="form-label">Email *</label>
+		<div class="form-field">
+			<input id="email" name="email" placeholder="Please enter your email address" type="email" required>
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="radio" class="form-label">Radio Buttons *</label>
+		<div class="form-field">
+			<span class="form-radios">Select 1: </span>
+			<input id="radio" name="radiobutton" value="selection-one" type="radio" required>
+			<span class="form-radios">Select 2: </span>
+			<input name="radiobutton" value="selection-two" type="radio">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="checkbox" class="form-label">Checkboxes *</label>
+		<div class="form-field">
+			<span class="form-radios">Select 1: </span>
+			<input id="checkbox" name="checkbox" type="checkbox" required>
+			<span class="form-radios">Select 2: </span>
+			<input name="checkbox" type="checkbox">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="tel" class="form-label">Telephone *</label>
+		<div class="form-field">
+			<input id="tel" name="telephone" placeholder="Please enter your number" type="tel" required>
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="website" class="form-label">Website *</label>
+		<div class="form-field">
+			<input id="website" name="website" placeholder="Begin with http://" type="url" required>
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="message" class="form-label">Message *</label>
+		<div class="form-field">
+			<textarea id="message" name="message" placeholder="Include all the details you can" required></textarea>
+		</div>
+	</div>
+	<div class="form-row">
+		<button name="submit" type="submit" class="form-submit">Send Email</button>
+	</div>
+</form>
 {% endhighlight %}
 
 ### Required attribute loop
@@ -135,7 +135,7 @@ $('[required]').each(function () {
 	if (!supportsRequired) {
 		var self = $(this)
 		self.removeAttr('required').addClass('required')
-		self.parent().append('&lt;span class="form-error"&gt;Required&lt;/span&gt;')
+		self.parent().append('<span class="form-error">Required</span>')
 	}
 })
 {% endhighlight %}
@@ -390,8 +390,8 @@ The nice part about listening for blur/change events is that the check will fire
 Putting everthing together, it looks as follows:
 
 {% highlight html %}
-&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+<script src="js/jquery.min.js"></script>
+<script>
 $(function () {
 	
 	// feature detect
@@ -410,7 +410,7 @@ $(function () {
 			self.removeAttr('required').addClass('required')
 			
 			// append an error message
-			self.parent().append('&lt;span class="form-error"&gt;Required&lt;/span&gt;')
+			self.parent().append('<span class="form-error">Required</span>')
 			
 		}
 		
@@ -482,7 +482,7 @@ $(function () {
 	})
 
 })
-&lt;/script&gt;
+</script>
 {% endhighlight %}
 
 ### Script testing
@@ -515,7 +515,7 @@ HTML5 required attributes are just one piece of the front-end validation puzzle,
 We won't be needing to do this for our fallback, but essentially we just need to add a line of JavaScript to the targeted element. This uses the full HTML5 validation whilst customising it to your advantage. To customise the text, we can set a custom message like so:
 
 {% highlight html %}
-&lt;input class="test" type="text" required&gt;
+<input class="test" type="text" required>
 {% endhighlight %}
 
 And the JavaScript:
