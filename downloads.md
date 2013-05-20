@@ -24,6 +24,16 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
+	<img src="/img/downloads/data-tabs.jpg" alt="Data Tabs">
+	<div class="download-details">
+		<h2>Simple HTML5 data-* jQuery tabs</h2>
+		<h4>Markup free and relative to their container for ultimate re-use, super-simple jQuery tabbed content.</h4>
+		<a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/data-tabs/data-tabs.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Data Tabs, 'Data Tabs Download']);">Download</a>
+		<a href="//toddmotto.com/simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse/">[article]</a>
+	</div>
+</div>
+<div class="download-item">
 	<img src="/img/downloads/fluidvids.jpg" alt="FluidVids">
 	<div class="download-details">
 		<h2>FluidVids</h2>
