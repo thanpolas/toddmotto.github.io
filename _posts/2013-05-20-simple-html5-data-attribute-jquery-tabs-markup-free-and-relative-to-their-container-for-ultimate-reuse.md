@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse
-title: Simple HTML5 data-* jQuery tabs. Markup free and relative to their container for ultimate re-use.
+title: Simple HTML5 data-* jQuery tabs, markup free and relative to their container for ultimate re-use
 ---
 
 One of my favourite additions to the HTML5 spec is data-* attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
@@ -15,7 +15,7 @@ And back to AngularJS, I just love the way it works. It focuses on the view (bei
 {% highlight html %}
 <div ng-app>
 	<input type=text ng-model="inputted">
-	{{inputted}}
+	{{ inputted }}
 </div>
 {% endhighlight %}
 
