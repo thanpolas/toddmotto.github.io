@@ -113,16 +113,16 @@ The tabs are setup to be totally markup free, and in true AngularJS fashion, you
 	<a href="#" data-tab="3" class="tab">Tab 3</a>
 	<a href="#" data-tab="4" class="tab">Tab 4</a>
 	<a href="#" data-tab="5" class="tab">Tab 5</a>
-	<a href="#" data-tab="4" class="tab">Tab 6</a>
-	<a href="#" data-tab="5" class="tab">Tab 7</a>
+	<a href="#" data-tab="6" class="tab">Tab 6</a>
+	<a href="#" data-tab="7" class="tab">Tab 7</a>
 	
 	<div data-content="1" class="content active">Tab 1 Content</div>
 	<div data-content="2" class="content">Tab 2 Content</div>
 	<div data-content="3" class="content">Tab 3 Content</div>
 	<div data-content="4" class="content">Tab 4 Content</div>
 	<div data-content="5" class="content">Tab 5 Content</div>
-	<div data-content="4" class="content">Tab 6 Content</div>
-	<div data-content="5" class="content">Tab 7 Content</div>
+	<div data-content="6" class="content">Tab 6 Content</div>
+	<div data-content="7" class="content">Tab 7 Content</div>
 </div>
 {% endhighlight %}
 
