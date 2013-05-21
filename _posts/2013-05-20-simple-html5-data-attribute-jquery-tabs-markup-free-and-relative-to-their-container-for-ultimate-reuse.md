@@ -100,6 +100,13 @@ $('[data-tab]').on('click', function (e) {
 })
 {% endhighlight %}
 
+### One line of code
+What's interesting about jQuery is the fact you can chain functions/methods together as it keeps returning the jQuery object after each one. I've actually split this code onto two lines (you see both calls for _$(this)_ but actually, these tabs are totally functional with chaining everything on just _one_ line of code (ignoring the click handler):
+
+{% highlight javascript %}
+$(this).addClass('active').siblings('[data-tab]').removeClass('active').siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
+{% endhighlight %}
+
 ### Ultimate re-use
 Because the script is setup to search for sibling selectors, feeding from a _$(this)_ element - it means we can have multiple tabs per page with the same data-&#42; values!
 
