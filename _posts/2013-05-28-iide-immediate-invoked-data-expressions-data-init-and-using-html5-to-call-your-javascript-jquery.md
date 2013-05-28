@@ -144,7 +144,7 @@ We could move an entire plugin's configuration into a JSON data structure, for e
 
 The choices are unlimited, and I don't see why you wouldn't do this. Alternatively, you could move the JSON configuration into the same file as the script itself too. But for ultimate reuse, we'll be looping through the data-&#42; attributes and running the identical function, so it's good that the model data is bound to the view.
 
-### Real examples of JSON config
+### Real examples of _why_ data-init
 I'm currently writing some new open source projects that invoke this method of development, but he's a real life use case. In the past I've used plugins that create 'responsive type' - aka shrink the browser and the text stays the width of the window - very nice. But here's a huge use case for the popular [FitText](http://fittextjs.com) plugin, to be configured in the view rather than a pointless call script!
 
 The redundant call (taken from FitText website):
