@@ -21,7 +21,7 @@ Let's take a made up slider jQuery plugin:
 </script>
 {% endhighlight %}
 
-We load the files, and call the function. This is a rather pointless exercise I feel nowadays, and has no benefit - no to mention the drastic challenge of maintaining your plugins configuration, you're never entirely sure what's going on and every plugin is different!
+We load the files, and call the function. This is a rather pointless exercise I feel nowadays, and has no benefit - not to mention the drastic challenge of maintaining your plugins configuration, you're never entirely sure what's going on and every plugin is different!
 
 So I'm proposing to drop this lame practice of 'calling' our functions/plugins, and getting more intelligent. Queue data-&#42; attributes!
 
