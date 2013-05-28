@@ -26,7 +26,7 @@ We load the files, and call the function. This is a rather pointless exercise I 
 So I'm proposing to drop this lame practice of 'calling' our functions/plugins, and getting more intelligent. Queue data-&#42; attributes!
 
 ### Introducing data-init
-When we typically write a function and call it, we're _init_ialising it! As HTML5 moves closer to JavaScript by the day, I'm talking about MVC frameworks like Knockout.js and AngularJS here - HTML templating is on the rise, it's all about components, reusable parts and shadow DOM. Static HTML is a thing of the past and we really need to take advantage of the superiority of modern browsers and even JavaScript/jQuery at a base level.
+When we typically write a function and call it, we're *init*ialising it! As HTML5 moves closer to JavaScript by the day, I'm talking about MVC frameworks like Knockout.js and AngularJS here - HTML templating is on the rise, it's all about components, reusable parts and shadow DOM. Static HTML is a thing of the past and we really need to take advantage of the superiority of modern browsers and even JavaScript/jQuery at a base level.
 
 So what is data-init? It's a way of calling your function when it exists, and also being able to configure a plugin should it have configurable options. Plugins are great for reusable code, ones that actually have purpose, but a good developer will bake this in whilst building their script(s).
 
