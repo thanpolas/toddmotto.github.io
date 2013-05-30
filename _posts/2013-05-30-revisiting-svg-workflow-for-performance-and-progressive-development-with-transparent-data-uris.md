@@ -11,7 +11,7 @@ This article sums up my SVG and HTML5 workflow stemming from my previous article
 ### Feature detect
 First thing's first, a proper progressive enhancement technique will require some form of base code that allows for all users to view some form of feature. When dealing with SVG, we split this into two - SVG for enhanced, and PNG for the base layer.
 
-Since the last feature detect, I've optimised the JavaScript even further. Here's where I was previously at, and lots of developers were using my feature detection script and SVG fallback, which ripped the _.svg_ file extension back to _.png_ for inline images - but I'm not sure this is the way to go anymore for a few reasons. First, let's talk a look at the old script:
+Since the last feature detect, I've optimised the JavaScript even further. Here's where I was previously at, and lots of developers were using my feature detection script and SVG fallback, which ripped the _.svg_ file extension back to _.png_ for inline images - but I'm not sure this is the way to continue anymore for a few reasons (no, don't worry your old sites are fine). First, let's talk a look at the old script:
 
 {% highlight javascript %}
 function supportsSVG() {
