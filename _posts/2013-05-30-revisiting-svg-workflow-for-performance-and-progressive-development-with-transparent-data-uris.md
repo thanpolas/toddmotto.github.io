@@ -190,6 +190,9 @@ Using the ampersand _&_ after the _.svg_ is what gets this working, which nicely
 
 Remember, it's important to put the SVG override in your CSS _after_ the PNG declaration, this will prevent any priority order issues in browsers and ensure your SVG always comes out ontop when supported.
 
+### Browser support
+Data URIs are supported in IE8 and up, which means for IE7 inclusive development you'll want to use the Google 'blank.gif' technique instead of a Data URI! If you're IE8+, then you could go the whole hog and convert all your icons, patterns and logos to Data URIs.
+
 ### Bonus: actually embedding SVG+XML inside CSS!
 As crazy as it sounds, I recently found this out; you can embed an SVG image inside CSS - essentially embedding XML markup as a background image (which is actually the stuff _inside_ the .svg file). This is really the next step in Data URIs, but just because we can, should we:
 
