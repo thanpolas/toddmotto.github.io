@@ -191,7 +191,7 @@ Using the ampersand _&_ after the _.svg_ is what gets this working, which nicely
 Remember, it's important to put the SVG override in your CSS _after_ the PNG declaration, this will prevent any priority order issues in browsers and ensure your SVG always comes out ontop when supported.
 
 ### Bonus: actually embedding SVG+XML inside CSS!
-As crazy as it sounds, I recently found this out; you can embed an SVG image inside CSS - essentially embedding XML markup as a background image (which is actually the stuff _inside_ the .svg file). This is really the next step up from Data URIs:
+As crazy as it sounds, I recently found this out; you can embed an SVG image inside CSS - essentially embedding XML markup as a background image (which is actually the stuff _inside_ the .svg file). This is really the next step in Data URIs, but just because we can, should we:
 
 {% highlight css %}
 .svg .chromium {
