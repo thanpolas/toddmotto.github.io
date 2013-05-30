@@ -51,11 +51,11 @@ To be fair, if we're only going to use _svg_ progressive enhancement techniques,
 }()
 {% endhighlight %}
 
-### clear.gif - the transparent window
-I'm employed to build the UI/front-end of software for Google Enterprise customers and we work closely with Google - this is great as I can keep in touch with their modern software and development techniques. At the time of seeing the aforementioned squashed logo, I'd noticed Google had been using a new form of image and icon development, adding a background image to an inline transparent image, a _clear.gif_ to be precise:
+### blank.gif - the transparent window
+I'm employed to build the UI/front-end of software for Google Enterprise customers and we work closely with Google - this is great as I can keep in touch with their modern software and development techniques. At the time of seeing the aforementioned squashed logo, I'd noticed Google had been using a new form of image and icon development, adding a background image to an inline transparent image, a _blank.gif_ to be precise:
 
 {% highlight html %}
-<img src="clear.gif" class="chromium">
+<img src="blank.gif" class="chromium">
 {% endhighlight %}
 
 With the accompanying CSS for example:
@@ -68,15 +68,15 @@ With the accompanying CSS for example:
 }
 {% endhighlight %}
 
-I really liked this as it suddenly made some sense in a crazy way. The _clear.gif_ image was 1px by 1px in dimensions, and literally stretched into the width and height it's needed to be - really smart.
+I really liked this as it suddenly made some sense in a crazy way. The _blank.gif_ image was 1px by 1px in dimensions, and literally stretched into the width and height it's needed to be - really smart.
 
 The above 'Google' technique I like to explain to others as a transparent window image with a background image, essentially you're looking through a transparent image to see a background image. This is also amazing for icons...
 
 ### Why a clear &lt;img&gt; tag, over the &lt;i&gt; element for icons?
-I've stoppe using &lt;i&gt; for icons, it really isn't a good element. It's semantic meaning is that the contents should be italic, yes it starts with 'i' for 'icon' so I assume this is why it's popularity has risen, but it's semantic use is incorrect and it should be swapped for the _clear.gif_ technique, as really - icons are images too.
+I've stoppe using &lt;i&gt; for icons, it really isn't a good element. It's semantic meaning is that the contents should be italic, yes it starts with 'i' for 'icon' so I assume this is why it's popularity has risen, but it's semantic use is incorrect and it should be swapped for the _blank.gif_ technique, as really - icons are images too.
 
 ### Data URIs
-Instead of using a _clear.gif_ physical image, we could trump Google a little and create a transparent Data URI image out of it, and embed the image data inline. This is done to save uploading and creating a transparent image as well as to save an HTTP request:
+Instead of using a _blank.gif_ physical image, we could trump Google a little and create a transparent Data URI image out of it, and embed the image data inline. This is done to save uploading and creating a transparent image as well as to save an HTTP request:
 
 {% highlight html %}
 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="chromium">
