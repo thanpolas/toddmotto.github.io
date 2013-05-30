@@ -73,7 +73,7 @@ I really liked this as it suddenly made some sense in a crazy way. The _blank.gi
 The above 'Google' technique I like to explain to others as a transparent window image with a background image, essentially you're looking through a transparent image to see a background image. This is also amazing for icons...
 
 ### Why a clear &lt;img&gt; tag, over the &lt;i&gt; element for icons?
-I've stoppe using &lt;i&gt; for icons, it really isn't a good element. It's semantic meaning is that the contents should be italic, yes it starts with 'i' for 'icon' so I assume this is why it's popularity has risen, but it's semantic use is incorrect and it should be swapped for the _blank.gif_ technique, as really - icons are images too.
+I've stopped using &lt;i&gt; for icons, it really isn't a good element. It's semantic meaning is that the contents should be italic, yes it starts with 'i' for 'icon' so I assume this is why it's popularity has risen, but it's semantic use is incorrect and it should be swapped for the _blank.gif_ technique, as really - icons are images too.
 
 ### Data URIs
 Instead of using a _blank.gif_ physical image, we could trump Google a little and create a transparent Data URI image out of it, and embed the image data inline. This is done to save uploading and creating a transparent image as well as to save an HTTP request:
