@@ -68,7 +68,7 @@ With the accompanying CSS for example:
 }
 {% endhighlight %}
 
-I really liked this as it suddenly made some sense in a crazy way. The _blank.gif_ image was 1px by 1px in dimensions, and literally stretched into the width and height it's needed to be - really smart.
+I really liked this as it suddenly made some sense in a crazy way. The _blank.gif_ image was 1px by 1px in dimensions, and literally stretched into the width and height it's needed to be by the CSS, not the physical HTML dimensions - really smart.
 
 The above 'Google' technique I like to explain to others as a transparent window image with a background image, essentially you're looking through a transparent image to see a background image. This is also amazing for icons...
 
