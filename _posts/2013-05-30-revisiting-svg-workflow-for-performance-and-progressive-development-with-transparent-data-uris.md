@@ -157,7 +157,7 @@ With the introduction of the new Chrome Pixel, x2 optimisation isn't enough - SV
 This technique is also good as the background-size property only applies to the SVG, so worst case if the browser supports SVG and the CSS3 property, or something went wrong, the PNG wouldn't be strangely sized.
 
 ### Live demo
-To view a live demo of the above technique (with some proper images), view my [jsFiddle](//jsfiddle.net/toddmotto/67BEq) and see what you think.
+To view a live demo of the above technique (with some proper images), view my [jsFiddle](//jsfiddle.net/toddmotto/67BEq) and see what you think. I encourage you to Inspect Element, and either delete the SVG background image (or untick it using dev tools), and watch the PNG fallback load in, proof that we've only loaded one image.
 
 ### Sass
 I'm a recent convert to Sass, and I love it. It's really easy to optimise all your CSS inside one selector wrap by doing the following:
