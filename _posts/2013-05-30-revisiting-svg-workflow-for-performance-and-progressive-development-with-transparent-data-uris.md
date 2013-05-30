@@ -82,7 +82,7 @@ Instead of using a _blank.gif_ physical image, we could trump Google a little an
 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="chromium">
 {% endhighlight %}
 
-It might look weird at first, but after a while you get used to it, and it starts to look pretty in a weird kind of way. If you're unsure what a Data URI is, please Google it, and then use [this tool]() for all your conversions. Data URIs are usually encoded in a base64 format, which syntax looks like so:
+It might look weird at first, but after a while you get used to it, and it starts to look pretty in a weird kind of way. If you're unsure what a Data URI is, please Google it, and then use [this tool](//websemantics.co.uk/online_tools/image_to_data_uri_convertor) for all your conversions. Data URIs are usually encoded in a base64 format, which syntax looks like so:
 
 {% highlight html %}
 data:[<mediatype>][;base64],<data>
