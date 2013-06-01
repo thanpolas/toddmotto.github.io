@@ -317,5 +317,11 @@ The old jBar used JavaScript for animating the bar and toggle up and down, but t
 ### Valid plugin configuration
 As above, the JSON configuration is very simple, but the laws of JSON are a lot more strict. In HTML and JavaScript development, we can use single or double quotes, JSON required double quotes at all times, which is why the attribute _data-jbar_ has single, so they don't conflict and divide up the element in strange ways.
 
+<div class="download-box">
+	<a href="//toddmotto.com/labs/jbar" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jBar', 'jBar Demo']);">Demo</a>
+	<a href="//github.com/toddmotto/jbar/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jBar', 'Download jBar']);">Download</a>
+	<a href="//github.com/toddmotto/jbar" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jBar', 'jBar Fork']);">Fork</a>
+</div>
+
 ### But I want to use Version 1.0.0
 Suit yourself, grab it [here](http://toddmotto.com/labs/jbar/jbar_v1.zip).
