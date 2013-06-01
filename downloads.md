@@ -118,8 +118,8 @@ layout: page
 	<div class="download-details">
 		<h2>jBar</h2>
 		<h4>The popular jBar plugin, a simple and lightweight notification banner for jQuery, easy customisation. Toggle the ribbon to show/hide.</h4>
-		<a href="//toddmotto.com/labs/jbar/" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
-		<a href="//toddmotto.com/labs/jbar/jbar.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
+		<a href="//toddmotto.com/labs/jbar/" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jBar', 'jBar Demo']);">Demo</a>
+		<a href="//toddmotto.com/labs/jbar/jbar_v2.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jBar', 'jBar Download']);">Download</a>
 		<a href="//toddmotto.com/jbar-plugin-the-jquery-call-to-action-bar">[article]</a>
 	</div>
 </div>
