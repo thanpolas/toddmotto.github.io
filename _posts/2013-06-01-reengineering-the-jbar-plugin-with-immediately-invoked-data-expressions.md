@@ -311,8 +311,10 @@ $(function () {
 })
 {% endhighlight %}
 
-### New technology advances
+### New technology advances, transitions and data URIs
 The old jBar used JavaScript for animating the bar and toggle up and down, but this is looking like a dying art now. CSS3 transitions are a much better way of handling animation events. Even Google are beginning to phase out JavaScript animation, the new Google+ UI uses CSS3 properties for transitions, including _linear_ and _cubic-bezier_ easing. This stuff is all baked into the browser and is by far the better way to develop. Yes, it does mean IE7 and IE8 won't have a smooth animation and the jBar wil literally just move instantly - but that's what progressive enhancement is all about - they've got the functionality and that's all that matters.
+
+The up and down jBar arrow images are also no longer images, they're data URIs, which means IE7 will not be able to render them. According to browser stats IE7 is pretty much non-existant. This also means that you don't need to upload any images to your directories to get it working, just the CSS which you're free to toy and destroy.
 
 ### Valid plugin configuration
 As above, the JSON configuration is very simple, but the laws of JSON are a lot more strict. In HTML and JavaScript development, we can use single or double quotes, JSON required double quotes at all times, which is why the attribute _data-jbar_ has single, so they don't conflict and divide up the element in strange ways.
