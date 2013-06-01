@@ -8,7 +8,7 @@ layout: page
 To get in touch about anything, email me:
 <a href="mailto:todd@toddmotto.com">todd@toddmotto.com</a>
 
-I'm not currently looking for job opportunities or other arrangements.
+I'm not currently looking for job opportunities or other arrangements. If you're wondering about Licensing restrictions, please check out the [Licensing](/licensing) page.
 
 ### Code support/queries or ideas
 
