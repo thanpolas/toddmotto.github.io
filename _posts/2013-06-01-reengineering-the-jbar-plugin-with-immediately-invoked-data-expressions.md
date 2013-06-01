@@ -52,12 +52,12 @@ Here's the old plugin configuration for the jBar version 1.0.0:
 Sure it looks okay, but it's not needed at all. We pass the plugin a bunch of _options_ which are then parsed through the plugin logic and it outputs your code entirely.
 
 ### No more default options
-One thing you're probably used to seeing is jQuery plugin _defaults_ that are actually inside the plugin script itself which you essentially override with your own _options_ when you call the script. Using the IIDE methodology, I decided this wasn't at all necessary and completely ignored the need for it. Why? Because it's not really needed either - the defaults are in the markup for one, and secondly, we can check to see if the user has added the JSON data to the data-* attribute and run a function if necesary - light work.
+One thing you're probably used to seeing is jQuery plugin _defaults_ that are actually inside the plugin script itself which you essentially override with your own _options_ when you call the script. Using the IIDE methodology, I decided this wasn't at all necessary and completely ignored the need for it. Why? Because it's not really needed either - the defaults are in the markup for one, and secondly, we can check to see if the user has added the JSON data to the data-&#42; attribute and run a function if necesary - light work.
 
 ### New plugin development + config
-I'm an advocate for ideas and changing things, not without good reason though, but generally because things make sense and following the direction of the industry. I really see this methodology pushing the way for future plugin development, and web development in general. I use IIDE for a lot of my application development work, with data-* attributes the possibilities are endless.
+I'm an advocate for ideas and changing things, not without good reason though, but generally because things make sense and following the direction of the industry. I really see this methodology pushing the way for future plugin development, and web development in general. I use IIDE for a lot of my application development work, with data-&#42; attributes the possibilities are endless.
 
-Here's the new configuration, the HTML with a data-* attribute named _data-init="jbar"_. In my previous article on IIDE, I mention using data-init to boot plugins is a fantastic way to get them initialised. Alongside the _data-init_, I have _data-jbar_ with a JSON config of my plugins options. This makes the process of integrating the plugin much easier for website authors (who generally find it difficult to integrate options and such into their page). It also makes things a lot easier with avoiding JavaScript errors. The plugin is created in the script file, all the intelligent work is done, we don't have to call it, add a script configuration to a particular element, we also don't have to worry about the global _.jbar_ class conflicting with other classnames that are potentially appended to it as all JavaScript logic is run through the data-* attribute - completely separate. It would also be quite difficult to get this to error, whereas when dealing with live JavaScript, sometimes the positioning of your script can have an erroring effect.
+Here's the new configuration, the HTML with a data-&#42; attribute named _data-init="jbar"_. In my previous article on IIDE, I mention using data-init to boot plugins is a fantastic way to get them initialised. Alongside the _data-init_, I have _data-jbar_ with a JSON config of my plugins options. This makes the process of integrating the plugin much easier for website authors (who generally find it difficult to integrate options and such into their page). It also makes things a lot easier with avoiding JavaScript errors. The plugin is created in the script file, all the intelligent work is done, we don't have to call it, add a script configuration to a particular element, we also don't have to worry about the global _.jbar_ class conflicting with other classnames that are potentially appended to it as all JavaScript logic is run through the data-&#42; attribute - completely separate. It would also be quite difficult to get this to error, whereas when dealing with live JavaScript, sometimes the positioning of your script can have an erroring effect.
 
 {% highlight html %}
 <div class="jbar" data-init="jbar" data-jbar='{
@@ -274,7 +274,7 @@ var jBar = function (elem) {
 }
 {% endhighlight %}
 
-You'll notice at the end we have _this.jsonConfig_ which uses the _.data()_ API from jQuery (conveniently parsing our JSON for us - jQuery will recognise JSON inside data-* attributes and return it).
+You'll notice at the end we have _this.jsonConfig_ which uses the _.data()_ API from jQuery (conveniently parsing our JSON for us - jQuery will recognise JSON inside data-&#42; attributes and return it).
 
 To get the message that you'd specify in the HTML, we'd now simply do this:
 
