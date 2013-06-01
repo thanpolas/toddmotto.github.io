@@ -1,10 +1,9 @@
-/*
+/*!
 	Todd Motto
-	URL: www.toddmotto.com
 */
 
 /*------------------------------------*\
-    RESET
+	RESET
 \*------------------------------------*/
 
 *,
@@ -19,210 +18,253 @@
 	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
+body {
+	background:#F1F1F1;
+	color:#717171;
+	font:100 14px/1.4 'Museo Slab 500', Helvetica, Arial;
+}
 img {
 	max-width:100%;
 	vertical-align:bottom;
 }
-a img {
-	border:0;
-}
-
-/*------------------------------------*\
-    MAIN
-\*------------------------------------*/
-
-body {
-	font:100 15px/1.6 'Museo Slab 500', Helvetica, Arial, sans-serif;
-	color:#717171;
-	background:#DDD;
+a {
+	color:#0099CC;
+	outline:0;
+	text-decoration:none;
+	img {
+		border:0;
+	}
 }
 h1,
 h2,
-h3,
-h4,
-h5 {
-	color:#2BA6CB;
+h3 {
 	font-weight:100;
 }
+h1,
+h2 {
+	font-size:18px;
+}
 h3 {
-	margin:20px 0 20px -45px;
-	border-left:5px solid #2BA6CB;
-	padding:0 0 0 40px;
+	margin:20px -35px;
+	padding:20px 0 20px 35px;
+	color:#0099CC;
+	background:#F9F9F9;
 }
-a,
-a:hover,
-a:visited {
-	color:#2BA6CB;
-	text-decoration:none;
+ul {
+	list-style:none;
 }
-p {
-	margin:0 0 20px;
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
 }
 
 /*------------------------------------*\
-    STRUCTURE
+	STRUCTURE
 \*------------------------------------*/
 
 .wrapper {
-	max-width:1280px;
 	width:95%;
 	margin:0 auto;
 	position:relative;
 }
-.main {
-	float:left;
-	width:100%;
-}
 .header {
-	border-left:8px solid #2BA6CB;
-	margin:20px 0;
-	overflow:hidden;
-}
-.footer {
-	margin:20px 0;
-	padding:20px;
-	background:#444;
-	color:#FFF;
-	float:left;
-	width:100%;
+	background:#0099CC;
+	position:relative;
+	z-index:1;
+	padding:20px 0;
+	height:101px;
 }
 .logo {
 	float:left;
+	a {
+		display:block;
+	}
 }
-.logo a {
-	display:block;
-}
-.no-svg .logo-img,
-.logo-img {
+.logo__img {
 	background:url(../img/logo.png) no-repeat;
 	height:61px;
 	width:136px;
-}
-.svg .logo-img {
-	background:url(../img/logo.svg) no-repeat;
-	background-size:136px 61px;
+	.svg & {
+		background:url(../img/logo.svg) no-repeat;
+		background-size:136px 61px;
+	}
 }
 .nav {
 	float:right;
-	margin:15px 0 0 0;
+	margin:5px 0 0;
 }
-.nav li {
+.nav__item {
 	display:inline-block;
 	*display:inline;
 	zoom:1;
-}
-.nav li a {
-	display:block;
-	padding:5px 10px;
-}
-#nav #mobile,
-#nav .mobile {
-	display:none;
+	a {
+		color:#FFF;
+		background:#0089B7;
+		display:block;
+		padding:15px 20px;
+		&:hover {
+			background:#017DA7;
+		}
+	}
 }
 .sidebar {
-	position:absolute;
-	right:0;
+	position:fixed;
+	z-index:2;
 	width:320px;
 }
-.sidebar img[src*="todd.jpg"] {
-	width:100%;
+.sidebar__profile {
+	
 }
-.box {
-	padding:40px;
-	background:#FFF;
+.sidebar__bio {
+	padding:10px 15px;
+	color:#444;
+	a {
+		color:#0099CC;
+		&:hover {
+			border-bottom:2px solid #BBB;
+		}
+	}
+}
+.sidebar__items {
+	li {
+		padding:5px 15px;
+		width:100%;
+	}
+}
+.sidebar--carbon {
+	margin:0 0 10px 0 !important;
+	&.carbonad {
+		border:0 !important;
+		width:100% !important;
+		background:rgba(0,0,0,0.04) !important;
+		a {
+			color:#222 !important;
+		}
+	}
+}
+.footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:2;
+	width:320px;
+	padding:15px 25px;
+	background:#444;
+	color:#888;
+	a {
+		color:#CCC;
+		&:hover {
+			border-bottom:2px solid #DDD;
+		}
+	}
+}
+.main {
+	position:absolute;
+	top:101px;
+	right:0;
+	bottom:0;
+	left:320px;
+	overflow-y:scroll;
+}
+.posts {
+	
+}
+.posts__item {
+	a {
+		display:block;
+		background:#FFF;
+		padding:35px;
+		&:hover {
+			background:#F9F9F9;
+		}
+	}
 }
 .full-post {
-	min-height:600px;
+	padding:35px;
 	background:#FFF;
-	padding:45px;
-	margin:0 340px 0 0;
+	p {
+		color:#717171;
+		margin:0 0 20px;
+	}
+	ol {
+		margin:0 0 15px 30px;
+	}
 }
-.full-post ol {
-	margin:0 0 15px 30px;
+.download-box {
+	a {
+		display:inline-block;
+		*display:inline;
+		zoom:1;
+		padding:10px 25px;
+		color:#FFF;
+		background:#444;
+		margin:5px 15px 25px 0;
+		&:hover {
+			color:#2BA6CB;
+		    background:#333;
+		}
+	}
 }
-.full-title {
-	color:#2BA6CB;
-	font-size:20px;
-	margin:0 0 35px;
+.full-post__title {
+	margin:0 0 25px;
+	color:#0099CC;
 }
-.posts-list {
-	list-style:none;
-}
-.post {
-	border-bottom:1px solid #EEE;
-	margin:0 340px 0 0;
-}
-.post a {
-	border-left:8px solid #CCC;
-	display:block;
-	font-size:16px;
-}
-.post a:hover {
-	border-left:8px solid #2BA6CB;
-}
-.post-title {
-	font-size:16px;
-}
-.post-date {
-	display:block;
-	color:#444;
-	font-size:12px;
-}
-.hidden {
-	display:none;
+.post__date {
+	color:#0099CC;
 }
 .pagination {
-	margin:0 340px 0 0;
 	background:#444;
 	color:#888;
 	overflow:hidden;
-}
-.pagination a {
-	color:#FFF;
-}
-.pagination a:hover {
-    color:#2BA6CB;
-    background:#333;
+	a {
+		color:#FFF;
+		&:hover {
+			color:#0099CC;
+			background:#333;
+		}
+	}
 }
 .pagination a,
 .pagination span {
 	padding:15px 25px;
 	display:inline-block;
+	*display:inline;
+	zoom:1;
 }
-.pagination-previous {
+.pagination--previous {
 	float:left;
 	width:50%;
 }
-.pagination-next {
+.pagination--next {
 	text-align:right;
 	float:right;
 	width:50%;
 }
-.item {
-	margin:0 0 20px;
-	background:#444;
+.social {
 	padding:20px;
-	color:#FFF;
-	font-size:13px;
+	background:#F9F9F9;
+	border:1px solid #E5E5E5;
+	margin:30px 0 50px;
 }
-iframe[src*="twitter"] {
-	vertical-align:top;
-}
-#carbonads {
-	margin:0 0 20px;
-	background:#444;
-	text-align:center;
-	height:118px;
-}
-.carbonad {
-	text-align:left;
+.social__button {
 	display:inline-block;
-	border:0 !important;
-	width:320px !important;
-	background-color:#444 !important;
+	vertical-align:top;
+	*display:inline;
+	zoom:1;
+	width:100px;
+	height:20px;
 }
-.item-fb {
-	height:71px;
+.disqus {
+	margin:50px 0 0;
 }
 #fb-root {
 	display:none;
@@ -239,67 +281,42 @@ iframe[src*="twitter"] {
 .download-item {
 	margin:0 0 25px;
 	overflow:hidden;
-}
-.download-item a {
-	display:inline-block;
-	padding:5px 15px;
-	color:#FFF;
-	background:#444;
-	margin:5px 5px 25px 0;
+	img {
+		max-width:30%;
+		float:left;
+	}
+	a {
+		display:inline-block;
+		padding:10px 15px;
+		color:#FFF;
+		background:#444;
+		margin:5px 5px 25px 0;
+		&:hover {
+			color:#2BA6CB;
+		    background:#333;
+		}
+	}
+	h4 {
+		font-weight:100;
+	}
 }
 .download-details {
 	padding:0 0 0 20px;
 	width:70%;
 	float:left;
 }
-.download-item img {
-	width:30%;
-	float:left;
-}
-.download-box a {
-	display:inline-block;
-	padding:10px 25px;
-	color:#FFF;
-	background:#444;
-	margin:5px 15px 25px 0;
-}
-.download-box a:hover {
-	color:#2BA6CB;
-    background:#333;
-}
-.disqus {
-	margin:50px 0 0;
-}
-.social {
-	padding:20px;
-	background:#F9F9F9;
-	border:1px solid #E5E5E5;
-	margin:30px 0 50px;
-}
-.social-button {
-	display:inline-block;
-	vertical-align:top;
-	*display:inline;
-	zoom:1;
-	width:100px;
-	height:20px;
-}
-.post-list {
-	margin:0 0 20px 25px;
-	color:#2BA6CB;
-}
 
 /*------------------------------------*\
-    TYPOGRAPHY
+	TYPOGRAPHY
 \*------------------------------------*/
 
 @font-face {
 	font-family:'Museo Slab 500';
-	src:url('fonts/Museo_Slab_500-webfont.eot');
-	src:url('fonts/Museo_Slab_500-webfont.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Museo_Slab_500-webfont.woff') format('woff'),
-		url('fonts/Museo_Slab_500-webfont.ttf') format('truetype'),
-		url('fonts/Museo_Slab_500-webfont.svg#MuseoSlab500Regular') format('svg');
+	src:url('../fonts/Museo_Slab_500-webfont.eot');
+	src:url('../fonts/Museo_Slab_500-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Museo_Slab_500-webfont.woff') format('woff'),
+		url('../fonts/Museo_Slab_500-webfont.ttf') format('truetype'),
+		url('../fonts/Museo_Slab_500-webfont.svg#MuseoSlab500Regular') format('svg');
 	font-weight:normal;
 	font-style:normal;
 }
@@ -312,90 +329,66 @@ iframe[src*="twitter"] {
 	.wrapper {
 		width:100%;
 	}
-	.header {
-		margin:0 0 20px;
+	.main {
+		overflow-y:auto;
 	}
+	.main,
+	.sidebar,
 	.footer {
-		margin:0;
-	}
-	#nav .mobile {
-		display:block;
-		font-size:30px;
-		color:#FFF;
-		position:absolute;
-		top:50px;
-		right:25px;
-		background:#444 url(img/nav.svg) no-repeat center center;
-		height:40px;
-		width:40px;
-		border-radius:5px;
-	}
-	#nav ul {
-		display:none;
-	}
-	#nav #mobile {
-		display:block;
-		position:absolute;
-		top:50px;
-		right:25px;
-		height:40px;
-		width:40px;
-		opacity:0;
-		cursor:pointer;
-		z-index:1;
-	}
-	.sidebar {
 		position:static;
 		width:100%;
+	}
+	.logo {
 		text-align:center;
-		float:left;
-		margin:25px 0 0;
+		width:100%;
 	}
-	.full-post,
-	.pagination,
-	.post {
-		margin:0;
+	.nav {
+		margin:20px 0 0;
+		overflow:hidden;
+		width:100%;
 	}
-	.full-post {
-		padding:30px;
+	.nav__item {
+		width:50%;
+		text-align:center;
 	}
-	h3 {
-		margin:20px 0 20px -30px;
-		padding:0 0 0 25px;
+	.sidebar__profile {
+		width:100%;
 	}
-	.carbonad {
-		text-align:left;
-		width:300px !important;
+	.footer {
+		text-align:center;
 	}
-	.carbonad-text {
-		width:118px !important;
+}
+@media only screen and (min-width: 769px) {
+	::-webkit-scrollbar {
+	    width:10px;
+	    height:10px;
+	}
+	::-webkit-scrollbar-track {
+	    background:#FFF;
+	    -webkit-box-shadow:inset 1px 1px 2px rgba(0,0,0,0.1);
+	}
+	::-webkit-scrollbar-thumb {
+	    background:#CCC;
+	    -webkit-box-shadow:inset 1px 1px 2px rgba(0,0,0,0.2);
+	    &:hover {
+	    	background:#AAA;
+	    }
+	    &:active {
+	    	background:#888;
+			-webkit-box-shadow:inset 1px 1px 2px rgba(0,0,0,0.3);
+		}
 	}
 }
 
 /*------------------------------------*\
-    MISC
+	SYNTAX HIGHLIGHTING
 \*------------------------------------*/
 
-a:hover {
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
-	transition:all 0.3s ease-in-out;
-}
-
-/*------------------------------------*\
-    SYNTAX HIGHLIGHTING
-\*------------------------------------*/
-
-.highlight  {
-	background:#272821;
+.highlight {
+	background:#333;
 	color:#F6F3E8;
 	padding:35px;
 	margin:30px 0;
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
 	overflow-x:scroll;
 }
 .highlight .hll { background-color: #ffffcc }

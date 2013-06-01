@@ -4,12 +4,12 @@ title: Todd Motto
 ---
 
 				<section class="posts">
-					<ul class="posts-list">
+					<ul>
 						{% for post in paginator.posts %}
-						<li class="post">
-							<a href="{{ post.url }}" class="box transition">
-								<h2 class="post-title">{{ post.title }}</h2>
-								<span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+						<li class="posts__item">
+							<a href="{{ post.url }}">
+								<h2 class="post__title">{{ post.title }}</h2>
+								<span class="post__date">{{ post.date | date: "%B %e, %Y" }}</span>
 							</a>
 						</li>
 						{% endfor %}
@@ -17,17 +17,17 @@ title: Todd Motto
 					<div class="pagination">
 							{% if paginator.previous_page %}
 							{% if paginator.previous_page == 1 %}
-								<a href="/" class="pagination-previous">Previous</a>
+								<a href="/" class="pagination--previous">Previous</a>
 							{% else %}
-								<a href="/page{{paginator.previous_page}}" class="pagination-previous">Previous</a>
+								<a href="/page{{paginator.previous_page}}" class="pagination--previous">Previous</a>
 							{% endif %}
 							{% else %}
-								<span class="pagination-previous">Previous</span>
+								<span class="pagination--previous">Previous</span>
 							{% endif %}
 							{% if paginator.next_page %}
-								<a href="/page{{paginator.next_page}}" class="pagination-next">Next</a>
+								<a href="/page{{paginator.next_page}}" class="pagination--next">Next</a>
 							{% else %}
-								<span class="pagination-next">Next</span>
+								<span class="pagination--next">Next</span>
 							{% endif %}
 					</div>
 				</section>

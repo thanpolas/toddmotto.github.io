@@ -1,108 +1,21 @@
-<!doctype html>
-<html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<title>{{ page.title }}</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="description" content="Articles, tutorials and downloads on front-end development. HTML5, CSS3, JavaScript.">
-		
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
-		<link href="//plus.google.com/104299354981726045306" rel="author">
-		<link href="/style.css" rel="stylesheet">
-		
-		<!-- javascript -->
-		<script>
-		!function(){
-			document.documentElement.className = 'js'
-			function supportsSVG() { return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect }
-			if (supportsSVG()) document.documentElement.className += ' svg'
-			else document.documentElement.className += ' no-svg'
-		}()
-		</script>
-		
-		<!--[if lte IE 8]>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-	
-		<!-- wrapper -->
-		<div class="wrapper">
-		
-			<!-- header -->
-			<header class="header box" role="banner">
-			
-				<!-- logo -->
-				<div class="logo">
-					<a href="/">
-						<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="logo-img" alt="Logo">
-					</a>
-				</div>
-				<!-- /logo -->
-				
-				<!-- nav -->
-				<nav id="nav" data-js="nav" role="navigation">
-					<ul class="nav">
-						<li><a href="/">Latest</a></li>
-						<li><a href="/about">About</a></li>
-						<li><a href="/downloads">Downloads</a></li>
-						<li><a href="/licensing">Licensing</a></li>
-						<li><a href="/contact">Contact</a></li>
-					</ul>
-				</nav>
-				<!-- /nav -->
-				
-			</header>
-			<!-- /header -->
+{% include header.html %}
 			
 			<!-- main -->
-			<section class="main">
+			<div class="main" role="main">
 				{{ content }}
-			</section>
+			</div>
 			<!-- /main -->
 			
-			<!-- sidebar -->
-			<aside class="sidebar" role="complementary">
-				<img src="/img/todd.jpg" alt="Todd Motto">
-				<p class="item">
-					Todd Motto. Front-end web developer. HTML5 and CSS3 lover, JavaScript and jQuery addict. 
-					I make stuff like <a href="//conditionizr.com" target="_blank">Conditionizr</a> and 
-					<a href="//html5blank.com" target="_blank">HTML5 Blank</a>.
-				</p>
-				<div id="carbonads">
-					<div class="carbonad">
-						<div id="azcarbon"></div>
-					</div>
-					<div id="bsap_1277686" class="bsarocks bsap_6b437ea62f74be534e3b9d72fcdeb8ff"></div>
-				</div>
-				<div class="item item-fb">
-					<div class="fb-like" data-href="http://facebook.com/toddmottoblog" data-send="false" 
-					data-width="100" data-show-faces="false" data-colorscheme="dark"></div>
-					<div id="fb-root"></div>
-				</div>
-				<div class="item">
-					<a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true">Follow @toddmotto</a>
-				</div>
-			</aside>
-			<!-- /sidebar -->
+{% include sidebar.html %}
 			
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-				&copy; {{ 'now' | date: "%Y" }} Todd Motto. 
-				Powered by <a href="//github.com/mojombo/jekyll">Jekyll</a>, 
-				site source code hosted on <a href="//github.com/toddmotto/toddmotto.github.com">GitHub</a>.
-				Grab the <a href="//feeds.feedburner.com/toddmotto" target="_blank">RSS feed</a>.
-			</footer>
-			<!-- /footer -->
-			
-		</div>
+{% include footer.html %}
 		
-		<script src="/js/scripts.js"></script>
+		<script src="/ironman/js/scripts.js"></script>
 		<script>
-		var _gaq=[['_setAccount','UA-20440416-10'],['_setDomainName', 'toddmotto.com'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src='//www.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)})(document,'script');
+			var _gaq=[['_setAccount','UA-20440416-10'],['_setDomainName', 'toddmotto.com'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src='//www.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)})(document,'script');
 		</script>
 	</body>
 </html>
