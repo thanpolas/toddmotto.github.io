@@ -7,7 +7,8 @@ title: Todd Motto
 					<ul>
 						{% for post in paginator.posts %}
 						<li class="posts__item">
-							<a href="{{ post.url }}">
+							{% if post.external %}<a href="{{ post.external }}">
+							{% else %}<a href="{{ post.url }}">{% endif %}
 								<h2 class="post__title">{{ post.title }}</h2>
 								<span class="post__date">{{ post.date | date: "%B %e, %Y" }}</span>
 							</a>
