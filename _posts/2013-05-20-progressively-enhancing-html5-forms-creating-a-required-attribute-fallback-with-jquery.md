@@ -4,7 +4,7 @@ permalink: /progressively-enhancing-html5-forms-creating-a-required-attribute-fa
 title: Progressively enhancing HTML5 forms, creating a required attribute fallback with jQuery
 ---
 
-Note: this article first featured on [Tech.Pro](//tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery)
+Note: this article first featured on [Tech.Pro](//tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery), please check out the full article there.
 
 HTML5 required attributes are a fantastic addition to the HTML5 spec, they save a lot of time when working on client-side form validation and enhance the user's experience. The HTML5 required attribute provides us with full client-side 'required' checking and validation, which is easy to add to several types of form elements.
 
@@ -56,6 +56,9 @@ if (!supportsRequired) {
 }
 {% endhighlight %}
 
+Note: this article first featured on [Tech.Pro](//tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery), please check out the full article there.
+
+<div style="display:none;">
 ### Adding the required attributes
 This is easily done as you can see from the introduction, adding a required attribute to our markup is really simple (here I've created a quick form with some different input fields). The below fields include various input types: _text_, _email_, _tel_, _url_, _radio_, _checkbox_ as well as the _textarea_ element. Let's add the required attributes where appropriate (we only need to add the required attribute once to radio and checkboxes with the same _name_ attribute):
 
@@ -523,3 +526,4 @@ And the JavaScript:
 {% highlight javascript %}
 document.querySelector('.test').setCustomValidity('Custom alert message, please fill this field in.')
 {% endhighlight %}
+</div>
