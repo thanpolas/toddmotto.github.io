@@ -329,14 +329,15 @@ ul {
 	.wrapper {
 		width:100%;
 	}
-	.main {
-		overflow-y:auto;
-	}
+	.header,
 	.main,
 	.sidebar,
 	.footer {
 		position:static;
 		width:100%;
+	}
+	.main {
+		margin:0;
 	}
 	.logo {
 		text-align:center;
