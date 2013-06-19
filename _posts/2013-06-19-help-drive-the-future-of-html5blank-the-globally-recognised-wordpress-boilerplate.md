@@ -11,6 +11,7 @@ HTML5 Blank has proved to be one of the top choices to starting WordPress projec
 The point of my post is; I rarely build WordPress websites anymore. I'm no longer actively keeping up-to-date with WordPress, I update the front-end HTML5 bare-bones within HTML5 Blank and refactor CSS/HTML and add new HTML5 practices when available, but the WordPress APIs and functionality I'm slowing dropping out the loop due to my idleness in the WordPress dev-scene.
 
 If you're up for the challenge, I'm looking for:
+
 * An open source advocate who loves WordPress and is actively involved in API/system updates
 * Strong love for HTML5 technology
 * Great ideas and discussion skills to talk through new HTML5 Blank releases
