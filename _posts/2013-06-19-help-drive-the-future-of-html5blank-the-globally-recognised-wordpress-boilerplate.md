@@ -12,11 +12,11 @@ The point of my post is; I rarely build WordPress websites anymore. I'm no longe
 
 If you're up for the challenge, I'm looking for:
 
-* An open source advocate who loves WordPress and is actively involved in API/system updates
-* Strong love for HTML5 technology
-* Great ideas and discussion skills to talk through new HTML5 Blank releases
-* Potentially assist with any comments on the landing page
-* Advice on anything else
+1. An open source advocate who loves WordPress and is actively involved in API/system updates
+2. Strong love for HTML5 technology
+3. Great ideas and discussion skills to talk through new HTML5 Blank releases
+4. Potentially assist with any comments on the landing page
+5. Advice on anything else
 
 And of course, I will credit you (profile shot, short bio) on the HTML5 Blank site with your specific role in maintaining the project, which will likely be a good traffic driver.
 
