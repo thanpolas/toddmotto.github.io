@@ -18,7 +18,7 @@ The demo includes both a YouTube and Vimeo iframe embed, both at different aspec
 
 <div class="download-box">
 	<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/fluidvids/fluidvids.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
+	<a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
 	<a href="//github.com/toddmotto/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork FluidVids, 'FluidVids Fork']);">Fork</a>
 </div>
 
@@ -27,7 +27,7 @@ The demo includes both a YouTube and Vimeo iframe embed, both at different aspec
 Before attacking our iframe and ripping the attributes off it, let’s have a think of what we can use. Let’s look at our YouTube iframe:
 
 {% highlight html %}
-<iframe width="560" height="315" src="//www.youtube.com/embed/JMl8cQjBfqk" frameborder="0" allowfullscreen></iframe>
+<iframe src="//www.youtube.com/embed/JMl8cQjBfqk" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 {% endhighlight %}
 
 A width and height attribute already exist, I see no reason to ‘remove’ these like other plugins, let’s simply overwrite them with our future code. The inline width and height attributes may be oldschool, but they’re here for a reason this time – so let’s keep them. It saves extra lines of markup removing the attributes and adding new inline styles.
@@ -103,11 +103,11 @@ iframe.style.width = '';
 Now we've added some styles to our iframes, they're all ready to go. But now we need to wrap them in a  with fluid properties.
 
 {% highlight javascript %}
-var div = document.createElement('div');
-div.className = 'video-wrap';
-div.style.width = '100%';
-div.style.position = 'relative';
-div.style.paddingTop = videoRatio + '%';
+var wrap = document.createElement('div');
+wrap.className = 'fluid-vids';
+wrap.style.width = '100%';
+wrap.style.position = 'relative';
+wrap.style.paddingTop = videoRatio + '%';
 {% endhighlight %}
 
 The trick I've used here is to apply the styles inline, using style="", instead of injecting styles into the  - saving additional script. What I have done though is include a class, which is appended to the div, for extra styling purposes should you need it. You'll notice at the end, we bring back our videoRatio (which we multiplied by 100 to use as a percentage). Then we add this figure to a percentage sign, which uses padding-top to 'emulate' the video aspect ratio. It's merely a clever hack-trick, but a brilliant one (used in FitVids but taken from A List Apart).
@@ -117,12 +117,12 @@ The trick I've used here is to apply the styles inline, using style="", instead 
 Our script is almost complete, we just need to wrap our iframe in our newly created div. This is similar to jQuery's $.wrap(); function.
 
 {% highlight javascript %}
-var parentNode = iframe.parentNode;
-parentNode.insertBefore(div, iframe);
-div.appendChild(iframe);
+var iframeParent = iframe.parentNode;
+iframeParent.insertBefore(wrap, iframe);
+wrap.appendChild(iframe);
 {% endhighlight %}
 
-### Putting it all together
+### Putting it all together (now updated to v1.1.0)
 
 Here's what our finished script looks like. The things we've been able to achieve are:  
 - Plugin/jQuery free  
@@ -131,33 +131,69 @@ Here's what our finished script looks like. The things we've been able to achiev
 - Enhanced performance
 
 {% highlight javascript %}
-(function() {
-	var iframes = document.getElementsByTagName('iframe');
-	
-	for (var i = 0; i < iframes.length; i++) {
-		var iframe = iframes[i];
-		var players = /www.youtube.com|player.vimeo.com/;
-		if(iframe.src.search(players) !== -1) {
-			var videoRatio = (iframe.height / iframe.width) * 100;
+(function ( window, document, undefined ) {
+
+	/*
+	 * Grab all iframes on the page or return
+	 */
+	var iframes = document.getElementsByTagName( 'iframe' );
+
+	/*
+	 * Loop through the iframes array
+	 */
+	for ( var i = 0; i < iframes.length; i++ ) {
+
+		var iframe = iframes[i],
+
+		/*
+	     * RegExp, extend this if you need more players
+	     */
+		players = /www.youtube.com|player.vimeo.com/;
+
+		/*
+		 * If the RegExp pattern exists within the current iframe
+		 */
+		if ( iframe.src.search( players ) > 0 ) {
+
+			/*
+			 * Calculate the video ratio based on the iframe's w/h dimensions
+			 */
+			var videoRatio        = ( iframe.height / iframe.width ) * 100;
 			
+			/*
+			 * Replace the iframe's dimensions and position
+			 * the iframe absolute, this is the trick to emulate
+			 * the video ratio
+			 */
 			iframe.style.position = 'absolute';
-			iframe.style.top = '0';
-			iframe.style.left = '0';
-			iframe.width = '100%';
-			iframe.height = '100%';
+			iframe.style.top      = '0';
+			iframe.style.left     = '0';
+			iframe.width          = '100%';
+			iframe.height         = '100%';
 			
-			var div = document.createElement('div');
-			div.className = 'video-wrap';
-			div.style.width = '100%';
-			div.style.position = 'relative';
-			div.style.paddingTop = videoRatio + '%';
+			/*
+			 * Wrap the iframe in a new <div> which uses a
+			 * dynamically fetched padding-top property based
+			 * on the video's w/h dimensions
+			 */
+			var wrap              = document.createElement( 'div' );
+			wrap.className        = 'fluid-vids';
+			wrap.style.width      = '100%';
+			wrap.style.position   = 'relative';
+			wrap.style.paddingTop = videoRatio + '%';
 			
-			var parentNode = iframe.parentNode;
-			parentNode.insertBefore(div, iframe);
-			div.appendChild(iframe);
+			/*
+			 * Add the iframe inside our newly created <div>
+			 */
+			var iframeParent      = iframe.parentNode;
+			iframeParent.insertBefore( wrap, iframe );
+			wrap.appendChild( iframe );
+
 		}
+
 	}
-})();
+
+})( window, document );
 {% endhighlight %}
 
 ### Usage
@@ -170,6 +206,6 @@ I've tested in Chrome, FireFox, Opera, Safari, IE7, IE8 and IE9, and all is well
 
 <div class="download-box">
 	<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/fluidvids/fluidvids.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
+	<a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
 	<a href="//github.com/toddmotto/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork FluidVids, 'FluidVids Fork']);">Fork</a>
 </div>

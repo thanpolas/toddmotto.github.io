@@ -14,6 +14,16 @@ layout: page
 	</div>
 </div>
 <div class="download-item">
+	<img src="/img/downloads/fluidvids.jpg" alt="FluidVids">
+	<div class="download-details">
+		<h2>FluidVids</h2>
+		<h4>A raw JavaScript alternative to FitVids jQuery plugin, fluid-width video embeds for responsive design, works faster, more efficient.</h4>
+		<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
+		<a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
+		<a href="//toddmotto.com/fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js">[article]</a>
+	</div>
+</div>
+<div class="download-item">
 	<img src="/img/downloads/superbox.jpg" alt="SuperBox">
 	<div class="download-details">
 		<h2>SuperBox</h2>
@@ -31,16 +41,6 @@ layout: page
 		<a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
 	<a href="//toddmotto.com/labs/data-tabs/data-tabs.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Data Tabs, 'Data Tabs Download']);">Download</a>
 		<a href="//toddmotto.com/simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse/">[article]</a>
-	</div>
-</div>
-<div class="download-item">
-	<img src="/img/downloads/fluidvids.jpg" alt="FluidVids">
-	<div class="download-details">
-		<h2>FluidVids</h2>
-		<h4>A raw JavaScript alternative to FitVids jQuery plugin, fluid-width video embeds for responsive design, works faster, more efficient.</h4>
-		<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
-		<a href="//toddmotto.com/labs/fluidvids/fluidvids.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
-		<a href="//toddmotto.com/fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js">[article]</a>
 	</div>
 </div>
 <div class="download-item">
