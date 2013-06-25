@@ -17,7 +17,7 @@ jQuery selectors are the big seller, we don't even have to think about it, selec
 JavaScript had no native _className_ method for grabbing elements with classes until fairly recent, which I feel has hindered it's popularity from the start. Classes are the best for our HTML/CSS development, but weren't well supported with native JavaScript - makes sense not to want to 'learn JavaScript' and go with jQuery. Until now.
 
 Let's look at the options:
-% highlight javascript %}
+{% highlight javascript %}
 // jQuery
 $('.myClass');
 
@@ -31,7 +31,7 @@ _Pro tip:_ the difference between jQuery and native JavaScript when using select
 
 #### ID selectors
 The easiest of the pack:
-% highlight javascript %}
+{% highlight javascript %}
 // jQuery
 $('#myID');
 
@@ -44,7 +44,7 @@ Returns a single Node.
 #### Tags
 As easy as the ID selector, the tag name selector returns a NodeList too:
 
-% highlight javascript %}
+{% highlight javascript %}
 // jQuery
 $('div');
 
@@ -59,7 +59,7 @@ The magic behind querySelector is astounding, it's a multi-purpose native tool t
 
 Let's look at some examples, read the comments for better clarification:
 
-% highlight javascript %}
+{% highlight javascript %}
 /*
  * Classes
  */
@@ -84,7 +84,7 @@ document.querySelectorAll('div');
 
 querySelectorAll is powerful, and definitely the future. It also supports more complicated selectors like so:
 
-% highlight javascript %}
+{% highlight javascript %}
 // Grab the last list Node of .someList unordered list
 document.querySelector('ul.someList li:last-child');
 
