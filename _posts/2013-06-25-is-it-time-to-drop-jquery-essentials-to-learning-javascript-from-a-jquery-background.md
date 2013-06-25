@@ -236,15 +236,15 @@ console.log(document.querySelector('.myClass').getAttribute('title'));
 HTML5 data-* attributes are probably one of the best additions to the HTML specification ever, IMO of course. I use the jQuery _.data();_ API all the time, and also the native JavaScript if it's required:
 
 {% highlight html %}
-<div class="myElem" data-username="Todd"></div>
+&lt;div class="myElem" data-username="Todd"&gt;&lt;/div&gt;
 
-<script>
+&lt;script&gt;
 // jQuery
 console.log($('.myElem').data('username')); // Logs 'Todd'
 
 // JavaScript - use the getAttribute method, fairly static
 console.log(document.querySelector('.myElem').getAttribute('data-username'));
-</script>
+&lt;/script&gt;
 {% endhighlight %}
 
 HTML5 introduces the _dataset_ API, which browser support isn't bad, I don't think IE9/10 even support it. For heavy _.data();_ usage, I recommend jQuery as it works in all browsers - even legacy.
@@ -253,9 +253,9 @@ HTML5 introduces the _dataset_ API, which browser support isn't bad, I don't thi
 There are neat tricks we can do to parse JSON and create objects too even in plain ol' JavaScript. It's pretty much the same! Let's take an HTML5 custom data-* attribute for a JSON example, grab the attribute, parse the JSON into an Object and then hook into that object:
 
 {% highlight html %}
-<div class="myElem" data-user='{ "name" : "Todd", "id" : "01282183" }'></div>
+&lt;div class="myElem" data-user='{ "name" : "Todd", "id" : "01282183" }'&gt;&lt;/div&gt;
 
-<script>
+&lt;script&gt;
 // jQuery
 var myElem = $('.myElem').data('user'); // Gets the JSON
 var myJSON = $.parseJSON(myElem); // Parses string into JSON Object
@@ -267,7 +267,7 @@ var myElem = document.querySelector('.myElem').getAttribute('data-user');
 var myJSON = JSON.parse(myElem);
 console.log(myJSON.name); // JSON Object, logs 'Todd'
 console.log(myJSON.id); // JSON Object, logs '01282183'
-</script>
+&lt;/script&gt;
 {% endhighlight %}
 
 ### Events
