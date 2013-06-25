@@ -371,9 +371,11 @@ jQuery comes built-in with a DOM ready function handler, in which we can safely 
 
 As we progress towards a future of amazing technology, browsers now fire their own DOM ready function handler, in modern browsers this is called the _DOMContentLoaded_ event and can be fired like so:
 
+{% highlight javascript %}
 document.addEventListener('DOMContentLoaded', function() {
     // DOM ready, run it!
 }, false);
+{% endhighlight %}
 
 jQuery has had a tendancy to be called _the_ solution and there's no other alternative ever, ever ever. It's bad for upcoming developers to rely on it and it's imperative to learn, or at least have some understanding of, native JavaScript. The more powerful HTML5 becomes, the more we can utilise these rapid HTML5 native capabilities. And the more powerful the features become, the less we need jQuery, the more useless it becomes!
 
