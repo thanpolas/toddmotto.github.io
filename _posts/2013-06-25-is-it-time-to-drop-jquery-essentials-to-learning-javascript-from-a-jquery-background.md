@@ -55,7 +55,7 @@ document.getElementsByTagName('div');
 #### querySelector/querySelectorAll
 This is where things heat up - enter querySelector. Had it not been for jQuery, querySelector may not have made it's way into the JavaScript language as quickly or as efficiently as it has - so we have jQuery to thank for this.
 
-The magic behind querySelector is astounding, it's a multi-purpose native tool that you can use in various instances (this is raw JavaScript). There are two types of querySelector, the first which is plain old _document.querySelector('')_ returns the first Node in the NodeList, regardless of how many Node Objects it might find. The second, ultimately the best and most powerful is _document.querySelectorAll('')_ which returns a NodeList every time. I've been using _document.querySelectorAll('')_ as standard as it's easier to grab the first item in the returned NodeList than it is to reverse engineer _document.querySelector'')_.
+The magic behind querySelector is astounding, it's a multi-purpose native tool that you can use in various instances (this is raw JavaScript). There are two types of querySelector, the first which is plain old _document.querySelector('')_ returns the first Node in the NodeList, regardless of how many Node Objects it might find. The second, ultimately the best and most powerful is _document.querySelectorAll('')_ which returns a NodeList every time. I've been using _document.querySelectorAll('')_ as standard as it's easier to grab the first item in the returned NodeList than it is to reverse engineer _document.querySelector('')_.
 
 Let's look at some examples, read the comments for better clarification:
 
@@ -91,6 +91,18 @@ document.querySelector('ul.someList li:last-child');
 // Grab some data-* attribute
 document.querySelectorAll('[data-toggle]');
 {% endhighlight %}
+
+You can also create a smart wrapper function for this, to save typing out _document.querySelectorAll('')_ each time:
+
+{% highlight javascript %}
+var _ = function ( elem ) {
+	return document.querySelectorAll( elem );
+}
+// Usage
+var myClass = _('.myClass');
+{% endhighlight %}
+
+You could use a _$_ symbol instead of an underscore, totes up to you. It's not ideal to begin a function expression with an underscore, but for demonstration purposes I have.
 
 IE8 supports querySelector CSS2 selectors, I'm not sure why you'd want to perform DOM operations with CSS3 selectors entirely as CSS3 is used for progressive enhancement, whereas functionality can be broken whereas styling isn't nearly as important. If you're doing it right, you're using efficient class names and minimal selectors.
 
