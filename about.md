@@ -3,35 +3,11 @@ title: About
 layout: page
 ---
 
-I'm Todd, a 22 year old front-end web developer from Wiltshire, UK. I am highly enthusiastic and love what I do.
+22 year old front-end developer and software engineer working at [Appsbroker](//www.appsbroker.com), the UK's leading Google Enterprise company and EMEA partner of the year.
 
-As you can tell, I love to blog, write code and tweet about it pretty much all the time. I share a lot of what I do on here, from UI components to plugins, JavaScript development tools and free downloads. Great feedback and people using what I create is what keeps me going!
+Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, AngularJS, declarative data-binding, MVC/MVVM, front-end architecture. Creator of [HTML5 Blank](//html5blank.com) and [Conditionizr](//conditionizr.com) (finalist in .NET's Open Source Project of the Year 2013).
+
+Open source/[GitHub](//github.com/toddmotto) project enthusiast that has been recognised as far as Adobe, Smashing Magazine, .NET Magazine and other industry leading brands. Featured in various .NET Magazine issues as well as the website. Partnered with Intel on the HTML5 Hub project. 
 
 ### Personal
-Away from the code, I live with my lovely girlfriend <a href="//twitter.com/staceylvincent" target="_blank">@StaceyLVincent</a> and eat too much Domino's pizza. I love tattoos (got a few), singing (bad at it), and weird stuff like UFO's, ancient history and the supernatural. Favourite music includes bands like Blink-182, Angels & Airwaves, The Killers, Ellie Goulding.
-
-### Work-life
-My experience ranges from working client-side in Central London, to in-house agency working with some of the world's leading global brands.
-
-My ethos when it comes to development is to deliver top quality and maintainable code, building cross-browser solutions that are standards compliant as well as performance enhanced. Building sites that are device agnostic is a key concern, offering users of all shapes and sizes a consistent user experience.
-
-My markup and code is lightweight, clean and minimal, through years of tweaking, perfecting and structuring code in different ways to achieve new feats. I love getting stuck in with things like OOCSS, HTML5 semantics/APIs, CSS sprites, responsive web design, UI interactions/events - and you'll probably see it in a download at some stage.
-
-### Key skills
-<ul class="post-list">
-	<li>HTML5, integrating some of the latest powerful technologies and APIs</li>
-	<li>CSS3, core CSS2 skills complete with progressive enhancement styling and keyframe animation</li>
-	<li>jQuery, working with animation, DOM events, AJAX and plugins</li>
-	<li>JavaScript, creating rich features, interactions, feature detects and tools</li>
-	<li>WordPress, powering many sites I build, along with basic PHP knowledge</li>
-	<li>HTML 4.01/XHTML, creating standards/platform compliant HTML email templates</li>
-	<li>Responsive Media Queries (#RWD), for creating websites that perfectly adapt to different viewports</li>
-</ul>
-
-### Projects and plugins
-I have several popular <a href="//github.com/toddmotto" target="_blank">GitHub projects</a>, namely <a href="//html5blank.com" target="_blank">HTML5 Blank</a>, <a href="//conditionizr.com" target="_blank">Conditionizr</a> among a few others.
-
-Popular plugins of mine include the jBar and jResize. Some of which are featured/noted in .NET Magazine, and have generated some wicked traffic and interest.
-
-### Work availability
-I do take on external (freelance) work from various agencies, mainly front-end development but occasionally design. At present I am only taking on front-end development work though, please get in touch for rates.
+I live in a picturesque village just outside of [Chippenham, Wiltshire, UK](//maps.google.co.uk/maps?q=Chippenham+Wiltshire+UK) with my fiancé [Stacey Vincent](//twitter.com/StaceyLVincent). I love tattoos, guitar, golf, ancient history and the supernatural. Massive music addict, favourite bands include; Blink-182, Angels &amp; Airwaves, The Killers, Ellie Goulding, Florence + The Machine.
