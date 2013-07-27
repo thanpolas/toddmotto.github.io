@@ -8,6 +8,8 @@ disqus: http://www.toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-wi
 
 SVGs (Scalable Vector Graphics) are the future graphics format of the web, they offer resolution-independent, fully scalable and crystal clear graphics. SVGs use XML to define paths and shapes, to create our graphic. Moving past JPG and PNG, SVG is the answer to Retina (HiDPI) displays, they even look better on standard display.
 
+#### Hint: SVG detection and workflow has been revised recently to an even better solution, which takes performance and consistency into account, please read about it [here](//toddmotto.com/revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris/).
+
 #### This Script has been updated, jQuery and Modernizr independent: 27.12.2012 – [updated script][1]
 
 This tutorial explains how we can link an SVG through an image element, providing PNG fallbacks with Modernizr and jQuery/JavaScript supports.
@@ -129,7 +131,7 @@ You’ll notice in there is ‘svg’. I’m using Chrome. If the browser didn�
 Some server setups support SVGs by default, if yours doesn’t, add this to your .htaccess file:  
 
 {% highlight html %}
-AddType image/svg xml svg svgz
+AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
 {% endhighlight %}
 
