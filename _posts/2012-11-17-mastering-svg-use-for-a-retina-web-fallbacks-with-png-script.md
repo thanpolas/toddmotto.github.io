@@ -10,9 +10,9 @@ SVGs (Scalable Vector Graphics) are the future graphics format of the web, they 
 
 #### Hint: SVG detection and workflow has been revised recently to an even better solution, which takes performance and consistency into account, please read about it [here](//toddmotto.com/revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris/).
 
-#### This Script has been updated, jQuery and Modernizr independent: 27.12.2012 – [updated script][1]
-
 This tutorial explains how we can link an SVG through an image element, providing PNG fallbacks with Modernizr and jQuery/JavaScript supports.
+
+#### This Script has been updated, jQuery and Modernizr independent: 27.12.2012 – [updated script][1]
 
  [1]: #update
 
