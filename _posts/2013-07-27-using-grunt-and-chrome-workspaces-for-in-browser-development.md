@@ -13,6 +13,8 @@ I'm using Sass/SCSS (.scss) and JavaScript, both of which compile, concat + mini
 	<a href="//github.com/toddmotto/workspaces-grunt/archive/master.zip">Download files</a>
 </div>
 
+Tip: if not default, change the video quality to 720p :)
+
 <div class="screencast">
   <iframe width="420" height="315" src="//www.youtube.com/embed/tHhwJDuW73c" frameborder="0" allowfullscreen></iframe>
 </div>
