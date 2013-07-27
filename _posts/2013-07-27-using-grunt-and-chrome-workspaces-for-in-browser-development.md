@@ -24,25 +24,25 @@ First you'll need to setup [Grunt](//gruntjs.com) locally, which requires [Node.
 
 Now, you'll want to do as I did in the video, and locate your project by using 'cd' (change directory) on the command line. Next, we need to install all project dependencies (internet connection required), which uses Node Package Manager (npm) to fetch. Once your Terminal is pointing at your project folder with your _package.json_ and _Gruntfile.js_ in, run the following:
 
-{% highlight %}
+{% highlight sh %}
 npm install
 {% endhighlight %}
 
 This will then loop through your _package.json_ and install all the necessary stuff. If your permissions are uptight, you'll need to run the following instead (which you'll need to authenticate with a password):
 
-{% highlight %}
+{% highlight sh %}
 sudo npm install
 {% endhighlight %}
 
 Once that's successfully downloaded all the dependency components, just run Grunt:
 
-{% highlight %}
+{% highlight sh %}
 grunt
 {% endhighlight %}
 
 You'll then hopefully see the following:
 
-{% highlight %}
+{% highlight sh %}
 Running "sass:dist" (sass) task
 
 Running "uglify:dist" (uglify) task
@@ -62,6 +62,6 @@ That's good news, you're good to go. Happy coding.
 ### Sourcemapping
 One thing I didn't mention inside the video was Sass/SCSS sourcemapping (though sourcemapping is standalone tech and not limited to Sass itself). It essentially allows you to Inspect Element, and instead of seeing _style.min.css_ inside the developer tools, you'll actually going to drill down into the non-compiled Sass and you'll see something like __inputs.scss_! This is coming in the latest version of Sass but is available now on prerelease:
 
-{% highlight %}
+{% highlight sh %}
 gem install sass --pre
 {% endhighlight %}
