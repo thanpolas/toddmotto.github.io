@@ -65,19 +65,3 @@ One thing I didn't mention inside the video was Sass/SCSS sourcemapping (though 
 {% highlight %}
 gem install sass --pre
 {% endhighlight %}
-
-<style>
-.screencast {
-  position:relative;
-  padding-bottom:56.25%;
-  height:0;
-}
-.screencast iframe {
-  position:absolute;
-  z-index:0;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-}
-</style>
