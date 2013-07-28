@@ -98,7 +98,7 @@ From the top, I create the constructor function, which I pass the current elemen
 
 First I grab the _videoSource_ from the attribute, which uses a RegExp to capture the file path and file name, but not the extension.
 
-Next I grab the file extensions (fileExts) which captures everything inside the curlies {}. From here, I use the _.toString()_ method, which converts the array sent back from _.match()_ to a string (you guessed it), from here, I _.replace()_ any whitespace to get a clean array for adding the file extensions, and then use the _.split(',')_ method to split the string by commas which then returns another array. I then loop through that array of file extensions and create the necessary &lt;source&gt; tags and populate them with the necessary _src_ and _type_ attributes.
+Next I grab the file extensions (fileExts) which captures everything inside the curlies {}. From here, I use the _.toString()_ method, which converts the array sent back from _.match()_ to a string (you guessed it), from here, I _.replace()_ any whitespace to get a clean array for adding the file extensions, and then use the _.split(',')_ method to split the string by commas which then returns a new array. I then loop through that array of file extensions and create the right amount of &lt;source&gt; tags, populating them with the necessary _src_ and _type_ attributes.
 
 At the bottom, I then hook into the Array.prototype (but use an empty array shorthand to access this) and loop through all _video[data-src]_ tags, which will hold our Suave.js videos! Inside this loop, I pass in the current element and create a new _Suave_ instance to the current item.
 
