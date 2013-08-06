@@ -94,11 +94,11 @@ ul {
 }
 .logo__img {
 	background:url(../img/logo.png) no-repeat;
+	width:130px;
 	height:61px;
-	width:136px;
 	.svg & {
 		background:url(../img/logo.svg) no-repeat;
-		background-size:136px 61px;
+		background-size:130px 61px;
 	}
 }
 .nav {
