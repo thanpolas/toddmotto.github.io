@@ -64,17 +64,23 @@
 		</div>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>');</script>
 		<script>
 		$(function () {
 		
 			$('[data-tab]').on('click', function (e) {
-				$(this).addClass('active').siblings('[data-tab]').removeClass('active')
-				$(this).siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
-				e.preventDefault()
-			})
+				$(this)
+					.addClass('active')
+					.siblings('[data-tab]')
+					.removeClass('active')
+					.siblings('[data-content=' + $(this).data('tab') + ']')
+					.addClass('active')
+					.siblings('[data-content]')
+					.removeClass('active');
+				e.preventDefault();
+			});
 			
-		})
+		});
 		</script>
 	
 		<!-- Demo Analytics -->
