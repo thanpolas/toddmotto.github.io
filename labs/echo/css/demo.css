@@ -23,12 +23,12 @@ body {
 	background:#FFF url(../img/ajax.gif) no-repeat center center;
 	border:1px solid #AAA;
 }
-.markup {
+.title {
 	font-size:18px;
 	font-weight:900;
 	margin:0 0 10px;
 }
-.markup__code {
+.title__code {
 	background:#FFF;
 	border-radius:5px;
 	border:1px solid #CCC;
