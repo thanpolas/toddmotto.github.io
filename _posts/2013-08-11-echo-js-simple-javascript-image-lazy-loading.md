@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /echo-js-simple-javascript-image-lazy-loading
-title: Echo.js, simple JavaScript image lazy loading
+title: Echojs simple JavaScript image lazy loading
 ---
 
 I'm currently working on a project for Intel's [HTML5 Hub](//html5hub.com) in which I require some image lazy-loading for an HTML5 showcase piece that's high in image content. After a quick Google search for an existing lazy-load solution there was yet another mass of outdated scripts or jQuery plugins that were too time consuming to search through or modify for the project - so I ended up writing my own.
