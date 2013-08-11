@@ -19,7 +19,7 @@ Lazy-loading works by only loading the assets needed when the elements 'would' b
 ### Using Echo.js
 Using Echo is really easy, just include an original image to be used as a placeholder, for the demo I am using a simple AJAX _.gif_ spinner as a background image with a transparent .gif placeholder so the user will always see something is happening, but you can use whatever you like.
 
-Here's the markup to specify the image source, which is literal so you'll be able to specify the full file path (even the full _http://_ if you like) which makes it easier when working with directories.
+Here's the markup to specify the image source, which is literal so you'll be able to specify the full file path (even the full protocol if you like) which makes it easier when working with directories.
 
 {% highlight html %}
 <img src="img/blank.gif" alt="" data-echo="img/album-1.jpg">
