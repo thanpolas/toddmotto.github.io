@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /echo-js-simple-javascript-image-lazy-loading
-title: Echojs simple JavaScript image lazy loading
+title: Echo.js, simple JavaScript image lazy loading
 ---
 
 I'm currently working on a project for Intel's [HTML5 Hub](//html5hub.com) in which I require some image lazy-loading for an HTML5 showcase piece that's high in image content. After a quick Google search for an existing lazy-load solution there was yet another mass of outdated scripts or jQuery plugins that were too time consuming to search through or modify for the project - so I ended up writing my own.
@@ -19,7 +19,7 @@ Lazy-loading works by only loading the assets needed when the elements 'would' b
 ### Using Echo.js
 Using Echo is really easy, just include an original image to be used as a placeholder, for the demo I am using a simple AJAX _.gif_ spinner as a background image with a transparent .gif placeholder so the user will always see something is happening, but you can use whatever you like.
 
-Here's the markup to specify the image source, which is literal so you'll be able to specify the full file path (even the full protocol if you like) which makes it easier when working with directories.
+Here's the markup to specify the image source, which is literal so you'll be able to specify the full file path (even the full _http://_ if you like) which makes it easier when working with directories.
 
 {% highlight html %}
 <img src="img/blank.gif" alt="" data-echo="img/album-1.jpg">
@@ -116,7 +116,7 @@ window.echo = (function (window, document) {
   }
 
 })(window, document);
-{% enghighlight %}
+{% endhighlight %}
 
 The script takes an Object-Orientated approach, instantiating the _Echo_ object (which is our Function constructor) on each element instance of NodeList inside our _for_ loop. You can see this instantiation at the end of the script, using the _new_ operator.
 
@@ -128,7 +128,7 @@ var Echo = function (elem) {
   this.render();
   this.listen();
 };
-{% enghighlight %}
+{% endhighlight %}
 
 I pass in the _elem_ argument, which will be the current element inside the _for_ loop in which the plugin is called upon, and call _render.();_ and _listen();_ internally, this will run the prototype functions that the Object inherits.
 
@@ -136,7 +136,7 @@ Next is an empty array:
 
 {% highlight javascript %}
 var echoStore = [];
-{% enghighlight %}
+{% endhighlight %}
 
 This empty array will act as our data store for pushing our images that need lazy-loading into. It's a good practice to use arrays for this type of thing so we can remove images that are already loaded from the same array, this will prevent our loops iterating over the same array, it may as well perform faster and loop over fewer items.
 
@@ -147,7 +147,7 @@ var scrolledIntoView = function (element) {
   var coords = element.getBoundingClientRect();
   return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight));
 };
-{% enghighlight %}
+{% endhighlight %}
 
 This uses a great addition to JavaScript, the _.getBoundingClientRect()_ method which returns a text rectangle object which encloses a group of text rectangles, which are the _border-boxes_ associated with that element, i.e. CSS box. The returned data describes the top, right, bottom and left in pixels. We can then make a smart comparison against the _window.innerHeight_ or the _document.documentElement.clientHeight_, which gives you the visible area inside your browser on a cross-browser basis.
 
@@ -160,7 +160,7 @@ var echoSrc = function (img, callback) {
     callback();
   }
 };
-{% enghighlight %}
+{% endhighlight %}
 
 If a callback is present, it will run (I do pass in a callback here, but to prevent errors it's good to simply _if_ statement this stuff).
 
@@ -172,7 +172,7 @@ var removeEcho = function (element, index) {
     echoStore.splice(index, 1);
   }
 };
-{% enghighlight %}
+{% endhighlight %}
 
 The fundamental tie in for the script is listening for constant updates in the view based on our data store array. This function loops through our data store, and checks if the current element in the array is in view after initiating the _scrolledIntoView_ function. If that proves to be true, then we call the _echoSrc_ function, pass in the current element and also the current element's _index_ value, being _i_. This index value gets passed into the _removeEcho_ function which in turn removes a copy of itself from the array. This means our array has become shorter and our JavaScript doesn't have to work as hard or as long when looping through our leftover elements.
 
@@ -185,7 +185,7 @@ var echoImages = function () {
     }
   }
 };
-{% enghighlight %}
+{% endhighlight %}
 
 The OO piece of the script looks inside the _prototype_ extension, which has a few functions inside. The first is the _init()_ function, that simply pushes the current element into our data store array. The _render()_ function checks to see if an _addEventListener_ event exists, which will then invoke the _echoImages_ function once the _DOMContentLoaded_ event is fired. If it doesn't exist, likely inside IE7/8, it'll just run _onload_. The _listen()_ function will just run the function again each time the window is scrolled, to poll and see if any elements come into view to work it's magic some more.
 
@@ -205,7 +205,7 @@ Echo.prototype = {
     window.onscroll = echoImages;
   }
 };
-{% enghighlight %}
+{% endhighlight %}
 
 The final piece of the script is the beautiful API where you invoke a new Object on each item in a NodeList:
 
@@ -214,7 +214,7 @@ var lazyImgs = document.querySelectorAll('img[data-echo]');
 for (var i = 0; i < lazyImgs.length; i++) {
   new Echo(lazyImgs[i]).init();
 }
-{% enghighlight %}
+{% endhighlight %}
 
 I chose to run a regular _for_ loop on this, but if you're routing for more modern JavaScript APIs you can of course do this which is much cleaner but unsupported in older IE (yes I can polyfill but the script is too small to warrant it):
 
@@ -222,7 +222,7 @@ I chose to run a regular _for_ loop on this, but if you're routing for more mode
 [].forEach.call(document.querySelectorAll('img[data-echo]'), function (img) {
   new Echo(img).init();
 }
-{% enghighlight %}
+{% endhighlight %}
 
 <div class="download-box">
   <a href="//toddmotto.com/labs/echo" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo echo', 'echo Demo']);">Demo</a>
