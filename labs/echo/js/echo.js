@@ -16,8 +16,6 @@ window.echo = (function (window, document) {
    */
   var Echo = function (elem) {
     this.elem = elem;
-    this.render();
-    this.listen();
   };
 
   /*
