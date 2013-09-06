@@ -1,24 +1,20 @@
-/*!
- *  Suave
- *  @version 1.1.0
- *  @author Todd Motto http://toddmotto.com
- *  Project: https://github.com/toddmotto/suave
- *
- *  Re-engineering the HTML5 <video> tag for semantics and modularity.
- *  Copyright 2013. MIT licensed.
- */
 window.suave = (function (window, document, undefined) {
 
   'use strict';
 
-  /*
+  /**
    * Constructor function
    */
   var Suave = function (elem) {
     this.elem = elem;
   };
+  
+  var supportsVideoType = function (type) {
+    var video = document.createElement('video');
+    return !!video.canPlayType('video/' + type);
+  };
 
-  /*
+  /**
    * Prototypal setup
    */
   Suave.prototype = {
@@ -31,17 +27,22 @@ window.suave = (function (window, document, undefined) {
       
       for (var i = 0; i < fileExts.length; i++) {
         var extension = fileExts[i];
-        var source = document.createElement('source');
-        source.src = videoSource + extension;
-        source.type = 'video/' + extension;
-        this.elem.appendChild(source);
+        if (supportsVideoType(extension)) {
+          var video = document.createElement('video');
+          video.src = videoSource + extension;
+          video.type = 'video/' + extension;
+            video.setAttribute('autoplay', true);
+          video.className = 'suave';
+          this.elem.parentNode.replaceChild(video, this.elem);
+          break;
+        }
       }
 
     }
 
   };
 
-  /*
+  /**
    * Initiate the plugin
    */
   [].forEach.call(document.querySelectorAll('video[data-src]'), function (suave) {
