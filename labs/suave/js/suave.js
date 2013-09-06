@@ -48,7 +48,8 @@ window.suave = (function (window, document, undefined) {
    * Initiate the plugin
    */
   [].forEach.call(document.querySelectorAll('video[data-src]'), function (suave) {
-    new Suave(suave).init();
+    alert(suave);
+    //new Suave(suave).init();
   });
 
 })(window, document);
