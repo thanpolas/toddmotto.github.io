@@ -26,6 +26,8 @@ window.suave = (function (window, document, undefined) {
       var fileExts = dataAttr.match(/\{([^]+)\}$/)[1].toString().replace(/\s/g, '').split(',');
 
       alert(dataAttr);
+      alert(videoSource);
+      alert(fileExts);
       
       for (var i = 0; i < fileExts.length; i++) {
         var extension = fileExts[i];
