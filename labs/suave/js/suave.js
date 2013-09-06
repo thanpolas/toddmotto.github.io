@@ -1,20 +1,24 @@
+/*!
+ *  Suave
+ *  @version 1.1.0
+ *  @author Todd Motto http://toddmotto.com
+ *  Project: https://github.com/toddmotto/suave
+ *
+ *  Re-engineering the HTML5 <video> tag for semantics and modularity.
+ *  Copyright 2013. MIT licensed.
+ */
 window.suave = (function (window, document, undefined) {
 
   'use strict';
 
-  /**
+  /*
    * Constructor function
    */
   var Suave = function (elem) {
     this.elem = elem;
   };
-  
-  var supportsVideoType = function (type) {
-    var video = document.createElement('video');
-    return !!video.canPlayType('video/' + type);
-  };
 
-  /**
+  /*
    * Prototypal setup
    */
   Suave.prototype = {
@@ -24,31 +28,20 @@ window.suave = (function (window, document, undefined) {
       var dataAttr = this.elem.getAttribute('data-src');
       var videoSource = dataAttr.match(/^([^]+)\{/)[1];
       var fileExts = dataAttr.match(/\{([^]+)\}$/)[1].toString().replace(/\s/g, '').split(',');
-
-      alert(dataAttr);
-      alert(videoSource);
-      alert(fileExts);
       
       for (var i = 0; i < fileExts.length; i++) {
         var extension = fileExts[i];
-        alert(extension);
-        if (supportsVideoType(extension)) {
-          alert(supportsVideoType(extension));
-          var video = document.createElement('video');
-          video.src = videoSource + extension;
-          video.type = 'video/' + extension;
-          video.setAttribute('autoplay', true);
-          video.className = 'suave';
-          this.elem.parentNode.replaceChild(video, this.elem);
-          break;
-        }
+        var source = document.createElement('source');
+        source.src = videoSource + extension;
+        source.type = 'video/' + extension;
+        this.elem.appendChild(source);
       }
 
     }
 
   };
 
-  /**
+  /*
    * Initiate the plugin
    */
   [].forEach.call(document.querySelectorAll('video[data-src]'), function (suave) {
