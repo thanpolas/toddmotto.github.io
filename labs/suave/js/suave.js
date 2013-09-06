@@ -27,11 +27,13 @@ window.suave = (function (window, document, undefined) {
       
       for (var i = 0; i < fileExts.length; i++) {
         var extension = fileExts[i];
+        alert(extension);
         if (supportsVideoType(extension)) {
+          alert(supportsVideoType(extension));
           var video = document.createElement('video');
           video.src = videoSource + extension;
           video.type = 'video/' + extension;
-            video.setAttribute('autoplay', true);
+          video.setAttribute('autoplay', true);
           video.className = 'suave';
           this.elem.parentNode.replaceChild(video, this.elem);
           break;
