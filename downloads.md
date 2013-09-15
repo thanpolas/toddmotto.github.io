@@ -6,6 +6,16 @@ layout: page
 <div class="download-item">
   <img src="/img/downloads/suave.jpg" alt="Suave">
   <div class="download-details">
+    <h2>FireShell</h2>
+    <h4>Fiercely quick front-end boilerplate and workflows, HTML5, Grunt, Sass. Built for the modern developer and teams.</h4>
+    <a href="//getfireshell.com" onclick="_gaq.push(['_trackEvent', 'Click', 'View FireShell', 'FireShell']);">Visit Site</a>
+    <a href="//github.com/toddmotto/fireshell/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FireShell', 'Download FireShell']);">Download</a>
+    <a href="//toddmotto.com/fireshell-fiercely-quick-front-end-boilerplate-and-workflows">[article]</a>
+  </div>
+</div>
+<div class="download-item">
+  <img src="/img/downloads/suave.jpg" alt="Suave">
+  <div class="download-details">
     <h2>Suave.js</h2>
     <h4>One line of code for cross-browser HTML5 &lt;video&gt; (how they should have been).</h4>
     <a href="//toddmotto.com/labs/suave" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo suave', 'suave Demo']);">Demo</a>
