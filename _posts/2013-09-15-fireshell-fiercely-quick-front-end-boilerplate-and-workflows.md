@@ -31,6 +31,7 @@ CSS structure for small projects and scaling big, a fantastic setup to get your 
 ### Grunt.js
 Compiling Sass/SCSS, concatenating JavaScript files, connecting to a localhost server and live file reloads and injection. Auto-minification for production.
 
+### Features
 * HTML5 framework, WAI-ARIA roles and HTML5 semantics
 * Baseline HTML5 features, DNS prefetching, responsive meta
 * Encourages one-file CSS/JS in the view (HTML) for performance
