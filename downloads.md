@@ -4,7 +4,7 @@ layout: page
 ---
 
 <div class="download-item">
-  <img src="/img/downloads/suave.jpg" alt="Suave">
+  <img src="/img/downloads/fireshell.jpg" alt="FireShell">
   <div class="download-details">
     <h2>FireShell</h2>
     <h4>Fiercely quick front-end boilerplate and workflows, HTML5, Grunt, Sass. Built for the modern developer and teams.</h4>
