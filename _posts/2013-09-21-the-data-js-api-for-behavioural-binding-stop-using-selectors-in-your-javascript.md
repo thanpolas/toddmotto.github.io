@@ -4,17 +4,23 @@ permalink: /the-data-js-api-for-behavioural-binding-stop-using-selectors-in-your
 title: The [data-js] API for behavioural-binding; stop using selectors in your JavaScript
 ---
 
-Selectors in JavaScript are bad. They are rubbish and I despise working with them. The bridge between the DOM and JavaScript is a tough one to cross and in no way modular, but there are ways around this. JavaScript is a beautiful language, it's fully dynamic, and that's exactly what selectors _aren't_. Selectors are a sin, and here's why...
+Selectors in JavaScript are bad. The bridge between the DOM communicating with JavaScript is a tough one to cross and in no way modular, but there are ways around this. Today I want to introduce something I can only call _behavioural-binding_. JavaScript is a beautiful language, it's very dynamic, and that's exactly what selectors _aren't_. Selectors are a sin, and here's why behavioural-binding is key.
 
-A while ago [I wrote about `data-js` selectors](//toddmotto.com/data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript), a fleshed out idea that was very raw and an attempt to create JavaScript logic beyond DOM selectors by binding logic to a `data-*` selector and not targeting an element. I'd experimented with it a few times and it often got a bit sticky when it came to modularity - I was repeating a lot of code. I've finally began to see the clearer picture on the 'modularness' and feel like it's worth sharing.
+A while ago [I wrote about `data-js` selectors](//toddmotto.com/data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript), a fleshed out idea that was very raw and an attempt to create JavaScript logic beyond DOM selectors by binding logic to a `data-*` selector and not targeting an element. I'd experimented with it a few times and it often got a bit sticky when it came to modularity - I was repeating a lot of code and the implementation was 90% there, until now. I've finally began to see the clearer picture on the behavioural-binding and feel like it's worth sharing. 
 
 I'm going to show you how to:
 
-1. Drop selectors binding/declaration in the DOM
+1. Drop selectors for behavioural-binding in the DOM
 2. Drop selector-reliant querying in JavaScript for modular logic
 3. Use the JavaScript Module pattern to return public APIs
 4. Rant a little about jQuery
 5. Go away feeling modular
+
+### Behavioural-binding
+The behavioural-binding concept is binding repeating behaviours to DOM elements, instead of selecting elements and manipulating them. In a sense, it's what you're not used to doing. Probably:
+
+_Previously_; you targeted an element, wrapped it in a function and did some DOM wizardry.
+_Now_; you write your JavaScript logic independent of elements, and bind the behaviours with `data-*` attributes. The implementation is quite similar, but the thinking behind it is the separation key and how you'll need to think ahead for all future elements and not tie your JS so closely to your HTML. Behavioural-binding doesn't care what element it is, it'll just do it's thing (if it's a valid method).
 
 ### Reuse and the problem scenario
 The initial problem with DOM logic and JavaScript binding is simple, take three inputs for example with different classes:
@@ -31,10 +37,10 @@ But uh oh, I've got three different classes, _s**t_.
 
 Now any (hypothetical) code is ruined because it only took into account `.header-input` - I need to account for the other two. So let's take a step back for a minute, thinking JavaScript first is often a really sexy way to code, let's think functionality. I bet you're starting to think 'Hmm, but why not just add an `autoselect` class to each of them?'. No. Just no. Classes are for styling, we've established this previously - I want to bind behaviour, not classes. So...
 
-### Semantic [data-js]
+### Behavioural [data-js] binding
 So how do we tackle the problem with applying the same logic to multiple elements without modifying our scripts everytime we extend them? I just want to write logic once and let it do the same work regardless of the element's identifier.
 
-That's where `data-js` comes in, seamless JavaScript logic. Wouldn't it be nice to do this:
+That's where `data-js` behavioural-binding comes in, seamless JavaScript logic. Wouldn't it be nice to do this:
 
 {% highlight html %}
 <input value="Select my contents" class="header-input" data-js="select">
