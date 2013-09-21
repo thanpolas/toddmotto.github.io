@@ -4,7 +4,7 @@ layout: page
 ---
 
 <div class="download-item">
-  <img src="/img/downloads/fireshell.jpg" alt="FireShell">
+  <img src="/assets/img/downloads/fireshell.jpg" alt="FireShell">
   <div class="download-details">
     <h2>FireShell</h2>
     <h4>Fiercely quick front-end boilerplate and workflows, HTML5, Grunt, Sass. Built for the modern developer and teams.</h4>
@@ -14,7 +14,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/suave.jpg" alt="Suave">
+  <img src="/assets/img/downloads/suave.jpg" alt="Suave">
   <div class="download-details">
     <h2>Suave.js</h2>
     <h4>One line of code for cross-browser HTML5 &lt;video&gt; (how they should have been).</h4>
@@ -24,7 +24,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/flaunt-js.jpg" alt="Flaunt JS">
+  <img src="/assets/img/downloads/flaunt-js.jpg" alt="Flaunt JS">
   <div class="download-details">
     <h2>Flaunt JS</h2>
     <h4>Overcoming responsive design issues with click-to-reveal stylish nested navigations.</h4>
@@ -34,7 +34,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/fluidvids.jpg" alt="FluidVids">
+  <img src="/assets/img/downloads/fluidvids.jpg" alt="FluidVids">
   <div class="download-details">
     <h2>FluidVids</h2>
     <h4>A raw JavaScript alternative to FitVids jQuery plugin, fluid-width video embeds for responsive design, works faster, more efficient.</h4>
@@ -44,7 +44,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/superbox.jpg" alt="SuperBox">
+  <img src="/assets/img/downloads/superbox.jpg" alt="SuperBox">
   <div class="download-details">
     <h2>SuperBox</h2>
     <h4>The re-imagined expanding lightbox gallery, using HTML5 data-* attributes and responsive design.</h4>
@@ -54,7 +54,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/data-tabs.jpg" alt="Data Tabs">
+  <img src="/assets/img/downloads/data-tabs.jpg" alt="Data Tabs">
   <div class="download-details">
     <h2>Simple HTML5 data-* jQuery tabs</h2>
     <h4>Markup free and relative to their container for ultimate re-use, super-simple jQuery tabbed content.</h4>
@@ -64,7 +64,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/required.jpg" alt="Required Attribute Fallback">
+  <img src="/assets/img/downloads/required.jpg" alt="Required Attribute Fallback">
   <div class="download-details">
     <h2>HTML5 'required' attribute jQuery fallback</h2>
     <h4>A robust HTML5 'required' attribute fallback, client-side validation jQuery script.</h4>
@@ -74,7 +74,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/html5blank.jpg" alt="HTML5 Blank">
+  <img src="/assets/img/downloads/html5blank.jpg" alt="HTML5 Blank">
   <div class="download-details">
     <h2>HTML5 Blank</h2>
     <h4>A powerful shell for rapidly deploying your WordPress projects. Recognised by Smashing Magazine, Adobe and .NET Magazine.</h4>
@@ -84,7 +84,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/svg-icons.jpg" alt="SVG Icons">
+  <img src="/assets/img/downloads/svg-icons.jpg" alt="SVG Icons">
   <div class="download-details">
     <h2>Progressive SVG sprite icons</h2>
     <h4>Retina-ready, progressively enhanced SVG sprite social icons, complete with PNG fallbacks.</h4>
@@ -94,7 +94,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/select-nav-js.jpg" alt="Select Nav">
+  <img src="/assets/img/downloads/select-nav-js.jpg" alt="Select Nav">
   <div class="download-details">
     <h2>Pure JavaScript select nav</h2>
     <h4>Dynamically creates a select menu and populates it with menu items from an existing nav. jQuery free, hierarchy support, responsive-ready.</h4>
@@ -104,7 +104,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
+  <img src="/assets/img/downloads/responsive-nav.jpg" alt="Responsive Nav">
   <div class="download-details">
     <h2>Responsive Navigation</h2>
     <h4>Using a fluid-width approach and utilising JavaScript and media queries, here's an iconic 'three-line' menu approach.</h4>
@@ -114,7 +114,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/conditionizr.jpg" alt="Conditionizr">
+  <img src="/assets/img/downloads/conditionizr.jpg" alt="Conditionizr">
   <div class="download-details">
     <h2>Conditionizr</h2>
     <h4>The conditional free legacy, retina, script and style loader. Enhance performance with dedicated loading, inspect element for Demo.</h4>
@@ -124,7 +124,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/html5-contact.jpg" alt="HTML5 Contact Form">
+  <img src="/assets/img/downloads/html5-contact.jpg" alt="HTML5 Contact Form">
   <div class="download-details">
     <h2>HTML5 Contact Form</h2>
     <h4>HTML5 form boilerplate, javascript feature detection, data-* attributes, responsive-ready, semantics.</h4>
@@ -134,7 +134,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/jbar.jpg" alt="jBar">
+  <img src="/assets/img/downloads/jbar.jpg" alt="jBar">
   <div class="download-details">
     <h2>jBar</h2>
     <h4>The popular jBar plugin, a simple and lightweight notification banner for jQuery, easy customisation. Toggle the ribbon to show/hide.</h4>
@@ -144,7 +144,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/oocss-buttons.jpg" alt="OOCSS Button Kit">
+  <img src="/assets/img/downloads/oocss-buttons.jpg" alt="OOCSS Button Kit">
   <div class="download-details">
     <h2>OOCSS Button Kit</h2>
     <h4>Utilising Object-Orientated CSS to create an effective button kit for any website.</h4>
@@ -154,7 +154,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/clickable-dropdown.jpg" alt="Clickable Dropdown">
+  <img src="/assets/img/downloads/clickable-dropdown.jpg" alt="Clickable Dropdown">
   <div class="download-details">
     <h2>Clickable Dropdown</h2>
     <h4>Flawless cross-browser clickable drop-down navigation, jQuery complete with CSS fallbacks. For websites, apps and more.</h4>
@@ -164,7 +164,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/imgshufflr.jpg" alt="imgShufflr">
+  <img src="/assets/img/downloads/imgshufflr.jpg" alt="imgShufflr">
   <div class="download-details">
     <h2>imgShufflr</h2>
     <h4>Randomised inline <img> and CSS background images plugin. Uses JavaScript arrays to load random image.</h4>
@@ -174,7 +174,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/html5nav.jpg" alt="HTML5 jQuery Nav">
+  <img src="/assets/img/downloads/html5nav.jpg" alt="HTML5 jQuery Nav">
   <div class="download-details">
     <h2>HTML5 jQuery Nav</h2>
     <h4>Bare-bones HTML5 semantics navigation, super simple jQuery drop down. Extremely light-weight solution.</h4>
@@ -184,7 +184,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/hoverbox.jpg" alt="Hoverbox">
+  <img src="/assets/img/downloads/hoverbox.jpg" alt="Hoverbox">
   <div class="download-details">
     <h2>jQuery Hover Box</h2>
     <h4>Using jQuery to animate two images to create a simple but great blurred effect, for all sorts of projects.</h4>
@@ -194,7 +194,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/retina.jpg" alt="Retina Tool">
+  <img src="/assets/img/downloads/retina.jpg" alt="Retina Tool">
   <div class="download-details">
     <h2>Responsive Development Tool</h2>
     <h4>Responsive/retina development JavaScript widget, dynamically displays pixel dimensions, retina detection and pixel ratio.</h4>
@@ -204,7 +204,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/bounce-this.jpg" alt="BounceThis">
+  <img src="/assets/img/downloads/bounce-this.jpg" alt="BounceThis">
   <div class="download-details">
     <h2>bounceThis</h2>
     <h4>Super slick and sharp bouncing headers, mimics CSS3 keyframes, a cross-browser jQuery plugin.</h4>
@@ -214,7 +214,7 @@ layout: page
   </div>
 </div>
 <div class="download-item">
-  <img src="/img/downloads/jresize.jpg" alt="jResize">
+  <img src="/assets/img/downloads/jresize.jpg" alt="jResize">
   <div class="download-details">
     <h2>jResize</h2>
     <h4>Dynamic viewport resizer plugin, built to assist responsive development and testing. Create your own widths to test.</h4>
