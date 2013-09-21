@@ -2,6 +2,7 @@
  * Sidebar
  */
 .sidebar__module {
+  position:relative;
   border-top:1px solid #d2d5db;
   padding:15px;
 }
@@ -11,6 +12,14 @@
 .sidebar__todd {
   width:80px;
   height:80px;
+  @include position(absolute, 15px 0 0 15px);
+}
+.sidebar__bio {
+  padding:0 0 0 95px;
+  margin:0;
+  a {
+    border-bottom:1px solid rgba(0,0,0,.1);
+  }
 }
 .sidebar__icon {
   display:inline-block;
