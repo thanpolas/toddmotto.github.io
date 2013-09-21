@@ -8,7 +8,7 @@ html {
   font-size:62.5%;
 }
 body {
-  font:300 13px/1.6 'Open Sans', Helvetica, Arial;
+  font:300 13px/1.6 'OpenSans', Helvetica, Arial;
   background:#fff;
   color:#39464e;
 }
@@ -33,7 +33,8 @@ h1,
 h2,
 h3,
 h4 {
-
+  font-family:'OpenSansBold', Helvetica, Arial;
+  font-weight:normal;
 }
 h1 {
 
