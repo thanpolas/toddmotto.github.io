@@ -180,7 +180,7 @@ $('div.className > ul:first-child li.className').on('click', function () {
 });
 {% endhighlight %}
 
-It happens all the time, and jQuery's amazing selector engine Sizzle promotes it's power, which is vastly abused by so many developers. Of course when you're learning, you don't know any different. I mean, when I faced challenges in DOM selectors and JavaScript logic in early days I'd duplicate a script and just change a selector to get it work twice - crazy looking back at it.
+It happens all the time, and jQuery's amazing selector engine Sizzle promotes it's power, which is vastly abused by so many developers. Of course when you're learning, you don't know any different. I mean, when I faced challenges in DOM selectors and JavaScript logic in early days I'd duplicate a script and just change a selector to get it to work twice - crazy looking back at it.
 
 If you're writing JavaScript with selector vomit you probably shouldn't be writing it at all. JavaScript provides functionality, it shouldn't be dependent on a Node somewhere in the DOM tree.
 
