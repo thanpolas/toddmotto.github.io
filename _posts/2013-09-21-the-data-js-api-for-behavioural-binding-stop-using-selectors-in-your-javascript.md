@@ -1,7 +1,7 @@
 ---
 layout: post
-permalink: /the-data-js-api-for-modular-dom-elements-stop-using-selectors-in-your-javascript
-title: The [data-js] API for modular DOM elements; stop using selectors in your JavaScript
+permalink: /the-data-js-api-for-behavioural-binding-stop-using-selectors-in-your-javascript
+title: The [data-js] API for behavioural-binding; stop using selectors in your JavaScript
 ---
 
 Selectors in JavaScript are bad. They are rubbish and I despise working with them. The bridge between the DOM and JavaScript is a tough one to cross and in no way modular, but there are ways around this. JavaScript is a beautiful language, it's fully dynamic, and that's exactly what selectors _aren't_. Selectors are a sin, and here's why...
