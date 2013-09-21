@@ -1,0 +1,48 @@
+* {
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  @include vendor(box-sizing, border-box);
+}
+html {
+  font-size:62.5%;
+}
+body {
+  font:300 13px/1.6 'Open Sans', Helvetica, Arial;
+  background:#fff;
+  color:#39464e;
+}
+img {
+  max-width:100%;
+  vertical-align:bottom;
+}
+a,
+a:hover,
+a:visited,
+a:active {
+  color:#39464e;
+  text-decoration:none;
+}
+ul,
+ol {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+h1,
+h2,
+h3,
+h4 {
+
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+  font-size:22px;
+  border-bottom:1px solid #eee;
+  padding:0 0 15px;
+}

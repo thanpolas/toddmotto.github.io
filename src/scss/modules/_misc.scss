@@ -1,0 +1,29 @@
+/**
+ * CarbonAds
+ */
+#carbonads-container {
+
+}
+.carbonad {
+  border:0 !important;
+  background:transparent !important;
+}
+
+/**
+ * Text Selection
+ */
+::selection {
+  background:#333;
+  color:#fff;
+  text-shadow:none;
+}
+::-moz-selection {
+  background:#333;
+  color:#fff;
+  text-shadow:none;
+}
+::-webkit-selection {
+  background:#333;
+  color:#fff;
+  text-shadow:none;
+}

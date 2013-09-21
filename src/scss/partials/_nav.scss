@@ -1,0 +1,21 @@
+.nav {
+  width:70%;
+  float:right;
+  margin:28px 30px 0 0;
+  ul {
+    list-style:none;
+    li {
+      display:inline-block;
+      *display:inline;
+      *zoom:1;
+      a {
+        display:block;
+        padding:0 10px;
+
+        &:hover {
+
+        }
+      }
+    }
+  }
+}

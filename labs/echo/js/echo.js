@@ -1,92 +1,61 @@
-/*!
- *  Echo
- *  @version 1.1.0
- *  @author Todd Motto http://toddmotto.com
- *  Project: https://github.com/toddmotto/echo
- *
- *  Raw JavaScript lazy-loading images with HTML5 data-* attributes.
- *  Copyright 2013. MIT licensed.
- */
-window.echo = (function (window, document) {
+window.Echo = (function (window, document, undefined) {
 
   'use strict';
 
-  /*
-   * Constructor function
-   */
-  var Echo = function (elem) {
-    this.elem = elem;
-  };
+  var self = {
 
-  /*
-   * Images for echoing
-   */
-  var echoStore = [];
+    config: {
+      store: [],
+      selector: '[data-echo]',
+      offset: 0
+    },
 
-  /*
-   * Element in viewport logic
-   */
-  var scrolledIntoView = function (element) {
-    var coords = element.getBoundingClientRect();
-    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight));
-  };
+    init: function (selector, offset) {
+      self.off = offset || self.config.offset;
+      self.selector = selector || self.config.selector;
+      self.store = self.config.store;
 
-  /*
-   * Changing src attr logic
-   */
-  var echoSrc = function (img, callback) {
-    img.src = img.getAttribute('data-echo');
-    if (callback) {
-      callback();
-    }
-  };
+      var echo = document.querySelectorAll(self.selector);
 
-  /*
-   * Remove loaded item from array
-   */
-  var removeEcho = function (element, index) {
-    if (echoStore.indexOf(element) !== -1) {
-      echoStore.splice(index, 1);
-    }
-  };
+      for (var i = 0; i < echo.length; i++) {
+          self.store.push(echo[i]);
+      }
+      self.echoImages();
+      window.onscroll = self.echoImages;
+    },
 
-  /*
-   * Echo the images and callbacks
-   */
-  var echoImages = function () {
-    for (var i = 0; i < echoStore.length; i++) {
-      var self = echoStore[i];
-      if (scrolledIntoView(self)) {
-        echoSrc(self, removeEcho(self, i));
+    echoImages: function () {
+      for (var i = 0; i < self.store.length; i++) {
+        var elem = self.store[i];
+        if (self.scrolledIntoView(elem)) {
+          console.log('Logging: ' + self.scrolledIntoView(elem));
+          self.echoSrc(elem, self.removeEcho(elem, i));
+        }
+      }
+    },
+
+    scrolledIntoView: function (element) {
+      var coords = element.getBoundingClientRect();
+      return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + self.off);
+    },
+
+    echoSrc: function (imgz, callback) {
+      imgz.src = imgz.getAttribute('data-echo');
+      if (callback) {
+        callback();
+      }
+    },
+
+    removeEcho: function (element, index) {
+      if (self.store.indexOf(element) !== -1) {
+        self.store.splice(index, 1);
       }
     }
+
   };
 
-  /*
-   * Prototypal setup
-   */
-  Echo.prototype = {
-    init : function () {
-      echoStore.push(this.elem);
-    }
+  return {
+    init: self.init
   };
-
-  /*
-   * Initiate the plugin
-   */
-  var lazyImgs = document.querySelectorAll('img[data-echo]');
-  for (var i = 0; i < lazyImgs.length; i++) {
-    new Echo(lazyImgs[i]).init();
-  }
-
-  /*
-   * Bind the events
-   */
-  if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', echoImages, false);
-  } else {
-    window.onload = echoImages;
-  }
-  window.onscroll = echoImages;
 
 })(window, document);

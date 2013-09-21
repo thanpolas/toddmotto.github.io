@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+
+    <base href="/assets/">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5, JavaScript, AngularJS.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Articles, tutorials and downloads on front-end development. HTML5, CSS3, JavaScript.">
+
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//plus.google.com/104675806858920385950" rel="author">
-    <link href="/css/style.min.css" rel="stylesheet">
-    
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
     <script>
     (function () {
-      document.documentElement.className = 'js'
+      document.documentElement.className = 'js';
       var supportsSVG = function () {
         return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
       };
@@ -20,29 +26,31 @@
     </script>
 
   </head>
-  <body>
+  <body class="clear">
+
     <header class="header" role="banner">
-      <div class="wrapper clear">
-        <div class="logo">
-          <a href="/">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="logo__img" alt="Logo">
-          </a>
-        </div>
-        <nav class="nav" role="navigation">
-          <ul>
-            <li class="nav__item">
-              <a href="/">Latest</a>
-            </li><!--
-            --><li class="nav__item">
-              <a href="/about">About</a>
-            </li><!--
-            --><li class="nav__item">
-              <a href="/downloads">Downloads</a>
-            </li><!--
-            --><li class="nav__item">
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="nav" role="navigation">
+        <ul>
+          <li>
+            <a href="/">
+              Latest
+            </a>
+          </li><!--
+          --><li>
+            <a href="/about">
+              About
+            </a>
+          </li><!--
+          --><li>
+            <a href="/downloads">
+              Downloads
+            </a>
+          </li><!--
+          --><li>
+            <a href="/contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>

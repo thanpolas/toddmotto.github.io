@@ -1,0 +1,8 @@
+.sidebar {
+  width:30%;
+  min-width:320px;
+  padding:79px 60px 0 0;
+  background:#f5f5f5;
+  border-left:1px solid #d2d5db;
+  @include position(fixed, 0px 0px 0px 0);
+}
