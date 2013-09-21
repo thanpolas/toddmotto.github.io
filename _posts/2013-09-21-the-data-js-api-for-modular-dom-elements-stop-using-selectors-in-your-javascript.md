@@ -29,7 +29,7 @@ I want to autoselect the text inside the input as soon as my cursor is focussed 
 
 But uh oh, I've got three different classes, _s**t_.
 
-Now any (hypothetical) code is ruined because it only took into account `.header-input` - I need to account for the other two. So let's take a step back for a minute, thinking JavaScript first is often a really sexy way to code, let's think functionality. I bet you're starting to think 'Hmm, but why not just add an `autoselect` class to each of them?'. No. Just no. Classes are for styling, we've established this previously. So...
+Now any (hypothetical) code is ruined because it only took into account `.header-input` - I need to account for the other two. So let's take a step back for a minute, thinking JavaScript first is often a really sexy way to code, let's think functionality. I bet you're starting to think 'Hmm, but why not just add an `autoselect` class to each of them?'. No. Just no. Classes are for styling, we've established this previously - I want to bind behaviour no classes. So...
 
 ### Semantic [data-js]
 So how do we tackle the problem with applying the same logic to multiple elements without modifying our scripts everytime we extend them? I just want to write logic once and let it do the same work regardless of the element's identifier.
