@@ -48,7 +48,7 @@ That's where `data-js` behavioural-binding comes in, seamless JavaScript logic. 
 <input value="Select my contents" class="sidebar-input" data-js="select">
 {% endhighlight %}
 
-I've binded my JavaScript logic independently, it has no clash with my class names. It also means that when it comes to my next project, I can just lift the JavaScript logic out for reuse and not have to fuss about changing class names and refactoring things.
+I've binded my JavaScript logic independently, no conflicts with my class names or even inside the class attribute. It also means that when it comes to my next project, I can just lift the JavaScript logic out for reuse and not have to fuss about changing class names and refactoring things.
 
 You can then use a selector like so to target these inputs:
 
