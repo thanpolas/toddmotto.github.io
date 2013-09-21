@@ -3,10 +3,7 @@ title: Contact
 layout: page
 ---
 
-### General
-
-To get in touch about anything, email me:
-<a href="mailto:todd@toddmotto.com">todd@toddmotto.com</a>
+To get in touch about anything, email me on [todd@toddmotto.com](mailto:todd@toddmotto.com) or [tweet](//twitter.com/toddmotto) me.
 
 I'm not currently looking for job opportunities or other arrangements.
 
