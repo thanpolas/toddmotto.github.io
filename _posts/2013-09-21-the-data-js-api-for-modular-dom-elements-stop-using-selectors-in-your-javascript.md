@@ -6,7 +6,7 @@ title: The [data-js] API for modular DOM elements; stop using selectors in your 
 
 Selectors in JavaScript are bad. They are rubbish and I despise working with them. The bridge between the DOM and JavaScript is a tough one to cross and in no way modular, but there are ways around this. JavaScript is a beautiful language, it's fully dynamic, and that's exactly what selectors _aren't_. Selectors are a sin, and here's why...
 
-A while ago [I wrote about `data-js` selectors](//toddmotto.com/data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript), a fleshed out idea that was very raw and an attempt to create JavaScript logic beyond DOM selectors. I'd experimented with it a few times and it often got a bit sticky when it came to modularity - I was repeating a lot of code. I've finally began to see the clearer picture on the 'modularness' and feel like it's worth sharing.
+A while ago [I wrote about `data-js` selectors](//toddmotto.com/data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript), a fleshed out idea that was very raw and an attempt to create JavaScript logic beyond DOM selectors by binding logic to a `data-*` selector and not targeting an element. I'd experimented with it a few times and it often got a bit sticky when it came to modularity - I was repeating a lot of code. I've finally began to see the clearer picture on the 'modularness' and feel like it's worth sharing.
 
 I'm going to show you how to:
 
