@@ -169,7 +169,7 @@ var Module = (function () {
 Module.public();
 {% endhighlight %}
 
-Why do I like this? For starters it creates a consistent namespace for all `data-js` modules, of course I can rename my `Module` to whatever I like though. It also promotes exposing only function you need which keep private functions safe, but most importantly, you don't have a single selector in the script at all - just the `data-js` prefix that we've established is well needed.
+Why do I like this? For starters it creates a consistent namespace for all `data-js` modules, of course I can rename my `Module` to whatever I like though. It also promotes exposing only functions you need which keep private functions safe, but most importantly, you don't have a single selector in the script at all - just the `data-js` prefix that we've established is well needed.
 
 ### jQuery and selector vomit
 I'll call it selector vomit, because I've seen this so many times:
