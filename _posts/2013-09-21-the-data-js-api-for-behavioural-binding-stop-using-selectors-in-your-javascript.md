@@ -210,7 +210,7 @@ I also have experimented with thrashing a few ideas out with JSON inside `data-*
 
 It opens up some crazy things that are possible (imagine passing in an object into a tiny function and letting it run wild) - for the future I'd definitely like to experiment more.
 
-For now though, how about passing in JSON data into our module? Here's how we could fully extend the DOM with no selectors inside our core script:
+For now though, how about passing in object data into our module? Here's how we could fully extend the DOM with no selectors inside our core script:
 
 {% highlight javascript %}
 Module.myPlugin({
