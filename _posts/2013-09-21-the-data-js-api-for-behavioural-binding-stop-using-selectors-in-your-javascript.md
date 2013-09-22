@@ -112,7 +112,7 @@ Now is the time to create an API that's totally separate from any JavaScript we 
 I'd like to be able to write a bunch of code that is fully dynamic, that doesn't rely on selectors inside it, but gets the data from outside the scope. In true module fashion, we could do this:
 
 {% highlight javascript %}
-Module.select('select');
+Module.dataSelect('select');
 {% endhighlight %}
 
 And that's it. This is the type of stuff that would be called on DOM Ready inside a pair of `<script>` tags or whatever your setup allows. I've created a Module that has a 'select' method, in which I pass in the 'select' attribute (ignoring the `data-js` part) of the selector as this is already setup.
@@ -126,7 +126,7 @@ var Module = (function () {
         return document.querySelectorAll('[data-js=' + selector + ']');
     };
 
-    var select = function (attr) {
+    var dataSelect = function (attr) {
         var elem = datajs(attr);
         var select = function () {
             this.select();
@@ -138,7 +138,7 @@ var Module = (function () {
     };
 
     return {
-        select: select
+        dataSelect: dataSelect
     };
 
 })();
@@ -209,6 +209,17 @@ I also have experimented with thrashing a few ideas out with JSON inside `data-*
 {% endhighlight %}
 
 It opens up some crazy things that are possible (imagine passing in an object into a tiny function and letting it run wild) - for the future I'd definitely like to experiment more.
+
+For now though, how about passing in JSON data into our module? Here's how we could fully extend the DOM with no selectors inside our core script:
+
+{% highlight javascript %}
+Module.myPlugin({
+  search: {
+    selector: 'search',
+    target: 'select'
+  }
+});
+{% endhighlight %}
 
 ### Food for thought
 I hope you've been a little intrigued at least from this article and what it presents, if so, here's some things to remember for future coding to aim for:
