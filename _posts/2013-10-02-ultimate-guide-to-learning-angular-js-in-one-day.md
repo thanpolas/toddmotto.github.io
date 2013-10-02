@@ -78,12 +78,12 @@ Each new file I create simple grabs the _myApp_ namespace and you're automatical
 #### Controllers
 Now you've grasped the concept of MVC and a basic setup, let's check out Angular's implementation on how you can get going with Controllers.
 
-Taking the example from above, we can take a baby step into pushing some data into the DOM from a controller. Angular uses a templating-style _&#123;&#123; handlebars &#125;&#125;_ syntax for talking to your HTML. Your HTML should (ideally) contain no physical text or hard coded values to make the most of Angular. Here's an example of pushing a simple String into the DOM:
+Taking the example from above, we can take a baby step into pushing some data into the DOM from a controller. Angular uses a templating-style _{% raw %}{{ handlebars }}{% endraw %}_ syntax for talking to your HTML. Your HTML should (ideally) contain no physical text or hard coded values to make the most of Angular. Here's an example of pushing a simple String into the DOM:
 
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
-         &#123;&#123;text &#125;&#125;
+         {% raw %}{{text }}{% endraw %}
     </div>
 </div>
 {% endhighlight %}
@@ -131,8 +131,8 @@ Then port it over to DOM to display this data:
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="UserCtrl">
-        <p class="username">Welcome, &#123;&#123; user.details.username &#125;&#125;</p>
-        <p class="id">User ID: &#123;&#123; user.details.id &#125;&#125;</p>
+        <p class="username">Welcome, {% raw %}{{ user.details.username }}{% endraw %}</p>
+        <p class="id">User ID: {% raw %}{{ user.details.id }}{% endraw %}</p>
     </div>
 </div>
 {% endhighlight %}
@@ -339,8 +339,8 @@ DOM usage:
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
-        <p>No filter: &#123;&#123; greeting &#125;&#125;</p>
-        <p>Reverse: &#123;&#123; greeting | reverse &#125;&#125;</p>
+        <p>No filter: {% raw %}{{ greeting }}{% endraw %}</p>
+        <p>Reverse: {% raw %}{{ greeting | reverse }}{% endraw %}</p>
     </div>
 </div>
 {% endhighlight %}
@@ -353,7 +353,7 @@ And it's usage inside an _ng-repeat_:
 
 {% highlight html%}
 <ul>
-  <li ng-repeat="number in myNumbers |filter:oddNumbers">&#123;&#123; number &#125;&#125;</li>
+  <li ng-repeat="number in myNumbers |filter:oddNumbers">{% raw %}{{ number }}{% endraw %}</li>
 </ul>
 {% endhighlight %}
 
@@ -378,7 +378,7 @@ And it's usage inside an _ng-repeat_:
 
 {% highlight html%}
 <li ng-repeat="number in numbers | filter:greaterThanNum">
-  &#123;&#123; number &#125;&#125;
+  {% raw %}{{ number }}{% endraw %}
 </li>
 {% endhighlight %}
 
@@ -397,7 +397,7 @@ Here I create the &lt;input&gt; and bind a Model called 'myModel', I can then us
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
         <input type="text" ng-model="myModel" placeholder="Start typing..." />
-        <p>My model data: &#123;&#123; myModel &#125;&#125;</p>
+        <p>My model data: {% raw %}{{ myModel }}{% endraw %}</p>
     </div>
 </div>
 {% endhighlight %}
@@ -493,7 +493,7 @@ And now in the DOM, we can just do this:
 
 {% highlight html %}
 <div ng-controller="MainCtrl">
-  <p>&#123;&#123; user.username &#125;&#125;</p>
+  <p>{% raw %}{{ user.username }}{% endraw %}</p>
 </div>
 {% endhighlight %}
 
@@ -538,9 +538,9 @@ No we need to plug it into our HTML. This is where we'll use declarative binding
 {% highlight html %}
 <ul>
   <li ng-repeat="message in emails.messages">
-    <p>From: &#123;&#123; message.from &#125;&#125;</p>
-    <p>Subject: &#123;&#123; message.subject &#125;&#125;</p>
-    <p>&#123;&#123; message.sent | date:'MMM d, y h:mm:ss a' &#125;&#125;</p>
+    <p>From: {% raw %}{{ message.from }}{% endraw %}</p>
+    <p>Subject: {% raw %}{{ message.subject }}{% endraw %}</p>
+    <p>{% raw %}{{ message.sent | date:'MMM d, y h:mm:ss a' }}{% endraw %}</p>
   </li>
 </ul>
 {% endhighlight %}
@@ -616,7 +616,7 @@ elem.onclick = function (data) {
 This would potentially be a callback from a _GET_ request, and you'll alter the DOM based on the data's state. Angular gives you this for free too, and you'll be able to do it inline without writing any JavaScript!
 
 {% highlight html %}
-<p>&#123;&#123; data.length > 0 && 'My data' || 'No data' &#125;&#125;</p>
+<p>{% raw %}{{ data.length > 0 && 'My data' || 'No data' }}{% endraw %}</p>
 {% endhighlight %}
 
 This will just update itself dynamically without callbacks as your application polls/fetches data. If there's no data, it'll tell you - if there's data, it'll say. There are so many use cases for this and Angular handles it all automatically via two-way binding magic.
@@ -744,7 +744,7 @@ A quick example of this, you could create an _ng-repeat_ without a Controller pr
 
 {% highlight html %}
 <li ng-repeat="number in [1,2,3,4,5,6,7,8,9]">
-  &#123;&#123; number &#125;&#125;
+  {% raw %}{{ number }}{% endraw %}
 </li>
 {% endhighlight %}
 
