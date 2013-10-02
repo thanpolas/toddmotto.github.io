@@ -779,6 +779,8 @@ When introducing Angular, let's think about Views and Scopes, not the DOM! Scope
  {% highlight html %}
 <!-- scope: MainCtrl -->
 <div class="content" ng-controller="MainCtrl">
+
+</div>
 <!-- /scope: MainCtrl -->
 {% endhighlight %}
 
