@@ -17,13 +17,13 @@ You've probably heard of MVC, used in many programming languages as a means of s
 
 {% highlight javascript %}
 {
-	"users" : [{
-		"name": "Joe Bloggs",
-		"id": "82047392"
-	},{
-		"name": "John Doe",
-		"id": "65198013"
-	}]
+  "users" : [{
+    "name": "Joe Bloggs",
+    "id": "82047392"
+  },{
+    "name": "John Doe",
+    "id": "65198013"
+  }]
 }
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ An Angular Module and Controller:
 var myApp = angular.module('myApp', []);
 
 myApp.controller('MainCtrl', ['$scope', function ($scope) {
-	// Controller magic
+  // Controller magic
 }]);
 {% endhighlight %}
 
@@ -83,7 +83,7 @@ Taking the example from above, we can take a baby step into pushing some data in
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
-        {{ text }}
+         &#123;&#123;text &#125;&#125;
     </div>
 </div>
 {% endhighlight %}
@@ -115,13 +115,13 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('UserCtrl', ['$scope', function ($scope) {
     
-		// Let's namespace the user details
-		// Also great for DOM visual aids too
-		$scope.user = {};
+    // Let's namespace the user details
+    // Also great for DOM visual aids too
+    $scope.user = {};
     $scope.user.details = {
-			"username": "Todd Motto",
-			"id": "89101112"
-		};
+      "username": "Todd Motto",
+      "id": "89101112"
+    };
     
 }]);
 {% endhighlight %}
@@ -131,8 +131,8 @@ Then port it over to DOM to display this data:
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="UserCtrl">
-        <p class="username">Welcome, {{ user.details.username }}</p>
-        <p class="id">User ID: {{ user.details.id }}</p>
+        <p class="username">Welcome, &#123;&#123; user.details.username &#125;&#125;</p>
+        <p class="id">User ID: &#123;&#123; user.details.id &#125;&#125;</p>
     </div>
 </div>
 {% endhighlight %}
@@ -173,7 +173,7 @@ Now you know how to declare where Directives are used/injected, let's create thi
 myApp.directive('customButton', function () {
   return {
     link: function (scope, element, attrs) {
-			// DOM manipulation/events here!
+      // DOM manipulation/events here!
     }
   };
 });
@@ -186,14 +186,14 @@ A directive simply returns itself via an Object and takes a number of parameters
 {% highlight javascript %}
 myApp.directive('customButton', function () {
   return {
-		restrict: 'A',
+    restrict: 'A',
     replace: true,
-		transclude: true,
-		template: '<a href="" class="myawesomebutton" ng-transclude>' +
-								'<i class="icon-ok-sign"></i>' +
-							'</a>',
+    transclude: true,
+    template: '<a href="" class="myawesomebutton" ng-transclude>' +
+                '<i class="icon-ok-sign"></i>' +
+              '</a>',
     link: function (scope, element, attrs) {
-			// DOM manipulation/events here!
+      // DOM manipulation/events here!
     }
   };
 });
@@ -214,8 +214,8 @@ Make sure you _Inspect Element_ to see the additional markup injected. Yes, I kn
 {% highlight javascript %}
 myApp.directive('customButton', function () {
   return {
-		templateUrl: 'templates/customButton.html'
-		// directive stuff...
+    templateUrl: 'templates/customButton.html'
+    // directive stuff...
   };
 });
 {% endhighlight %}
@@ -225,7 +225,7 @@ And inside your file (filename isn't sensitive at all):
 {% highlight html %}
 <!-- inside customButton.html -->
 <a href="" class="myawesomebutton" ng-transclude>
-	<i class="icon-ok-sign"></i>
+  <i class="icon-ok-sign"></i>
 </a>
 {% endhighlight %}
 
@@ -234,7 +234,7 @@ What's really good about doing this, is the browser will actually _cache_ the HT
 {% highlight html %}
 <script type="text/ng-template" id="customButton.html">
 <a href="" class="myawesomebutton" ng-transclude>
-	<i class="icon-ok-sign"></i>
+  <i class="icon-ok-sign"></i>
 </a>
 </script>
 {% endhighlight %}
@@ -258,10 +258,10 @@ You would then use this inside a Controller like so:
 
 {% highlight javascript %}
 myApp.controller('MainCtrl', ['$scope', function ($scope) {
-		var a = 12;
-		var b = 24;
+    var a = 12;
+    var b = 24;
 
-		// outputs 288
+    // outputs 288
     var result = Math.multiply(a, b);
 }]);
 {% endhighlight %}
@@ -273,10 +273,10 @@ When you create a Service (or Factory) you'll need to use dependency injection t
 {% highlight javascript %}
 // Pass in Math
 myApp.controller('MainCtrl', ['$scope', 'Math', function ($scope, Math) {
-		var a = 12;
-		var b = 24;
+    var a = 12;
+    var b = 24;
 
-		// outputs 288
+    // outputs 288
     var result = Math.multiply(a, b);
 }]);
 {% endhighlight %}
@@ -287,12 +287,12 @@ Coming from Services to Factories should be simple now, we could create an Objec
 {% highlight javascript %}
 myApp.factory('Server', function () {
   return {
-		get: function(url) {
-			return $http.get(url);
-		},
-		post: function(url) {
-			return $http.post(url);
-		},
+    get: function(url) {
+      return $http.get(url);
+    },
+    post: function(url) {
+      return $http.post(url);
+    },
   };
 });
 {% endhighlight %}
@@ -302,10 +302,10 @@ Here I'm creating a custom wrapper for Angular's XHR's. After dependency injecti
 {% highlight javascript %}
 // Pass in Math
 myApp.controller('MainCtrl', ['$scope', 'Server', function ($scope, Server) {
-		var jsonGet = 'http://myserver/getURL';
-		var jsonPost = 'http://myserver/postURL';
+    var jsonGet = 'http://myserver/getURL';
+    var jsonPost = 'http://myserver/postURL';
     Server.get(jsonGet);
-		Server.post(jsonPost);
+    Server.post(jsonPost);
 }]);
 {% endhighlight %}
 
@@ -339,8 +339,8 @@ DOM usage:
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
-        <p>No filter: {{ greeting }}</p>
-        <p>Reverse: {{ greeting | reverse }}</p>
+        <p>No filter: &#123;&#123; greeting &#125;&#125;</p>
+        <p>Reverse: &#123;&#123; greeting | reverse &#125;&#125;</p>
     </div>
 </div>
 {% endhighlight %}
@@ -353,7 +353,7 @@ And it's usage inside an _ng-repeat_:
 
 {% highlight html%}
 <ul>
-	<li ng-repeat="number in myNumbers |filter:oddNumbers">{{ number }}</li>
+  <li ng-repeat="number in myNumbers |filter:oddNumbers">&#123;&#123; number &#125;&#125;</li>
 </ul>
 {% endhighlight %}
 
@@ -366,7 +366,7 @@ myApp.controller('MainCtrl', ['$scope', function ($scope) {
     
     $scope.lowerBound = 42;
     
-		// Does the Filters
+    // Does the Filters
     $scope.greaterThanNum = function (item) {
         return item > $scope.lowerBound;
     };
@@ -378,7 +378,7 @@ And it's usage inside an _ng-repeat_:
 
 {% highlight html%}
 <li ng-repeat="number in numbers | filter:greaterThanNum">
-	{{ number }}
+  &#123;&#123; number &#125;&#125;
 </li>
 {% endhighlight %}
 
@@ -397,7 +397,7 @@ Here I create the &lt;input&gt; and bind a Model called 'myModel', I can then us
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
         <input type="text" ng-model="myModel" placeholder="Start typing..." />
-        <p>My model data: {{ myModel }}</p>
+        <p>My model data: &#123;&#123; myModel &#125;&#125;</p>
     </div>
 </div>
 {% endhighlight %}
@@ -405,7 +405,7 @@ Here I create the &lt;input&gt; and bind a Model called 'myModel', I can then us
 {% highlight javascript %}
 myApp.controller('MainCtrl', ['$scope', function ($scope) {
     // Capture the model data
-		// and/or initialise it with an existing string
+    // and/or initialise it with an existing string
     $scope.myModel = '';
 }]);
 {% endhighlight %}
@@ -423,10 +423,10 @@ Enter 'dollar http'. Your best friend from now on. The _$http_ method is a nice 
 
 {% highlight javascript %}
 myApp.controller('MainCtrl', ['$scope', function ($scope) {
-	$http({
-		method: 'GET',
-		url: '//localhost:9000/someUrl'
-	});
+  $http({
+    method: 'GET',
+    url: '//localhost:9000/someUrl'
+  });
 }]);
 {% endhighlight %}
 
@@ -434,13 +434,13 @@ Angular then returns something called a _promise_, which is a much more efficien
 
 {% highlight javascript %}
 myApp.controller('MainCtrl', ['$scope', function ($scope) {
-	$http({
-		method: 'GET',
-		url: '//localhost:9000/someUrl'
-	})
-	.success(function (data, status, headers, config) {
-		// successful data retrieval
-	})
+  $http({
+    method: 'GET',
+    url: '//localhost:9000/someUrl'
+  })
+  .success(function (data, status, headers, config) {
+    // successful data retrieval
+  })
   .error(function (data, status, headers, config) {
     // something went wrong :(
   });
@@ -453,10 +453,10 @@ Ideally, we should setup and design our JSON first, which will affect how we bin
 
 {% highlight javascript %}
 {
-	"user": {
-		"name": "Todd Motto",
-		"id": "80138731"
-	}
+  "user": {
+    "name": "Todd Motto",
+    "id": "80138731"
+  }
 }
 {% endhighlight %}
 
@@ -466,23 +466,23 @@ The JavaScript (check inline annotations for what's going on here):
 {% highlight javascript %}
 myApp.controller('UserCtrl', ['$scope', function ($scope) {
 
-	// create a user Object
-	$scope.user = {};
+  // create a user Object
+  $scope.user = {};
 
-	// Initiate a model as an empty string
-	$scope.user.username = '';
+  // Initiate a model as an empty string
+  $scope.user.username = '';
 
-	// We want to make a call and get
-	// the person's username
-	$http({
-		method: 'GET',
-		url: '//localhost:9000/someUrlForGettingUsername'
-	})
-	.success(function (data, status, headers, config) {
-		// See here, we are now assigning this username
-		// to our existing model!
-		$scope.user.username = data.user.name;
-	})
+  // We want to make a call and get
+  // the person's username
+  $http({
+    method: 'GET',
+    url: '//localhost:9000/someUrlForGettingUsername'
+  })
+  .success(function (data, status, headers, config) {
+    // See here, we are now assigning this username
+    // to our existing model!
+    $scope.user.username = data.user.name;
+  })
   .error(function (data, status, headers, config) {
     // something went wrong :(
   });
@@ -493,7 +493,7 @@ And now in the DOM, we can just do this:
 
 {% highlight html %}
 <div ng-controller="MainCtrl">
-	<p>{{ user.username }}</p>
+  <p>&#123;&#123; user.username &#125;&#125;</p>
 </div>
 {% endhighlight %}
 
@@ -507,12 +507,12 @@ Let's imagine we've just made an Ajax request to get a list of emails and their 
 {% highlight javascript %}
 myApp.controller('EmailsCtrl', ['$scope', function ($scope) {
 
-	// create a emails Object
-	$scope.emails = {};
+  // create a emails Object
+  $scope.emails = {};
 
-	// pretend data we just got back from the server
-	// this is an ARRAY of OBJECTS
-	$scope.emails.messages = [{
+  // pretend data we just got back from the server
+  // this is an ARRAY of OBJECTS
+  $scope.emails.messages = [{
         "from": "Steve Jobs",
         "subject": "I think I'm holding my phone wrong :/",
         "sent": "2013-10-01T08:05:59Z"
@@ -537,11 +537,11 @@ No we need to plug it into our HTML. This is where we'll use declarative binding
 
 {% highlight html %}
 <ul>
-	<li ng-repeat="message in emails.messages">
-		<p>From: {{ message.from }}</p>
-		<p>Subject: {{ message.subject }}</p>
-		<p>{{ message.sent | date:'MMM d, y h:mm:ss a' }}</p>
-	</li>
+  <li ng-repeat="message in emails.messages">
+    <p>From: &#123;&#123; message.from &#125;&#125;</p>
+    <p>Subject: &#123;&#123; message.subject &#125;&#125;</p>
+    <p>&#123;&#123; message.sent | date:'MMM d, y h:mm:ss a' &#125;&#125;</p>
+  </li>
 </ul>
 {% endhighlight %}
 
@@ -559,9 +559,9 @@ As a continuation from declarative-binding, scope functions are the next level u
 {% highlight javascript %}
 myApp.controller('MainCtrl', ['$scope', function ($scope) {
 
-	$scope.deleteEmail = function (index) {
-  	$scope.emails.messages.splice(index, 1)
-	};
+  $scope.deleteEmail = function (index) {
+    $scope.emails.messages.splice(index, 1)
+  };
 
 }]);
 {% endhighlight %}
@@ -585,7 +585,7 @@ Now we'll move onto _DOM Methods_, these are also Directives and simulate functi
 
 {% highlight html %}
 <a href="" ng-click="toggle = !toggle">Toggle nav</a>
-	<ul ng-show="toggle">
+  <ul ng-show="toggle">
     <li>Link 1</li>
     <li>Link 2</li>
     <li>Link 3</li>
@@ -605,18 +605,18 @@ Have you ever done this?
 
 {% highlight javascript %}
 elem.onclick = function (data) {
-	if (data.length === 0) {
-		otherElem.innerHTML = 'No data';
-	} else {
-		otherElem.innerHTML = 'My data';
-	}
+  if (data.length === 0) {
+    otherElem.innerHTML = 'No data';
+  } else {
+    otherElem.innerHTML = 'My data';
+  }
 };
 {% endhighlight %}
 
 This would potentially be a callback from a _GET_ request, and you'll alter the DOM based on the data's state. Angular gives you this for free too, and you'll be able to do it inline without writing any JavaScript!
 
 {% highlight html %}
-<p>{{ data.length > 0 && 'My data' || 'No data' }}</p>
+<p>&#123;&#123; data.length > 0 && 'My data' || 'No data' &#125;&#125;</p>
 {% endhighlight %}
 
 This will just update itself dynamically without callbacks as your application polls/fetches data. If there's no data, it'll tell you - if there's data, it'll say. There are so many use cases for this and Angular handles it all automatically via two-way binding magic.
@@ -659,7 +659,7 @@ myApp.config(['$routeProvider', function ($routeProvider) {
   .when('/', {
     templateUrl: 'views/main.html'
   })
-	.when('/emails', {
+  .when('/emails', {
     templateUrl: 'views/emails.html'
   })
   .otherwise({
@@ -693,7 +693,7 @@ myApp.controller('EmailsCtrl', ['$scope', function ($scope) {
 
     $scope.emails = {};
     
-		// Assign the initial data!
+    // Assign the initial data!
     $scope.emails.messages = globalData.emails;
     
 }]);
@@ -709,7 +709,7 @@ myApp.controller('MainCtrl',
 ['$scope', 'Dependency', 'Service', 'Factory',
 function ($scope, Dependency, Service, Factory) {
 
-	// code
+  // code
 
 }]);
 {% endhighlight %}
@@ -721,13 +721,13 @@ myApp.controller('MainCtrl',
 ['$scope', 'Dependency', 'Service', 'Factory',
 function (a,b,c,d) {
 
-	// a = $scope
-	// b = Dependency
-	// c = Service
-	// d = Factory
+  // a = $scope
+  // b = Dependency
+  // c = Service
+  // d = Factory
 
-	// $scope alias usage
-	a.someFunction = function () {...};
+  // $scope alias usage
+  a.someFunction = function () {...};
 
 }]);
 {% endhighlight %}
@@ -744,7 +744,7 @@ A quick example of this, you could create an _ng-repeat_ without a Controller pr
 
 {% highlight html %}
 <li ng-repeat="number in [1,2,3,4,5,6,7,8,9]">
-	{{ number }}
+  &#123;&#123; number &#125;&#125;
 </li>
 {% endhighlight %}
 
@@ -769,7 +769,7 @@ Scope comments I think are a really nice addition to my workflow, instead of dec
 {% highlight html %}
 <!-- header -->
 <header>
-	Stuff.
+  Stuff.
 </header>
 <!-- /header -->
 {% endhighlight %}
