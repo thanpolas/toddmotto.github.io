@@ -195,8 +195,20 @@ Using `data-*` attributes for performance selectors are actually surprisingly fa
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/LCAjY/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-### [data-js] JSON
-I also have experimented with thrashing a few ideas out with JSON inside `data-*` attributes to fully configure the DOM and do crazy stuff with, it can be classed as a little close for comfort with regards to the separation of concern - but I think it's got some use cases and potential grounding, here's an example:
+### [data-js] JSON/Obj literals
+How about passing in object data into our module? Here's how we could fully extend the DOM with no selectors inside our core script:
+
+{% highlight javascript %}
+Module.myPlugin({
+  search: {
+    selector: 'search',
+    target: 'select'
+  }
+});
+{% endhighlight %}
+
+### Data-binding JSON (highly experimental, for reading only!)
+I also have experimented with thrashing a few ideas out with JSON inside `data-*` attributes to fully configure the DOM and do crazy stuff with, it can be classed as a little close for comfort with regards to the separation of concern - but I think it's got some possible use cases and potential grounding for the future and dynamically creating elements and setups, here's an example:
 
 {% highlight javascript %}
 <div class="myPlugin" data-js='{
@@ -208,18 +220,7 @@ I also have experimented with thrashing a few ideas out with JSON inside `data-*
 }'></div>
 {% endhighlight %}
 
-It opens up some crazy things that are possible (imagine passing in an object into a tiny function and letting it run wild) - for the future I'd definitely like to experiment more.
-
-For now though, how about passing in object data into our module? Here's how we could fully extend the DOM with no selectors inside our core script:
-
-{% highlight javascript %}
-Module.myPlugin({
-  search: {
-    selector: 'search',
-    target: 'select'
-  }
-});
-{% endhighlight %}
+You can then use JavaScript to read the properties whilst looping through the elements to dynamically generate a unique setup for each Node, I've seen this idea once or twice also on the web, it's obviously not too crazy. For the future, I'd definitely like to experiment more.
 
 ### Food for thought
 I hope you've been a little intrigued at least from this article and what it presents, if so, here's some things to remember for future coding to aim for:
