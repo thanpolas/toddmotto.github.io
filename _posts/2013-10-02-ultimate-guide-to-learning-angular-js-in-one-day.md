@@ -755,7 +755,7 @@ Output:
 <iframe width="100%" height="300" src="http://jsfiddle.net/toddmotto/C9GHF/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### HTML5 Web Components
-You'll probably have caught it earlier, but AngularJS allows you to create custom directives:
+You'll probably have caught it earlier, but AngularJS allows you to create custom elements:
 
 {% highlight html %}
 <myCustomElement></myCustomElement>
