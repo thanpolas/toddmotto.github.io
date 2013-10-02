@@ -83,7 +83,7 @@ Taking the example from above, we can take a baby step into pushing some data in
 {% highlight html %}
 <div ng-app="myApp">
     <div ng-controller="MainCtrl">
-         {% raw %}{{text }}{% endraw %}
+         {% raw %}{{ text }}{% endraw %}
     </div>
 </div>
 {% endhighlight %}
