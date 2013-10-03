@@ -300,7 +300,6 @@ myApp.factory('Server', function () {
 Here I'm creating a custom wrapper for Angular's XHR's. After dependency injection into a Controller, the usage is simple:
 
 {% highlight javascript %}
-// Pass in Math
 myApp.controller('MainCtrl', ['$scope', 'Server', function ($scope, Server) {
     var jsonGet = 'http://myserver/getURL';
     var jsonPost = 'http://myserver/postURL';
