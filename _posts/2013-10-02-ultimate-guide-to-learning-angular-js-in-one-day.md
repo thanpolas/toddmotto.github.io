@@ -491,7 +491,7 @@ myApp.controller('UserCtrl', ['$scope', function ($scope) {
 And now in the DOM, we can just do this:
 
 {% highlight html %}
-<div ng-controller="MainCtrl">
+<div ng-controller="UserCtrl">
   <p>{% raw %}{{ user.username }}{% endraw %}</p>
 </div>
 {% endhighlight %}
