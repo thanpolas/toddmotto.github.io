@@ -4,6 +4,7 @@ layout: default
 
     <article class="main__content full-post">
       <h1 class="full-post__title">{{ page.title }}</h1>
+      <p class="full-post__date">{{ page.date | date: "%B %d, %Y" }}</p>
       {{ content }}
       <div class="social">
         <div class="social__button">
