@@ -300,7 +300,6 @@ myApp.factory('Server', function () {
 Here I'm creating a custom wrapper for Angular's XHR's. After dependency injection into a Controller, the usage is simple:
 
 {% highlight javascript %}
-// Pass in Math
 myApp.controller('MainCtrl', ['$scope', 'Server', function ($scope, Server) {
     var jsonGet = 'http://myserver/getURL';
     var jsonPost = 'http://myserver/postURL';
@@ -492,7 +491,7 @@ myApp.controller('UserCtrl', ['$scope', function ($scope) {
 And now in the DOM, we can just do this:
 
 {% highlight html %}
-<div ng-controller="MainCtrl">
+<div ng-controller="UserCtrl">
   <p>{% raw %}{{ user.username }}{% endraw %}</p>
 </div>
 {% endhighlight %}
@@ -676,7 +675,7 @@ There is a lot more to the _$routeProvider_ service which is well worth reading 
 ### Global static data
 Gmail handles a lot of it's initial data by writing the JSON into the page (right-click View Source). If you want to instantly set data in your page, it'll quicken up rendering time and Angular will hit the ground running.
 
-When we develop our apps, Java tags are sent down from the backend. I've zero experience with Java so you'll get a made up declaration from me. Here's how to write JSON into your page, and then pass it into a Controller for immediate binding use:
+When I develop our apps, Java tags are placed in the DOM and when rendered, the data is sent down from the backend. [I've zero experience with Java so you'll get a made up declaration from me below, you could use any language though on the server.] Here's how to write JSON into your page and then pass it into a Controller for immediate binding use:
 
 {% highlight html %}
 <!-- inside index.html (bottom of page ofc) -->
