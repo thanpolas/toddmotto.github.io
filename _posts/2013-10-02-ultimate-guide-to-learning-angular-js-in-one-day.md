@@ -153,7 +153,7 @@ function MainCtrl ($scope) {
 };
 {% endhighlight %}
 
-... DON'T do this. This exposes all your functions to the global and doesn't keep them tied in very well with your app. This also means that you can't minify your code or run tests very easily. Don't pollute the global namespace and keep your controllers _inside_ your app.
+... DON'T do this. This exposes all your functions to the global scope and doesn't keep them tied in very well with your app. This also means that you can't minify your code or run tests very easily. Don't pollute the global namespace and keep your controllers _inside_ your app.
 
 #### Directives
 
