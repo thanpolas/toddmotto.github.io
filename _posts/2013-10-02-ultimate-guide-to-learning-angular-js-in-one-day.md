@@ -143,6 +143,18 @@ Output:
 
 It's important to remember that Controllers are for _data_ only, and creating functions (event functions too!) that talk to the server and push/pull JSON data. No DOM manipulation should be done here, so put your jQuery toolkit away. Directives are for DOM manipulation, and that's up next.
 
+Protip: throughout the Angular documentation (at the time of writing this) their examples show this usage to create Controllers:
+
+{% highlight javascript %}
+var myApp = angular.module('myApp', []);
+
+function MainCtrl ($scope) {
+  //...
+};
+{% endhighlight %}
+
+... DON'T do this. This exposes all your functions to the global and doesn't keep them tied in very well with your app. This also means that you can't minify your code or run tests very easily. Don't pollute the global namespace and keep your controllers _inside_ your app.
+
 #### Directives
 
 A directive in it's simplest form is a small piece of templated HTML, preferably used multiple times throughout an application where needed. It's an easy way to inject DOM into your application with no effort at all, or perform custom DOM interactions. Directives are not simple at all, however, there is an incredible learning curve to fully conquering them, but this next phase will let you hit the ground running.
