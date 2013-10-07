@@ -161,9 +161,4 @@ Depending on your team and setups, it might be easier using one method or the ot
 
 Web Components introduces custom attributes too, use - but _don't_ abuse :)
 
-<div class="download-box">
-  <a href="//toddmotto.com/labs/fluidvids-angular">Demo</a>
-  <a href="http://jsfiddle.net/toddmotto/MvGyc">jsFiddle</a>
-</div>
-
 <iframe width="100%" height="300" src="http://jsfiddle.net/toddmotto/MvGyc/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
