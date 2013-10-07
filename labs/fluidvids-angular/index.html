@@ -47,7 +47,7 @@
           src: '@'
         },
         template: '<div class="fluidvids">' +
-        '<iframe src="{{ src }}"></iframe>' +
+        '<iframe ng-src="{{ src }}"></iframe>' +
         '</div>',
         link: function (scope, element, attrs) {
           var ratio = (attrs.height / attrs.width) * 100;
