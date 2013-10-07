@@ -24,8 +24,8 @@
 
     <div class="wrapper">
 
-      <fluidvids video="http://player.vimeo.com/video/23919731" width="500" height="281"></fluidvids>
-      <fluidvids video="http://www.youtube.com/embed/JMl8cQjBfqk" width="560" height="315"></fluidvids>
+      <fluidvids src="http://player.vimeo.com/video/23919731" width="500" height="281"></fluidvids>
+      <fluidvids src="http://www.youtube.com/embed/JMl8cQjBfqk" width="560" height="315"></fluidvids>
 
     </div>
 
@@ -41,10 +41,10 @@
         replace: true,
         transclude: true,
         scope: {
-          video: '@'
+          src: '@'
         },
         template: '<div class="fluidvids">' +
-        '<iframe src="{{ video }}"></iframe>' +
+        '<iframe src="{{ src }}"></iframe>' +
         '</div>',
         link: function (scope, element, attrs) {
           var ratio = (attrs.height / attrs.width) * 100;
