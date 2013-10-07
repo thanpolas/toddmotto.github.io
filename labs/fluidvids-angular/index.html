@@ -37,16 +37,15 @@
     var myApp = angular.module('myApp', []);
 
     // needed to whitelist domains passed into Angular
-    // myApp.config(function ($sceDelegateProvider) {
-    //   $sceDelegateProvider.resourceUrlWhitelist(['.*']);
-    // });
+    myApp.config(function ($sceDelegateProvider) {
+      $sceDelegateProvider.resourceUrlWhitelist(['.*']);
+    });
 
     // Fluidvids directive
     myApp.directive('fluidvids', function () {
       return {
         restrict: 'EA',
         replace: true,
-        transclude: true,
         scope: {
           src: '@'
         },
