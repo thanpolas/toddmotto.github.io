@@ -96,7 +96,7 @@ myApp.directive('fluidvids', function () {
       video: '@'
     },
     template: '<div class="fluidvids">' +
-                '<iframe ng-src="{{ video }}"></iframe>' +
+                '<iframe ng-src="{% raw %}{{ video }}{% endraw %}"></iframe>' +
               '</div>',
     link: function (scope, element, attrs) {
       var ratio = (attrs.height / attrs.width) * 100;
