@@ -157,7 +157,7 @@ function MainCtrl ($scope) {
 
 #### Directives
 
-A directive in it's simplest form is a small piece of templated HTML, preferably used multiple times throughout an application where needed. It's an easy way to inject DOM into your application with no effort at all, or perform custom DOM interactions. Directives are not simple at all, however, there is an incredible learning curve to fully conquering them, but this next phase will let you hit the ground running.
+A directive [checkout my post on Directives from existing scripts/plugins](http://toddmotto.com/creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts) in it's simplest form is a small piece of templated HTML, preferably used multiple times throughout an application where needed. It's an easy way to inject DOM into your application with no effort at all, or perform custom DOM interactions. Directives are not simple at all, however, there is an incredible learning curve to fully conquering them, but this next phase will let you hit the ground running.
 
 So what are directives useful for? A lot of things, including DOM components, for example tabs or navigation elements - really depends on what your app makes use of in the UI. Let me put it this way, if you've toyed with _ng-show_ or _ng-hide_, those are directives (though they don't inject DOM).
 
@@ -799,3 +799,7 @@ When introducing Angular, let's think about Views and Scopes, not the DOM! Scope
 There's an awesome Chrome Extension that the guys at Google recommend for developing and debugging with Angular, it's called Batarang and you can grab it [here](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk).
 
 Happy coding.
+
+### Further reading
+
+- Learn how to [code your own Directive](http://toddmotto.com/creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts) from a custom script or plugin
