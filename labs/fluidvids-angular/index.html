@@ -38,9 +38,11 @@
     <script>
     var myApp = angular.module('myApp', []);
 
-    myApp.directive('fluidvids', function ($sce) {
-      $sce.trustAsResourceUrl("http://player.vimeo.com");
-      $sce.trustAsResourceUrl("http://www.youtube.com");
+    myApp.config(function($sceDelegateProvider) {
+      $sceDelegateProvider.resourceUrlWhitelist(['.*']);
+    });
+
+    myApp.directive('fluidvids', function () {
       return {
         restrict: 'EA',
         replace: true,
