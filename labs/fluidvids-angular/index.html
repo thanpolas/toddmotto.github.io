@@ -24,9 +24,6 @@
 
     <div class="wrapper">
 
-      <!-- <fluidvids src="http://player.vimeo.com/video/23919731" width="500" height="281"></fluidvids> -->
-      <!-- <fluidvids src="http://www.youtube.com/embed/JMl8cQjBfqk" width="560" height="315"></fluidvids> -->
-
       <fluidvids src="//player.vimeo.com/video/23919731" height="281" width="500"></fluidvids>
       <fluidvids src="http://www.youtube.com/embed/JMl8cQjBfqk" width="560" height="315"></fluidvids>
 
@@ -36,12 +33,15 @@
     <script>window.angular || document.write('<script src="js/angular.min.js"><\/script>');</script>
 
     <script>
+    // application module
     var myApp = angular.module('myApp', []);
 
-    myApp.config(function($sceDelegateProvider) {
-      $sceDelegateProvider.resourceUrlWhitelist(['.*']);
-    });
+    // needed to whitelist domains passed into Angular
+    // myApp.config(function ($sceDelegateProvider) {
+    //   $sceDelegateProvider.resourceUrlWhitelist(['.*']);
+    // });
 
+    // Fluidvids directive
     myApp.directive('fluidvids', function () {
       return {
         restrict: 'EA',
@@ -51,8 +51,8 @@
           src: '@'
         },
         template: '<div class="fluidvids">' +
-        '<iframe ng-src="{{ src }}"></iframe>' +
-        '</div>',
+                    '<iframe ng-src="{{ src }}"></iframe>' +
+                  '</div>',
         link: function (scope, element, attrs) {
           var ratio = (attrs.height / attrs.width) * 100;
           element[0].style.paddingTop = ratio + '%';
