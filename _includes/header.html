@@ -15,17 +15,25 @@
     <link href="css/style.min.css" rel="stylesheet">
 
     <script>
-    (function () {
-      document.documentElement.className = 'js';
+    (function (a) {
+      a.documentElement.className = 'js';
       var supportsSVG = function () {
-        return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
+        return !! a.createElementNS && !! a.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
       };
-      if (supportsSVG()) document.documentElement.className += ' svg';
-    })();
+      if (supportsSVG()) a.documentElement.className += ' svg';
+    })(document);
     </script>
 
   </head>
   <body class="clear">
+    
+    <script>
+    (function (a) {
+      var bsa = a.createElement('script');
+      bsa.async = bsa.src = '//s3.buysellads.com/ac/bsa.js';
+      a.body.appendChild(bsa);
+    })(document);
+    </script>
 
     <header class="header" role="banner">
       <nav class="nav" role="navigation">
