@@ -20,7 +20,14 @@ Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, Angular
 ### Recognition
 Here's a few brands and companies that have recognised or utilised my work in the web industry:
 
-- Rolling Stone, Intel, Adobe, HTML5 Hub, AppendTo, Google, Esquire, Microsoft, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, Tech.Pro.
+- Rolling Stone, Intel, Adobe, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, Tech.Pro.
+
+### Interviews
+* 09.10.2013: [SND](//www.snd.org/2013/10/the-guts-todd-motto-on-developing-rolling-stones-the-geeks-on-the-front-lines)
+* 23.09.2013: [Advertising Age](//adage.com/article/digital/intel-hub-targets-developers-subsidizing-web-publishers/244296)
+* 12.09.2013: [Web Developer 2](//www.webdeveloper2.com/2013/09/interview-1-todd-motto)
+
+If you'd like to interview me, please get in touch.
 
 ### Friends
 Some great people who I urge you to check out:
