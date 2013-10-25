@@ -4,9 +4,9 @@ permalink: /conditionizr-reloaded-what-every-developer-has-been-waiting-for
 title: Conditionizr reloaded, what every developer has been waiting for
 ---
 
-Wouldn't it be awesome to target browsers, mobile browsers, mobile devices, retina screens or higher screen resolution and conditionally load assets based on those environments? Wouldn't it also be cool to write logic for different environments using callbacks and simple expressions, or even dynamically loading polyfills to get rid of messy conditional statements? How about adding your own tests to target any other devices you're working on? Well, keep reading, because Conditionizr does all this!
+Wouldn't it be ideal to target any browser, mobile browser, mobile device, touch device, screen resolution, operating system and conditionally load assets or tweak your code based on any environments? In a perfect world, Conditionizr wouldn't be needed, but it's here to save your ass...
 
-Conditionizr is just under a year old now, and has just hit version 4. It includes a full API rewrite, public API modules and is just 1kb in size (66% reduction). It ships with 5 incredibly fast APIs that make development life seamless.
+You can also write logic for different environments using callbacks and simple expressions, or even dynamically load polyfills to rid messy conditional statements. You can also add your own tests to target any other environments/devices you're working on. Keep reading, and open your eyes to Conditionizr v4. It includes a full API rewrite, public API modules and is just 1kb in size (66% reduction). It ships with 5 incredibly fast APIs that make development life seamless.
 
 _Yes, in a perfect world feature detection, blah blah blah, wake up man..._
 
