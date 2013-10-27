@@ -3,7 +3,7 @@ title: About
 layout: page
 ---
 
-22 year old lead front-end engineer working at [Appsbroker](//www.appsbroker.com), the UK's leading Google Enterprise company and EMEA partner of the year.
+23 year old lead front-end engineer working at [Appsbroker](//www.appsbroker.com), the UK's leading Google Enterprise company and EMEA partner of the year.
 
 Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, AngularJS, declarative data-binding, MVC/MVVM, front-end architecture. Creator of [FireShell](//getfireshell.com) [HTML5 Blank](//html5blank.com) and [Conditionizr](//conditionizr.com) (finalist in .NET's Open Source Project of the Year 2013). Founding Contributor on the Intel [HTML5 Hub](//html5hub.com) project. [Open source](//github.com/toddmotto) enthusiast with several popular projects.
 
