@@ -8,6 +8,9 @@ layout: page
 Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, AngularJS, declarative data-binding, MVC/MVVM, front-end architecture. Creator of [FireShell](//getfireshell.com) [HTML5 Blank](//html5blank.com) and [Conditionizr](//conditionizr.com) (finalist in .NET's Open Source Project of the Year 2013). Founding Contributor on the Intel [HTML5 Hub](//html5hub.com) project. [Open source](//github.com/toddmotto) enthusiast with several popular projects.
 
 ### Timeline
+* 25.09.2013: Visited [Google in San Francisco](//twitter.com/BrianHall/status/393789283728769024) teaching a half-day AngularJS workshop
+* 23.09.2013: Re-engineered [Conditionizr 4](//conditionizr.com) with 5 public APIs and architecture rewrite
+* 22.09.2013: Represented Intel at HTML5 Dev Conf in San Francisco evangelising the [HTML5 Hub](//html5hub.com)
 * 15.09.2013: Launched [FireShell](//getfireshell.com) to promote full end to end HTML5 developer workflow with Sass/SCSS and Grunt
 * 09.09.2013: Developed [Rolling Stone's](//rollingstone.com/feature/the-geeks-on-the-frontlines) HTML5 experience as part of Intel's HTML5 Hub
 * 30.08.2013: [KitKat.com](//kitkat.com) Android launch used my JavaScript SVG script
