@@ -18,7 +18,7 @@
     (function (a) {
       a.documentElement.className = 'js';
       var supportsSVG = function () {
-        return !! a.createElementNS && !! a.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
+        return !!(a.createElementNS && a.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect);
       };
       if (supportsSVG()) a.documentElement.className += ' svg';
     })(document);
