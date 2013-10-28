@@ -28,8 +28,8 @@
     <!-- main -->
     <div class="main">
 
-      <h1 class="title">Just kill your internet connection to see the demo.*</h1>
-      <p class="title__sub">*Super lazy demo using alerts, ooh yeah.</p>
+      <h1 class="title online">You're online!</h1>
+      <p class="title__sub">Just kill your internet connection to see the demo.</p>
 
     </div>
     <!-- /main -->
@@ -37,25 +37,32 @@
     <!-- NoFi -->
     <script src="js/nofi.js"></script>
     <script>
-    // init NoFi
+    /**
+     * NoFi configuration
+     */
     NoFi.init({
       eventName: 'offline',
       interval: 1000,
       exit: true
     });
 
+    /**
+     * Demo stuff only!
+     */
+    var a = document.querySelector('.title');
+    var b = document.querySelector('.title__sub');
+
     // wait for internet to die
     window.addEventListener('offline', function () {
       // boring callback, but do what you like here
-      alert('You are offline, oops.');
+      a.innerHTML = 'You are offline, oops.';
+      a.className = a.className.replace(/online/, 'offline');
     });
 
     // let people know their browser sucks
     if (!'onLine' in navigator) {
-      var a = document.querySelector('.title');
-      var b = document.querySelector('.title__sub');
       a.innerHTML = 'Your browser doesn\'t support this HTML5 feature, try Chrome or another.';
-      b.innerHTML = 'Check out the support on CanIUse.com too ;)'
+      b.innerHTML = 'Check out the support on CanIUse.com too ;)';
     }
     </script>
 

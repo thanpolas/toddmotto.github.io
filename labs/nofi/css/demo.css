@@ -17,7 +17,15 @@ body {
 	text-align:center;
 }
 .title {
-	font-size:18px;
+	font-size:28px;
 	font-weight:900;
 	margin:0 0 10px;
+}
+.online {
+  background: green;
+  color: white;
+}
+.offline {
+  background: red;
+  color: white;
 }
