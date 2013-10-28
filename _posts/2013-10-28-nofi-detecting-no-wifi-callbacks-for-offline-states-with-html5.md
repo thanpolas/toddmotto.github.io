@@ -112,5 +112,11 @@ window.NoFi = (function (window, document, undefined) {
 })(window, document);
 {% endhighlight %}
 
+<div class="download-box">
+  <a href="//toddmotto.com/labs/nofi" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo nofi', 'nofi Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/nofi/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download nofi', 'Download nofi']);">Download</a>
+  <a href="//github.com/toddmotto/nofi" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork nofi', 'nofi Fork']);">Fork</a>
+</div>
+
 ### Disclaimer: HTML5 implementations
 The `navigator.onLine` has had some bad press as vendors can't decide on best implementation, some results are a little flakey, but this is an HTML5 API and I'm going to use it, don't hate the player and all that...
