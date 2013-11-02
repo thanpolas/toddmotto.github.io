@@ -57,7 +57,7 @@ Payments are made via PayPal or if you're in the US/UK invoices can be arranged.
 Payments should be made at least 24 hours before the sessions. I'm adopting this model to prevent any disputes or time wasters.
 
 #### Are sessions refundable?
-Sessions are refundable, but in hourly chunk. For example, in a 2 hour session, if you're unhappy then only 1 hour will be refunded. Let me know as soon as possible if things aren't to your liking.
+Sessions are refundable, but in only on a 1 hour basis. For example, in a 2 hour session, if you're unhappy then only 1 hour will be refunded. Let me know as soon as possible if things aren't to your liking.
 
 #### What if you don't know something?
 I'll let you know beforehand once you've emailed me with your requirements.
