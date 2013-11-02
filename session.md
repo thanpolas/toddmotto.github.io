@@ -47,6 +47,9 @@ I'd be open to discussing teaching groups/teams either remotely or on site, wher
 #### Can you just code something for me?
 I'd advise sessions over me simple providing a solution as you'll learn a lot more. Sessions can be used for me to provide coding assistance however in cases such as overflow, though should only be kept to a few hours.
 
+#### When are you available?
+I'm available weekdays and weekends, though these will be discussed beforehand. I'm based in the UK so consider your time zone.
+
 #### How are payments made?
 Payments are made via PayPal or if you're in the US/UK invoices can be arranged.
 
