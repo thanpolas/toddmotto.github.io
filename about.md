@@ -5,7 +5,7 @@ layout: page
 
 23 year old lead front-end engineer working at [Appsbroker](//www.appsbroker.com), the UK's leading Google Enterprise company and EMEA partner of the year.
 
-Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, AngularJS, declarative data-binding, MVC/MVVM, front-end architecture. Creator of [FireShell](//getfireshell.com) [HTML5 Blank](//html5blank.com) and [Conditionizr](//conditionizr.com) (finalist in .NET's Open Source Project of the Year 2013). Founding Contributor on the Intel [HTML5 Hub](//html5hub.com) project. [Open source](//github.com/toddmotto) enthusiast with several popular projects.
+Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, AngularJS, declarative data-binding, MVC/MVVM, front-end architecture. Creator of [FireShell](//getfireshell.com) [HTML5 Blank](//html5blank.com) and [Conditionizr](//conditionizr.com) (finalist in .NET's Open Source Project of the Year 2013). Previously involved with the Intel [HTML5 Hub](//html5hub.com) project. [Open source](//github.com/toddmotto) enthusiast with several popular projects.
 
 ### Timeline
 * 25.09.2013: Visited [Google in San Francisco](//twitter.com/BrianHall/status/393789283728769024) teaching a half-day AngularJS workshop [slides](//speakerdeck.com/toddmotto/angularjs-in-one-day)
