@@ -297,7 +297,7 @@ myApp.controller('MainCtrl', ['$scope', 'Math', function ($scope, Math) {
 Coming from Services to Factories should be simple now, we could create an Object Literal inside a Factory or simply provide some more in-depth methods:
 
 {% highlight javascript %}
-myApp.factory('Server', function () {
+myApp.factory('Server', ['$http', function ($http) {
   return {
     get: function(url) {
       return $http.get(url);
@@ -306,7 +306,7 @@ myApp.factory('Server', function () {
       return $http.post(url);
     },
   };
-});
+}]);
 {% endhighlight %}
 
 Here I'm creating a custom wrapper for Angular's XHR's. After dependency injection into a Controller, the usage is simple:
@@ -433,7 +433,7 @@ When you're developing locally, you're possibly using something like Java, ASP .
 Enter 'dollar http'. Your best friend from now on. The _$http_ method is a nice Angular wrapper for accessing data from the server, and so easy to use you could do it blindfolded. Here's a simple example of a 'GET' request, which (you guessed it) gets data from the server. It's syntax is very jQuery-like so transitioning is a breeze:
 
 {% highlight javascript %}
-myApp.controller('MainCtrl', ['$scope', function ($scope) {
+myApp.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
   $http({
     method: 'GET',
     url: '//localhost:9000/someUrl'
@@ -475,7 +475,7 @@ This means we'll get an Object returned back from the server (under an alias we'
 
 The JavaScript (check inline annotations for what's going on here):
 {% highlight javascript %}
-myApp.controller('UserCtrl', ['$scope', function ($scope) {
+myApp.controller('UserCtrl', ['$scope', '$http', function ($scope, $http) {
 
   // create a user Object
   $scope.user = {};
@@ -802,4 +802,5 @@ Happy coding.
 
 ### Further reading
 
+- This post, on [SpeakerDeck in slides](https://speakerdeck.com/toddmotto/angularjs-in-one-day)
 - Learn how to [code your own Directive](http://toddmotto.com/creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts) from a custom script or plugin
