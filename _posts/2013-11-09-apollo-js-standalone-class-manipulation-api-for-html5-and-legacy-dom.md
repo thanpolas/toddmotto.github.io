@@ -6,7 +6,9 @@ title: Apollo.js, standalone class manipulation API for HTML5 and legacy DOM
 
 Apollo is a &lt;1KB standalone DOM class manipulation API for adding, removing, toggling and testing the existence of classes on an element. Apollo is the successor to an [original post](/creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass) I published on raw JavaScript class functions earlier this year, but is completely rewritten and enhanced for the next level, whilst integrating HTML5.
 
-Under the hood, Apollo uses the HTML5 `classList` API when available and fallbacks to manual class manipulation for legacy support, making it the most powerful class manipulation API on the web.
+Under the hood, Apollo uses the HTML5 `classList` API (jQuery isn't even using this yet!) when available and fallbacks to manual class manipulation for legacy support, making it the most powerful class manipulation API on the web. HTML5 `classList` performance far outweighs the legacy method.
+
+Support? IE6+ for legacy support and internal feature detection to switch to HTML5 when available. Cross-browser compatible.
 
 <div class="download-box">
   <a href="//github.com/toddmotto/apollo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download apollo', 'Download apollo']);">Download</a>
@@ -174,3 +176,4 @@ The Apollo API is also part of a JavaScript Module and returned as an Object wit
   <a href="//github.com/toddmotto/apollo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download apollo', 'Download apollo']);">Download</a>
   <a href="//github.com/toddmotto/apollo" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork apollo', 'apollo Fork']);">Fork</a>
 </div>
+
