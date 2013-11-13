@@ -72,7 +72,7 @@
 .main__content {
   width:70%;
   float:right;
-  margin:0 30px 0 0;
+  margin:0 30px 50px 0;
 }
 .full-post {
   a {
@@ -84,6 +84,13 @@
   background:#fbfbfb;
   padding:5px 10px;
 }
+.downloads {
+  h4 {
+    margin: 20px 0 10px;
+    padding: 20px 0 0;
+    border-top: 1px solid #eee;
+  }
+}
 
 /**
  * Buttons
@@ -91,15 +98,25 @@
 .download-box,
 .download-details {
   a {
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    padding:10px 25px;
-    margin:0 15px 0 0;
-    background:#333;
-    color:#fff;
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 10px 25px;
+    margin: 0 15px 0 0;
+    background: #333;
+    color: #fff;
     &:hover {
-      background:#222;
+      background: #222;
+    }
+  }
+}
+.download-icons {
+  a {
+    padding: 10px 25px 10px 50px;
+    i {
+      font-size: 20px;
+      @include position(absolute, 10px 0 0 15px);
     }
   }
 }
