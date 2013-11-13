@@ -5,7 +5,7 @@ class: downloads
 ---
 
 #### Conditionizr
-Open Source Project of the Year finalist. Detecting front-end environments and conditionally loading assets. Retina, touch, legacy IE, modern browsers, custom tests and more, wrapped inside a 1KB API.
+.NET Mag Open Source Project of the Year finalist. Detecting front-end environments and conditionally loading assets. Retina, touch, legacy IE, modern browsers, custom tests and more, wrapped inside a 1KB API.
 
 <div class="download-box download-icons">
   <a href="//conditionizr.com">
