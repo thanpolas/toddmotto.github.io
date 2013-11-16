@@ -202,15 +202,15 @@ Fiercely quick front-end boilerplate and workflows, HTML5, Grunt, Sass.
 Powerful shell for rapidly deploying your WordPress projects. Industry recognised WordPress kickstarter, recognised by Adobe, Smashing Magazine and many more.
 
 <div class="download-box download-icons">
-  <a href="//getfireshell.com">
+  <a href="//html5blank.com">
     <i class="icon-beaker"></i>
     Site
   </a>
-  <a href="//github.com/toddmotto/fireshell">
+  <a href="//github.com/html5blank/html5blank">
     <i class="icon-github"></i>
     Fork
   </a>
-  <a href="//github.com/toddmotto/fireshell/archive/master.zip">
+  <a href="//github.com/html5blank/html5blank/archive/master.zip">
     <i class="icon-cloud-download"></i>
     Download
   </a>
