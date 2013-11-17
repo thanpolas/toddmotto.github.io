@@ -1,0 +1,1135 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"doc",
+				"documentElement"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"in",
+				"includesDir"
+			],
+			[
+				"inc",
+				"includes"
+			],
+			[
+				"clas",
+				"classList"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"image",
+				"image1"
+			],
+			[
+				"sel",
+				"selector"
+			],
+			[
+				"se",
+				"selector"
+			],
+			[
+				"offset",
+				"offsetz"
+			],
+			[
+				"of",
+				"offsetz"
+			],
+			[
+				"off",
+				"offie"
+			],
+			[
+				"mobman",
+				"mobman__circle"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"data-",
+				"data-expand"
+			],
+			[
+				"view",
+				"viewportClass"
+			],
+			[
+				"get",
+				"getSupportedTransform"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"supp",
+				"supportsTransform"
+			],
+			[
+				"echo",
+				"echoStore"
+			],
+			[
+				"data",
+				"data-echo"
+			],
+			[
+				"Con",
+				"ConstructorName"
+			],
+			[
+				"elem",
+				"element"
+			],
+			[
+				"remov",
+				"removeFromArray"
+			],
+			[
+				"laz",
+				"lazyImgs"
+			],
+			[
+				"pro",
+				"processScroll"
+			],
+			[
+				"queryS",
+				"querySelectorAll"
+			],
+			[
+				"set",
+				"setImage"
+			],
+			[
+				"my",
+				"myArray"
+			],
+			[
+				"mat",
+				"matchMedia"
+			],
+			[
+				"new",
+				"newSrc"
+			],
+			[
+				"pars",
+				"parseAttr"
+			],
+			[
+				"con",
+				"concat"
+			],
+			[
+				"dat",
+				"dataInit"
+			],
+			[
+				"chi",
+				"childNodes"
+			],
+			[
+				"pss",
+				"psswrdNodes"
+			],
+			[
+				"check",
+				"checkbox"
+			],
+			[
+				"chec",
+				"checkbox"
+			],
+			[
+				"che",
+				"checkz"
+			],
+			[
+				"go",
+				"googleMap"
+			],
+			[
+				"test",
+				"testValidate"
+			],
+			[
+				"patt",
+				"patternFallback"
+			],
+			[
+				"has",
+				"hasAttr"
+			],
+			[
+				"val",
+				"validitizr"
+			],
+			[
+				"list-",
+				"list-c	list-style-type: circle;"
+			],
+			[
+				"suppo",
+				"supportsAttr"
+			],
+			[
+				"inpu",
+				"inputToTest"
+			],
+			[
+				"email",
+				"emailFallback"
+			],
+			[
+				"tal",
+				"ta-l	text-align: left;"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_includes/sidebar.html",
+			"settings":
+			{
+				"buffer_size": 2118,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/default.html",
+			"settings":
+			{
+				"buffer_size": 694,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/header.html",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/footer.html",
+			"settings":
+			{
+				"buffer_size": 173,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/modules/_app.scss",
+			"settings":
+			{
+				"buffer_size": 2064,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_footer.scss",
+			"settings":
+			{
+				"buffer_size": 13,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_header.scss",
+			"settings":
+			{
+				"buffer_size": 36,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_main.scss",
+			"settings":
+			{
+				"buffer_size": 75,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_sidebar.scss",
+			"settings":
+			{
+				"buffer_size": 796,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/modules/_vars.scss",
+			"settings":
+			{
+				"buffer_size": 86,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_misc.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/js/scripts.js",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/labs/fluidvids/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/vendor/_external.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_defaults.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/package.json",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_typography.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/partials/_nav.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_buttons.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_clearfix.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_inputs.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_lists.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_normalize.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_print.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/src/scss/modules/_breakpoints.scss",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/labs/echo/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/package.json",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/dist/echo.js",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/.git/objects/12/194509d2677b2d5e38fe5868b5f8d0af136280",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/src/echo.js",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/.jshintrc",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/dist/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/echo/Gruntfile.js",
+		"/Users/toddmotto/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/toddmotto/Dropbox/GitHub/echo/src/echo.js",
+		"/Users/toddmotto/Dropbox/GitHub/echo/package.json",
+		"/Users/toddmotto/Sites/optimus/app/services-teeth-whitening-facial-aesthetics.php",
+		"/Users/toddmotto/Sites/optimus/app/services-physiotherapy.php",
+		"/Users/toddmotto/Sites/optimus/app/services-pilates.php",
+		"/Users/toddmotto/Sites/optimus/app/services-podiatry.php",
+		"/Users/toddmotto/Sites/optimus/app/services-acupuncture.php",
+		"/Users/toddmotto/Sites/optimus/Gruntfile.js",
+		"/Users/toddmotto/Sites/optimus/.gitignore",
+		"/Users/toddmotto/Sites/optimus/.bowerrc",
+		"/Users/toddmotto/Sites/optimus/app/index.php",
+		"/Users/toddmotto/Sites/optimus/app/clinic.php",
+		"/Users/toddmotto/Sites/optimus/app/contact.php",
+		"/Users/toddmotto/Sites/optimus/app/prices.php",
+		"/Users/toddmotto/Sites/optimus/app/services-chiropody.php",
+		"/Users/toddmotto/Sites/optimus/app/services-chiropractic.php",
+		"/Users/toddmotto/Sites/optimus/src/scss/mixins/mixins.scss",
+		"/Users/toddmotto/Sites/optimus/.jshintrc",
+		"/Users/toddmotto/Sites/optimus-cp/index.php",
+		"/Users/toddmotto/Desktop/optimus/Gruntfile.js",
+		"/Users/toddmotto/Desktop/optimus/src/html/includes/header.php",
+		"/Users/toddmotto/Sites/optimus/grunt-dev.command",
+		"/Users/toddmotto/Desktop/optimus/src/scss/style.scss",
+		"/Users/toddmotto/Sites/optimus-cp/contact.php",
+		"/Users/toddmotto/Desktop/optimus/src/html/includes/header.html",
+		"/Users/toddmotto/Desktop/optimus/src/html/index.html",
+		"/Users/toddmotto/Desktop/optimus/package.json",
+		"/Users/toddmotto/Desktop/optimus/app/includes/header.html",
+		"/Users/toddmotto/Desktop/optimus/app/index.html",
+		"/Users/toddmotto/Downloads/fireshell-master 2/Gruntfile.js",
+		"/Users/toddmotto/Downloads/fireshell-master 2/package.json",
+		"/Users/toddmotto/Desktop/optimus/grunt-dev.command",
+		"/Users/toddmotto/Downloads/conditionizr-master/dist/conditionizr.min.js",
+		"/Users/toddmotto/Downloads/conditionizr-master/dist/conditionizr.js",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/package.json",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/src/apollo.js",
+		"/Users/toddmotto/Dropbox/SourceTree/intel/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/dist/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/package.json",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/dist/apollo.min.js",
+		"/Users/toddmotto/.Trash/node_modules 18.52.37/grunt-contrib-concat/package.json",
+		"/Users/toddmotto/.Trash/node_modules 18.52.37/grunt-contrib-uglify/package.json",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/SourceTree/_apollo/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/.jshintrc",
+		"/Users/toddmotto/Dropbox/SourceTree/apollo/dist/module.js",
+		"/Users/toddmotto/Dropbox/SourceTree/classes/dist/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/classes/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/SourceTree/classes/src/module.js",
+		"/Users/toddmotto/Dropbox/SourceTree/classes/package.json",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/_posts/2013-11-09-js.md",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/contact.md",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/session.md",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/_includes/header.html",
+		"/Users/toddmotto/Dropbox/GitHub/fluidvids/README.md",
+		"/Users/toddmotto/Dropbox/GitHub/fluidvids/Gruntfile.js",
+		"/Users/toddmotto/Dropbox/GitHub/fluidvids/package.json",
+		"/Users/toddmotto/Dropbox/GitHub/fluidvids/config.json",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/README.md",
+		"/Users/toddmotto/Dropbox/GitHub/fluidvids/src/fluidvids.js",
+		"/Users/toddmotto/Dropbox/GitHub/fluidvids/dist/fluidvids.js",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/_posts/2013-10-29-understanding-regular-expression-matching-with-test-match-exec-search-and-split.md",
+		"/Users/toddmotto/Dropbox/SourceTree/toddmotto.github.io/_posts/2013-10-29-regexp.md",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-28-nofi-detecting-no-wifi-callbacks-for-offline-states-with-html5.md",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/labs/nofi/css/demo.css",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/labs/nofi/js/nofi.js",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/labs/nofi/index.html",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-28-nofi.md",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/src/nofi.js",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/dist/nofi.js",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/labs/echo/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/.jshintrc",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/.editorconfig",
+		"/Users/toddmotto/Dropbox/SourceTree/nofi/src/selectnav.js",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/src/scss/modules/_defaults.scss",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/src/scss/modules/_app.scss",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-02-02-creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass.md",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-27-hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions.md",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-27-svg-traversing-with-ease.md",
+		"/Users/toddmotto/Dropbox/SourceTree/fireshell/docs/DOCS.md",
+		"/Users/toddmotto/Dropbox/SourceTree/fireshell/README.md",
+		"/Users/toddmotto/Desktop/circle-sync/app/js/controllers/SyncCtrl.js",
+		"/Users/toddmotto/Desktop/circle-sync/app/js/controllers/GroupCtrl.js",
+		"/Users/toddmotto/Desktop/circle-sync/app/js/controllers/FollowCtrl.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/README.md",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-24-conditionizr-reloaded-what-every-developer-has-been-waiting-for.md",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-24-conditionizr.md",
+		"/Users/toddmotto/Desktop/circle-sync/src/main/webapp/views/group.html",
+		"/Users/toddmotto/Desktop/circle-sync/src/main/webapp/views/sync.html",
+		"/Users/toddmotto/Desktop/circle-sync/src/main/webapp/views/follow.html",
+		"/Users/toddmotto/Dropbox/GitHub/toddmotto.github.com/_posts/2013-10-02-ultimate-guide-to-learning-angular-js-in-one-day.md",
+		"/Users/toddmotto/Desktop/Angular Slides/Gruntfile.js",
+		"/Users/toddmotto/Desktop/Angular Slides/app/index.html",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/dist/conditionizr.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/src/core.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/src/polyfill-load.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/src/on.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/src/deps.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/src/return.js",
+		"/Users/toddmotto/Dropbox/SourceTree/conditionizr/src/script.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".1",
+			"section",
+			":",
+			"dns-prefetch",
+			"none;",
+			"#fff",
+			"#333",
+			"carbon",
+			".carbonad-text",
+			"z",
+			"Z",
+			"z",
+			"a",
+			":",
+			"6",
+			":",
+			"false",
+			"store",
+			"element",
+			"btn",
+			"View ",
+			"document",
+			"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+			"podiatry",
+			"julie",
+			"Julie",
+			"assets/",
+			"clinic",
+			"overview",
+			"=\"i",
+			"assets",
+			".src",
+			"document.documentElement.classList",
+			"\"",
+			"pkg",
+			"\"",
+			"<%= project.name %>",
+			"dist/",
+			"module",
+			"Module",
+			"elem.h",
+			"this",
+			"ion (cla",
+			"(cl",
+			"document.documentElement.classList",
+			"add",
+			" ",
+			"echo",
+			"FluidVids",
+			"fluidvids",
+			"FluidVids",
+			"fluidvids",
+			"FluidVids",
+			"fluidvids",
+			"selectnav",
+			" ",
+			"emove",
+			"remove",
+			"svgNode",
+			"circle",
+			"$",
+			"####",
+			"````",
+			"````js",
+			"Ultimate guide to learning AngularJS in one day",
+			"fireshell",
+			"getfireshell",
+			"toddmotto/fireshell",
+			"getfireshell",
+			"instant json",
+			"Dependency injection",
+			"dependency injection",
+			"Dependency injection",
+			"dependency injection",
+			"server-side",
+			"routing",
+			"<",
+			"Expressions",
+			"expressions",
+			"scope fns",
+			"<",
+			"{% endraw %}",
+			"{% raw %}",
+			"reverse",
+			"No",
+			"<",
+			"Factory",
+			"factory",
+			"Factory",
+			"factory",
+			"Services",
+			"services",
+			"Services",
+			"services",
+			"essentials",
+			"<",
+			"essentials",
+			"pushing scope",
+			"dist/",
+			"src/",
+			"classes",
+			"addtest",
+			"webkitCancel",
+			"Request",
+			"request",
+			"Request",
+			"request",
+			"controller",
+			"element",
+			"stealth",
+			"full-post",
+			"&#125;&#125;",
+			"&#123;&#123;",
+			"{{",
+			"}}",
+			"{{ ",
+			"{{",
+			"}}",
+			"{{",
+			"assets",
+			"fireshell",
+			"project.js",
+			"<%= pkg.name %>",
+			"open",
+			"body",
+			".",
+			"class=\"header-input\"",
+			"/img/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"{% highlight javascript %}",
+			"}}{% endraw %}",
+			"{% raw %}{{",
+			"conditionizr",
+			"credit",
+			"components",
+			">",
+			"<",
+			"wrap",
+			"$color",
+			"<a href=\"services.php\" class=\"services__box--btn btn btn--blue\">View Services</a>",
+			"tooltips"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_includes/sidebar.html",
+					"settings":
+					{
+						"buffer_size": 2118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1110,
+								1110
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 174.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_layouts/default.html",
+					"settings":
+					{
+						"buffer_size": 694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								188,
+								188
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_includes/header.html",
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								577,
+								577
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_includes/footer.html",
+					"settings":
+					{
+						"buffer_size": 173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "src/scss/modules/_app.scss",
+					"settings":
+					{
+						"buffer_size": 2064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1038,
+								1038
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 710.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/scss/partials/_footer.scss",
+					"settings":
+					{
+						"buffer_size": 13,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/scss/partials/_header.scss",
+					"settings":
+					{
+						"buffer_size": 36,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/scss/partials/_main.scss",
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/scss/partials/_sidebar.scss",
+					"settings":
+					{
+						"buffer_size": 796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/scss/modules/_vars.scss",
+					"settings":
+					{
+						"buffer_size": 86,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.541574435764,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"oocs",
+				"optimus/src/scss/includes/oocss.scss"
+			],
+			[
+				"facial",
+				"optimus/app/services-teeth-whitening-facial-aesthetics.php"
+			],
+			[
+				"style",
+				"optimus/src/scss/style.scss"
+			],
+			[
+				"ser",
+				"optimus/app/services.php"
+			],
+			[
+				"sidebar",
+				"optimus/app/includes/sidebar.php"
+			],
+			[
+				"prices",
+				"optimus/app/prices.php"
+			],
+			[
+				"team",
+				"optimus/app/team.php"
+			],
+			[
+				"contac",
+				"optimus/app/contact.php"
+			],
+			[
+				"grun",
+				"optimus/Gruntfile.js"
+			],
+			[
+				"index",
+				"optimus/app/index.php"
+			],
+			[
+				"clin",
+				"optimus/app/clinic.php"
+			],
+			[
+				"break",
+				"src/scss/modules/_breakpoints.scss"
+			],
+			[
+				"app.scss",
+				"src/scss/modules/_app.scss"
+			],
+			[
+				"defa",
+				"src/scss/modules/_defaults.scss"
+			],
+			[
+				"typo",
+				"src/scss/modules/_typography.scss"
+			],
+			[
+				"header",
+				"_includes/header.html"
+			],
+			[
+				"sty",
+				"src/scss/style.scss"
+			],
+			[
+				"scripts.",
+				"src/js/scripts.js"
+			],
+			[
+				"exter",
+				"src/scss/vendor/_external.scss"
+			],
+			[
+				"nav",
+				"src/scss/partials/_nav.scss"
+			],
+			[
+				"misc",
+				"src/scss/modules/_misc.scss"
+			],
+			[
+				"index.",
+				"index.html"
+			],
+			[
+				"main.scs",
+				"src/scss/partials/_main.scss"
+			],
+			[
+				"main",
+				"src/scss/partials/_main.scss"
+			],
+			[
+				"side",
+				"src/scss/partials/_sidebar.scss"
+			],
+			[
+				"app",
+				"src/scss/modules/_app.scss"
+			],
+			[
+				"footer",
+				"src/scss/partials/_footer.scss"
+			],
+			[
+				"vars",
+				"src/scss/modules/_vars.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 263.0,
+	"status_bar_visible": true
+}
