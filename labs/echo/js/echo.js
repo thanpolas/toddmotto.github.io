@@ -21,7 +21,7 @@ window.Echo = (function (window, document, undefined) {
       var self = store[i];
       if (_inView(self)) {
         self.src = self.getAttribute('data-echo');
-        if (store.indexOf(self) !== -1) {
+        if (Array.indexOf && store.indexOf(self) !== -1) {
           store.splice(i, 1);
         }
       }
