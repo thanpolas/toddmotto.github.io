@@ -13,7 +13,7 @@ window.Echo = (function (window, document, undefined) {
 
   var _inView = function (img) {
     var coords = img.getBoundingClientRect();
-    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight));
+    return (coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight);
   };
 
   var _pollImages = function () {
@@ -29,7 +29,7 @@ window.Echo = (function (window, document, undefined) {
   };
 
   var init = function () {
-    store = [].slice.call(document.querySelectorAll('[data-echo]'));
+    store = document.querySelectorAll('[data-echo]');
     _pollImages();
     window.onscroll = _pollImages;
   };
