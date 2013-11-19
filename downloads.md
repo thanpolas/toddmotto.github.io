@@ -336,11 +336,7 @@ Dynamic viewport resizer plugin, built to assist responsive development and test
     <i class="icon-beaker"></i>
     Demo
   </a>
-  <a href="//github.com/toddmotto/jResize">
-    <i class="icon-github"></i>
-    Fork
-  </a>
-  <a href="//github.com/toddmotto/jResize/archive/master.zip">
+  <a href="//toddmotto.com/labs/jresize/jresize.zip">
     <i class="icon-cloud-download"></i>
     Download
   </a>

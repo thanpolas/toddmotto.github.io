@@ -13,8 +13,7 @@ jResize is a responsive web development tool, built in jQuery to assist the work
 <div class="download-box">
 	<a href="//toddmotto.com/labs/responsive" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Dev Tool', 'Responsive Dev Tool Demo']);">Browser Version</a>
 	<a href="//toddmotto.com/labs/jresize" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jResize', 'jResize Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/jResize/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jResize', 'jResize Download']);">Download</a>
-	<a href="//github.com/toddmotto/jResize" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jResize', 'jResize Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/jresize/jresize.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jResize', 'jResize Download']);">Download</a>
 </div>
 
 Let’s talk you through the plugin.
