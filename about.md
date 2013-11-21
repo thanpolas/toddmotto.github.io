@@ -7,11 +7,11 @@ I'm Todd, lead front-end engineer at [Appsbroker](//www.appsbroker.com) aiming t
 
 By day I'm part of a software engineering team at Appsbroker where we build custom web applications for large organisations. We're the UK's leading Google Enterprise partner and EMEA partner of the year 2012, using the latest HTML5 and JavaScript technology with tools such as [AngularJS](//angularjs.org).
 
-I created [Conditionizr](//conditionizr.com)(.NET Magazine's Open Source Project of the Year finalist), a standalone JavaScript tool that detects front-end environments and returns an Object with boolean values on given test states. You can use Conditionizr with various public APIs to make your cross platform/device/browser development much easier and manageable. These APIs include adding your own tests, dynamic polyfills (eradicating conditional comments), callbacks for specific environment tests.
+I created [Conditionizr](//conditionizr.com) (.NET Magazine's Open Source Project of the Year finalist), a standalone JavaScript tool that detects front-end environments and returns an Object with boolean values on given test states. You can use Conditionizr with various public APIs to make your cross platform/device/browser development much easier and manageable. These APIs include adding your own tests, dynamic polyfills (eradicating conditional comments), callbacks for specific environment tests.
 
 Other notable open source projects include [Echo.js](//github.com/toddmotto/echo), [FluidVids.js](//github.com/toddmotto/fluidvids), [Apollo.js](https://github.com/toddmotto/apollo), [HTML5 Blank](//html5blank.com), [FireShell](//getfireshell.com).
 
-Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on-the-frontlines) to bring an HTML5 experience to life. Many other brands have recognised and used/sahred my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
+Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on-the-frontlines) to bring an HTML5 experience to life. Many other brands have recognised and used/shared my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
 
 Have so far taught an [AngularJS half-day workshop](//speakerdeck.com/toddmotto/angularjs-in-one-day) at Google in San Francisco. Next April I'm speaking at the [Future of Web Design](//futureofwebdesign.com/london-2014/schedule/day-2) (FOWD) conference in London.
 
