@@ -1,61 +1,41 @@
+/*!
+ *  Echo v1.2.0
+ *  Lazy-loading images with data-* attributes
+ *  Project: https://github.com/toddmotto/echo
+ *  by Todd Motto: http://toddmotto.com
+ *  Copyright. MIT licensed.
+ */
 window.Echo = (function (window, document, undefined) {
 
   'use strict';
 
-  var self = {
+  var store;
 
-    config: {
-      store: [],
-      selector: '[data-echo]',
-      offset: 0
-    },
+  var _inView = function (img) {
+    var coords = img.getBoundingClientRect();
+    return (coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight);
+  };
 
-    init: function (selector, offset) {
-      self.off = offset || self.config.offset;
-      self.selector = selector || self.config.selector;
-      self.store = self.config.store;
-
-      var echo = document.querySelectorAll(self.selector);
-
-      for (var i = 0; i < echo.length; i++) {
-          self.store.push(echo[i]);
-      }
-      self.echoImages();
-      window.onscroll = self.echoImages;
-    },
-
-    echoImages: function () {
-      for (var i = 0; i < self.store.length; i++) {
-        var elem = self.store[i];
-        if (self.scrolledIntoView(elem)) {
-          console.log('Logging: ' + self.scrolledIntoView(elem));
-          self.echoSrc(elem, self.removeEcho(elem, i));
+  var _pollImages = function () {
+    for (var i = 0; i < store.length; i++) {
+      var self = store[i];
+      if (_inView(self)) {
+        self.src = self.getAttribute('data-echo');
+        if ([].indexOf && [].slice.call(store).indexOf(self) !== -1) {
+          [].slice.call(store).splice(i, 1);
         }
       }
-    },
-
-    scrolledIntoView: function (element) {
-      var coords = element.getBoundingClientRect();
-      return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + self.off);
-    },
-
-    echoSrc: function (imgz, callback) {
-      imgz.src = imgz.getAttribute('data-echo');
-      if (callback) {
-        callback();
-      }
-    },
-
-    removeEcho: function (element, index) {
-      if (self.store.indexOf(element) !== -1) {
-        self.store.splice(index, 1);
-      }
     }
+  };
 
+  var init = function () {
+    store = document.querySelectorAll('[data-echo]');
+    _pollImages();
+    window.onscroll = _pollImages;
   };
 
   return {
-    init: self.init
+    init: init
   };
 
 })(window, document);

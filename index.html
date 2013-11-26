@@ -3,10 +3,10 @@ layout: default
 title: Todd Motto
 ---
 
-        <section class="main__content posts">
-          <ul>
+        <div class="main__content posts">
+          <ul class="posts__list">
             {% for post in paginator.posts %}
-            <li class="posts__item">
+            <li>
               {% if post.external %}<a href="{{ post.external }}" target="_blank">
               {% else %}<a href="{{ post.url }}">{% endif %}
                 <h2 class="posts__title">{{ post.title }}</h2>
@@ -31,4 +31,4 @@ title: Todd Motto
                 <span class="pagination--next">Next</span>
             {% endif %}
           </div>
-        </section>
+        </div>

@@ -1,8 +1,9 @@
-      <!-- sidebar -->
       <aside class="sidebar clear" role="complementary">
 
         <div class="sidebar__module">
-          <img src="img/todd.jpg" alt="Todd Motto" class="sidebar__todd">
+          <a href="/">
+            <img src="img/todd.png" alt="Todd Motto" class="sidebar__profile">
+          </a>
           <p class="sidebar__bio">
             Todd Motto, lead front-end engineer at <a href="//www.appsbroker.com">Appsbroker</a> (hiring, ask me).
             HTML5, JavaScript, AngularJS, CSS3. <a href="//conditionizr.com">Conditionizr</a>, <a href="//getfireshell.com">FireShell</a>,
@@ -10,7 +11,22 @@
           </p>
         </div>
 
-        <div class="sidebar__module">
+        <nav class="sidebar__nav" role="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/session">Book Session</a></li>
+            <li><a href="/downloads">Downloads</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="sidebar__module hidden--tablet">
+          <a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true">
+            Follow @toddmotto
+          </a>
+        </div>
+
+        <div class="sidebar__module hidden--tablet">
           <a href="//github.com/toddmotto" class="sidebar__icon">
             <i class="icon-github"></i>
           </a>
@@ -37,14 +53,4 @@
           <div id="bsap_1277686" class="bsarocks bsap_6b437ea62f74be534e3b9d72fcdeb8ff"></div>
         </div>
 
-        <div class="sidebar__module">
-          <div class="fb-like" data-href="http://facebook.com/toddmottoblog" data-send="false"
-            data-width="100" data-show-faces="false" data-colorscheme="light"></div>
-            <div id="fb-root"></div>
-            <a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true">
-              Follow @toddmotto
-            </a>
-        </div>
-
       </aside>
-      <!-- /sidebar -->

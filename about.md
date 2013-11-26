@@ -3,9 +3,17 @@ title: About
 layout: page
 ---
 
-23 year old lead front-end engineer working at [Appsbroker](//www.appsbroker.com), the UK's leading Google Enterprise company and EMEA partner of the year.
+I'm Todd, lead front-end engineer at [Appsbroker](//www.appsbroker.com) aiming to make the web better. I'm an HTML5 and JavaScript developer focused on making web development easier for others by blogging and making code freely available via [open source](//github.com/toddmotto).
 
-Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, AngularJS, declarative data-binding, MVC/MVVM, front-end architecture. Creator of [FireShell](//getfireshell.com) [HTML5 Blank](//html5blank.com) and [Conditionizr](//conditionizr.com) (finalist in .NET's Open Source Project of the Year 2013). Previously involved with the Intel [HTML5 Hub](//html5hub.com) project. [Open source](//github.com/toddmotto) enthusiast with several popular projects.
+By day I'm part of a software engineering team at Appsbroker where we build custom web applications for large organisations. We're the UK's leading Google Enterprise partner and EMEA partner of the year 2012, using the latest HTML5 and JavaScript technology with tools such as [AngularJS](//angularjs.org).
+
+I created [Conditionizr](//conditionizr.com) (.NET Magazine's Open Source Project of the Year finalist), a standalone JavaScript tool that detects front-end environments and returns an Object with boolean values on given test states. You can use Conditionizr with various public APIs to make your cross platform/device/browser development much easier and manageable. These APIs include adding your own tests, dynamic polyfills (eradicating conditional comments), callbacks for specific environment tests.
+
+Other notable open source projects include [Echo.js](//github.com/toddmotto/echo), [FluidVids.js](//github.com/toddmotto/fluidvids), [Apollo.js](https://github.com/toddmotto/apollo), [HTML5 Blank](//html5blank.com), [FireShell](//getfireshell.com).
+
+Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on-the-frontlines) to bring an HTML5 experience to life. Many other brands have recognised and used/shared my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
+
+Have so far taught an [AngularJS half-day workshop](//speakerdeck.com/toddmotto/angularjs-in-one-day) at Google in San Francisco. Next April I'm speaking at the [Future of Web Design](//futureofwebdesign.com/london-2014/schedule/day-2) (FOWD) conference in London.
 
 ### Timeline
 * 25.09.2013: Visited [Google in San Francisco](//twitter.com/BrianHall/status/393789283728769024) teaching a half-day AngularJS workshop [slides](//speakerdeck.com/toddmotto/angularjs-in-one-day)
@@ -20,17 +28,10 @@ Fixated on HTML5, JavaScript, CSS3, OOCSS/BEM, Sass/SCSS, Grunt.js, RWD, Angular
 * 17.11.2012: Pushed [SVG](//toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script) usage on the web to raise awareness, led to great adoption and [refinement](//toddmotto.com/revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris)
 * 16.09.2012: Launched [HTML5 Blank](//html5blank.com) for WordPress, recognised by Adobe
 
-### Recognition
-Here's a few brands and companies that have recognised or utilised my work in the web industry:
-
-- Rolling Stone, Intel, Adobe, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, Tech.Pro.
-
 ### Interviews
 * 09.10.2013: [SND](//www.snd.org/2013/10/the-guts-todd-motto-on-developing-rolling-stones-the-geeks-on-the-front-lines)
 * 23.09.2013: [Advertising Age](//adage.com/article/digital/intel-hub-targets-developers-subsidizing-web-publishers/244296)
 * 12.09.2013: [Web Developer 2](//www.webdeveloper2.com/2013/09/interview-1-todd-motto)
-
-If you'd like to interview me, please get in touch.
 
 ### Friends
 Some great people who I urge you to check out:

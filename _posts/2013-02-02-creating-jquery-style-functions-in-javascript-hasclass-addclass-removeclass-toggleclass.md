@@ -6,11 +6,14 @@ permalink: /creating-jquery-style-functions-in-javascript-hasclass-addclass-remo
 disqus: http://www.toddmotto.com/creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass
 ---
 
+#### UPDATE: Check out [Apollo.js](/apollo-js-standalone-class-manipulation-api-for-html5-and-legacy-dom/), the latest version of these scripts integrated with HTML APIs, the most powerful class API on the web!
+
 jQuery is a pretty cool framework, it has it’s uses, it’s pretty reliable, but remember: it’s written with JavaScript. It’s not a language by itself, it’s not a magical tool, nor the answer to our prayers. It doesn’t make front-end animation/AJAX/DOM maniuplating easy, it makes you think less and miss out on vital knowledgable. What happened before jQuery?
 
 <div class="download-box">
 	<a href="//toddmotto.com/labs/reusable-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Reusable JS, 'Reusable JS Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download</a>
+	<a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download Old</a>
+  <a href="//github.com/toddmotto/apollo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download New</a>
 </div>
 
 jQuery makes you as a developer reliant on a framework, and (I’m going to say it!)… lazy, to some extent. I’d succumbed to being lazy, and at times have included the mighty jquery.js file for a few simple lines of code. What an idiot.
@@ -204,5 +207,6 @@ The possibilities are endless for what you decide to create.
 
 <div class="download-box">
 	<a href="//toddmotto.com/labs/reusable-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Reusable JS, 'Reusable JS Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download</a>
+	<a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download Old</a>
+  <a href="//github.com/toddmotto/apollo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download New</a>
 </div>

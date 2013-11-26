@@ -1,38 +1,50 @@
-@media only screen and (min-width:320px) and (max-width:850px) {
+@media only screen and (min-width:320px) and (max-width:768px) {
+  .sidebar,
   .main {
-    padding:0;
+    width: 100%;
+    margin: 0;
+    position: relative !important;
+  }
+  .carbon--module {
+    display: none !important;
+  }
+  .sidebar__nav {
+    li {
+      width: 50%;
+      a {
+        padding: 10px;
+      }
+    }
+  }
+  .sidebar__profile {
+    width: 100px;
+    height: 100px;
   }
   .full-post {
-    padding:15px;
+    padding: 25px;
   }
-  .nav {
-    width:100%;
-    float:right;
-    margin:30px 0;
-    text-align:center;
+  .posts__list li a {
+    padding: 15px 25px;
   }
-  .header,
-  .sidebar {
-    position:static;
-    float:left;
-    width:100%;
-    padding:0;
-    text-align:center;
+  .posts__title {
+    font-size: 16px;
   }
-  #carbonads-container {
-    position:static;
-  }
-  .carbonad {
-    margin:0 auto;
+  .hidden--tablet {
+    display: none;
   }
 }
-@media only screen and (min-width:320px) and (max-width:1100px) {
-  .main__content {
-    width:100%;
-    float:right;
-    margin:0;
+@media only screen and (min-width:600px) and (max-width:768px) {
+  .sidebar__bio {
+    padding: 5px 80px;
   }
-  .posts__item a {
-    padding:25px;
+  .sidebar__nav {
+    li {
+      width: 25% !important;
+    }
+  }
+}
+@media only screen and (min-width:768px) {
+  .ios .sidebar {
+    position: absolute !important;
   }
 }
