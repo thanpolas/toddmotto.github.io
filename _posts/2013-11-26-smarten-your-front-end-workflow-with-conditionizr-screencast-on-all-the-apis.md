@@ -6,6 +6,8 @@ title: Smarten your front-end workflow with @conditionizr, screencast on all the
 
 Conditionizr (.NET Magazine's Open Source Project of the Year finalist), is a standalone JavaScript tool that detects front-end environments and returns an Object with boolean values on given test states. You can use Conditionizr with various public APIs to make your cross platform/device/browser development much easier and manageable. These APIs include adding your own tests, dynamic polyfills (eradicating conditional comments), callbacks for specific environment tests.
 
+Who's using Conditionizr? So far we've found Google, Sencha, NASA are some great names using it.
+
 <div class="download-box">
   <a href="//conditionizr.com">Conditionizr</a>
   <a href="//github.com/conditionizr/conditionizr">Fork</a>
