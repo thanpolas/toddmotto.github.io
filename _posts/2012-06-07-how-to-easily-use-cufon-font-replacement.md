@@ -6,7 +6,7 @@ permalink: /how-to-easily-use-cufon-font-replacement
 disqus: http://www.toddmotto.com/how-to-easily-use-cufon-font-replacement
 ---
 
-<strong>Stop!</strong> I highly recommend you find an alternative to Cufon, use @font-face.
+<strong>Stop! (27.11.2023 update):</strong> I highly recommend you find an alternative to Cufon, use @font-face. Cufon is a very poor method for loading custom font resources in a modern web environment. Only proceed if you have no other choice, but if you have a choice, use [Font Squirrel's](http://www.fontsquirrel.com/tools/webfont-generator) Web Font generator.
 
 Cufón font replacement is an easy way to embed custom fonts on the web. There are many ways to embed fonts onto a website, Cufón is just one method. I find it to be one of the best ways, depending on the project. Here’s a quick ‘how-to’ on embedding those custom fonts you love.
 
