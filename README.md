@@ -1,4 +1,4 @@
-# Todd Motto [![Build Status](https://travis-ci.org/toddmotto/toddmotto.github.com.png)](https://travis-ci.org/toddmotto/toddmotto.github.com)
+# Todd Motto website (toddmotto.com)
 
 The Jekyll build for [toddmotto.com](http://toddmotto.com), built on [FireShell](//github.com/toddmotto/fireshell).
 
