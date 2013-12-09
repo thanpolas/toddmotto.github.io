@@ -158,7 +158,8 @@ Moving swiftly forward, you'd be interested (maybe) to know that some performanc
 
 {% highlight javascript %}
 var arr = [];
-for(var i = nl.length; i--; arr.unshift(nl[i]));
+var divs = document.querySelectorAll('div');
+for(var i = divs.length; i--; arr.unshift(divs[i]));
 {% endhighlight %}
 
 Check out some of the other [NodeList to Array perf tests](http://jsperf.com/nodelist-to-array/27).
