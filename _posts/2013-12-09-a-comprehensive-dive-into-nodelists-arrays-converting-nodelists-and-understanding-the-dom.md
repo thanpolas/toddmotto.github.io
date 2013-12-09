@@ -190,7 +190,7 @@ We can _shorten_ this entire declaration however using an empty Array, which has
 var divs = [].slice.call(document.querySelectorAll('div'));
 {% endhighlight %}
 
-... But I wouldn't advise it, this can cause issues with other libraries, even though it's not as sexy and is a bit longer, use the long version and you'll be writing more bulletproof code.
+... But I wouldn't advise it, this can cause issues with other libraries, even though it's sexier and shorter, use the long version and you'll be writing more bulletproof code.
 
 #### Looping through NodeLists on-the-fly
 
