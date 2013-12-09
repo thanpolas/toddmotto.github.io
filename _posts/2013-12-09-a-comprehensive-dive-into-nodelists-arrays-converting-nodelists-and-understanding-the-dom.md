@@ -46,7 +46,7 @@ for (var i = 0; i < divs.length; i++) {
 }
 {% endhighlight %}
 
-But when we introduce the modern JavaScript _forEach()_ method, problems arise with the native API itself, the _forEach()_ method is to be used when iterating over Arrays (BTW, you can use _forEach()_ in older browsers with a Polyfill, see end of article):
+But when we introduce the modern JavaScript _forEach()_ method, problems arise with the native API itself, the _forEach()_ method is to be used when iterating over Arrays (BTW, you can use _forEach()_ for Arrays in older browsers with a Polyfill, see end of article):
 
 {% highlight javascript %}
 var myArray = [1,2,3,4,5];
@@ -87,7 +87,7 @@ Which means we cannot remove an item from a NodeList like you'd simply expect:
 var divs = document.querySelectorAll('div');
 for (var i = 0; i < divs.length; i++) {
     var self = divs[i];
-    divs.splice(i, 1); // REMOVE this elemen from the NodeList
+    divs.splice(i, 1); // Remove this element from the NodeList
 }
 {% endhighlight %}
 
