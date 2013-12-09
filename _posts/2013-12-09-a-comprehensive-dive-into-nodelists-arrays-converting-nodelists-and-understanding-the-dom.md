@@ -152,7 +152,7 @@ for (var i = 0; i < myNodeList.length; i++) {
 }
 {% endhighlight %}
 
-And you're all done. It's a nice and simply process. I absolutely love this method, as it still keeps your original NodeList reference if you need it, for instance keeping a tab on your live NodeList collection. Please note though, using _document.querySelectorAll()_ returns a _static_ NodeList, not _live_, therefore it won't automatically update. However, _document.getElementsByTagName()_ will keep a live record, but getting elements by their tag name is slowly dying. I personally would've liked to have seen live Nodes in _querySelector_.
+And you're all done. It's a nice and simply process. I absolutely love this method, as it still keeps your original NodeList reference if you need it, for instance keeping a tab on your live NodeList collection. Please note though, using _document.querySelectorAll()_ returns a _static_ NodeList, not _live_, therefore it won't automatically update. However, _document.getElementsByTagName()_ will keep a live record, but getting elements by their tag name is slowly dying. I personally would've liked to have seen live Nodes in _querySelectorAll_.
 
 Moving swiftly forward, you'd be interested (maybe) to know that some performance/speed tests were done and the quickest method (apparently) of converting a NodeList to Array is:
 
