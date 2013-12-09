@@ -164,7 +164,7 @@ for(var i = divs.length; i--; arr.unshift(divs[i]));
 
 Check out some of the other [NodeList to Array perf tests](http://jsperf.com/nodelist-to-array/27).
 
-If you're fortunate enough to not care about IE8 and below, then you can use a neat trick to convert your NodeList instantly using _Array.prototype.slice.call()_: (but please see the Polyfill section below as you can drop it in and use this method for all IE versions!).
+If you're fortunate enough to not care about IE8 and below, then you can use a neat trick to convert your NodeList instantly using _Array.prototype.slice.call()_:
 
 {% highlight javascript %}
 // 'divs' is now an Array
