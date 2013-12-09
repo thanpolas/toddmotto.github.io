@@ -238,8 +238,8 @@ if (!Array.prototype.forEach) {
 Dropping in the above will run a quick feature detect on the _forEach_ method and patch the browser functionality for you, which means you can do this and it'll work in every browser:
 
 {% highlight javascript %}
-var divs = Array.prototype.slice.call(document.querySelectorAll('div'));
-divs.forEach(function () {
+var myArray = [1,2,3,4,5];
+myArray.forEach(function () {
   //...
 });
 {% endhighlight %}
