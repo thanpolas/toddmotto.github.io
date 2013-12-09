@@ -220,9 +220,7 @@ var divs = document.querySelectorAll('div');
 
 As promised, polyfill(s) for you to drop in:
 
-#### _array.forEach()_
-
-[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+#### _array.forEach()_, [reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 {% highlight javascript %}
 if (!Array.prototype.forEach) {
