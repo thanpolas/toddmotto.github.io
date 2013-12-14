@@ -36,8 +36,8 @@ window.Fluidvids = (function (window, document, undefined) {
   var _appendStyles = function () {
     var CSS = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;height:100%;}.fluidvids{width:100%;position:relative;}';
     var htmDiv = document.createElement('div');
-    htmDiv.innerHTML = '<p>x</p><style>'+CSS+'</style>';
-    head.appendChild(htmDiv.childNodes[1]);
+    htmDiv.innerHTML = '<style>'+CSS+'</style>';
+    head.appendChild(htmDiv.childNodes[0]);
   
 
   
