@@ -66,7 +66,7 @@ window.Fluidvids = (function (window, document, undefined) {
     var options = object || {};
     var selector = options.selector || 'iframe';
     obj = options.players || ['www.youtube.com', 'player.vimeo.com'];
-    var nodes = document.querySelectorAll(selector);
+    var nodes = document.getElementsByTagName(selector);
     for (var i = 0; i < nodes.length; i++) {
       var self = nodes[i];
       if (_matchesPlayer(self.src)) {
