@@ -1,5 +1,5 @@
 /*!
- *  FluidVids.js v2.0.0
+ *  FluidVids.js v2.1.0
  *  Responsive and fluid YouTube/Vimeo video embeds.
  *  Project: https://github.com/toddmotto/fluidvids
  *  by Todd Motto: http://toddmotto.com
@@ -12,8 +12,8 @@ window.Fluidvids = (function (window, document, undefined) {
 
   var players, obj;
   var head = document.head || document.getElementsByTagName('head')[0];
-  /*var css = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
-  'height:100%;}.fluidvids{width:100%;position:relative;}';*/
+  var css = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
+  'height:100%;}.fluidvids{width:100%;position:relative;}';
 
   var _matchesPlayer = function (source) {
     players = new RegExp('^(https?:)?\/\/(?:' + obj.join('|') + ').*$', 'i');
@@ -34,39 +34,16 @@ window.Fluidvids = (function (window, document, undefined) {
   };
 
   var _appendStyles = function () {
-    var CSS = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;height:100%;}.fluidvids{width:100%;position:relative;}';
-    var htmDiv = document.createElement('div');
-    htmDiv.innerHTML = '<p></p><style>'+CSS+'</style>';
-    head.appendChild(htmDiv.childNodes[1]);
-  
-
-  
-  
-  
-  
-  
-    /*var style = document.createElement("style");
-    style.setAttribute("type", "text/css");
-    if (style.styleSheet) {
-      style.styleSheet.cssText = cssStr;
-    } else {
-      var cssText = document.createTextNode(cssStr);
-      style.appendChild(cssText);
-    }
-    var style = document.createElement('style');
-    if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-    } else {
-      style.appendChild(document.createTextNode(css));
-    }
-    head.appendChild(style);*/
+  	var div = document.createElement('div');
+  	div.innerHTML = '<p>x</p><style>' + css + '</style>';
+  	head.appendChild(div.childNodes[1]);
   };
 
   var init = function (object) {
     var options = object || {};
     var selector = options.selector || 'iframe';
     obj = options.players || ['www.youtube.com', 'player.vimeo.com'];
-    var nodes = document.getElementsByTagName(selector);
+    var nodes = document.querySelectorAll(selector);
     for (var i = 0; i < nodes.length; i++) {
       var self = nodes[i];
       if (_matchesPlayer(self.src)) {
