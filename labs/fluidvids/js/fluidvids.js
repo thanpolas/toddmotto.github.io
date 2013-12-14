@@ -34,9 +34,20 @@ window.Fluidvids = (function (window, document, undefined) {
   };
 
   var _appendStyles = function () {
-    var cssStr = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
+    var css = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
   'height:100%;}.fluidvids{width:100%;position:relative;}';
-    var style = document.createElement("style");
+  
+  
+  var elem=document.createElement('style');
+  if(elem.styleSheet && !elem.sheet)elem.styleSheet.cssText=css;
+  else elem.appendChild(document.createTextNode(css));
+  head.appendChild(elem); 
+  
+  
+  
+  
+  
+    /*var style = document.createElement("style");
     style.setAttribute("type", "text/css");
     if (style.styleSheet) {
       style.styleSheet.cssText = cssStr;
@@ -44,7 +55,7 @@ window.Fluidvids = (function (window, document, undefined) {
       var cssText = document.createTextNode(cssStr);
       style.appendChild(cssText);
     }
-    /*var style = document.createElement('style');
+    var style = document.createElement('style');
     if (style.styleSheet) {
       style.styleSheet.cssText = css;
     } else {
