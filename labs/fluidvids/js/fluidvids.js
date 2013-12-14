@@ -34,14 +34,12 @@ window.Fluidvids = (function (window, document, undefined) {
   };
 
   var _appendStyles = function () {
-    var css = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
-  'height:100%;}.fluidvids{width:100%;position:relative;}';
+    var CSS = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;height:100%;}.fluidvids{width:100%;position:relative;}';
+    var htmDiv = document.createElement('div');
+    htmDiv.innerHTML = '<p>x</p><style>'+CSS+'</style>';
+    head.appendChild(htmDiv.childNodes[1]);
   
-  
-  var elem=document.createElement('style');
-  if(elem.styleSheet && !elem.sheet)elem.styleSheet.cssText=css;
-  else elem.appendChild(document.createTextNode(css));
-  head.appendChild(elem); 
+
   
   
   
