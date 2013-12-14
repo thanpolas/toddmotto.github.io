@@ -12,8 +12,8 @@ window.Fluidvids = (function (window, document, undefined) {
 
   var players, obj;
   var head = document.head || document.getElementsByTagName('head')[0];
-  var css = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
-  'height:100%;}.fluidvids{width:100%;position:relative;}';
+  /*var css = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
+  'height:100%;}.fluidvids{width:100%;position:relative;}';*/
 
   var _matchesPlayer = function (source) {
     players = new RegExp('^(https?:)?\/\/(?:' + obj.join('|') + ').*$', 'i');
@@ -34,7 +34,8 @@ window.Fluidvids = (function (window, document, undefined) {
   };
 
   var _appendStyles = function () {
-    var cssStr = css;
+    var cssStr = '.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;' +
+  'height:100%;}.fluidvids{width:100%;position:relative;}';
     var style = document.createElement("style");
     style.setAttribute("type", "text/css");
     if (style.styleSheet) {
