@@ -34,9 +34,9 @@ window.Fluidvids = (function (window, document, undefined) {
   };
 
   var _appendStyles = function () {
-  	var div = document.createElement('div');
-  	div.innerHTML = '<p>x</p><style>' + css + '</style>';
-  	head.appendChild(div.childNodes[1]);
+    var div = document.createElement('div');
+    div.innerHTML = '<p>x</p><style>' + css + '</style>';
+    head.appendChild(div.childNodes[1]);
   };
 
   var init = function (object) {
