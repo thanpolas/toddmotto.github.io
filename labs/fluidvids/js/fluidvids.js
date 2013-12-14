@@ -34,13 +34,22 @@ window.Fluidvids = (function (window, document, undefined) {
   };
 
   var _appendStyles = function () {
-    var style = document.createElement('style');
+    var cssStr = css;
+    var style = document.createElement("style");
+    style.setAttribute("type", "text/css");
+    if (style.styleSheet) {
+      style.styleSheet.cssText = cssStr;
+    } else {
+      var cssText = document.createTextNode(cssStr);
+      style.appendChild(cssText);
+    }
+    /*var style = document.createElement('style');
     if (style.styleSheet) {
       style.styleSheet.cssText = css;
     } else {
       style.appendChild(document.createTextNode(css));
     }
-    head.appendChild(style);
+    head.appendChild(style);*/
   };
 
   var init = function (object) {
