@@ -129,8 +129,6 @@ Putting it altogether, we might do the following and create a function tied in w
 var nav = document.querySelector('.nav__toggle');
 var toggleState = function (elem, one, two) {
   var elem = document.querySelector(elem);
-  var dataOne = one;
-  var dataTwo = two;
   elem.setAttribute('data-state', elem.getAttribute('data-state') === one ? two : one);
 };
 
