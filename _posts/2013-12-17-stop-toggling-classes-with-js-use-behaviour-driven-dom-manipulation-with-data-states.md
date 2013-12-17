@@ -136,6 +136,9 @@ nav.onclick = function (e) {
   toggleState('.nav ul', 'closed', 'open');
   e.preventDefault();
 };
+
+// ES5 using .bind() #ftw
+// nav.addEventListener('click', toggleState.bind(null, '.nav ul', 'closed', 'open'), false);
 {% endhighlight %}
 
 I've created a real quick _toggleState_ function which passes in a selector, and the two values to toggle, you'll then need to declare the markup:
