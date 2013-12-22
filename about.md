@@ -33,10 +33,5 @@ Have so far taught an [AngularJS half-day workshop](//speakerdeck.com/toddmotto/
 * 23.09.2013: [Advertising Age](//adage.com/article/digital/intel-hub-targets-developers-subsidizing-web-publishers/244296)
 * 12.09.2013: [Web Developer 2](//www.webdeveloper2.com/2013/09/interview-1-todd-motto)
 
-### Friends
-Some great people who I urge you to check out:
-
-[Mark Goodyear](//markgoodyear.com), [Omer Dawelbeit](//dawelbeit.info), [Steve Fenton](//stevefenton.co.uk).
-
 ### Personal
-I live in a picturesque village just outside of [Chippenham, Wiltshire, UK](//maps.google.co.uk/maps?q=Chippenham+Wiltshire+UK) with my fiancé [Stacey Vincent](//twitter.com/StaceyLVincent). I love tattoos, guitar, golf, ancient history and the supernatural. Massive music addict, favourite bands include; Blink-182, Angels &amp; Airwaves, The Killers, Ellie Goulding, Florence + The Machine.
+I live just outside of [Chippenham, Wiltshire, UK](//maps.google.co.uk/maps?q=Chippenham+Wiltshire+UK) with my fiancé [Stacey Vincent](//twitter.com/StaceyLVincent). I love tattoos, guitar, golf, ancient history and the supernatural. I'm a massive music fan, favourite bands include; Blink-182, Angels &amp; Airwaves, Stereophonics, The Killers, Ellie Goulding, Florence + The Machine.

@@ -1,86 +1,70 @@
+.posts {
+
+}
 /* ul */.posts__list {
+  margin: 10px 0;
   li {
-    overflow: hidden;
-    &:nth-child(odd) {
-      background: $post;
-    }
     a {
+      position: relative;
+      overflow: hidden;
+      color: #444;
       display: block;
-      padding: 15px 50px;
-      &:hover {
-        color: darken($primary, 10%);
-      }
     }
   }
 }
-.full-post {
-  overflow: hidden;
-  padding: 0 50px 50px;
-}
-.full-post__title {
-  font-size: 26px;
+.posts__date {
+  background: #0086b3;
+  padding: 5px 10px;
+  margin: 15px 0 0;
+  font-weight: 900;
+  color: #fff;
+  @include position(absolute, 0px 0px 0 0);
+  @media screen and (min-width: 300px) and (max-width: 850px) {
+    position: static;
+    font-size: 12px;
+  }
 }
 .posts__title {
-  font-size: 18px;
-}
-.carbon--module {
-  background: $primary-dark;
-  padding: 0;
-  width: 100%;
-  @include position(absolute, 0 0 0px 0px);
-}
-.carbonad-text a {
-  color: $white !important;
-}
-
-
-.full-post {
-  a {
-    color:#0099c7;
-    border-bottom:2px solid #eee;
+  margin: 20px 165px 20px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @media screen and (min-width: 300px) and (max-width: 850px) {
+    margin: 20px 0 10px;
+    font-size: 16px;
+    white-space: normal;
   }
+}
+.full-post {
+  position: relative;
+  padding: 20px 0;
 }
 .full-post__date {
-  background:#fbfbfb;
-  padding:5px 10px;
-}
-.downloads {
-  h4 {
-    margin: 20px 0 10px;
-    padding: 20px 0 0;
-    border-top: 1px solid #eee;
-  }
-}
-
-/**
- * Buttons
- */
-.download-box,
-.download-details {
-  a {
-    position: relative;
+  text-align: center;
+  p {
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    padding: 10px 25px;
-    margin: 0 15px 0 0;
-    background: $primary;
-    color: $white;
-    &:hover {
-      background: $primary-dark;
-    }
+    background: #0086b3;
+    padding: 5px 10px;
+    margin: 0;
+    font-weight: 900;
+    color: #fff;
   }
 }
-.download-icons {
+.full-post__title {
+  @media screen and (min-width: 300px) and (max-width: 850px) {
+    font-size: 22px;
+  }
+}
+.download-box {
   a {
-    padding: 10px 25px 10px 50px;
-    i {
-      font-size: 20px;
-      @include position(absolute, 10px 0 0 15px);
-    }
+    display: inline-block;
+    background: #0086b3;
+    padding: 8px 20px;
+    color: #fff;
+    font-weight: 900;
+    margin: 10px 10px 10px 0;
   }
 }
-
 /**
  * Social
  */
@@ -123,28 +107,28 @@
  * Pagination
  */
 .pagination {
-  background: $primary;
-  color: lighten($primary, 25%);
-  overflow:hidden;
+  background: darken(#f8f8f8, 5%);
+  color: darken(#f8f8f8, 35%);
+  overflow: hidden;
   a,
   span {
-    padding:15px 25px;
-    display:inline-block;
-    zoom:1;
+    padding: 15px 25px;
+    display: inline-block;
+    zoom: 1;
   }
   a {
-    color: $white;
+    color: darken(#f8f8f8, 50%);
     &:hover {
-      background: darken($primary, 5%);
+      color: darken(#f8f8f8, 70%);
     }
   }
 }
 .pagination--previous {
-  float:left;
-  width:50%;
+  float: left;
+  width: 50%;
 }
 .pagination--next {
-  text-align:right;
-  float:right;
-  width:50%;
+  text-align: right;
+  float: right;
+  width: 50%;
 }

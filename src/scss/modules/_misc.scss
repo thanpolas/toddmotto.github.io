@@ -1,29 +1,15 @@
-/**
- * CarbonAds
- */
-#carbonads-container {
-
+::selection{
+  background:#333;
+  color:#fff;
+  text-shadow:none;
 }
-.carbonad {
-  border:0 !important;
-  background:transparent !important;
+::-moz-selection{
+  background:#333;
+  color:#fff;
+  text-shadow:none;
 }
-
-/**
- * Text Selection
- */
-::selection {
-  background: #fe57a1;
-  color: $white;
-  text-shadow: none;
-}
-::-moz-selection {
-  background: #fe57a1;
-  color: $white;
-  text-shadow: none;
-}
-::-webkit-selection {
-  background: #fe57a1;
-  color: $white;
-  text-shadow: none;
+::-webkit-selection{
+  background:#333;
+  color:#fff;
+  text-shadow:none;
 }
