@@ -77,7 +77,7 @@ For our menu, wouldn't it be awesome to do this:
 }
 {% endhighlight %}
 
-This keeps so many semantic values, as well as being _so_ easy to read and maintain. There are many awesome pseudo events that we could semantically introduce to our code that would keep thigns maintainable and semantic.
+This keeps so many semantic values, as well as being _so_ easy to read and maintain. There are many awesome pseudo events that we could semantically introduce to our code that would keep things maintainable and semantic.
 
 Unfortunately _this isn't going to work_, as this CSS is invalid...
 
