@@ -28,7 +28,7 @@ Before you write a line of JavaScript, you're in what we call the `Global Scope`
 var name = 'Todd';
 {% endhighlight %}
 
-Global scope is your best friend and your worst nightmare, learning to control your scopes is easy and in doing so, you''ll run into no issues with global scope problems (usually namespace clashes). You'll often hear people saying "Global Scope is _bad_, but never really justifying as to _why_". Global scope isn't bad, you need it to create Modules/APIs that are accessible across scopes, you must use it to your advantage and not cause issues.
+Global scope is your best friend and your worst nightmare, learning to control your scopes is easy and in doing so, you''ll run into no issues with global scope problems (usually namespace clashes). You'll often hear people saying "Global Scope is _bad_", but never really justifying as to _why_. Global scope isn't bad, you need it to create Modules/APIs that are accessible across scopes, you must use it to your advantage and not cause issues.
 
 Everyone's used jQuery before, as soon as you do this...
 
