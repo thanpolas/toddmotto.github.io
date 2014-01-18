@@ -255,7 +255,7 @@ for (var i = 0; i < links.length; i++) {
 }
 {% endhighlight %}
 
-The `this` value here doesn't refer to our elements, we're not invoking anything or changing the scope. Let's look at how we can change scope.
+The `this` value here doesn't refer to our elements, we're not invoking anything or changing the scope. Let's look at how we can change scope (well, it looks like we change scope, but what we're really doing is changing the _context_ of how the function is called).
 
 #### .call() and .apply()
 

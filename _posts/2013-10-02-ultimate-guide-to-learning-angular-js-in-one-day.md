@@ -802,5 +802,6 @@ Happy coding.
 
 ### Further reading
 
+- This post, translated in [French!](http://vfsvp.fr/article/apprendre-angular-en-un-jour-le-guide-ultime)
 - This post, on [SpeakerDeck in slides](https://speakerdeck.com/toddmotto/angularjs-in-one-day)
 - Learn how to [code your own Directive](http://toddmotto.com/creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts) from a custom script or plugin
