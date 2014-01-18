@@ -92,14 +92,33 @@
  * Fluid videos
  */
 .screencast {
-  position:relative;
-  padding-bottom:56.25%;
-  height:0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   iframe {
-    z-index:0;
-    width:100%;
-    height:100%;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
     @include position(absolute, 0px 0 0 0px);
+  }
+}
+
+/**
+ * About
+ */
+.about__talk {
+  background: #eee;
+  float: left;
+  width: 400px;
+  margin: 0 20px 0 0;
+  @media screen and (min-width: 300px) and (max-width: 750px) {
+    float: none;
+    width: 100%;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 900;
+    margin: 5px 10px;
   }
 }
 

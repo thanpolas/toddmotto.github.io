@@ -1,6 +1,23 @@
 .full-post {
   ul {
     margin: 0 0 0 35px;
+    &.events {
+      margin: 0;
+      li {
+        padding: 0 0 0 20px;
+        list-style: none;
+        border-bottom: 1px solid #eee;
+        .events__type {
+          color: #888;
+          font-size: 12px;
+          span {
+            color: #888;
+          }
+        }
+        .events__title {
+        }
+      }
+    }
     li {
       list-style: disc;
     }
