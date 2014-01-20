@@ -164,7 +164,7 @@ element.addEventListener('click', toggleMenu(param1, param2), false);
 ...But this will invoke the function as soon as the JavaScript engine hits the function, which is bad news. So what we can do is use the `ECMAScript 5` addition `Function.prototype.bind` (modern browsers only) which sets up the values without invoking the function. This is similar to `.call()` and `.apply()` but doesn't invoke the function:
 
 {% highlight javascript %}
-element.addEventListener('click', toggleMenu.bind(this, param1, param2), false);
+element.addEventListener('click', toggleMenu.bind(null, param1, param2), false);
 {% endhighlight %}
 
 You can read more about `.bind()` [here](/everything-you-wanted-to-know-about-javascript-scope) and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).You can grab the `.bind()` [polyfill here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) so that all browsers can use `.bind()` (as it's current IE9+ and all modern browsers)
