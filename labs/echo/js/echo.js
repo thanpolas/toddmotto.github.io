@@ -13,10 +13,9 @@ window.Echo = (function (global, document, undefined) {
   var _pollImages = function () {
     for (var i = 0; i < store.length; i++) {
       var self = store[i];
-      if (_inView(self)) {
+      if (self && _inView(self)) {
         self.src = self.getAttribute('data-echo');
         store.splice(i, 1);
-        _pollImages();
       }
     }
   };
