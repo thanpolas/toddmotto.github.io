@@ -7,11 +7,7 @@ window.Echo = (function (global, document, undefined) {
 
   var _inView = function (element) {
     var coords = element.getBoundingClientRect();
-    return (
-      (coords.top >= 0 && coords.left >= 0) &&
-      coords.top <= (global.innerHeight || document.documentElement.clientHeight) + parseInt(offset) &&
-      coords.left <= (global.innerWidth || document.documentElement.clientWidth) + parseInt(offset)
-    );
+    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
   };
 
   var _pollImages = function () {
