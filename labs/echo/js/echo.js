@@ -11,12 +11,25 @@ window.Echo = (function (global, document, undefined) {
   };
 
   var _pollImages = function () {
-    for (var i = 0; i < store.length; i++) {
-      var self = store[i];
-      if (self && _inView(self)) {
-        self.src = self.getAttribute('data-echo');
-        store.splice(i, 1);
+    var length = store.length;
+    if (length > 0) {
+      for (var i = 0, len = length; i < len; i++) {
+        var self = store[i];
+        if (self && _inView(self)) {
+          self.src = self.getAttribute('data-echo');
+          store.splice(i, 1);
+          len = length;
+          i--;
+        }
       }
+    } else {
+      if (document.removeEventListener) {
+        console.log('Done!');
+        global.removeEventListener('scroll', _throttle);
+      } else {
+        global.detachEvent('onscroll', _throttle);
+      }
+      clearTimeout(poll);
     }
   };
 
