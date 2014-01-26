@@ -16,6 +16,7 @@ window.Echo = (function (global, document, undefined) {
       if (_inView(self)) {
         self.src = self.getAttribute('data-echo');
         store.splice(i, 1);
+        _pollImages();
       }
     }
   };
