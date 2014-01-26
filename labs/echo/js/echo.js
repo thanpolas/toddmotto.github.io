@@ -3,7 +3,7 @@ window.Echo = (function (global, document, undefined) {
 
   'use strict';
 
-  var store = [], offset, throttle, poll;
+  var store = [], offset, throttle, poll, element;
 
   var _inView = function (el) {
     var coords = el.getBoundingClientRect();
@@ -24,10 +24,9 @@ window.Echo = (function (global, document, undefined) {
       }
     } else {
       if (document.removeEventListener) {
-        console.log('Done!');
-        global.removeEventListener('scroll', _throttle);
+        element.removeEventListener('scroll', _throttle);
       } else {
-        global.detachEvent('onscroll', _throttle);
+        element.detachEvent('onscroll', _throttle);
       }
       clearTimeout(poll);
     }
@@ -39,11 +38,12 @@ window.Echo = (function (global, document, undefined) {
   };
 
   var init = function (obj) {
-    var nodes = document.querySelectorAll('[data-echo]');
     var opts = obj || {};
     offset = opts.offset || 0;
     throttle = opts.throttle || 250;
+    element = document.querySelector(opts.element) || window;
 
+    var nodes = element.querySelectorAll(element + ' [data-echo]');
     for (var i = 0; i < nodes.length; i++) {
       store.push(nodes[i]);
     }
@@ -51,9 +51,9 @@ window.Echo = (function (global, document, undefined) {
     _throttle();
 
     if (document.addEventListener) {
-      global.addEventListener('scroll', _throttle, false);
+      element.addEventListener('scroll', _throttle, false);
     } else {
-      global.attachEvent('onscroll', _throttle);
+      element.attachEvent('onscroll', _throttle);
     }
   };
 
