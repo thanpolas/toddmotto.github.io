@@ -3,11 +3,15 @@ window.Echo = (function (global, document, undefined) {
 
   'use strict';
 
-  var store = [], offset, throttle, poll, element;
+  var store = [], offset, throttle, poll;
 
-  var _inView = function (el) {
-    var coords = el.getBoundingClientRect();
-    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (global.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
+  var _inView = function (element) {
+    var coords = element.getBoundingClientRect();
+    return (
+      (coords.top >= 0 && coords.left >= 0) &&
+      coords.top <= (global.innerHeight || document.documentElement.clientHeight) + parseInt(offset) &&
+      coords.left <= (global.innerWidth || document.documentElement.clientWidth) + parseInt(offset)
+    );
   };
 
   var _pollImages = function () {
@@ -24,9 +28,9 @@ window.Echo = (function (global, document, undefined) {
       }
     } else {
       if (document.removeEventListener) {
-        element.removeEventListener('scroll', _throttle);
+        global.removeEventListener('scroll', _throttle);
       } else {
-        element.detachEvent('onscroll', _throttle);
+        global.detachEvent('onscroll', _throttle);
       }
       clearTimeout(poll);
     }
@@ -38,22 +42,23 @@ window.Echo = (function (global, document, undefined) {
   };
 
   var init = function (obj) {
+    var nodes = document.querySelectorAll('[data-echo]');
     var opts = obj || {};
     offset = opts.offset || 0;
     throttle = opts.throttle || 250;
-    element = opts.element ? document.querySelector(opts.element) : window;
 
-    var nodes = document.querySelectorAll((opts.element || '') + ' [data-echo]');
     for (var i = 0; i < nodes.length; i++) {
       store.push(nodes[i]);
     }
 
-    _throttle();
+    _pollImages();
 
     if (document.addEventListener) {
-      element.addEventListener('scroll', _throttle, false);
+      global.addEventListener('scroll', _throttle, false);
+      global.addEventListener('load', _throttle, false);
     } else {
-      element.attachEvent('onscroll', _throttle);
+      global.attachEvent('onscroll', _throttle);
+      global.attachEvent('onload', _throttle);
     }
   };
 
