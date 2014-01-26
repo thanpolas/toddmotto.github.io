@@ -3,13 +3,45 @@ window.Echo = (function (global, document, undefined) {
 
   'use strict';
 
-  var store = [], offset, throttle, poll;
+  /**
+   * store
+   * @type {Array}
+   */
+  var store = [];
 
+  /**
+   * offset Stores the offset value
+   * for pre-viewport rendering
+   */
+  var offset;
+
+  /**
+   * throttle Stores the throttle value
+   * for event frequency
+   */
+  var throttle;
+
+  /**
+   * poll Stores the `setTimeout` value
+   */
+  var poll;
+
+  /**
+   *  _inView
+   * @private
+   * @param {Element} element Image element
+   * @returns {Boolean} Is element in viewport
+   */
   var _inView = function (element) {
     var coords = element.getBoundingClientRect();
-    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
+    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + offset);
   };
 
+  /**
+   * _pollImages Loop through the images if present
+   * or remove all event listeners
+   * @private
+   */
   var _pollImages = function () {
     var length = store.length;
     if (length > 0) {
@@ -32,16 +64,28 @@ window.Echo = (function (global, document, undefined) {
     }
   };
 
+  /**
+   * _throttle Sensible event firing
+   * @private
+   */
   var _throttle = function () {
     clearTimeout(poll);
     poll = setTimeout(_pollImages, throttle);
   };
 
+  /**
+   * init Module init function
+   * @param {Object} obj Passed in Object with options
+   * @param {Number} obj.offset
+   * @param {Number|String} obj.throttle
+   * @param {Number|String} obj.offset
+   */
   var init = function (obj) {
+
     var nodes = document.querySelectorAll('[data-echo]');
     var opts = obj || {};
-    offset = opts.offset || 0;
-    throttle = opts.throttle || 250;
+    offset = parseInt(opts.offset || 0);
+    throttle = parseInt(opts.throttle || 250);
 
     for (var i = 0; i < nodes.length; i++) {
       store.push(nodes[i]);
@@ -56,11 +100,15 @@ window.Echo = (function (global, document, undefined) {
       global.attachEvent('onscroll', _throttle);
       global.attachEvent('onload', _throttle);
     }
+
   };
 
+  /**
+   * @returns {Object}
+   */
   return {
     init: init,
-    render: _throttle
+    render: _pollImages
   };
 
 })(this, document);
