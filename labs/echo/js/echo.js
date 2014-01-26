@@ -1,11 +1,5 @@
-/*!
- *  Echo v1.4.0
- *  Lazy-loading with data-* attributes, offsets and throttle options
- *  Project: https://github.com/toddmotto/echo
- *  by Todd Motto: http://toddmotto.com
- *  Copyright. MIT licensed.
- */
-window.Echo = (function (window, document, undefined) {
+/*! Echo v1.4.0 | (c) 2014 @toddmotto | MIT license | github.com/toddmotto/echo */
+window.Echo = (function (global, document, undefined) {
 
   'use strict';
 
@@ -13,11 +7,11 @@ window.Echo = (function (window, document, undefined) {
 
   var _inView = function (el) {
     var coords = el.getBoundingClientRect();
-    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
+    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (global.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
   };
 
   var _pollImages = function () {
-    for (var i = store.length; i--;) {
+    for (var i = 0; i < store.length; i++) {
       var self = store[i];
       if (_inView(self)) {
         self.src = self.getAttribute('data-echo');
@@ -44,9 +38,9 @@ window.Echo = (function (window, document, undefined) {
     _throttle();
 
     if (document.addEventListener) {
-      window.addEventListener('scroll', _throttle, false);
+      global.addEventListener('scroll', _throttle, false);
     } else {
-      window.attachEvent('onscroll', _throttle);
+      global.attachEvent('onscroll', _throttle);
     }
   };
 
@@ -55,4 +49,4 @@ window.Echo = (function (window, document, undefined) {
     render: _throttle
   };
 
-})(window, document);
+})(this, document);
