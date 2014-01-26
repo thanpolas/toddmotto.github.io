@@ -73,7 +73,7 @@ myApp.controller('NavCtrl', ['$scope', function ($scope) {...}]);
 myApp.controller('UserCtrl', ['$scope', function ($scope) {...}]);
 {% endhighlight %}
 
-Each new file I create simple grabs the _myApp_ namespace and you're automatically bolted into the application. Yes, I'm creating new files for each Controller, Directive, Factory and everything else (you'll thank me for this). Concatenate them all and push the single script file into the DOM on the fly using something like Grunt.
+Each new file I create simply grabs the _myApp_ namespace and automatically bolts itself into the application. Yes, I'm creating new files for each Controller, Directive, Factory and everything else (you'll thank me for this). Concatenate and minify them all and push the single script file into the DOM (using something like Grunt/Gulp).
 
 #### Controllers
 Now you've grasped the concept of MVC and a basic setup, let's check out Angular's implementation on how you can get going with Controllers.

@@ -152,3 +152,29 @@ Based on this setup, you've probably guessed how I (on a very basic level) struc
 This also has many other benefits, including caching your selectors, your team knowing the exact format in which you're writing your code, and not littering the file with random scripts here, there, everywhere, and making future changes incredibly easy.
 
 You'll also notice I wrap all my code inside an IIFE, `(function () {...})();`, this keeps all your code outside of the global scope and helps reduce [more headaches](/everything-you-wanted-to-know-about-javascript-scope).
+
+### Passing parameters
+
+You may have noticed that I haven't passed in any parameters to any of the above code examples, this is because the was `addEventListener` was added to JavaScript was _nearly_ done well, but missed a vital piece of functionality, so we need to look closer and understand what's happening. You might think you can do this:
+
+{% highlight javascript %}
+element.addEventListener('click', toggleMenu(param1, param2), false);
+{% endhighlight %}
+
+...But this will invoke the function as soon as the JavaScript engine hits the function, which is bad news. So what we can do is use the `ECMAScript 5` addition `Function.prototype.bind` (modern browsers only) which sets up the values without invoking the function. This is similar to `.call()` and `.apply()` but doesn't invoke the function:
+
+{% highlight javascript %}
+element.addEventListener('click', toggleMenu.bind(null, param1, param2), false);
+{% endhighlight %}
+
+You can read more about `.bind()` [here](/everything-you-wanted-to-know-about-javascript-scope) and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).You can grab the `.bind()` [polyfill here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) so that all browsers can use `.bind()` (as it's current IE9+ and all modern browsers)
+
+If you don't want to polyfill and go "oldschool" then you'll need to wrap it inside a function:
+
+{% highlight javascript %}
+element.addEventListener('click', function () {
+  toggleMenu(param1, param2);
+}, false);
+{% endhighlight %}
+
+_Doesn't this go against the article?_ No. This is a workaround for passing arguments into functions and has nothing to do with the benefits listed in the intro paragraph. You could even add your `event.preventDefault()` logic inside the wrapper callback depending on what the function inside did to ensure your function doesn't `preventDefault()` when you don't need it to.
