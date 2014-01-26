@@ -1,4 +1,4 @@
-/*! Echo v1.4.0 | (c) 2014 @toddmotto | MIT license | github.com/toddmotto/echo */
+/*! Echo v1.5.0 | (c) 2014 @toddmotto | MIT license | github.com/toddmotto/echo */
 window.Echo = (function (global, document, undefined) {
 
   'use strict';
@@ -10,21 +10,9 @@ window.Echo = (function (global, document, undefined) {
   var store = [];
 
   /**
-   * offset Stores the offset value
-   * for pre-viewport rendering
+   * offset, throttle, poll vars
    */
-  var offset;
-
-  /**
-   * throttle Stores the throttle value
-   * for event frequency
-   */
-  var throttle;
-
-  /**
-   * poll Stores the `setTimeout` value
-   */
-  var poll;
+  var offset, throttle, poll;
 
   /**
    *  _inView
@@ -75,10 +63,9 @@ window.Echo = (function (global, document, undefined) {
 
   /**
    * init Module init function
-   * @param {Object} obj Passed in Object with options
-   * @param {Number} obj.offset
-   * @param {Number|String} obj.throttle
-   * @param {Number|String} obj.offset
+   * @param {Object} [obj] Passed in Object with options
+   * @param {Number|String} [obj.throttle]
+   * @param {Number|String} [obj.offset]
    */
   var init = function (obj) {
 
@@ -104,6 +91,7 @@ window.Echo = (function (global, document, undefined) {
   };
 
   /**
+   * return Public methods
    * @returns {Object}
    */
   return {
