@@ -41,9 +41,9 @@ window.Echo = (function (global, document, undefined) {
     var opts = obj || {};
     offset = opts.offset || 0;
     throttle = opts.throttle || 250;
-    element = document.querySelector(opts.element) || window;
+    element = opts.domElement ? document.querySelector(opts.domElement) : window;
 
-    var nodes = element.querySelectorAll(element + ' [data-echo]');
+    var nodes = document.querySelectorAll((opts.element || '') + ' [data-echo]');
     for (var i = 0; i < nodes.length; i++) {
       store.push(nodes[i]);
     }
