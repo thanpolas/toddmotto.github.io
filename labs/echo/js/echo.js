@@ -36,7 +36,9 @@ window.Echo = (function (global, document, undefined) {
     if (length > 0) {
       for (var i = 0; i < length; i++) {
         var self = store[i];
+        console.log('Looping over ', self);
         if (self && _inView(self)) {
+          console.log('Swapping src for ', self);
           self.src = self.getAttribute('data-echo');
           store.splice(i, 1);
           length = store.length;
