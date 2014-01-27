@@ -32,6 +32,7 @@ window.Echo = (function (global, document, undefined) {
    */
   var _pollImages = function () {
     var length = store.length;
+    console.log(length);
     if (length > 0) {
       for (var i = 0; i < length; i++) {
         var self = store[i];
@@ -39,6 +40,7 @@ window.Echo = (function (global, document, undefined) {
           self.src = self.getAttribute('data-echo');
           store.splice(i, 1);
           length = store.length;
+          console.log(store.length, i--);
           i--;
         }
       }
