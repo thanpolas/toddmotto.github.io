@@ -33,12 +33,12 @@ window.Echo = (function (global, document, undefined) {
   var _pollImages = function () {
     var length = store.length;
     if (length > 0) {
-      for (var i = 0, len = length; i < len; i++) {
+      for (var i = 0; i < length; i++) {
         var self = store[i];
         if (self && _inView(self)) {
           self.src = self.getAttribute('data-echo');
           store.splice(i, 1);
-          len = length;
+          length = store.length;
           i--;
         }
       }
