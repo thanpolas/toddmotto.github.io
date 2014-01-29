@@ -188,6 +188,49 @@ var Module = (function () {
 
 I really like the above syntax, as it's very declarative. For bigger JavaScript Modules this pattern helps out a lot more, using a standard "Module Pattern" can get out of control depending on the syntax you go for and how you structure your code.
 
+### Accessing "Private" Methods
+You might be thinking at some stage during this article, _"So if I make some methods private, how can I call them?"_. This is where JavaScript becomes even more awesome, and allows us to actually _invoke_ private functions via our public methods. Observe:
+
+{% highlight javascript %}
+var Module = (function () {
+
+  var privateMethod = function (message) {
+    console.log(message);
+  };
+
+  var publicMethod = function (text) {
+    privateMethod(text);
+  };
+  
+  return {
+    publicMethod: publicMethod
+  };
+
+})();
+
+// Example of passing data into a private method
+// the private method will then `console.log()` 'Hello!'
+Module.publicMethod('Hello!');
+{% endhighlight %}
+
+You're not just limited to methods, though. You've access to Objects, Arrays, anything:
+
+{% highlight javascript %}
+var Module = (function () {
+
+  var privateArray = [];
+
+  var publicMethod = function (somethingOfInterest) {
+    privateArray.push(somethingOfInterest);
+  };
+  
+  return {
+    publicMethod: publicMethod
+  };
+
+})();
+{% endhighlight %}
+
 ### Augmenting Modules
 So far we've created a nice Module, and returned an Object. But what if we wanted to extend our Module, and include another smaller Module, which extends our original Module?
 
@@ -264,3 +307,24 @@ console.log(Module);
 {% endhighlight %}
 
 Another hint here, you'll notice I've passed in `Module || {}` into my second `ModuleTwo`, this is incase `Module` is not defined - we don't want to cause errors now do we ;). What this does is instantiate a _new_ Object, and bind our `extension` method to it, and return it.
+
+### Private Naming Conventions
+I personally love the Revealing Module Pattern, and as such, I have many functions dotting around my code that visually are all declared the same, and look the same when I'm scanning around. I sometimes create a locally scoped Object, but sometimes don't. When I don't, how can I distinguish between private variables/methods? The `_` character! You've probably seen this dotted around the web, and now you know why we do it:
+
+{% highlight javascript %}
+var Module = (function () {
+
+  var _privateMethod = function () {
+    // private stuff
+  };
+
+  var publicMethod = function () {
+    _privateMethod();
+  };
+  
+  return {
+    publicMethod: publicMethod
+  };
+
+})();
+{% endhighlight %}
