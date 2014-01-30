@@ -306,7 +306,7 @@ I can then see (through something like Chrome's Dev Tools) that my initial Modul
 console.log(Module);
 {% endhighlight %}
 
-Another hint here, you'll notice I've passed in `Module || {}` into my second `ModuleTwo`, this is incase `Module` is not defined - we don't want to cause errors now do we ;). What this does is instantiate a _new_ Object, and bind our `extension` method to it, and return it.
+Another hint here, you'll notice I've passed in `Module || {}` into my second `ModuleTwo`, this is incase `Module` is `undefined` - we don't want to cause errors now do we ;). What this does is instantiate a _new_ Object, and bind our `extension` method to it, and return it.
 
 ### Private Naming Conventions
 I personally love the Revealing Module Pattern, and as such, I have many functions dotting around my code that visually are all declared the same, and look the same when I'm scanning around. I sometimes create a locally scoped Object, but sometimes don't. When I don't, how can I distinguish between private variables/methods? The `_` character! You've probably seen this dotted around the web, and now you know why we do it:
