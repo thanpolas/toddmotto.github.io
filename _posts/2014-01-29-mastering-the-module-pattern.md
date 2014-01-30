@@ -259,7 +259,7 @@ var Module = (function () {
 })();
 {% endhighlight %}
 
-Let's image it's part of our application, but by design we've decided to not include something into the core of our application, so we could include it as a standalone Module, creating an extension.
+Let's imagine it's part of our application, but by design we've decided to not include something into the core of our application, so we could include it as a standalone Module, creating an extension.
 
 So far our Object for `Module` would look like:
 
