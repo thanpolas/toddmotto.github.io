@@ -113,7 +113,7 @@ var Module = (function () {
 {% endhighlight %}
 
 ### Locally scoped Object Literal
-Local scope means a variable/function declared inside a scope. On the [Conditionizr](//conditionizr.com), we use a locally scoped namespace as the file is over 100 lines, so it's good to be able to see what a public and private methods. In this sense, it's _much_ easier to see what _is_ public, because they'll have a locally scoped namespace attached:
+Local scope means a variable/function declared inside a scope. On the [Conditionizr](//conditionizr.com) project, we use a locally scoped namespace as the file is over 100 lines, so it's good to be able to see what a public and private methods. In this sense, it's _much_ easier to see what _is_ public, because they'll have a locally scoped namespace attached:
 
 {% highlight javascript %}
 var Module = (function () {
