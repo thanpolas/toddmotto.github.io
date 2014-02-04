@@ -10,18 +10,6 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
 <ul class="events">
   <li>
     <p class="events__type">
-      Talk, <span>30.01.2014</span>
-    </p>
-    <p class="events__title">
-      <a href="//speakerdeck.com/toddmotto/building-the-modern-web-with-angularjs" target="_blank">
-        Building the Modern Web with AngularJS
-      </a>, 
-      <a href="//www.frontendlondon.co.uk" target="_blank">Front End London</a>, 
-      London
-    </p>
-  </li>
-  <li>
-    <p class="events__type">
       Talk, <span>09.04.2014</span>
     </p>
     <p class="events__title">
@@ -37,6 +25,18 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
 #### Past
 
 <ul class="events">
+  <li>
+    <p class="events__type">
+      Talk, <span>30.01.2014</span>
+    </p>
+    <p class="events__title">
+      <a href="//speakerdeck.com/toddmotto/building-the-modern-web-with-angularjs" target="_blank">
+        Building the Modern Web with AngularJS
+      </a>, 
+      <a href="//www.frontendlondon.co.uk" target="_blank">Front End London</a>, 
+      London
+    </p>
+  </li>
   <li>
     <p class="events__type">
       Talk, <span>16.01.2014</span>
