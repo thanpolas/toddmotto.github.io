@@ -72,6 +72,20 @@ Simple raw JavaScript image lazy loading through data-* attributes.
   </a>
 </div>
 
+#### Vault.js
+Web Storage (local/session) API with automatic JSON support. Store functions, objects, arrays, strings inside HTML5 localStorage or sessionStorage with ease.
+
+<div class="download-box download-icons">
+  <a href="//github.com/toddmotto/vault">
+    <i class="fa fa-github"></i>
+    Fork
+  </a>
+  <a href="//github.com/toddmotto/vault/archive/master.zip">
+    <i class="fa fa-cloud-download"></i>
+    Download
+  </a>
+</div>
+
 #### Flaunt.js
 Overcoming responsive design issues with click-to-reveal stylish nested navigations.
 
