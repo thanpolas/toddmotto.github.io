@@ -17,16 +17,16 @@ Stratos acts as a factory and supports AMD (require.js), browser globals and `mo
 
 Stratos has a few helper utilities, as well as powerful and time/byte saving methods. The methods that Stratos currently ships with are:
 
-- has()
-- type()
-- add()
-- remove()
-- extend()
-- destroy()
-- keys()
-- vals()
-- toJSON()
-- fromJSON()
+* has()
+* type()
+* add()
+* remove()
+* extend()
+* destroy()
+* keys()
+* vals()
+* toJSON()
+* fromJSON()
 
 These methods take care of the heavy lifting that comes with Object manipulation, for instance to extend an Object, Stratos has a method that wraps it all up for you:
 
