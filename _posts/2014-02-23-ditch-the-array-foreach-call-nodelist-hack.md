@@ -68,7 +68,7 @@ var myNodeList = document.querySelectorAll('li');
 });
 {% endhighlight %}
 
-#### Problem #4: Separation of concerns
+#### Problem #3: Separation of concerns
 NodeLists and Arrays are two different beasts, so why are we writing code where the overlap doesn't provide us any benefit? If you need an array _from_ a NodeList, then do exactly that. There are a few options for this, the non-cross-browser version:
 
 {% highlight javascript %}
@@ -94,13 +94,13 @@ console.log(myArrayFromNodeList); // Array of Nodes
 
 From here, we can then loop through our Array and make `splice` and `push` calls to actually do something valuable.
 
-#### Problem #5: Creates a needless Array
+#### Problem #4: Creates a needless Array
 Using `[].forEach.call` actually _creates_ a new Array, and it then dithers in memory, why would you even want to do that? There is a workaround for this however, using `Array.prototype.forEach.call`, which is in fact faster and more reliable (some libraries will conflict using `[]` syntax) and also simply accesses the `forEach` method, rather than creating a new array and then accessing it.
 
-#### Problem #6: It's slower and works harder
+#### Problem #5: It's slower and works harder
 I'm not going to get into a mass debate on shaving `0.00012230ms` from the method, but `[].forEach.call` is _very_ slow, especially as it's usually instantiating new objects against elements (or something like that). First, `[]` instantiates a new Array, and then for forEach method is then chained against `.call()` which then changes the execution context for each part of the loop. I don't know about you, but that's a lot of work for such a mild task.
 
-#### Problem #7: Stupidity vulnerabilities
+#### Problem #6: Stupidity vulnerabilities
 Based on the current examples we've seen, did you know that this example will still work:
 
 {% highlight javascript %}
@@ -113,16 +113,16 @@ var myNodeList = document.querySelectorAll('li');
 
 I don't want my code to be susceptible to things like that, it could happen and probably will/has.
 
-#### Problem #8: Scalability
+#### Problem #7: Scalability
 If I wanted to take the NodeList and ship it into another method, I'd have to completely rewrite the `forEach` hack and then ship it into a method, which then means more testing and opening up to more bugs. Write code properly the first time and you'll be able to extend your code excellently.
 
-#### Problem #9: Readibility
+#### Problem #8: Readibility
 A random `forEach` (usually seen at the end of a script) is completely meaningless, what does it do? Loops are usually based around manipulating objects/elements of some kind, so wrapping it inside a method of your own would likely be better.
 
-#### Problem #10: Confusing syntax
+#### Problem #9: Confusing syntax
 Are you manipulating a NodeList or an Array? Why make others work out what you're doing when you can easily write a method to take care of these things for you.
 
-#### Problem #11: Not cross-browser
+#### Problem #10: Not cross-browser
 I don't usually use the ECMAScript 5 `forEach` method, usually a straightforward `for` loop is _way more_ than enough:
 
 {% highlight javascript %}
@@ -143,8 +143,10 @@ for (var i = myNodeList.length; i--;) { // reverse
 
 You could even create your own wrapper `forEach` method, which will work in every browser and save you some typing.
 
-#### Problem #12: Developer misunderstanding
+#### Problem #11: Developer misunderstanding
 I've seen developers use this method to loop over arrays, which as we've established would be rather silly because the hack is meant for NodeLists, not arrays.
+
+There are likely more problems using the hack, but for now these will shed some light on main issue areas.
 
 ### Recommendations
 
