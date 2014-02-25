@@ -8,7 +8,7 @@ JavaScript Objects are usually the driving force behind applications I develop, 
 
 To save time rewriting the same (or similar) logic over and over again when dealing with our data (typically as part of a Model/View) - wouldn't it be great to use _one_ module to encapsulate the trickier object manipulation stuff and make developing the core of the application easier? It would also be great to bulletproof the object manipulation process, reducing object tasks, limit debugging, promote code reuse and even save a tonne of KB! Yes. So I built Stratos.js, a standalone 1KB module! It also comes fully equipped with unit tests for each method.
 
-Stratos acts as a factory aelnd supports AMD (require.js), browser globals and `module.exports` to run on Node/Browserify/CommonJS, so it can be used server-side too.
+Stratos acts as a factory and supports: AMD (require.js), browser globals and `module.exports` to run on Node/Browserify/CommonJS, so it can be used server-side too.
 
 <div class="download-box">
   <a href="//github.com/toddmotto/stratos/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download stratos', 'Download stratos']);">Download</a>

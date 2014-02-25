@@ -28,7 +28,7 @@ myNodeList.forEach(function (item) {
 });
 {% endhighlight %}
 
-So, we've reach an error, because NodeLists don't share the Array's prototype, of which contains the `forEach` method. There are some, erm, "solutions" to this:
+So, we've reached an error, because NodeLists don't share the Array's prototype, of which contains the `forEach` method. There are some, erm, "solutions" to this:
 
 {% highlight javascript %}
 NodeList.prototype.forEach = Array.prototype.forEach;
@@ -45,14 +45,16 @@ var myNodeList = document.querySelectorAll('li'); // grabs some <li>
 });
 {% endhighlight %}
 
-And everything works. Now let's look at some of the issues you're likely to face when writing JavaScript using the above edgy trick.
+And everything works. This accesses the created (empty) array's prototype method and using call allows the NodeList to take advantage.
+
+Now let's look at some of the issues surrounding this technique.
 
 ### Problems
 
 #### Problem #1: No Array methods
 This is a big one. NodeLists have a length property, but what if you want to add a new element or remove one from that list? You are not keeping _any_ state by using the forEach hack, and have no access to the list itself, which means it's a one way street, you can manipulate once, but only to static elements, you can't go back and add/remove other elements.
 
-Using methods such as `.splice()` will result in an error - as NodeLists cannot be changed, which is often very impractical. This also means you can't do anything exciting with your NodeList, apart from maybe bind an event handler or call a method.
+Using methods such as `.splice()` will result in an error - as NodeLists do not contain this method in their Prototype. NodeLists cannot be changed too, which is often very impractical. This also means you can't do anything exciting with your NodeList, apart from maybe bind an event handler or call a method.
 
 #### Problem #2: Limits reuse
 We are caching the selector, but we're not caching the array or even what the loop is doing, which means we can't reuse the method as it's frequently seen. I see this as a huge issue for scalability as well as reusability. What if I want to call the method again? I'll have to write the same non-descriptive code out twice.
