@@ -65,7 +65,7 @@ From here, we can then get started with some magic.
 
 ### Aspect Ratio calculation
 
-This is the clever part, and is why we need JavaScript over CSS. We set a variable to work out the iframe's width and height, which it will do very easily based on the inline dimension attributes. We then divide the height by the width, to obtain the aspect ratio. We then multiple it by 100 to be able to use it for CSS purposes for our fluid video.
+This is the clever part (thanks to [intrinsic ratios](http://alistapart.com/article/creating-intrinsic-ratios-for-video)), and is why we need JavaScript over CSS to be fully extensible for any width/height dimensions. We set a variable to work out the iframe's width and height, which it will do very easily based on the inline dimension attributes. We then divide the height by the width, to obtain the aspect ratio. We then multiple it by 100 to be able to use it for CSS purposes for our fluid video.
 
 {% highlight javascript %}
 var videoRatio = (iframe.height / iframe.width) * 100;
