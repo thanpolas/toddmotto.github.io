@@ -27,6 +27,18 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
 <ul class="events">
   <li>
     <p class="events__type">
+      Talk, <span>08.03.2014</span>
+    </p>
+    <p class="events__title">
+      <a href="//speakerdeck.com/toddmotto/building-the-modern-web-with-angularjs" target="_blank">
+        AngularJS overview and Appsbroker introduction
+      </a>, 
+      <a href="//southampton.startupweekend.org" target="_blank">Startup Weekend, Southampton</a>, 
+      London
+    </p>
+  </li>
+  <li>
+    <p class="events__type">
       Talk, <span>30.01.2014</span>
     </p>
     <p class="events__title">
