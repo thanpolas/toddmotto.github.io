@@ -3,6 +3,43 @@
   'use strict';
 
   /**
+   * Shuffle
+   */
+  var shuffleSrc = function (obj) {
+    var options = obj || {};
+    var selector = document.querySelector(options.selector || '[data-shuffle]');
+    var path = options.path || '';
+    var src = options.src || [];
+    if (selector) {
+      selector.src = path + src[Math.floor(Math.random() * src.length)];
+    }
+  };
+
+  shuffleSrc({
+    selector: '[data-shuffle]',
+    path: 'img/shuffle/',
+    src: [
+      'html5devconf.jpg',
+      'cloudplatform.jpg',
+      'careers.jpg',
+      'startupweekend.jpg',
+      'slidesprep.jpg',
+      'golf.jpg',
+      'lanzarote.jpg',
+      'html5hub.jpg',
+      'waterski.jpg',
+      'watersurf.jpg',
+      'phonejs.jpg',
+      'baybridge.jpg',
+      'tweeting.jpg',
+      'londonweb.jpg',
+      'wifi.jpg',
+      'southampton-stairs.jpg',
+      'startup-close.jpg'
+    ]
+  });
+
+  /**
    * Nav
    */
   var nav = document.querySelector('.nav__icon');
@@ -77,4 +114,4 @@
     fjs.parentNode.insertBefore(frag, fjs);
   })(document,'script');
 
-})( window, document);
+})(this, document);

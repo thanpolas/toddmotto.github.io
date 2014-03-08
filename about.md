@@ -4,8 +4,7 @@ layout: page
 ---
 
 <div class="about__talk">
-  <img src="img/talk.jpg">
-  <p>AngularJS @ London Web, Credit: <a href="https://twitter.com/poshaughnessy/status/423914129217552384">Peter O'Shaughnessy</a></p>
+  <img data-shuffle>
 </div>
 
 I'm Todd, lead front-end engineer at [Appsbroker](//www.appsbroker.com) aiming to make the web better. I'm an HTML5 and JavaScript developer focused on making web development easier for others by blogging and making code freely available via [open source](//github.com/toddmotto).
