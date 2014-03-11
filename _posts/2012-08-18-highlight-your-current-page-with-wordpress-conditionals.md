@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /highlight-your-current-page-with-wordpress-conditionals
 disqus: http://www.toddmotto.com/highlight-your-current-page-with-wordpress-conditionals
+path: 2012-08-18-highlight-your-current-page-with-wordpress-conditionals.md
 ---
 
 Here’s a quick overview on how to highlight your current page in the nav using WordPress PHP Conditional tags. It’s dead easy, and if you prefer hand-coding your navigation, then this is definitely for you. You can use the PHP Conditional tags for a vast amount of other things, and they’re one of the most powerful WordPress functions. Check the [Codex][1] for a more comprehensive overview.
@@ -24,13 +25,13 @@ Here’s what a basic HTML navigation would look like.
 
 {% highlight html %}
 <nav>
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Portfolio</a></li>
-		<li><a href="#">Testimonials</a></li>
-		<li><a href="#">Contact</a></li>
-	</ul>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Testimonials</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 </nav>
 {% endhighlight %}
 
@@ -47,13 +48,13 @@ Here’s how we’d add it to our navigation, with all other pages in considerat
 
 {% highlight html %}
 <nav>
-	<ul>
-		<li<?php if (is_front_page()) { echo " class=\"current\""; }?>><a href="#">Home</a></li>
-		<li<?php if (is_page('About')) { echo " class=\"current\""; }?>><a href="#">About</a></li>
-		<li<?php if (is_page('Portfolio')) { echo " class=\"current\""; }?>><a href="#">Portfolio</a></li>
-		<li<?php if (is_page('Testimonials')) { echo " class=\"current\""; }?>><a href="#">Testimonials</a></li>
-		<li<?php if (is_page('Contact')) { echo " class=\"current\""; }?>><a href="#">Contact</a></li>
-	</ul>
+  <ul>
+    <li<?php if (is_front_page()) { echo " class=\"current\""; }?>><a href="#">Home</a></li>
+    <li<?php if (is_page('About')) { echo " class=\"current\""; }?>><a href="#">About</a></li>
+    <li<?php if (is_page('Portfolio')) { echo " class=\"current\""; }?>><a href="#">Portfolio</a></li>
+    <li<?php if (is_page('Testimonials')) { echo " class=\"current\""; }?>><a href="#">Testimonials</a></li>
+    <li<?php if (is_page('Contact')) { echo " class=\"current\""; }?>><a href="#">Contact</a></li>
+  </ul>
 </nav>
 {% endhighlight %}
 

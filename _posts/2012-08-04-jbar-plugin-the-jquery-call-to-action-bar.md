@@ -4,14 +4,15 @@ author: Todd Motto
 layout: post
 permalink: /jbar-plugin-the-jquery-call-to-action-bar
 disqus: http://www.toddmotto.com/jbar-plugin-the-jquery-call-to-action-bar
+path: 2012-08-04-jbar-plugin-the-jquery-call-to-action-bar.md
 --- 
 
 jBar is a simple and lightweight jQuery notification bar that’s been revisited and rewritten (18.11.2012) as an official plugin, which serves up loads of easy customisable options. The jBar allows you to create a simple call to action and bring it forward for the user to see at the top of your website. The user can then toggle the visibility of the bar by clicking the ribbon.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/jbar" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jBar', 'jBar Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/jBar/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jBar', 'jBar Plugin Coded Download']);">Download</a>
-	<a href="//github.com/toddmotto/jBar" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jBar', 'jBar Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/jbar" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jBar', 'jBar Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/jBar/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jBar', 'jBar Plugin Coded Download']);">Download</a>
+  <a href="//github.com/toddmotto/jBar" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jBar', 'jBar Fork']);">Fork</a>
 </div>
 
 ### Overview
@@ -53,20 +54,20 @@ Simply include the plugin file, jQuery (jbar.js) in your page, and customise the
 <script src="jquery.js"></script>
 <script src="jbar.min.js"></script>
 <script>
-	$(function() {
-	    $.jBar({
-	        type: 'fixed', // fixed/static (lowercase)
-	        delay: '1000', // In milliseconds
-	        backgroundColor: '#DB5903', // Background Color
-	        borderColor: '#FFF', // Background Color
-	        buttonTextColor: '#FFF', // Button Text
-	        buttonColor: '#333', // Button Color
-	        buttonColorHover: '#222', // Button Color Hover
-	        calltoAction: 'jBar Plugin! A simple and lightweight notification banner.', // Call to action text
-	        buttonText: 'Download it!', // Button Text
-	        buttonLink: 'http://www.toddmotto.com' // Hyperlink from button
-	    });
-	});
+  $(function() {
+      $.jBar({
+          type: 'fixed', // fixed/static (lowercase)
+          delay: '1000', // In milliseconds
+          backgroundColor: '#DB5903', // Background Color
+          borderColor: '#FFF', // Background Color
+          buttonTextColor: '#FFF', // Button Text
+          buttonColor: '#333', // Button Color
+          buttonColorHover: '#222', // Button Color Hover
+          calltoAction: 'jBar Plugin! A simple and lightweight notification banner.', // Call to action text
+          buttonText: 'Download it!', // Button Text
+          buttonLink: 'http://www.toddmotto.com' // Hyperlink from button
+      });
+  });
 </script>
 {% endhighlight %}
 ### Support
@@ -74,7 +75,7 @@ Simply include the plugin file, jQuery (jbar.js) in your page, and customise the
 All you need to do is download the source code, and hook up the scripts with your website. If you need some support, feel free to comment and I’ll provide some help.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/jbar" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jBar', 'jBar Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/jBar/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jBar', 'jBar Plugin Coded Download']);">Download</a>
-	<a href="//github.com/toddmotto/jBar" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jBar', 'jBar Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/jbar" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jBar', 'jBar Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/jBar/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jBar', 'jBar Plugin Coded Download']);">Download</a>
+  <a href="//github.com/toddmotto/jBar" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jBar', 'jBar Fork']);">Fork</a>
 </div>

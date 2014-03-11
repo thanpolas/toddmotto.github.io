@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js
 disqus: http://www.toddmotto.com/fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js
+path: 2013-01-22-fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js.md
 ---
 
 One of the major drawbacks to responsive design is managing external plugins/resources, such as YouTube and Vimeo videos – which we can embed into our sites using an iframe. This is where we lose control. Working with iframes is sometimes tricky, especially with video and maintaining aspect ratios. There are some CSS hacks we can do to attempt making iframe videos responsive, but to no success.
@@ -17,9 +18,9 @@ We’re in a world full of plugins, it’s time to start writing your own stuff.
 The demo includes both a YouTube and Vimeo iframe embed, both at different aspect ratios. Both fluid, both 100% width.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
-	<a href="//github.com/toddmotto/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork FluidVids, 'FluidVids Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
+  <a href="//github.com/toddmotto/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork FluidVids, 'FluidVids Fork']);">Fork</a>
 </div>
 
 ### The iFrame
@@ -133,65 +134,65 @@ Here's what our finished script looks like. The things we've been able to achiev
 {% highlight javascript %}
 (function ( window, document, undefined ) {
 
-	/*
-	 * Grab all iframes on the page or return
-	 */
-	var iframes = document.getElementsByTagName( 'iframe' );
+  /*
+   * Grab all iframes on the page or return
+   */
+  var iframes = document.getElementsByTagName( 'iframe' );
 
-	/*
-	 * Loop through the iframes array
-	 */
-	for ( var i = 0; i < iframes.length; i++ ) {
+  /*
+   * Loop through the iframes array
+   */
+  for ( var i = 0; i < iframes.length; i++ ) {
 
-		var iframe = iframes[i],
+    var iframe = iframes[i],
 
-		/*
-	     * RegExp, extend this if you need more players
-	     */
-		players = /www.youtube.com|player.vimeo.com/;
+    /*
+       * RegExp, extend this if you need more players
+       */
+    players = /www.youtube.com|player.vimeo.com/;
 
-		/*
-		 * If the RegExp pattern exists within the current iframe
-		 */
-		if ( iframe.src.search( players ) > 0 ) {
+    /*
+     * If the RegExp pattern exists within the current iframe
+     */
+    if ( iframe.src.search( players ) > 0 ) {
 
-			/*
-			 * Calculate the video ratio based on the iframe's w/h dimensions
-			 */
-			var videoRatio        = ( iframe.height / iframe.width ) * 100;
-			
-			/*
-			 * Replace the iframe's dimensions and position
-			 * the iframe absolute, this is the trick to emulate
-			 * the video ratio
-			 */
-			iframe.style.position = 'absolute';
-			iframe.style.top      = '0';
-			iframe.style.left     = '0';
-			iframe.width          = '100%';
-			iframe.height         = '100%';
-			
-			/*
-			 * Wrap the iframe in a new <div> which uses a
-			 * dynamically fetched padding-top property based
-			 * on the video's w/h dimensions
-			 */
-			var wrap              = document.createElement( 'div' );
-			wrap.className        = 'fluid-vids';
-			wrap.style.width      = '100%';
-			wrap.style.position   = 'relative';
-			wrap.style.paddingTop = videoRatio + '%';
-			
-			/*
-			 * Add the iframe inside our newly created <div>
-			 */
-			var iframeParent      = iframe.parentNode;
-			iframeParent.insertBefore( wrap, iframe );
-			wrap.appendChild( iframe );
+      /*
+       * Calculate the video ratio based on the iframe's w/h dimensions
+       */
+      var videoRatio        = ( iframe.height / iframe.width ) * 100;
+      
+      /*
+       * Replace the iframe's dimensions and position
+       * the iframe absolute, this is the trick to emulate
+       * the video ratio
+       */
+      iframe.style.position = 'absolute';
+      iframe.style.top      = '0';
+      iframe.style.left     = '0';
+      iframe.width          = '100%';
+      iframe.height         = '100%';
+      
+      /*
+       * Wrap the iframe in a new <div> which uses a
+       * dynamically fetched padding-top property based
+       * on the video's w/h dimensions
+       */
+      var wrap              = document.createElement( 'div' );
+      wrap.className        = 'fluid-vids';
+      wrap.style.width      = '100%';
+      wrap.style.position   = 'relative';
+      wrap.style.paddingTop = videoRatio + '%';
+      
+      /*
+       * Add the iframe inside our newly created <div>
+       */
+      var iframeParent      = iframe.parentNode;
+      iframeParent.insertBefore( wrap, iframe );
+      wrap.appendChild( iframe );
 
-		}
+    }
 
-	}
+  }
 
 })( window, document );
 {% endhighlight %}
@@ -205,7 +206,7 @@ Just drop the JavaScript file into your page (this needs to be placed before the
 I've tested in Chrome, FireFox, Opera, Safari, IE7, IE8 and IE9, and all is well. Though if you run into any problems or even have a suggestion on improving FluidVids.js, feel free to comment or submit a on GitHub or Fork.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
-	<a href="//github.com/toddmotto/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork FluidVids, 'FluidVids Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo FluidVids, 'FluidVids Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/fluidvids/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download FluidVids, 'FluidVids Download']);">Download</a>
+  <a href="//github.com/toddmotto/fluidvids" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork FluidVids, 'FluidVids Fork']);">Fork</a>
 </div>

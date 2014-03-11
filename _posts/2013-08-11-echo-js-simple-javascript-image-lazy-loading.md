@@ -2,6 +2,7 @@
 layout: post
 permalink: /echo-js-simple-javascript-image-lazy-loading
 title: Echo.js, simple JavaScript image lazy loading
+path: 2013-08-11-echo-js-simple-javascript-image-lazy-loading.md
 ---
 
 I'm currently working on a project for Intel's [HTML5 Hub](//html5hub.com) in which I require some image lazy-loading for an HTML5 showcase piece that's high in image content. After a quick Google search for an existing lazy-load solution there was yet another mass of outdated scripts or jQuery plugins that were too time consuming to search through or modify for the project - so I ended up writing my own.
@@ -9,9 +10,9 @@ I'm currently working on a project for Intel's [HTML5 Hub](//html5hub.com) in wh
 Echo.js is probably as simple as image lazy loading gets, it's less than 1KB minified and is library agnostic (no jQuery/Zepto/other).
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/echo" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo echo', 'echo Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/echo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download echo', 'Download echo']);">Download</a>
-	<a href="//github.com/toddmotto/echo" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork echo', 'echo Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/echo" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo echo', 'echo Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/echo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download echo', 'Download echo']);">Download</a>
+  <a href="//github.com/toddmotto/echo" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork echo', 'echo Fork']);">Fork</a>
 </div>
 
 Lazy-loading works by only loading the assets needed when the elements 'would' be in view, which it'll get from the server for you upon request, which is automated by simply changing the image _src_ attribute. This is also an asynchronous process which also benefits us.

@@ -2,6 +2,7 @@
 layout: post
 permalink: /smarten-your-front-end-workflow-with-conditionizr-screencast-on-all-the-apis
 title: Smarten your front-end workflow with @conditionizr, screencast on all the APIs
+path: 2013-11-26-smarten-your-front-end-workflow-with-conditionizr-screencast-on-all-the-apis.md
 ---
 
 Who's using Conditionizr? So far we've found some teams at _Google_, _Sencha_, _NASA_ are some great names using it.

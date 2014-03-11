@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /getting-started-with-object-orientated-css-oocss-creating-a-button-kit
 disqus: http://www.toddmotto.com/getting-started-with-object-orientated-css-oocss-creating-a-button-kit
+path: 2013-02-04-getting-started-with-object-orientated-css-oocss-creating-a-button-kit.md
 ---
 
 Object-Orientated CSS, or OOCSS to the masses, is a method of structuring your CSS and HTML classes in a specific way. The purpose of OOCSS is to make code more easily usable, and more importantly – reusable. It can help trim down your stylesheets and you start to think about the object you’re creating and not just the  elements inside. This theory (done right) makes your stylesheet more efficient.
@@ -11,8 +12,8 @@ Object-Orientated CSS, or OOCSS to the masses, is a method of structuring your C
 By writing this post, I do not promote the use of OOCSS for every project, or completely side with it’s lack of HTML class semantics, though one thing’s for sure, it’s awesome.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons, 'OOCSS Buttons Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons, 'OOCSS Buttons Download']);">Download</a>
+  <a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons, 'OOCSS Buttons Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons, 'OOCSS Buttons Download']);">Download</a>
 </div>
 
 ### Why OOCSS has it’s place now
@@ -27,29 +28,29 @@ Before we start to ‘think’ OOCSS, let’s look at how a basic button might l
 <a href="#" class="button-blue">Click me!</a>
 <style>
 .button-blue-small {
-	display:inline-block;
-	zoom:1;
-	vertical-align:bottom;
-	text-align:center;
-	margin:10px 5px;
-	border-radius:3px;
-	text-decoration:none;
-	font-weight:900;
-	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-	text-shadow:0 1px 1px rgba(0,0,0,0.5);
-	box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	color:#FFF;
-	border:1px solid #0082BE;
-	background:#00A4EF;
-	background-image:linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-o-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-moz-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-webkit-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-ms-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	font-size:13px;
-	padding:5px 20px;	
+  display:inline-block;
+  zoom:1;
+  vertical-align:bottom;
+  text-align:center;
+  margin:10px 5px;
+  border-radius:3px;
+  text-decoration:none;
+  font-weight:900;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow:0 1px 1px rgba(0,0,0,0.5);
+  box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  -moz-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  color:#FFF;
+  border:1px solid #0082BE;
+  background:#00A4EF;
+  background-image:linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-o-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-moz-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-webkit-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-ms-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  font-size:13px;
+  padding:5px 20px; 
 }
 </style>
 {% endhighlight %}
@@ -75,19 +76,19 @@ Keeping CSS selectors as short as possible, for two reasons, CSS maintenance and
 
 {% highlight css %}
 .btn {
-	display:inline-block;
-	zoom:1;
-	vertical-align:bottom;
-	text-align:center;
-	margin:10px 5px;
-	border-radius:3px;
-	text-decoration:none;
-	font-weight:900;
-	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-	text-shadow:0 1px 1px rgba(0,0,0,0.5);
-	box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  display:inline-block;
+  zoom:1;
+  vertical-align:bottom;
+  text-align:center;
+  margin:10px 5px;
+  border-radius:3px;
+  text-decoration:none;
+  font-weight:900;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow:0 1px 1px rgba(0,0,0,0.5);
+  box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  -moz-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
 }
 {% endhighlight %}
 
@@ -113,8 +114,8 @@ Now we’re onto the sizing, we’ll want to create a few different sizes of but
 
 {% highlight css %}
 .btn-small {
-	font-size:13px;
-	padding:5px 20px;
+  font-size:13px;
+  padding:5px 20px;
 }
 {% endhighlight %}
 
@@ -128,14 +129,14 @@ Let’s give our button the lick of paint it needs, here I’ve ripped out the f
 
 {% highlight css %}
 .btn-blue {
-	color:#FFF;
-	border:1px solid #0082BE;
-	background:#00A4EF;
-	background-image:linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-o-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-moz-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-webkit-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
-	background-image:-ms-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  color:#FFF;
+  border:1px solid #0082BE;
+  background:#00A4EF;
+  background-image:linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-o-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-moz-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-webkit-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
+  background-image:-ms-linear-gradient(bottom, rgb(0,163,239) 1%, rgb(0,177,241) 51%);
 }
 {% endhighlight %}
 
@@ -183,19 +184,19 @@ Structure:
 
 {% highlight css %}
 .btn {
-	display:inline-block;
-	zoom:1;
-	vertical-align:bottom;
-	text-align:center;
-	margin:10px 5px;
-	border-radius:3px;
-	text-decoration:none;
-	font-weight:900;
-	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-	text-shadow:0 1px 1px rgba(0,0,0,0.5);
-	box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
-	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  display:inline-block;
+  zoom:1;
+  vertical-align:bottom;
+  text-align:center;
+  margin:10px 5px;
+  border-radius:3px;
+  text-decoration:none;
+  font-weight:900;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow:0 1px 1px rgba(0,0,0,0.5);
+  box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
+  -moz-box-shadow:0 1px 3px rgba(0,0,0,0.3),inset 0 1px 0 rgba(250,250,250,0.4);
 }
 {% endhighlight %}
 
@@ -253,13 +254,13 @@ You’ll notice in the demo that the only :hover pseudo class I’ve used is on 
 
 {% highlight css %}
 .btn:hover {
-	opacity:0.7;
+  opacity:0.7;
 }
 {% endhighlight %}
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons, 'OOCSS Buttons Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons, 'OOCSS Buttons Download']);">Download</a>
+  <a href="//toddmotto.com/labs/oocss-buttons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo OOCSS Buttons, 'OOCSS Buttons Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/oocss-buttons/oocss-buttons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download OOCSS Buttons, 'OOCSS Buttons Download']);">Download</a>
 </div>
 
 ### Workflow

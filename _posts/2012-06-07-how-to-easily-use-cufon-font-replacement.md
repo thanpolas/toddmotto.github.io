@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /how-to-easily-use-cufon-font-replacement
 disqus: http://www.toddmotto.com/how-to-easily-use-cufon-font-replacement
+path: 2012-06-07-how-to-easily-use-cufon-font-replacement.md
 ---
 
 <strong>Stop! (27.11.2023 update):</strong> I highly recommend you find an alternative to Cufon, use @font-face. Cufon is a very poor method for loading custom font resources in a modern web environment. Only proceed if you have no other choice, but if you have a choice, use [Font Squirrel's](http://www.fontsquirrel.com/tools/webfont-generator) Web Font generator.
@@ -60,7 +61,7 @@ Seeing as you’re more than likely to be using jQuery on your website, we may a
 <!-- Load jQuery from Google CDN -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-	Cufon.replace('Replace this stuff!');
+  Cufon.replace('Replace this stuff!');
 </script>
 {% endhighlight %}
 
@@ -72,7 +73,7 @@ Option 1: If you are going to want all your website headings to be Cufónized, t
 
 {% highlight javascript %}
 $(function(){
-	Cufon.replace('h1,h2,h3,h4,h5');
+  Cufon.replace('h1,h2,h3,h4,h5');
 });
 {% endhighlight %}
 
@@ -80,10 +81,10 @@ Option 2: Create a custom class (for example .cufon) that we can add to HTML ele
 
 {% highlight javascript %}
 $(function(){
-	Cufon.replace('.cufon');
+  Cufon.replace('.cufon');
 });
 {% endhighlight %}
-	
+  
 {% highlight html %}
 <h1 class="cufon">Awesome Cufón Heading</h1>
 <h1>Not-so Awesome Heading</h1>
@@ -104,9 +105,9 @@ Putting all that together (and in the correct load order) you’ll end up with t
 <script src="assets/js/ChunkFive_400.font.js"></script>
 
 <script>
-	$(function(){
-		Cufon.replace('h1,h2,h3,h4,h5');
-	});
+  $(function(){
+    Cufon.replace('h1,h2,h3,h4,h5');
+  });
 </script>
 {% endhighlight %}
 

@@ -2,6 +2,7 @@
 layout: post
 permalink: /creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts
 title: Creating an AngularJS Directive from one of your existing plugins/scripts
+path: 2013-10-07-creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts.md
 ---
 
 Writing scripts for your websites or web apps is often a simple process, you write your script, concatenate the file into your main scripts file and it gets pushed into the DOM. Not much to it, but when it comes to AngularJS, they believe in something slightly different...
@@ -13,8 +14,8 @@ So here's how to migrate one of your existing scripts or plugins across into a t
 Directives are Angular's answer to Web Components 'Shadow DOM' but are compatible in all browsers (not just cutting edge HTML5 supporting ones) - bringing you the power of the future technology, today. Shadow DOM injects new content based on the element, has it's own CSS and JavaScript scope and introduces some incredible behaviour mechanisms, and this is what Directives mimic to bring you this technology today.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/fluidvids-angular">Demo</a>
-	<a href="http://jsfiddle.net/toddmotto/MvGyc">jsFiddle</a>
+  <a href="//toddmotto.com/labs/fluidvids-angular">Demo</a>
+  <a href="http://jsfiddle.net/toddmotto/MvGyc">jsFiddle</a>
 </div>
 
 Defining a Directive:

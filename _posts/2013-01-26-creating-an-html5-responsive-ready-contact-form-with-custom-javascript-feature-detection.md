@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /creating-an-html5-responsive-ready-contact-form-with-custom-javascript-feature-detection
 disqus: http://www.toddmotto.com/creating-an-html5-responsive-ready-contact-form-with-custom-javascript-feature-detection
+path: 2013-01-26-creating-an-html5-responsive-ready-contact-form-with-custom-javascript-feature-detection.md
 ---
 
 Forms are often one of the last quick-finishes to a website, so here’s a great boilerplate to get you kick-started on a standards-compliant, HTML5, CSS3, responsive-ready form with custom JavaScript feature detections.
@@ -19,8 +20,8 @@ HTML5 brings many great features that we can start using now, and many of them l
 7.  HTML5 fallback setup
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/html5-contact-form" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 Contact Form, 'HTML5 Contact Form Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/html5-contact-form/html5-contact-form.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 Contact Form, 'HTML5 Contact Form Download']);">Download</a>
+  <a href="//toddmotto.com/labs/html5-contact-form" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 Contact Form, 'HTML5 Contact Form Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/html5-contact-form/html5-contact-form.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 Contact Form, 'HTML5 Contact Form Download']);">Download</a>
 </div>
 
 ### Markup
@@ -33,8 +34,8 @@ A properly setup label and input looks like this:
 
 {% highlight html %}
 <label>
-	<span>Label</span>
-	<input type="text">
+  <span>Label</span>
+  <input type="text">
 </label>
 {% endhighlight %}
 
@@ -53,8 +54,8 @@ Next we can look at the HTML5 placeholder attribute, which allow us to hint more
 
 {% highlight html %}
 <label>
-	<span>Label</span>
-	<input placeholder="Placeholder" type="text">
+  <span>Label</span>
+  <input placeholder="Placeholder" type="text">
 </label>
 {% endhighlight %}
 
@@ -62,13 +63,13 @@ Now we’ve enhanced our form a little more, let’s look at the updated HTML5 t
 
 {% highlight html %}
 <label>
-	<span>Label</span>
-	<input placeholder="Placeholder" type="text" tabindex="1">
+  <span>Label</span>
+  <input placeholder="Placeholder" type="text" tabindex="1">
 </label>
 <label>
-	<span>Label</span>
-	<input placeholder="Placeholder" type="text" tabindex="2">
-	</label>
+  <span>Label</span>
+  <input placeholder="Placeholder" type="text" tabindex="2">
+  </label>
 {% endhighlight %}
 
 Required fields are also an important aspect of validation and getting the necessary information from your users. From a usability perspective, you’ll want to hint to the user, preferably next to the label, that the field is required. HTML5 introduces the ‘required’ attribute, which can be added in multiple ways, which all mean the same thing:
@@ -86,8 +87,8 @@ Now we’ve got some great fields setup, let’s look how can enhance it further
 
 {% highlight html %}
 <label>
-	<span>Label</span>
-	<input placeholder="Placeholder" type="text" tabindex="1" required autofocus>
+  <span>Label</span>
+  <input placeholder="Placeholder" type="text" tabindex="1" required autofocus>
 </label>
 {% endhighlight %}
 
@@ -95,16 +96,16 @@ Now we’ve added some great attributes to enhance the inputs, let’s look at c
 
 {% highlight html %}
 <label>
-	<span>Label</span>
-	<input type="email">
+  <span>Label</span>
+  <input type="email">
 </label>
 <label>
-	<span>Label</span>
-	<input type="tel">
+  <span>Label</span>
+  <input type="tel">
 </label>
 <label>
-	<span>Label</span>
-	<input type="url">
+  <span>Label</span>
+  <input type="url">
 </label>
 {% endhighlight %}
 
@@ -116,41 +117,41 @@ In terms of browser compatibility, if the browser doesn’t support the HTML5 in
 
 {% highlight html %}
 <form id="contact-form" action="/" method="post">
-	<h3>Get in touch</h3>
-	<h4>Fill in the form below, and we'll get back to you within 24 hours.</h4>
-	<div>
-		<label>
-			<span>Name: (required)</span>
-			<input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
-		</label>
-	</div>
-	<div>
-		<label>
-			<span>Email: (required)</span>
-			<input placeholder="Please enter your email address" type="email" tabindex="2" required>
-		</label>
-	</div>
-	<div>
-		<label>
-			<span>Telephone: (required)</span>
-			<input placeholder="Please enter your number" type="tel" tabindex="3" required>
-		</label>
-	</div>
-	<div>
-		<label>
-			<span>Website: (required)</span>
-			<input placeholder="Begin with http://" type="url" tabindex="4" required>
-		</label>
-	</div>
-	<div>
-		<label>
-			<span>Message: (required)</span>
-			<textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
-		</label>
-	</div>
-	<div>
-		<button name="submit" type="submit" id="contact-submit">Send Email</button>
-	</div>
+  <h3>Get in touch</h3>
+  <h4>Fill in the form below, and we'll get back to you within 24 hours.</h4>
+  <div>
+    <label>
+      <span>Name: (required)</span>
+      <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Email: (required)</span>
+      <input placeholder="Please enter your email address" type="email" tabindex="2" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Telephone: (required)</span>
+      <input placeholder="Please enter your number" type="tel" tabindex="3" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Website: (required)</span>
+      <input placeholder="Begin with http://" type="url" tabindex="4" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Message: (required)</span>
+      <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+    </label>
+  </div>
+  <div>
+    <button name="submit" type="submit" id="contact-submit">Send Email</button>
+  </div>
 </form>
 {% endhighlight %}
 
@@ -174,15 +175,15 @@ Back to styling the inputs! Now they’re all setup to perfectly obey 100% width
 #contact-form input[type="tel"],
 #contact-form input[type="url"],
 #contact-form textarea {
-	width:100%;
-	box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
-	-webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
-	-moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
-	border:1px solid #CCC;
-	background:#FFF;
-	margin:0 0 5px;
-	padding:10px;
-	border-radius:5px;
+  width:100%;
+  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #CCC;
+  background:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
 }
 {% endhighlight %}
 
@@ -190,17 +191,17 @@ We can then target the &lt;button&gt; in the same way:
 
 {% highlight css %}
 #contact-form button[type="submit"] {
-	cursor:pointer;
-	width:100%;
-	border:none;
-	background:#991D57;
-	background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
-	background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
-	background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
-	color:#FFF;
-	margin:0 0 5px;
-	padding:10px;
-	border-radius:5px;
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background:#991D57;
+  background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
 }
 {% endhighlight %}
 
@@ -267,9 +268,9 @@ We then run the attributes through the input, and can test whether they exist li
 {% highlight javascript %}
 // Fallback for autofocus attribute
 if(supports.autofocus) {
-	// Support
+  // Support
 } else {
-	// No support
+  // No support
 }
 {% endhighlight %}
 
@@ -278,7 +279,7 @@ We can of course invert the expression (using a bang – ‘!’) so that it onl
 {% highlight javascript %}
 // Fallback for autofocus attribute
 if(!supports.autofocus) {
-	// No support
+  // No support
 }
 {% endhighlight %}
 
@@ -297,17 +298,17 @@ supports.placeholder = 'placeholder' in input;
 
 // Fallback for autofocus attribute
 if(!supports.autofocus) {
-	
+  
 }
 
 // Fallback for required attribute
 if(!supports.required) {
-	
+  
 }
 
 // Fallback for placeholder attribute
 if(!supports.placeholder) {
-	
+  
 }
 {% endhighlight %}
 
@@ -324,7 +325,7 @@ supports.autofocus   = 'autofocus' in input;
 
 // Fallback for autofocus attribute
 if(!supports.autofocus) {
-	document.getElementById('contact-submit').focus();
+  document.getElementById('contact-submit').focus();
 }
 {% endhighlight %}
 
@@ -360,10 +361,10 @@ Using this knowledge, we can have a little fun with our Submit button. When a us
 // Change text inside send button on submit
 var send = document.getElementById('contact-submit');
 if(send) {
-	var dataText = send.getAttribute('data-text');
-	send.onclick = function() {
-		send.innerHTML = dataText;
-	}
+  var dataText = send.getAttribute('data-text');
+  send.onclick = function() {
+    send.innerHTML = dataText;
+  }
 }
 {% endhighlight %}
 
@@ -376,44 +377,44 @@ Now we’ve created an awesome HTML5 contact form, ready for integrating into an
 {% highlight javascript %}
 (function() {
 
-	// Create input element for testing
-	var input = document.createElement('input');
-	
-	// Create the supports object
-	var supports = {};
-	
-	supports.autofocus   = 'autofocus' in input;
-	supports.required    = 'required' in input;
-	supports.placeholder = 'placeholder' in input;
+  // Create input element for testing
+  var input = document.createElement('input');
+  
+  // Create the supports object
+  var supports = {};
+  
+  supports.autofocus   = 'autofocus' in input;
+  supports.required    = 'required' in input;
+  supports.placeholder = 'placeholder' in input;
 
-	// Fallback for autofocus attribute
-	if(!supports.autofocus) {
-		
-	}
-	
-	// Fallback for required attribute
-	if(!supports.required) {
-		
-	}
+  // Fallback for autofocus attribute
+  if(!supports.autofocus) {
+    
+  }
+  
+  // Fallback for required attribute
+  if(!supports.required) {
+    
+  }
 
-	// Fallback for placeholder attribute
-	if(!supports.placeholder) {
-		
-	}
-	
-	// Change text inside send button on submit
-	var send = document.getElementById('contact-submit');
-	if(send) {
-		var dataText = send.getAttribute('data-text');
-		send.onclick = function() {
-			send.innerHTML = dataText;
-		}
-	}
+  // Fallback for placeholder attribute
+  if(!supports.placeholder) {
+    
+  }
+  
+  // Change text inside send button on submit
+  var send = document.getElementById('contact-submit');
+  if(send) {
+    var dataText = send.getAttribute('data-text');
+    send.onclick = function() {
+      send.innerHTML = dataText;
+    }
+  }
 
 })();
 {% endhighlight %}
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/html5-contact-form" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 Contact Form, 'HTML5 Contact Form Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/html5-contact-form/html5-contact-form.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 Contact Form, 'HTML5 Contact Form Download']);">Download</a>
+  <a href="//toddmotto.com/labs/html5-contact-form" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 Contact Form, 'HTML5 Contact Form Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/html5-contact-form/html5-contact-form.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 Contact Form, 'HTML5 Contact Form Download']);">Download</a>
 </div>

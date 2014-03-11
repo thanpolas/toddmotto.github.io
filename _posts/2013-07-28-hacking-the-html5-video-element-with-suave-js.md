@@ -2,6 +2,7 @@
 layout: post
 permalink: /hacking-the-html5-video-element-with-suave-js
 title: Hacking the HTML5 &lt;video&gt; element with Suave.js
+path: 2013-07-28-hacking-the-html5-video-element-with-suave-js.md
 ---
 
 Suave, for elegant HTML5 videos (how they should have been). Suave was built to re-engineer the unstructured mess the HTML5 &lt;video&gt; tag presents. Suave cleverly takes all the strain of nested &lt;source&gt; tags and file types away from you allowing you to code an HTML5 video in just one line (it's also <1KB).
@@ -9,9 +10,9 @@ Suave, for elegant HTML5 videos (how they should have been). Suave was built to 
 HTML5 video is awesome, what's not awesome is the markup. The semantics and unmodular approach with HTML5 video upset me and I was inspired to fix it. So here's my idea, which is very modular and works in all browsers supporting HTML5 video.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/suave" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo suave', 'suave Demo']);">Demo</a>
-	<a href="//github.com/toddmotto/suave/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download suave', 'Download suave']);">Download</a>
-	<a href="//github.com/toddmotto/suave" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork suave', 'suave Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/suave" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo suave', 'suave Demo']);">Demo</a>
+  <a href="//github.com/toddmotto/suave/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download suave', 'Download suave']);">Download</a>
+  <a href="//github.com/toddmotto/suave" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork suave', 'suave Fork']);">Fork</a>
 </div>
 
 ### The problem

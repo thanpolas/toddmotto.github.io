@@ -2,6 +2,7 @@
 layout: post
 permalink: /is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background
 title: Is it time to drop jQuery&#63; Essentials to learning JavaScript from a jQuery background
+path: 2013-06-25-is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background.md
 ---
 
 jQuery has been a godsend to pretty much all of us front-end developers since it's release, it's intuitive methods, easy functions make light work of JavaScript's loosely typed language. JavaScript is hard, it's hard to get into, it's much harder than jQuery. But the time is nearly here, going native is going to be the future of front-end - HTML5.
@@ -96,7 +97,7 @@ You can also create a smart wrapper function for this, to save typing out _docum
 
 {% highlight javascript %}
 var _ = function ( elem ) {
-	return document.querySelectorAll( elem );
+  return document.querySelectorAll( elem );
 }
 // Usage
 var myClass = _('.myClass');
@@ -154,7 +155,7 @@ jQuery makes this super easy with the _$.each();_ method, which again hides some
 {% highlight javascript %}
 var myArray = ['one', 'two', 'three', 'four']
 for (var i = 0; i < myArray.length; i++) {
-	// ...
+  // ...
 }
 {% endhighlight %}
 
@@ -163,13 +164,13 @@ Recently, we received an upgrade from this rather manual method to the dedicated
 {% highlight javascript %}
 // Bolt the array at the beginning, I like this
 ['one', 'two', 'three', 'four'].forEach(function(){
-	// ...
+  // ...
 });
 
 // Or go oldschool with a variable declaration
 var myArray = ['one', 'two', 'three', 'four'];
 myArray.forEach(function(){
-	// ...
+  // ...
 });
 {% endhighlight %}
 
@@ -205,7 +206,7 @@ someElem.classList.add('myClass');
 // JavaScript - this adds the class to every Node in the NodeList
 var someElem = document.querySelectorAll('.someElem');
 for (var i = 0; i < someElem.length; i++) {
-	someElem[i].classList.add('myClass');
+  someElem[i].classList.add('myClass');
 }
 {% endhighlight %}
 
@@ -287,7 +288,7 @@ Events play a massive part in JavaScript, and has had a bad reputation in the pa
 
 {% highlight javascript %}
 $(elem).click(function () {
-	// ...
+  // ...
 });
 {% endhighlight %}
 
@@ -295,7 +296,7 @@ I actually recommend going with jQuery's _.on();_ method should you want to use 
 
 {% highlight javascript %}
 $(elem).on('click', function () {
-	// ...
+  // ...
 });
 {% endhighlight %}
 
@@ -303,7 +304,7 @@ Two reasons, you can chain the 'on' part like so:
 
 {% highlight javascript %}
 $(elem).on('click focus keyup', function () {
-	// ...
+  // ...
 });
 {% endhighlight %}
 
@@ -313,7 +314,7 @@ Secondly, event delegation with dynamically created JavaScript elements:
 
 {% highlight javascript %}
 $(parent).on('click', elem, function () {
-	// ...
+  // ...
 });
 {% endhighlight %}
 
@@ -366,8 +367,8 @@ CSS is admittedly nicer in the jQuery object methods, but check out native JavaS
 {% highlight javascript %}
 // jQuery
 $(elem).css({
-	"background" : "#F60",
-	"color" : "#FFF"
+  "background" : "#F60",
+  "color" : "#FFF"
 });
 
 // JavaScript

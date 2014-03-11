@@ -2,6 +2,7 @@
 layout: post
 permalink: /hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions
 title: Hacking SVG, traversing with ease - addClass, removeClass, toggleClass functions
+path: 2013-10-27-hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions.md
 ---
 
 I encountered how painful traversing inline SVG can be when working on a recent project, simple DOM APIs such as adding, removing and toggling classes just aren't there, or supported by tools such as jQuery (yes, I even tried jQuery).

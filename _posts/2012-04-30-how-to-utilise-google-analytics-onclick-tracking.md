@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /how-to-utilise-google-analytics-onclick-tracking
 disqus: http://www.toddmotto.com/how-to-utilise-google-analytics-onclick-tracking
+path: 2012-04-30-how-to-utilise-google-analytics-onclick-tracking.md
 ---
 
 Collecting data on how web users scurry through our websites is a great performance indicator as well as an interesting statistic provider. Google Analytics offers a pretty awesome feature which allows you to track outbound and on-page click events. Using some inline Javascript provided by Google, you can setup your onclick tracking instantly and see results straight away. 
@@ -16,15 +17,15 @@ First of all, if you’re not using Google Analytics, get on over [here][1] and 
 
 {% highlight html %}
 <script>
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-XXXXXXXX-XX']);
-	_gaq.push(['_trackPageview']);
-	
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 {% endhighlight %}
 
