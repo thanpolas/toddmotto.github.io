@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /imgshufflr-randomised-inline-and-css-background-images-plugin
 disqus: http://www.toddmotto.com/imgshufflr-randomised-inline-and-css-background-images-plugin
+path: 2012-12-06-imgshufflr-randomised-inline-and-css-background-images-plugin.md
 ---
 
 imgShufflr is quick and lightweight plugin for generating a random image upon page load. Simply load your images onto the server, and include the plugin on your page with a quick call, and you’ll be randomly generating their order with ease.
@@ -11,9 +12,9 @@ imgShufflr is quick and lightweight plugin for generating a random image upon pa
 imgShufflr started as purely an inline image randomiser, using the  tag, but includes options for using the background-image: property to use it as a background instead, it’s pretty flexible.
 
 <div class="download-box">
-	<a href="//www.toddmotto.com/labs/imgshufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo imgShufflr', 'imgShufflr Demo']);">Demo</a>
-	<a href="//www.toddmotto.com/labs/imgshufflr/imgshufflr.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download imgShufflr', 'imgShufflr Download']);">Download</a>
-	<a href="//github.com/toddmotto/imgShufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork imgShufflr', 'imgShufflr Fork']);">Fork</a>
+  <a href="//www.toddmotto.com/labs/imgshufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo imgShufflr', 'imgShufflr Demo']);">Demo</a>
+  <a href="//www.toddmotto.com/labs/imgshufflr/imgshufflr.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download imgShufflr', 'imgShufflr Download']);">Download</a>
+  <a href="//github.com/toddmotto/imgShufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork imgShufflr', 'imgShufflr Fork']);">Fork</a>
 </div>
 
 ### Markup and Usage
@@ -37,14 +38,14 @@ Let’s look at the options included and the full markup:
 <script src="js/imgshufflr.min.js"></script>
 <script>
 $(function() {
-	$('#imgShufflr').imgShufflr({
-		imgType  : 'inline', // inline or background
-		imgs     : ["image-1.jpg","image-2.jpg","image-3.jpg","image-4.jpg"], // Image array
-		imgPath  : 'img/shuffle/', // Image directory
-		imgAlt   : 'Random Image', // Alternate text on images
-		imgTitle : 'Title', // Title text on images
-		imgClass : 'shuffled' // Class name for the images
-	});
+  $('#imgShufflr').imgShufflr({
+    imgType  : 'inline', // inline or background
+    imgs     : ["image-1.jpg","image-2.jpg","image-3.jpg","image-4.jpg"], // Image array
+    imgPath  : 'img/shuffle/', // Image directory
+    imgAlt   : 'Random Image', // Alternate text on images
+    imgTitle : 'Title', // Title text on images
+    imgClass : 'shuffled' // Class name for the images
+  });
 });
 </script>
 {% endhighlight %}
@@ -68,59 +69,59 @@ The workings behind imgShufflr explained.
 
 {% highlight javascript %}
 ;(function($) {
-		
-	$.fn.imgShufflr = function(options) {
-		
-		// imgShufflr settings
-		var settings = {
-			imgType  : 'inline', // inline or background
-			imgs     : ["image-1.jpg","image-2.jpg","image-3.jpg","image-4.jpg"], // Image array
-			imgPath  : 'img/shuffle/', // Image directory
-			imgAlt   : 'Random Image', // Alternate text on images
-			imgTitle : 'Title', // Title text on images
-			imgClass : 'shuffled' // Class name for the images
-		};
-		
-		// Load our settings
-		if (options) {
-			$.extend(settings, options);
-		}
-		
-		// Shuffle, shuffle
-		return this.each(function() {
-		
-			// Define our variables
-			var $this = $(this),
-				imgs  = settings.imgs,
-				img   = imgs[Math.floor(Math.random() * imgs.length)];
-			
-			// If the settings are inline 
-			if (settings.imgType === 'inline') {
-			
-				// Prepend the inline  with the following attributes
-				$this.prepend(
-					$('')
-						.attr({
-							src   : settings.imgPath   img,
-							alt   : settings.imgAlt,
-							title : settings.imgTitle,
-							class : settings.imgClass
-						})
-				);
-			
-			}
-			
-			// If the settings are background image
-			if (settings.imgType === 'background') {
-			
-				// Load the image into the CSS as a background image
-				$this.css({
-					'background-image':'url('   settings.imgPath   img   ')'
-				});
-			}
-			
-		});
-	};
+    
+  $.fn.imgShufflr = function(options) {
+    
+    // imgShufflr settings
+    var settings = {
+      imgType  : 'inline', // inline or background
+      imgs     : ["image-1.jpg","image-2.jpg","image-3.jpg","image-4.jpg"], // Image array
+      imgPath  : 'img/shuffle/', // Image directory
+      imgAlt   : 'Random Image', // Alternate text on images
+      imgTitle : 'Title', // Title text on images
+      imgClass : 'shuffled' // Class name for the images
+    };
+    
+    // Load our settings
+    if (options) {
+      $.extend(settings, options);
+    }
+    
+    // Shuffle, shuffle
+    return this.each(function() {
+    
+      // Define our variables
+      var $this = $(this),
+        imgs  = settings.imgs,
+        img   = imgs[Math.floor(Math.random() * imgs.length)];
+      
+      // If the settings are inline 
+      if (settings.imgType === 'inline') {
+      
+        // Prepend the inline  with the following attributes
+        $this.prepend(
+          $('')
+            .attr({
+              src   : settings.imgPath   img,
+              alt   : settings.imgAlt,
+              title : settings.imgTitle,
+              class : settings.imgClass
+            })
+        );
+      
+      }
+      
+      // If the settings are background image
+      if (settings.imgType === 'background') {
+      
+        // Load the image into the CSS as a background image
+        $this.css({
+          'background-image':'url('   settings.imgPath   img   ')'
+        });
+      }
+      
+    });
+  };
 })(jQuery);
 {% endhighlight %}
 
@@ -137,7 +138,7 @@ if (settings.imgType === ‘background’) – here we run a check to see if the
 When using the ‘background’ option, you’ll need to set the background size to the height and width of your image or it won’t appear.
 
 <div class="download-box">
-	<a href="//www.toddmotto.com/labs/imgshufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo imgShufflr', 'imgShufflr Demo']);">Demo</a>
-	<a href="//www.toddmotto.com/labs/imgshufflr/imgshufflr.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download imgShufflr', 'imgShufflr Download']);">Download</a>
-	<a href="//github.com/toddmotto/imgShufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork imgShufflr', 'imgShufflr Fork']);">Fork</a>
+  <a href="//www.toddmotto.com/labs/imgshufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo imgShufflr', 'imgShufflr Demo']);">Demo</a>
+  <a href="//www.toddmotto.com/labs/imgshufflr/imgshufflr.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download imgShufflr', 'imgShufflr Download']);">Download</a>
+  <a href="//github.com/toddmotto/imgShufflr" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork imgShufflr', 'imgShufflr Fork']);">Fork</a>
 </div>

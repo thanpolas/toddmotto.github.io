@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /mastering-svg-use-for-a-retina-web-fallbacks-with-png-script
 disqus: http://www.toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script
+path: 2012-11-25-flawless-clickable-drop-down-navigation.md
 ---
 
 SVGs (Scalable Vector Graphics) are the future graphics format of the web, they offer resolution-independent, fully scalable and crystal clear graphics. SVGs use XML to define paths and shapes, to create our graphic. Moving past JPG and PNG, SVG is the answer to Retina (HiDPI) displays, they even look better on standard display.
@@ -141,19 +142,19 @@ Here’s my SVG feature detection script, which creates an SVG from a NameSpace 
 
 {% highlight javascript %}
 function supportsSVG() {
-	return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;	
+  return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;  
 }
 if (supportsSVG()) {
-	document.documentElement.className += ' svg';
+  document.documentElement.className += ' svg';
 } else {
-	document.documentElement.className += ' no-svg';
-	var imgs = document.getElementsByTagName('img');
-	var dotSVG = /.*\.svg$/;
-	for (var i = 0; i != imgs.length; ++i) {
-		if(imgs[i].src.match(dotSVG)) {
-			imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-		}
-	}
+  document.documentElement.className += ' no-svg';
+  var imgs = document.getElementsByTagName('img');
+  var dotSVG = /.*\.svg$/;
+  for (var i = 0; i != imgs.length; ++i) {
+    if(imgs[i].src.match(dotSVG)) {
+      imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+    }
+  }
 }
 {% endhighlight %}
 
@@ -161,16 +162,16 @@ If you’re not fussed about the additional classnames, use this script, which i
 
 {% highlight javascript %}
 function supportsSVG() {
-	return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;	
+  return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;  
 }
 if (!supportsSVG()) {
-	var imgs = document.getElementsByTagName('img');
-	var dotSVG = /.*\.svg$/;
-	for (var i = 0; i != imgs.length; ++i) {
-		if(imgs[i].src.match(dotSVG)) {
-			imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-		}
-	}
+  var imgs = document.getElementsByTagName('img');
+  var dotSVG = /.*\.svg$/;
+  for (var i = 0; i != imgs.length; ++i) {
+    if(imgs[i].src.match(dotSVG)) {
+      imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+    }
+  }
 }
 {% endhighlight %}
 
