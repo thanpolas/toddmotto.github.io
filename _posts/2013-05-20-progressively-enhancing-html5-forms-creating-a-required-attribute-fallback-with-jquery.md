@@ -3,6 +3,7 @@ layout: post
 permalink: /progressively-enhancing-html5-forms-creating-a-required-attribute-fallback-with-jquery
 title: Progressively enhancing HTML5 forms, creating a required attribute fallback with jQuery
 external: http://tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery
+path: 2013-05-20-progressively-enhancing-html5-forms-creating-a-required-attribute-fallback-with-jquery.md
 ---
 
 Note: this article first featured on [Tech.Pro](//tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery), please check out the full article there!
@@ -10,9 +11,9 @@ Note: this article first featured on [Tech.Pro](//tech.pro/tutorial/1318/progres
 HTML5 required attributes are a fantastic addition to the HTML5 spec, they save a lot of time when working on client-side form validation and enhance the user's experience. The HTML5 required attribute provides us with full client-side 'required' checking and validation, which is easy to add to several types of form elements.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Required Fallback, 'Required Fallback Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/required-fallback/required-fallback.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Required Fallback, 'Required Fallback Download']);">Download</a>
-	<a href="//github.com/toddmotto/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Required Fallback', 'Required Fallback Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Required Fallback, 'Required Fallback Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/required-fallback/required-fallback.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Required Fallback, 'Required Fallback Download']);">Download</a>
+  <a href="//github.com/toddmotto/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Required Fallback', 'Required Fallback Fork']);">Fork</a>
 </div>
 
 The required attribute is developer friendly. It's a boolean attribute too which means we don't need to supply it any data, it's either present or not. We can add it simply to form elements like so:
@@ -42,9 +43,9 @@ We'll be using the JavaScript _in_ method, which will test the outcome inside an
 {% highlight javascript %}
 var supportsRequired = 'required' in document.createElement('input')
 if (supportsRequired) {
-	// support
+  // support
 } else {
-	// no support
+  // no support
 }
 {% endhighlight %}
 
@@ -53,7 +54,7 @@ We'll want to run any fallbacks when it isn't supported, the _else_ part of the 
 {% highlight javascript %}
 var supportsRequired = 'required' in document.createElement('input')
 if (!supportsRequired) {
-	// no support
+  // no support
 }
 {% endhighlight %}
 
@@ -62,57 +63,57 @@ This is easily done as you can see from the introduction, adding a required attr
 
 {% highlight html %}
 <form class="form" action="/" method="post">
-	<div class="form-row">
-		<label for="name" class="form-label">Name *</label>
-		<div class="form-field">
-			<input id="name" name="name" placeholder="Please enter your name" type="text" required>
-		</div>
-	</div>
-	<div class="form-row">
-		<label for="email" class="form-label">Email *</label>
-		<div class="form-field">
-			<input id="email" name="email" placeholder="Please enter your email address" type="email" required>
-		</div>
-	</div>
-	<div class="form-row">
-		<label for="radio" class="form-label">Radio Buttons *</label>
-		<div class="form-field">
-			<span class="form-radios">Select 1: </span>
-			<input id="radio" name="radiobutton" value="selection-one" type="radio" required>
-			<span class="form-radios">Select 2: </span>
-			<input name="radiobutton" value="selection-two" type="radio">
-		</div>
-	</div>
-	<div class="form-row">
-		<label for="checkbox" class="form-label">Checkboxes *</label>
-		<div class="form-field">
-			<span class="form-radios">Select 1: </span>
-			<input id="checkbox" name="checkbox" type="checkbox" required>
-			<span class="form-radios">Select 2: </span>
-			<input name="checkbox" type="checkbox">
-		</div>
-	</div>
-	<div class="form-row">
-		<label for="tel" class="form-label">Telephone *</label>
-		<div class="form-field">
-			<input id="tel" name="telephone" placeholder="Please enter your number" type="tel" required>
-		</div>
-	</div>
-	<div class="form-row">
-		<label for="website" class="form-label">Website *</label>
-		<div class="form-field">
-			<input id="website" name="website" placeholder="Begin with http://" type="url" required>
-		</div>
-	</div>
-	<div class="form-row">
-		<label for="message" class="form-label">Message *</label>
-		<div class="form-field">
-			<textarea id="message" name="message" placeholder="Include all the details you can" required></textarea>
-		</div>
-	</div>
-	<div class="form-row">
-		<button name="submit" type="submit" class="form-submit">Send Email</button>
-	</div>
+  <div class="form-row">
+    <label for="name" class="form-label">Name *</label>
+    <div class="form-field">
+      <input id="name" name="name" placeholder="Please enter your name" type="text" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="email" class="form-label">Email *</label>
+    <div class="form-field">
+      <input id="email" name="email" placeholder="Please enter your email address" type="email" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="radio" class="form-label">Radio Buttons *</label>
+    <div class="form-field">
+      <span class="form-radios">Select 1: </span>
+      <input id="radio" name="radiobutton" value="selection-one" type="radio" required>
+      <span class="form-radios">Select 2: </span>
+      <input name="radiobutton" value="selection-two" type="radio">
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="checkbox" class="form-label">Checkboxes *</label>
+    <div class="form-field">
+      <span class="form-radios">Select 1: </span>
+      <input id="checkbox" name="checkbox" type="checkbox" required>
+      <span class="form-radios">Select 2: </span>
+      <input name="checkbox" type="checkbox">
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="tel" class="form-label">Telephone *</label>
+    <div class="form-field">
+      <input id="tel" name="telephone" placeholder="Please enter your number" type="tel" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="website" class="form-label">Website *</label>
+    <div class="form-field">
+      <input id="website" name="website" placeholder="Begin with http://" type="url" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="message" class="form-label">Message *</label>
+    <div class="form-field">
+      <textarea id="message" name="message" placeholder="Include all the details you can" required></textarea>
+    </div>
+  </div>
+  <div class="form-row">
+    <button name="submit" type="submit" class="form-submit">Send Email</button>
+  </div>
 </form>
 {% endhighlight %}
 
@@ -121,9 +122,9 @@ Now we've got a feature detect and a form full of required elements, we need to 
 
 {% highlight javascript %}
 $('[required]').each(function () {
-	if (!supportsRequired) {
-		// No support	
-	}
+  if (!supportsRequired) {
+    // No support 
+  }
 })
 {% endhighlight %}
 
@@ -133,11 +134,11 @@ Let's remove the attribute using jQuery's _removeAttr_ method, and add a class c
 
 {% highlight javascript %}
 $('[required]').each(function () {
-	if (!supportsRequired) {
-		var self = $(this)
-		self.removeAttr('required').addClass('required')
-		self.parent().append('<span class="form-error">Required</span>')
-	}
+  if (!supportsRequired) {
+    var self = $(this)
+    self.removeAttr('required').addClass('required')
+    self.parent().append('<span class="form-error">Required</span>')
+  }
 })
 {% endhighlight %}
 
@@ -146,7 +147,7 @@ Attributes are all setup now for form submission, which of course will only fire
 
 {% highlight javascript %}
 $('.form').on('submit', function () {
-	// on submit
+  // on submit
 })
 {% endhighlight %}
 
@@ -154,9 +155,9 @@ I've found using jQuery's _.on_ methods are much more flexible, you can easily i
 
 {% highlight javascript %}
 $('.form').on('submit', function () {
-	$('.required').each(function(){
-		// loop through required classes
-	})
+  $('.required').each(function(){
+    // loop through required classes
+  })
 })
 {% endhighlight %}
 
@@ -165,9 +166,9 @@ Inside the loop, we need to think of the next step; checking empty values. Let's
 
 {% highlight javascript %}
 if ($(element).val() === '') {
-	// empty
+  // empty
 } else {
-	// not empty
+  // not empty
 }
 {% endhighlight %}
 
@@ -175,14 +176,14 @@ It'd be good to setup the loop now to incorporate this:
 
 {% highlight javascript %}
 $('.form').on('submit', function () {
-	$('.required').each(function(){
-		var self = $(this)
-		if (self.val() === '') {
-			// empty
-		} else {
-			// not empty
-		}
-	})
+  $('.required').each(function(){
+    var self = $(this)
+    if (self.val() === '') {
+      // empty
+    } else {
+      // not empty
+    }
+  })
 })
 {% endhighlight %}
 
@@ -190,14 +191,14 @@ Nice and easy. So what do we need to do when the field is empty? Well, two thing
 
 {% highlight javascript %}
 $('.form').on('submit', function (e) {
-	$('.required').each(function(){
-		var self = $(this)
-		if (self.val() === '') {
-			e.preventDefault()
-		} else {
-			// submit otherwise
-		}
-	})
+  $('.required').each(function(){
+    var self = $(this)
+    if (self.val() === '') {
+      e.preventDefault()
+    } else {
+      // submit otherwise
+    }
+  })
 })
 {% endhighlight %}
 
@@ -205,15 +206,15 @@ Next we need to show the appended message:
 
 {% highlight javascript %}
 $('.form').on('submit', function (e) {
-	$('.required').each(function(){
-		var self = $(this)
-		if (self.val() === '') {
-			self.siblings('.form-error').show() // show error
-			e.preventDefault() // stop submission
-		} else {
-			// submit otherwise
-		}
-	})
+  $('.required').each(function(){
+    var self = $(this)
+    if (self.val() === '') {
+      self.siblings('.form-error').show() // show error
+      e.preventDefault() // stop submission
+    } else {
+      // submit otherwise
+    }
+  })
 })
 {% endhighlight %}
 
@@ -221,15 +222,15 @@ The events will both fire together, doing exactly what we'd like it to. Next I'm
 
 {% highlight javascript %}
 $('.form').on('submit', function (e) {
-	$('.required').each(function(){
-		var self = $(this)
-		if (self.val() === '') {
-			self.siblings('.form-error').show() // show error
-			e.preventDefault() // stop submission
-		} else {
-			self.siblings('.form-error').hide() // hide errors
-		}
-	})
+  $('.required').each(function(){
+    var self = $(this)
+    if (self.val() === '') {
+      self.siblings('.form-error').show() // show error
+      e.preventDefault() // stop submission
+    } else {
+      self.siblings('.form-error').hide() // hide errors
+    }
+  })
 })
 {% endhighlight %}
 
@@ -238,7 +239,7 @@ Now we've checked if the values are empty (thankfully this covers input types te
 
 {% highlight javascript %}
 if (self.is(':checkbox') || self.is(':radio')) {
-	// is a checkbox or radio
+  // is a checkbox or radio
 }
 {% endhighlight %}
 
@@ -262,7 +263,7 @@ var checked = (self.is(':checkbox') || self.is(':radio'))
 : false
 
 if (checked) {
-	// stop submit, show error
+  // stop submit, show error
 }
 {% endhighlight %}
 
@@ -270,7 +271,7 @@ The above will fire if no input type radio or checkbox have been selected with t
 
 {% highlight javascript %}
 if (self.val() === '' || checked) {
-	// if empty value, or isn't checked
+  // if empty value, or isn't checked
 }
 {% endhighlight %}
 
@@ -283,38 +284,38 @@ Putting the full loop and submit handler together, we can paint a picture of how
 // submit the form
 $('.form').on('submit', function (e) {
 
-	// loop through class name required
-	$('.required').each(function () {
-	
-		// this
-		var self = $(this)
-		
-		// check shorthand if statement for input[type] detection
-		var checked = (self.is(':checkbox') || self.is(':radio')) 
-		? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
-		: false
-		
-		// run the empty/not:checked test
-		if (self.val() === '' || checked) {
-				
-			// show error if the values are empty still (or re-emptied)
-			// this will fire after it's already been checked once
-			self.siblings('.form-error').show()
-			
-			// stop form submitting
-			e.preventDefault()
-		
-		// if it's passed the check
-		} else {
-		
-			// hide the error
-			self.siblings('.form-error').hide()
-			
-		}
-		
-	})
-	
-	// all other form submit handlers here
+  // loop through class name required
+  $('.required').each(function () {
+  
+    // this
+    var self = $(this)
+    
+    // check shorthand if statement for input[type] detection
+    var checked = (self.is(':checkbox') || self.is(':radio')) 
+    ? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
+    : false
+    
+    // run the empty/not:checked test
+    if (self.val() === '' || checked) {
+        
+      // show error if the values are empty still (or re-emptied)
+      // this will fire after it's already been checked once
+      self.siblings('.form-error').show()
+      
+      // stop form submitting
+      e.preventDefault()
+    
+    // if it's passed the check
+    } else {
+    
+      // hide the error
+      self.siblings('.form-error').hide()
+      
+    }
+    
+  })
+  
+  // all other form submit handlers here
 
 })
 {% endhighlight %}
@@ -328,7 +329,7 @@ Coming back to what I mentioned earlier about chaining event listeners, we want 
 
 {% highlight javascript %}
 $(element).on('blur change', function () {
-	// listening for blur and change events 
+  // listening for blur and change events 
 })
 {% endhighlight %}
 
@@ -350,7 +351,7 @@ And then run the event listening function:
 
 {% highlight javascript %}
 $('input, textarea', '.form').on('blur change', function () {
-	// listening for input and textarea blur/changes inside .form
+  // listening for input and textarea blur/changes inside .form
 })
 {% endhighlight %}
 
@@ -360,28 +361,28 @@ We don't need to create a new loop, as the jQuery library will power this automa
 // key change on all form inputs
 $('input, textarea', '.form').on('blur change', function () {
 
-	// this
-	var self = $(this)
-		
-	// check shorthand if statement for input[type] detection
-	var checked = (self.is(':checkbox') || self.is(':radio')) 
-	? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
-	: false
-	
-	// if empty on change, i.e. if data is removed
-	if (self.val() === '' || checked) {
-	
-		// show/keep the error in view
-		self.siblings('.form-error').show()
-	
-	// if there's a value or checked
-	} else {
-	
-		// hide the error
-		self.siblings('.form-error').hide()
-		
-	}
-	
+  // this
+  var self = $(this)
+    
+  // check shorthand if statement for input[type] detection
+  var checked = (self.is(':checkbox') || self.is(':radio')) 
+  ? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
+  : false
+  
+  // if empty on change, i.e. if data is removed
+  if (self.val() === '' || checked) {
+  
+    // show/keep the error in view
+    self.siblings('.form-error').show()
+  
+  // if there's a value or checked
+  } else {
+  
+    // hide the error
+    self.siblings('.form-error').hide()
+    
+  }
+  
 })
 {% endhighlight %}
 
@@ -394,93 +395,93 @@ Putting everthing together, it looks as follows:
 <script src="js/jquery.min.js"></script>
 <script>
 $(function () {
-	
-	// feature detect
-	var supportsRequired = 'required' in document.createElement('input')
-	
-	// loop through required attributes
-	$('[required]').each(function () {
-	
-		// if 'required' isn't supported
-		if (!supportsRequired) {
-		
-			// this
-			var self = $(this)
-		
-			// swap attribute for class
-			self.removeAttr('required').addClass('required')
-			
-			// append an error message
-			self.parent().append('<span class="form-error">Required</span>')
-			
-		}
-		
-	})
-	
-	// submit the form
-	$('.form').on('submit', function (e) {
-	
-		// loop through class name required
-		$('.required').each(function () {
-		
-			// this
-			var self = $(this)
-			
-			// check shorthand if statement for input[type] detection
-			var checked = (self.is(':checkbox') || self.is(':radio')) 
-			? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
-			: false
-			
-			// run the empty/not:checked test
-			if (self.val() === '' || checked) {
-					
-				// show error if the values are empty still (or re-emptied)
-				// this will fire after it's already been checked once
-				self.siblings('.form-error').show()
-				
-				// stop form submitting
-				e.preventDefault()
-			
-			// if it's passed the check
-			} else {
-			
-				// hide the error
-				self.siblings('.form-error').hide()
-				
-			}
-			
-		})
-		
-		// all other form submit handlers here
-	
-	})
-	
-	// key change on all form inputs
-	$('input, textarea', '.form').on('blur change', function () {
-	
-		// this
-		var self = $(this)
-			
-		// check shorthand if statement for input[type] detection
-		var checked = (self.is(':checkbox') || self.is(':radio')) 
-		? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
-		: false
-		
-		// if empty on change, i.e. if data is removed
-		if (self.val() === '' || checked) {
-		
-			// show/keep the error in view
-			self.siblings('.form-error').show()
-		
-		// if there's a value or checked
-		} else {
-		
-			// hide the error
-			self.siblings('.form-error').hide()
-			
-		}
-		
-	})
+  
+  // feature detect
+  var supportsRequired = 'required' in document.createElement('input')
+  
+  // loop through required attributes
+  $('[required]').each(function () {
+  
+    // if 'required' isn't supported
+    if (!supportsRequired) {
+    
+      // this
+      var self = $(this)
+    
+      // swap attribute for class
+      self.removeAttr('required').addClass('required')
+      
+      // append an error message
+      self.parent().append('<span class="form-error">Required</span>')
+      
+    }
+    
+  })
+  
+  // submit the form
+  $('.form').on('submit', function (e) {
+  
+    // loop through class name required
+    $('.required').each(function () {
+    
+      // this
+      var self = $(this)
+      
+      // check shorthand if statement for input[type] detection
+      var checked = (self.is(':checkbox') || self.is(':radio')) 
+      ? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
+      : false
+      
+      // run the empty/not:checked test
+      if (self.val() === '' || checked) {
+          
+        // show error if the values are empty still (or re-emptied)
+        // this will fire after it's already been checked once
+        self.siblings('.form-error').show()
+        
+        // stop form submitting
+        e.preventDefault()
+      
+      // if it's passed the check
+      } else {
+      
+        // hide the error
+        self.siblings('.form-error').hide()
+        
+      }
+      
+    })
+    
+    // all other form submit handlers here
+  
+  })
+  
+  // key change on all form inputs
+  $('input, textarea', '.form').on('blur change', function () {
+  
+    // this
+    var self = $(this)
+      
+    // check shorthand if statement for input[type] detection
+    var checked = (self.is(':checkbox') || self.is(':radio')) 
+    ? self.is(':not(:checked)') && $('input[name=' + self.attr('name') + ']:checked').length === 0 
+    : false
+    
+    // if empty on change, i.e. if data is removed
+    if (self.val() === '' || checked) {
+    
+      // show/keep the error in view
+      self.siblings('.form-error').show()
+    
+    // if there's a value or checked
+    } else {
+    
+      // hide the error
+      self.siblings('.form-error').hide()
+      
+    }
+    
+  })
 
 })
 </script>
@@ -507,9 +508,9 @@ Which drops the bang (!). This now says 'if it supports the required attribute' 
 HTML5 required attributes are just one piece of the front-end validation puzzle, but you can see their instant power and methods to improving user interaction. Just remember, not all users enable JavaScript, which means by turning it off they can bypass your system. It's best practice to include a server-side validator alongside your client-side validator, for fallback methods as well as a second reassurance. You can also sanitize data server-side and make sure no malicious code gets through.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Required Fallback, 'Required Fallback Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/required-fallback/required-fallback.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Required Fallback, 'Required Fallback Download']);">Download</a>
-	<a href="//github.com/toddmotto/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Required Fallback', 'Required Fallback Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Required Fallback, 'Required Fallback Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/required-fallback/required-fallback.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Required Fallback, 'Required Fallback Download']);">Download</a>
+  <a href="//github.com/toddmotto/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Required Fallback', 'Required Fallback Fork']);">Fork</a>
 </div>
 
 ### Extra: Customising HTML5 popups

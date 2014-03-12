@@ -2,6 +2,7 @@
 layout: post
 permalink: /simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse
 title: Simple HTML5 data-* jQuery tabs, markup free and relative to their container for ultimate re-use
+path: 2013-05-20-simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse.md
 ---
 
 One of my favourite additions to the HTML5 spec is data-&#42; attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
@@ -14,16 +15,16 @@ And back to AngularJS, I just love the way it works. It focuses on the view (bei
 
 {% highlight html %}
 <div ng-app>
-	<input type=text ng-model="inputted">
+  <input type=text ng-model="inputted">
 </div>
 {% endhighlight %}
 
 The above may not look like much, but you can see I've binded 'ng-model' onto the input element, and can essentially mirror/call the model using double curly brackets _&#123;&#123;inputted&#125;&#125;_ - which means anything I type into the input will be reflected into the DOM too. Built into AngularJS are directives that get this to work obviously, but you can see the simplicity behind it, as well as the fact it's totally reusable on as many elements throughout the DOM as you need. So let's head that way. Enough with the UI components that need actual hard coding - let's create objects that are reusable.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/data-tabs/data-tabs.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Data Tabs, 'Data Tabs Download']);">Download</a>
-	<a href="//github.com/toddmotto/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Data Tabs', Data Tabs Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/data-tabs/data-tabs.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Data Tabs, 'Data Tabs Download']);">Download</a>
+  <a href="//github.com/toddmotto/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Data Tabs', Data Tabs Fork']);">Fork</a>
 </div>
 
 ### HTML5 data-&#42; attributes
@@ -45,7 +46,7 @@ This now pairs them! So what next? We need to get started with the jQuery. We ne
 
 {% highlight javascript %}
 $('[data-tab]').on('click', function (e) {
-	
+  
 })
 {% endhighlight %}
 
@@ -53,7 +54,7 @@ Then log a result using jQuery's built-in _.data()_ API:
 
 {% highlight javascript %}
 $('[data-tab]').on('click', function (e) {
-	console.log($(this).data('tab'))
+  console.log($(this).data('tab'))
 })
 {% endhighlight %}
 
@@ -69,13 +70,13 @@ We need to create some fuller markup now to get a better picture of what's happe
 
 {% highlight html %}
 <div class="tabs">
-	<a href="#" data-tab="1" class="tab active">Tab 1</a>
-	<a href="#" data-tab="2" class="tab">Tab 2</a>
-	<a href="#" data-tab="3" class="tab">Tab 3</a>
-	
-	<div data-content="1" class="content active">Tab 1 Content</div>
-	<div data-content="2" class="content">Tab 2 Content</div>
-	<div data-content="3" class="content">Tab 3 Content</div>
+  <a href="#" data-tab="1" class="tab active">Tab 1</a>
+  <a href="#" data-tab="2" class="tab">Tab 2</a>
+  <a href="#" data-tab="3" class="tab">Tab 3</a>
+  
+  <div data-content="1" class="content active">Tab 1 Content</div>
+  <div data-content="2" class="content">Tab 2 Content</div>
+  <div data-content="3" class="content">Tab 3 Content</div>
 </div>
 {% endhighlight %}
 
@@ -83,8 +84,8 @@ An _active_ classes need pushing around now it's in the markup, let's put the ab
 
 {% highlight javascript %}
 $('[data-tab]').on('click', function () {
-	$(this).addClass('active').siblings('[data-tab]').removeClass('active')
-	$(this).siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
+  $(this).addClass('active').siblings('[data-tab]').removeClass('active')
+  $(this).siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
 })
 {% endhighlight %}
 
@@ -94,9 +95,9 @@ The finishing touch on the script is to prevent the &lt;a href="#"&gt; links fro
 
 {% highlight javascript %}
 $('[data-tab]').on('click', function (e) {
-	$(this).addClass('active').siblings('[data-tab]').removeClass('active')
-	$(this).siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
-	e.preventDefault()
+  $(this).addClass('active').siblings('[data-tab]').removeClass('active')
+  $(this).siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
+  e.preventDefault()
 })
 {% endhighlight %}
 
@@ -115,21 +116,21 @@ The tabs are setup to be totally markup free, and in true AngularJS fashion, you
 
 {% highlight html %}
 <div class="tabs">
-	<a href="#" data-tab="1" class="tab active">Tab 1</a>
-	<a href="#" data-tab="2" class="tab">Tab 2</a>
-	<a href="#" data-tab="3" class="tab">Tab 3</a>
-	<a href="#" data-tab="4" class="tab">Tab 4</a>
-	<a href="#" data-tab="5" class="tab">Tab 5</a>
-	<a href="#" data-tab="6" class="tab">Tab 6</a>
-	<a href="#" data-tab="7" class="tab">Tab 7</a>
-	
-	<div data-content="1" class="content active">Tab 1 Content</div>
-	<div data-content="2" class="content">Tab 2 Content</div>
-	<div data-content="3" class="content">Tab 3 Content</div>
-	<div data-content="4" class="content">Tab 4 Content</div>
-	<div data-content="5" class="content">Tab 5 Content</div>
-	<div data-content="6" class="content">Tab 6 Content</div>
-	<div data-content="7" class="content">Tab 7 Content</div>
+  <a href="#" data-tab="1" class="tab active">Tab 1</a>
+  <a href="#" data-tab="2" class="tab">Tab 2</a>
+  <a href="#" data-tab="3" class="tab">Tab 3</a>
+  <a href="#" data-tab="4" class="tab">Tab 4</a>
+  <a href="#" data-tab="5" class="tab">Tab 5</a>
+  <a href="#" data-tab="6" class="tab">Tab 6</a>
+  <a href="#" data-tab="7" class="tab">Tab 7</a>
+  
+  <div data-content="1" class="content active">Tab 1 Content</div>
+  <div data-content="2" class="content">Tab 2 Content</div>
+  <div data-content="3" class="content">Tab 3 Content</div>
+  <div data-content="4" class="content">Tab 4 Content</div>
+  <div data-content="5" class="content">Tab 5 Content</div>
+  <div data-content="6" class="content">Tab 6 Content</div>
+  <div data-content="7" class="content">Tab 7 Content</div>
 </div>
 {% endhighlight %}
 
@@ -138,7 +139,7 @@ The tabs are setup to be totally markup free, and in true AngularJS fashion, you
 Just add more data-&#42; attributes and you're golden! :)
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/data-tabs/data-tabs.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Data Tabs, 'Data Tabs Download']);">Download</a>
-	<a href="//github.com/toddmotto/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Data Tabs', Data Tabs Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Data Tabs, 'Data Tabs Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/data-tabs/data-tabs.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Data Tabs, 'Data Tabs Download']);">Download</a>
+  <a href="//github.com/toddmotto/data-tabs" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Data Tabs', Data Tabs Fork']);">Fork</a>
 </div>
