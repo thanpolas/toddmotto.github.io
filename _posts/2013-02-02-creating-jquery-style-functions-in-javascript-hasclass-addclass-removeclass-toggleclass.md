@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass
 disqus: http://www.toddmotto.com/creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass
+path: 2013-02-02-creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass.md
 ---
 
 #### UPDATE: Check out [Apollo.js](/apollo-js-standalone-class-manipulation-api-for-html5-and-legacy-dom/), the latest version of these scripts integrated with HTML APIs, the most powerful class API on the web!
@@ -11,8 +12,8 @@ disqus: http://www.toddmotto.com/creating-jquery-style-functions-in-javascript-h
 jQuery is a pretty cool framework, it has it’s uses, it’s pretty reliable, but remember: it’s written with JavaScript. It’s not a language by itself, it’s not a magical tool, nor the answer to our prayers. It doesn’t make front-end animation/AJAX/DOM maniuplating easy, it makes you think less and miss out on vital knowledgable. What happened before jQuery?
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/reusable-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Reusable JS, 'Reusable JS Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download Old</a>
+    <a href="//toddmotto.com/labs/reusable-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Reusable JS, 'Reusable JS Demo']);">Demo</a>
+    <a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download Old</a>
   <a href="//github.com/toddmotto/apollo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download New</a>
 </div>
 
@@ -72,7 +73,7 @@ So we want to create our own hasClass now. We don’t want to know it ‘just wo
 
 {% highlight javascript %}
 function hasClass(elem, className) {
-	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 }
 {% endhighlight %}
 
@@ -82,9 +83,9 @@ Put into some practical use, we can then put it into practice, without duplicati
 
 {% highlight javascript %}
 if (hasClass(document.documentElement, 'ie6')) {
-	// Do something crazy
+    // Do something crazy
 } else {
-	// Phew
+    // Phew
 }
 {% endhighlight %}
 
@@ -102,7 +103,7 @@ Potential usage again:
 
 {% highlight javascript %}
 $('.button').click(function() {
-	$(this).addClass('ie6rules');
+    $(this).addClass('ie6rules');
 });
 {% endhighlight %}
 
@@ -111,7 +112,7 @@ Again, here’s my stab at creating a nice addClass function, which passes the c
 {% highlight javascript %}
 function addClass(elem, className) {
     if (!hasClass(elem, className)) {
-    	elem.className += ' ' + className;
+        elem.className += ' ' + className;
     }
 }
 {% endhighlight %}
@@ -122,7 +123,7 @@ Using a bang (!) you can invert it’s meaning, so technically this means ‘if 
 
 {% highlight javascript %}
 document.getElementById('myButton').onclick = function() {
-	addClass(document.documentElement, 'some-class');
+    addClass(document.documentElement, 'some-class');
 }
 {% endhighlight %}
 
@@ -140,7 +141,7 @@ With some potential use like this:
 
 {% highlight javascript %}
 if ($('html').hasClass('ie7')) {
-	$('body').removeClass('sanity');
+    $('body').removeClass('sanity');
 }
 {% endhighlight %}
 
@@ -148,8 +149,8 @@ Now we can create a removeClass function, which is a little more complicated, us
 
 {% highlight javascript %}
 function removeClass(elem, className) {
-	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-	if (hasClass(elem, className)) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
             newClass = newClass.replace(' ' + className + ' ', ' ');
         }
@@ -163,7 +164,7 @@ We can then use it like so:
 
 {% highlight javascript %}
 document.getElementById('myButton').onclick = function() {
-	removeClass(document.documentElement, 'some-class');
+    removeClass(document.documentElement, 'some-class');
 }
 {% endhighlight %}
 
@@ -179,7 +180,7 @@ A usage example could be as follows:
 
 {% highlight javascript %}
 $('.button').click(function(){
-	$(this).toggleClass('active');
+    $(this).toggleClass('active');
 });
 {% endhighlight %}
 
@@ -187,7 +188,7 @@ Which would toggle the class ‘active’ for one click, and toggle it back for 
 
 {% highlight javascript %}
 function toggleClass(elem, className) {
-	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
     if (hasClass(elem, className)) {
         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
             newClass = newClass.replace( ' ' + className + ' ' , ' ' );
@@ -206,7 +207,7 @@ As you can see, we can start to move into a jQuery-free state of mind. What’s 
 The possibilities are endless for what you decide to create.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/reusable-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Reusable JS, 'Reusable JS Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download Old</a>
+    <a href="//toddmotto.com/labs/reusable-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Reusable JS, 'Reusable JS Demo']);">Demo</a>
+    <a href="//toddmotto.com/labs/reusable-js/reusable-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download Old</a>
   <a href="//github.com/toddmotto/apollo/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Reusable JS, 'Reusable JS Download']);">Download New</a>
 </div>

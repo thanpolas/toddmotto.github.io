@@ -2,6 +2,7 @@
 layout: post
 permalink: /writing-the-best-css-when-building-with-html5
 title: Writing the best CSS when building with HTML5
+path: 2013-03-07-writing-the-best-css-when-building-with-html5.md
 ---
 
 ### Becoming HTML agnostic
@@ -10,16 +11,16 @@ HTML agnostic means to use as little HTML in your CSS (or none). The key factor 
 
 {% highlight html %}
 <ul>
-	<li>
-		<a href="#">Link</a>
-	</li>
-	<li>
-		<a href="#">Link</a>
-	</li>
-	<li>
-		<a href="#">Link</a>
-	</li>
-</ul>  		    		
+  <li>
+    <a href="#">Link</a>
+  </li>
+  <li>
+    <a href="#">Link</a>
+  </li>
+  <li>
+    <a href="#">Link</a>
+  </li>
+</ul>             
 {% endhighlight %}
 
 Here's what you might be used to seeing this to target the above HTML:
@@ -29,23 +30,23 @@ ul {}
 ul li {}
 ul li a {}
 {% endhighlight %}
-	
+  
 These selectors aren't specific enough, they are potentially too complicated and not very efficient, especially when we expand our code. They're not very maintainable either. By default, this will also target the styles of every single &lt;li&gt; element inside your first &lt;ul&gt; - which means we are going to be undoing styles at a later date when adding a nested dropdown.
 
 On becoming HTML agnostic, we can begin to create more classes to represent each element when we need them. Let's rewrite our navigation to become HTML agnostic:
 
 {% highlight html %}
 <ul class="nav">
-	<li class="nav-item">
-		<a href="#">Link</a>
-	</li>
-	<li class="nav-item">
-		<a href="#">Link</a>
-	</li>
-	<li class="nav-item">
-		<a href="#">Link</a>
-	</li>
-</ul>  		    		
+  <li class="nav-item">
+    <a href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a href="#">Link</a>
+  </li>
+</ul>             
 {% endhighlight %}
 
 And the CSS that we can link with our navigation will look like this:
@@ -55,7 +56,7 @@ And the CSS that we can link with our navigation will look like this:
 .nav-item {}
 .nav-item a {}
 {% endhighlight %}
-	
+  
 Perfect. The new CSS we've created is better for many reasons, the specificity has increased, and will only apply to the elements we tell it, we could change our &lt;ul&gt; to an &lt;ol&gt; and not have to change a single line of CSS. We also didn't have to nest our CSS to target the &lt;li&gt; elements inside. Our CSS is much more efficient now.
 
 If you're still not sold on the approach, here's a killer example. We'll likely want to add a current item class to our HTML to show the current page, and using a non-agnostic approach is a challenge and we _could_ end up using the hacky !important method to override styles - which again we want to avoid.
@@ -79,8 +80,8 @@ I've worked on so many coding projects, which at the time I was coding CSS with 
 
 {% highlight html %}
 <header>
-	<!-- Content -->
-</header>  		    		
+  <!-- Content -->
+</header>             
 {% endhighlight %}
 
 Using qualified selectors, you can then target the HTML like so:
@@ -97,7 +98,7 @@ Here's a much better way of targeting the &lt;header&gt; element:
 
 {% highlight html %}
 <header class="header">
-	<!-- Content -->
+  <!-- Content -->
 </header>
 {% endhighlight %}
 
@@ -134,9 +135,9 @@ This doesn't mean creating an Object-Orientated CSS solution for every segment o
 
 {% highlight html %}
 <div id="logo">
-	<a href="/">
-		<img src="img/logo.svg" alt="Logo">
-	</a>
+  <a href="/">
+    <img src="img/logo.svg" alt="Logo">
+  </a>
 </div>
 {% endhighlight %}
 
@@ -152,9 +153,9 @@ This was nearly acceptable, as using an ID meant the declaration was safe as you
 
 {% highlight html %}
 <div class="logo">
-	<a href="/" class="logo-link">
-		<img src="img/logo.svg" alt="Logo" class="logo-img">
-	</a>
+  <a href="/" class="logo-link">
+    <img src="img/logo.svg" alt="Logo" class="logo-img">
+  </a>
 </div>
 {% endhighlight %}
 
@@ -186,19 +187,19 @@ At first this looks nice and neat, but when you're working on a more complicated
 
 {% highlight css %}
 .posts-list {
-	list-style:none;
+  list-style:none;
 }
 .post {
-	border-bottom:1px solid #EEE;
-	margin:0 340px 0 0;
+  border-bottom:1px solid #EEE;
+  margin:0 340px 0 0;
 }
 .post a {
-	border-left:8px solid #CCC;
-	display:block;
-	font-size:16px;
+  border-left:8px solid #CCC;
+  display:block;
+  font-size:16px;
 }
 .post a:hover {
-	border-left:8px solid #2BA6CB;
+  border-left:8px solid #2BA6CB;
 }
 {% endhighlight %}
 
@@ -209,8 +210,8 @@ When providing a notification (perhaps saving your profile), you could display a
 
 {% highlight css %}
 .green-alert {
-	background:green;
-	border:1px solid darkgreen;
+  background:green;
+  border:1px solid darkgreen;
 }
 {% endhighlight %}
 
@@ -218,8 +219,8 @@ CSS properties are technically variables, and can change, that's why presentatio
 
 {% highlight css %}
 .alert-success {
-	background:green;
-	border:1px solid darkgreen;
+  background:green;
+  border:1px solid darkgreen;
 }
 {% endhighlight %}
 
@@ -227,15 +228,15 @@ You could then imagine the parent element of the 'alert-success' class being cal
 
 {% highlight css %}
 .alert {
-	/* Create the alert box */
+  /* Create the alert box */
 }
 .alert-success {
-	background:green;
-	border:1px solid darkgreen;
+  background:green;
+  border:1px solid darkgreen;
 }
 .alert-fail {
-	background:red;
-	border:1px solid darkred;
+  background:red;
+  border:1px solid darkred;
 }
 {% endhighlight %}
 
@@ -246,11 +247,11 @@ Naming conventions: using a naming convention that shows a relationship between 
 
 {% highlight html %}
 <article class="post">
-	<h3 class="post-title">Post title</h3>
-	<img src="img/post.jpg" alt="Post Thumbnail" class="post-img">
-	<div class="post-content">
-		<!-- Text here -->
-	</div>
+  <h3 class="post-title">Post title</h3>
+  <img src="img/post.jpg" alt="Post Thumbnail" class="post-img">
+  <div class="post-content">
+    <!-- Text here -->
+  </div>
 </article>
 {% endhighlight %}
 

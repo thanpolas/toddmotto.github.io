@@ -2,6 +2,7 @@
 layout: post
 permalink: /using-html5-geolocation-to-show-current-location-with-google-maps-api
 title: Using HTML5 Geolocation to show current location with Google Maps API
+path: 2013-02-25-using-html5-geolocation-to-show-current-location-with-google-maps-api.md
 ---
 
 Geolocation is one of the best new HTML5 APIs, so let's see what we can do with it. In a nutshell, Geolocation allows you to give your current location information to the browser. Google use Geolocation a lot, especially for things like Google Maps, you're bound to have seen the popups 'This page would like to use your current location'. If so, you've experienced HTML5 Geolocation.
@@ -9,8 +10,8 @@ Geolocation is one of the best new HTML5 APIs, so let's see what we can do with 
 In this tutorial, we're going to dive into HTML Geolocation and hook the position into Google Maps API, to show our current location on Google Maps! Sounds fun.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/geolocation-google-api" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Geolocation, 'Geolocation Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/geolocation-google-api/geolocation-google-api.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Geolocation, 'Geolocation Download']);">Download</a>
+    <a href="//toddmotto.com/labs/geolocation-google-api" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Geolocation, 'Geolocation Demo']);">Demo</a>
+    <a href="//toddmotto.com/labs/geolocation-google-api/geolocation-google-api.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Geolocation, 'Geolocation Download']);">Download</a>
 </div>
 
 ### Current location
@@ -41,9 +42,9 @@ First we need to feature detect and find out if the browser supports Geolocation
 
 {% highlight javascript %}
 if(!!navigator.geolocation) {
-	// Support
+    // Support
 } else {
-	// No support
+    // No support
 }
 {% endhighlight %}
 
@@ -65,38 +66,38 @@ Merging a simple Google maps basepoint and hooking it into our Geolocation, we a
 {% highlight javascript %}
 (function() {
 
-	if(!!navigator.geolocation) {
-	
-		var map;
-	
-    	var mapOptions = {
-    		zoom: 15,
-    		mapTypeId: google.maps.MapTypeId.ROADMAP
-    	};
-    	
-    	map = new google.maps.Map(document.getElementById('google_canvas'), mapOptions);
-	
-		navigator.geolocation.getCurrentPosition(function(position) {
-		
-    		var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    		
-    		var infowindow = new google.maps.InfoWindow({
-    			map: map,
-    			position: geolocate,
-    			content:
-    				'<h1>Location pinned from HTML5 Geolocation!</h1>' +
-    				'<h2>Latitude: ' + position.coords.latitude + '</h2>' +
-    				'<h2>Longitude: ' + position.coords.longitude + '</h2>'
-    		});
-    		
-    		map.setCenter(geolocate);
-    		
-		});
-		
-	} else {
-		document.getElementById('google_canvas').innerHTML = 'No Geolocation Support.';
-	}
-	
+    if(!!navigator.geolocation) {
+    
+        var map;
+    
+        var mapOptions = {
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        
+        map = new google.maps.Map(document.getElementById('google_canvas'), mapOptions);
+    
+        navigator.geolocation.getCurrentPosition(function(position) {
+        
+            var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            
+            var infowindow = new google.maps.InfoWindow({
+                map: map,
+                position: geolocate,
+                content:
+                    '<h1>Location pinned from HTML5 Geolocation!</h1>' +
+                    '<h2>Latitude: ' + position.coords.latitude + '</h2>' +
+                    '<h2>Longitude: ' + position.coords.longitude + '</h2>'
+            });
+            
+            map.setCenter(geolocate);
+            
+        });
+        
+    } else {
+        document.getElementById('google_canvas').innerHTML = 'No Geolocation Support.';
+    }
+    
 })();
 {% endhighlight %}
 
@@ -127,6 +128,6 @@ If you're building a cool web app or mobile app, you could use the watchPosition
 IE9 and up supports Geolocation, with a good number of earlier modern browser versions supporting it too. Mobiles are pretty great with geolocation, and you could even use the aforementioned watchPosition method and walk about to see your position moving!
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/geolocation-google-api" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Geolocation, 'Geolocation Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/geolocation-google-api/geolocation-google-api.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Geolocation, 'Geolocation Download']);">Download</a>
+    <a href="//toddmotto.com/labs/geolocation-google-api" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Geolocation, 'Geolocation Demo']);">Demo</a>
+    <a href="//toddmotto.com/labs/geolocation-google-api/geolocation-google-api.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Geolocation, 'Geolocation Download']);">Download</a>
 </div>
