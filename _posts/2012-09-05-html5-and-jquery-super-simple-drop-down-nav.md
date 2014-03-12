@@ -4,6 +4,7 @@ author: Todd Motto
 layout: post
 permalink: /html5-and-jquery-super-simple-drop-down-nav
 disqus: http://www.toddmotto.com/html5-and-jquery-super-simple-drop-down-nav
+path: 2012-09-05-html5-and-jquery-super-simple-drop-down-nav.md
 ---
 
 How hard is it to find a decent and lightweight navigation that actually works and is easy to implement? The web presents us thousands of options, but often the most simple are the best. It can take time to create your own, especially under deadlines, or alternatively you could chance a plugin.
@@ -11,8 +12,8 @@ How hard is it to find a decent and lightweight navigation that actually works a
 Here’s a bare-bones, efficient way to create a super simple HTML5 navigation with jQuery drop down. The navigation supports fallbacks as well for users with JavaScript disabled, which is something that a lot of people disregard/forget about when building a navigation. Be progressive, build a solution for all systems and add advanced functionality for those that enable/support it, don’t drop functionality for legacy browsers.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/html5-jquery-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Demo', 'HTML5 jQuery Nav Demo Button']);">Demo</a>
-	<a href="//toddmotto.com/labs/html5-jquery-nav/html5-jquery-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Download', 'HTML5 jQuery Nav Download Button']);">Download</a>
+  <a href="//toddmotto.com/labs/html5-jquery-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Demo', 'HTML5 jQuery Nav Demo Button']);">Demo</a>
+  <a href="//toddmotto.com/labs/html5-jquery-nav/html5-jquery-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Download', 'HTML5 jQuery Nav Download Button']);">Download</a>
 </div>
 
 ### HTML
@@ -20,29 +21,29 @@ The markup follows a really simple HTML5 setup using the  tag, and unordered lis
 
 {% highlight html %}
 <nav>
-	<ul>
-		<li><a href="#">Link 1</a></li>
-		<li>
-			<a href="#">Link 2</a>
-			<ul class="fallback">
-				<li><a href="#">Sub-Link 1</a></li>
-				<li><a href="#">Sub-Link 2</a></li>
-				<li><a href="#">Sub-Link 3</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="#">Link 3</a>
-			<ul class="fallback">
-				<li><a href="#">Sub-Link 1</a></li>
-				<li><a href="#">Sub-Link 2</a></li>
-				<li><a href="#">Sub-Link 3</a></li>
-				<li><a href="#">Sub-Link 4</a></li>
-			</ul>
-		</li>
-		<li><a href="#">Link 4</a></li>
-		<li><a href="#">Link 5</a></li>
-		<li><a href="#">Link 6</a></li>
-	</ul>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li>
+      <a href="#">Link 2</a>
+      <ul class="fallback">
+        <li><a href="#">Sub-Link 1</a></li>
+        <li><a href="#">Sub-Link 2</a></li>
+        <li><a href="#">Sub-Link 3</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Link 3</a>
+      <ul class="fallback">
+        <li><a href="#">Sub-Link 1</a></li>
+        <li><a href="#">Sub-Link 2</a></li>
+        <li><a href="#">Sub-Link 3</a></li>
+        <li><a href="#">Sub-Link 4</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Link 4</a></li>
+    <li><a href="#">Link 5</a></li>
+    <li><a href="#">Link 6</a></li>
+  </ul>
 </nav>
 {% endhighlight %}
 
@@ -69,12 +70,12 @@ The jQuery should be lightweight as we want our navigation to perform really wel
 {% highlight javascript %}
 $('nav li ul').hide().removeClass('fallback');
 $('nav li').hover(
-	function () {
-		$('ul', this).stop().slideDown(100);
-	},
-	function () {
-		$('ul', this).stop().slideUp(100);
-	}
+  function () {
+    $('ul', this).stop().slideDown(100);
+  },
+  function () {
+    $('ul', this).stop().slideUp(100);
+  }
 );
 {% endhighlight %}
 
@@ -99,6 +100,6 @@ $('ul', this).stop().slideDown(500);
 Works perfectly as far as I’ve tested. I’ve even tested IE7, IE8, IE9. IE6 support isn’t included, but the navigation surprisingly works.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/html5-jquery-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Demo', 'HTML5 jQuery Nav Demo Button']);">Demo</a>
-	<a href="//toddmotto.com/labs/html5-jquery-nav/html5-jquery-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Download', 'HTML5 jQuery Nav Download Button']);">Download</a>
+  <a href="//toddmotto.com/labs/html5-jquery-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Demo', 'HTML5 jQuery Nav Demo Button']);">Demo</a>
+  <a href="//toddmotto.com/labs/html5-jquery-nav/html5-jquery-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'HTML5 jQuery Nav Download', 'HTML5 jQuery Nav Download Button']);">Download</a>
 </div>
