@@ -2,6 +2,7 @@
 layout: post
 permalink: /introducing-superbox-the-reimagined-lightbox-gallery
 title: Introducing SuperBox the re-imagined lightbox gallery
+path: 2013-03-18-introducing-superbox-the-reimagined-lightbox-gallery.md
 ---
 
 SuperBox is a new jQuery plugin I've been composing over the last few days. SuperBox takes the whole 'image' and 'lightbox' one step further, reducing the JavaScript and image load dependence to make lightboxing a thing of the past! Using HTML5 data-* attributes, responsive layouts and jQuery, here's SuperBox.
@@ -9,9 +10,9 @@ SuperBox is a new jQuery plugin I've been composing over the last few days. Supe
 SuperBox works wonders as a static image gallery, which you can click to reveal a full version of the image. Each image in the demo is the same size, but SuperBox supports any image size.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SuperBox, 'SuperBox Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/superbox/superbox.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SuperBox, 'SuperBox Download']);">Download</a>
-	<a href="//github.com/toddmotto/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork SuperBox', 'SuperBox Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SuperBox, 'SuperBox Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/superbox/superbox.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SuperBox, 'SuperBox Download']);">Download</a>
+  <a href="//github.com/toddmotto/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork SuperBox', 'SuperBox Fork']);">Fork</a>
 </div>
 
 ### HTML
@@ -19,7 +20,7 @@ The markup is pretty neat and tidy, and to adhere to the CSS challenge faced wit
 
 {% highlight html %}
 <div class="superbox-list">
-	<img src="img/superbox/superbox-thumb-1.jpg" data-img="img/superbox/superbox-full-1.jpg" alt="" class="superbox-img">
+  <img src="img/superbox/superbox-thumb-1.jpg" data-img="img/superbox/superbox-full-1.jpg" alt="" class="superbox-img">
 </div>
 {% endhighlight %}
 
@@ -27,13 +28,13 @@ By default, display:inline-block; creates a gap between elements, which we don't
 
 {% highlight html %}
 <div class="superbox-list">
-	<img src="img/superbox/superbox-thumb-1.jpg" data-img="img/superbox/superbox-full-1.jpg" alt="" class="superbox-img">
+  <img src="img/superbox/superbox-thumb-1.jpg" data-img="img/superbox/superbox-full-1.jpg" alt="" class="superbox-img">
 </div><!--
 --><div class="superbox-list">
-	<img src="img/superbox/superbox-thumb-2.jpg" data-img="img/superbox/superbox-full-2.jpg" alt="" class="superbox-img">
+  <img src="img/superbox/superbox-thumb-2.jpg" data-img="img/superbox/superbox-full-2.jpg" alt="" class="superbox-img">
 </div><!--
 --><div class="superbox-list">
-	<img src="img/superbox/superbox-thumb-3.jpg" data-img="img/superbox/superbox-full-3.jpg" alt="" class="superbox-img">
+  <img src="img/superbox/superbox-thumb-3.jpg" data-img="img/superbox/superbox-full-3.jpg" alt="" class="superbox-img">
 </div>
 {% endhighlight %}
 
@@ -47,10 +48,10 @@ The CSS for each 'box' looks like so, which you can see includes the *display:in
 
 {% highlight css %}
 .superbox-list {
-	display:inline-block;
-	*display:inline;
-	zoom:1;
-	width:12.5%;
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  width:12.5%;
 }
 {% endhighlight %}
 
@@ -64,47 +65,47 @@ The jQuery is pretty simple stuff, and at the minute it's a pretty simple lightw
 
 {% highlight javascript %}
 ;(function($) {
-		
-	$.fn.SuperBox = function(options) {
-		
-		var superbox      = $('<div class="superbox-show"></div>');
-		var superboximg   = $('<img src="" class="superbox-current-img">');
-		var superboxclose = $('<div class="superbox-close"></div>');
-		
-		superbox.append(superboximg).append(superboxclose);
-		
-		return this.each(function() {
-			
-			$('.superbox-list').click(function() {
-		
-				var currentimg = $(this).find('.superbox-img');
-				var imgData = currentimg.data('img');
-				superboximg.attr('src', imgData);
-				
-				if($('.superbox-current-img').css('opacity') == 0) {
-					$('.superbox-current-img').animate({opacity: 1});
-				}
-				
-				if ($(this).next().hasClass('superbox-show')) {
-					superbox.toggle();
-				} else {
-					superbox.insertAfter(this).css('display', 'block');
-				}
-				
-				$('html, body').animate({
-					scrollTop:superbox.position().top - currentimg.width()
-				}, 'medium');
-			
-			});
-						
-			$('.superbox').on('click', '.superbox-close', function() {
-				$('.superbox-current-img').animate({opacity: 0}, 200, function() {
-					$('.superbox-show').slideUp();
-				});
-			});
-			
-		});
-	};
+    
+  $.fn.SuperBox = function(options) {
+    
+    var superbox      = $('<div class="superbox-show"></div>');
+    var superboximg   = $('<img src="" class="superbox-current-img">');
+    var superboxclose = $('<div class="superbox-close"></div>');
+    
+    superbox.append(superboximg).append(superboxclose);
+    
+    return this.each(function() {
+      
+      $('.superbox-list').click(function() {
+    
+        var currentimg = $(this).find('.superbox-img');
+        var imgData = currentimg.data('img');
+        superboximg.attr('src', imgData);
+        
+        if($('.superbox-current-img').css('opacity') == 0) {
+          $('.superbox-current-img').animate({opacity: 1});
+        }
+        
+        if ($(this).next().hasClass('superbox-show')) {
+          superbox.toggle();
+        } else {
+          superbox.insertAfter(this).css('display', 'block');
+        }
+        
+        $('html, body').animate({
+          scrollTop:superbox.position().top - currentimg.width()
+        }, 'medium');
+      
+      });
+            
+      $('.superbox').on('click', '.superbox-close', function() {
+        $('.superbox-current-img').animate({opacity: 0}, 200, function() {
+          $('.superbox-show').slideUp();
+        });
+      });
+      
+    });
+  };
 })(jQuery);
 {% endhighlight %}
 
@@ -112,7 +113,7 @@ You can then call SuperBox like so:
 
 {% highlight javascript %}
 $(function() {
-	$('.superbox').SuperBox();
+  $('.superbox').SuperBox();
 });
 {% endhighlight %}
 
@@ -123,7 +124,7 @@ I've tested SuperBox on all modern browsers, IE7, IE8, IE9 and IE10 and it works
 At the minute SuperBox is pretty flexible and a perfect platform to build upon. I do plan on updating it to include more features in the near future. Should you have ideas for future plugin additions, feel free to get involved and comment, fork or update it.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SuperBox, 'SuperBox Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/superbox/superbox.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SuperBox, 'SuperBox Download']);">Download</a>
-	<a href="//github.com/toddmotto/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork SuperBox', 'SuperBox Fork']);">Fork</a>
+  <a href="//toddmotto.com/labs/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SuperBox, 'SuperBox Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/superbox/superbox.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SuperBox, 'SuperBox Download']);">Download</a>
+  <a href="//github.com/toddmotto/superbox" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork SuperBox', 'SuperBox Fork']);">Fork</a>
 </div>

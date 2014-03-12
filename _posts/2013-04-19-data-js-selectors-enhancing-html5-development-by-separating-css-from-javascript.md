@@ -2,6 +2,7 @@
 layout: post
 permalink: /data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript
 title: data-js selectors, enhancing HTML5 development by separating CSS from JavaScript
+path: 2013-04-19-data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript.md
 ---
 
 I've started introducing a new concept into my JavaScript workflow and I really think it's worth sharing:
@@ -14,9 +15,9 @@ Let's rewind for a second, before CSS documents we were seeing this (inline styl
 
 {% highlight html %}
 <table style="border-top:1px solid #000;">
-	<tr>
-		<td>Oh hey.</td>
-	</tr>
+  <tr>
+    <td>Oh hey.</td>
+  </tr>
 </table>
 {% endhighlight %}
 
@@ -24,11 +25,11 @@ Which then became this (a class defining and attributing a specific style):
 
 {% highlight html %}
 <div class="table-border">
-	<p>Oh hey.</p>
+  <p>Oh hey.</p>
 </div>
 <style>
 .table-border {
-	border-top:1px solid #000;
+  border-top:1px solid #000;
 }
 </style>
 {% endhighlight %}
@@ -44,7 +45,7 @@ For example, you're used to seeing this no doubt:
 
 {% highlight javascript %}
 $('.contact-button').click(function(){
-	alert($(this).text());
+  alert($(this).text());
 });
 {% endhighlight %}
 
@@ -83,7 +84,7 @@ I've defined a new attribute, 'data-js' which will be a consistent naming conven
 
 {% highlight javascript %}
 $('[data-js=click-contact]').click(function(){
-	alert($(this).text());
+  alert($(this).text());
 });
 {% endhighlight %}
 
@@ -115,9 +116,9 @@ Let's revisit that:
 The JavaScript:
 {% highlight javascript %}
 $('[data-js=send-email]').click(function(){
-	$.ajax({
-		// Do some email sending
-	});
+  $.ajax({
+    // Do some email sending
+  });
 });
 {% endhighlight %}
 
@@ -141,13 +142,13 @@ A common part of JavaScript is targeting nested elements, for instance an _&lt;a
 
 {% highlight html %}
 <li class="list-item" data-js="click-list">
-	<a href="#">Account</a>
+  <a href="#">Account</a>
 </li>
 {% endhighlight %}
 
 {% highlight javascript %}
 $('[data-js=click-list] a').click(function(){
-	// Fire event for <a> tag
+  // Fire event for <a> tag
 });
 {% endhighlight %}
 
@@ -161,7 +162,7 @@ We've separated CSS from JavaScript, which gives us a lot more flexibility and e
 
 {% highlight html %}
 <li class="list-item" data-js="click-list">
-	<a href="#">Account</a>
+  <a href="#">Account</a>
 </li>
 {% endhighlight %}
 
@@ -175,7 +176,7 @@ A great comment below from [Kasper Mikiewicz](http://twitter.com/Idered) on how 
 
 {% highlight javascript %}
 $.js = function(el){
-	return $('[data-js=' + el + ']')
+  return $('[data-js=' + el + ']')
 };
 {% endhighlight %}
 
@@ -183,7 +184,7 @@ Simply include that in your scripts file, and use like this:
 
 {% highlight javascript %}
 $.js('click-list').on('click', function() {
-	// Take it away!
+  // Take it away!
 });
 {% endhighlight %}
 

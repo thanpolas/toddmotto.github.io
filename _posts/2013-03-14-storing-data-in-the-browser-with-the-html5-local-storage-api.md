@@ -2,13 +2,14 @@
 layout: post
 permalink: /storing-data-in-the-browser-with-the-html5-local-storage-api
 title: Storing data in the browser with the HTML5 localStorage API
+path: 2013-03-14-storing-data-in-the-browser-with-the-html5-local-storage-api.md
 ---
 
 HTML5 localStorage is an HTML5 API that allows us to save string data in the browser. localStorage is part of the web storage specification, it also has a sister called sessionStorage which is slightly different - but very similar. localStorage stores the data and has no expiration - it's persistent, whereas sessionStorage is limited to the session only, meaning when you close your browser - it's gone. In this tutorial we're going to create a small localStorage app that autosaves your data in the browser.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/html5-local-storage" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 localStorage, 'HTML5 localStorage Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/html5-local-storage/html5-local-storage.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 localStorage, 'HTML5 localStorage Download']);">Download</a>
+  <a href="//toddmotto.com/labs/html5-local-storage" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 localStorage, 'HTML5 localStorage Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/html5-local-storage/html5-local-storage.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 localStorage, 'HTML5 localStorage Download']);">Download</a>
 </div>
 
 ### JavaScript detection
@@ -17,14 +18,14 @@ Before doing anything, it's probably wise to detect whether the browser supports
 {% highlight javascript %}
 // localStorage detection
 function supportsLocalStorage() {
-	return typeof(Storage)!== 'undefined';
+  return typeof(Storage)!== 'undefined';
 }
 
 // Run the support check
 if (!supportsLocalStorage()) {
-	// No HTML5 localStorage Support
+  // No HTML5 localStorage Support
 } else {
-	// HTML5 localStorage Support
+  // HTML5 localStorage Support
 }
 {% endhighlight %}
 
@@ -80,7 +81,7 @@ The above sets an item called 'autosave' which then uses the value of the textar
 
 {% highlight javascript %}
 setInterval(function() {
-	localStorage.setItem('autosave', demo.value);
+  localStorage.setItem('autosave', demo.value);
 }, 1000);
 {% endhighlight %}
 
@@ -89,13 +90,13 @@ localStorage has a quota in which you can hit and no longer store further data, 
 
 {% highlight javascript %}
 try {
-	setInterval(function() {
-		localStorage.setItem('autosave', demo.value);
-	}, 1000);
+  setInterval(function() {
+    localStorage.setItem('autosave', demo.value);
+  }, 1000);
 } catch (e) {
-	if (e == QUOTA_EXCEEDED_ERR) {
-		alert('Quota exceeded!');
-	}
+  if (e == QUOTA_EXCEEDED_ERR) {
+    alert('Quota exceeded!');
+  }
 }
 {% endhighlight %}
 
@@ -114,60 +115,60 @@ Putting the above together, we can create a really simple localStorage app that 
 
 {% highlight javascript %}
 (function() {
-	
-	// Grab the textarea
-	var demo = document.querySelector('.localstorage');
-	
-	// localStorage feature detect
-	function supportsLocalStorage() {
-		return typeof(Storage)!== 'undefined';
-	}
-	
-	// Run the detection with inverted expression
-	if (!supportsLocalStorage()) {
-	
-		// Change the value to inform the user of no support
-		demo.value = 'No HTML5 localStorage support, soz.';
-		
-	} else {
-	
-		// Try this
-		try {
-		
-			// Set the interval and autosave every second
-			setInterval(function() {
-				localStorage.setItem('autosave', demo.value);
-			}, 1000);
+  
+  // Grab the textarea
+  var demo = document.querySelector('.localstorage');
+  
+  // localStorage feature detect
+  function supportsLocalStorage() {
+    return typeof(Storage)!== 'undefined';
+  }
+  
+  // Run the detection with inverted expression
+  if (!supportsLocalStorage()) {
+  
+    // Change the value to inform the user of no support
+    demo.value = 'No HTML5 localStorage support, soz.';
+    
+  } else {
+  
+    // Try this
+    try {
+    
+      // Set the interval and autosave every second
+      setInterval(function() {
+        localStorage.setItem('autosave', demo.value);
+      }, 1000);
 
-		} catch (e) {
-		
-			// If any errors, catch and alert the user
-			if (e == QUOTA_EXCEEDED_ERR) {
-				alert('Quota exceeded!');
-			}
-		}
-		
-		// If there is data available
-		if (localStorage.getItem('autosave')) {
-		
-			// Retrieve the item
-			demo.value = localStorage.getItem('autosave');
-		}
-		
-		// Clear button, onclick handler
-		document.querySelector('.clear').onclick = function() {
-			demo.value = '';
-			localStorage.removeItem('autosave');
-		};
-		
-		// Empty button, onclick handler
-		document.querySelector('.empty').onclick = function() {
-			demo.value = '';
-			localStorage.clear();	
-		};
-		
-	}
-	
+    } catch (e) {
+    
+      // If any errors, catch and alert the user
+      if (e == QUOTA_EXCEEDED_ERR) {
+        alert('Quota exceeded!');
+      }
+    }
+    
+    // If there is data available
+    if (localStorage.getItem('autosave')) {
+    
+      // Retrieve the item
+      demo.value = localStorage.getItem('autosave');
+    }
+    
+    // Clear button, onclick handler
+    document.querySelector('.clear').onclick = function() {
+      demo.value = '';
+      localStorage.removeItem('autosave');
+    };
+    
+    // Empty button, onclick handler
+    document.querySelector('.empty').onclick = function() {
+      demo.value = '';
+      localStorage.clear(); 
+    };
+    
+  }
+  
 })();
 {% endhighlight %}
 
@@ -180,6 +181,6 @@ The web storage API was implemented a few years back now, and as such was integr
 Those times you've filled out forms, the internet dies, or you accidentally refreshed, gone back, an error occured and wiped the form - gone! What's even better is that you can even turn off your computer, disconnect from the internet - everything - and it'll still be there when you come back. Try it on the demo, type anything you want, refresh, reboot, have a play - and download should you feel you can use it in any of your projects.
 
 <div class="download-box">
-	<a href="//toddmotto.com/labs/html5-local-storage" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 localStorage, 'HTML5 localStorage Demo']);">Demo</a>
-	<a href="//toddmotto.com/labs/html5-local-storage/html5-local-storage.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 localStorage, 'HTML5 localStorage Download']);">Download</a>
+  <a href="//toddmotto.com/labs/html5-local-storage" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo HTML5 localStorage, 'HTML5 localStorage Demo']);">Demo</a>
+  <a href="//toddmotto.com/labs/html5-local-storage/html5-local-storage.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download HTML5 localStorage, 'HTML5 localStorage Download']);">Download</a>
 </div>
