@@ -2,7 +2,6 @@
 layout: post
 permalink: /building-an-html5-responsive-menu-with-media-queries-javascript
 title: Building an HTML5 responsive menu with media queries and JavaScript
-path: 2013-03-12-building-an-html5-responsive-menu-with-media-queries-javascript.md
 ---
 
 ### Responsive menus
@@ -12,8 +11,8 @@ Responsive navigation menus come in all different shapes and sizes, you might re
 Edit: If you're looking for an even better responsive navigation that supports nested menus, check out my [Flaunt JS script](http://toddmotto.com/flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal).
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav, 'Responsive Nav Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav, 'Responsive Nav Download']);">Download</a>
+	<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav, 'Responsive Nav Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav, 'Responsive Nav Download']);">Download</a>
 </div>
 
 ### What is 'in-page' navigation?
@@ -27,15 +26,15 @@ Let's break out the HTML5 elements and create a neat and basic menu:
 
 {% highlight html %}
 <nav class="nav">
-  <ul class="nav-list">
-    <li class="nav-item"><a href="#">Home</a></li>
-    <li class="nav-item"><a href="#">About</a></li>
-    <li class="nav-item"><a href="#">Services</a></li>
-    <li class="nav-item"><a href="#">Portfolio</a></li>
-    <li class="nav-item"><a href="#">Testimonials</a></li>
-    <li class="nav-item"><a href="#">Contact</a></li>
-  </ul>
-</nav>  
+	<ul class="nav-list">
+		<li class="nav-item"><a href="#">Home</a></li>
+		<li class="nav-item"><a href="#">About</a></li>
+		<li class="nav-item"><a href="#">Services</a></li>
+		<li class="nav-item"><a href="#">Portfolio</a></li>
+		<li class="nav-item"><a href="#">Testimonials</a></li>
+		<li class="nav-item"><a href="#">Contact</a></li>
+	</ul>
+</nav>	
 {% endhighlight %}
 
 Here I've used a nice naming convention on our navigation, unordered list and items inside. This gives us nice and easy CSS targeting.
@@ -47,36 +46,36 @@ First I am going to add some basic styling to the nav:
 
 {% highlight css %}
 .nav {
-  position:relative;
-  display:inline-block;
-  font-size:14px;
-  font-weight:900;
+	position:relative;
+	display:inline-block;
+	font-size:14px;
+	font-weight:900;
 }
 .nav-list {
-  
+	
 }
 .nav-item {
-  float:left;
-  *display:inline;
-  zoom:1;
+	float:left;
+	*display:inline;
+	zoom:1;
 }
 .nav-item a {
-  display:block;
-  padding:15px 20px;
-  color:#FFF;
-  background:#34495E;
+	display:block;
+	padding:15px 20px;
+	color:#FFF;
+	background:#34495E;
 }
 .nav-item:first-child a {
-  border-radius:5px 0 0 5px;
+	border-radius:5px 0 0 5px;
 }
 .nav-item:last-child a {
-  border-radius:0 5px 5px 0;
+	border-radius:0 5px 5px 0;
 }
 .nav-item a:hover {
-  background:#2C3E50;
+	background:#2C3E50;
 }
 {% endhighlight %}
-  
+	
 You'll notice .nav has the 'display:inline-block' property, this is so it centralises in the page for the demo, and isn't entirely necessary for production.
 
 This sets out a nice deep grey/blue coloured navigation for us to work with on the desktop. Done. But now we need a mobile navigation.
@@ -90,16 +89,16 @@ This doesn't require much fiddling, but we've introduced a media query:
 
 {% highlight css %}
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .nav {
-    width:100%;
-  }
-  .nav-item {
-    width:100%;
-    float:none;
-  }
+	.nav {
+		width:100%;
+	}
+	.nav-item {
+		width:100%;
+		float:none;
+	}
 }
 {% endhighlight %}
-  
+	
 Depending on the design of your project, you might need to use different media queries, but essentially, this media query saves us from undoing/redoing later styles that we need to re-apply. It tells the browser two things; 1) any styles above 320px, use this styles, and 2) don't show these styles to anything above 768px, which is anything larger than iPad. This is a pretty good use of the min-width and max-width CSS3 media queries as you can achieve a lot with very little.
 
 What the above CSS does is change our inline navigation items into full-width and stacked items, just what we need.
@@ -121,20 +120,20 @@ Now we need to style the clickable icon:
 
 {% highlight css %}
 .nav-mobile {
-  display:none; /* Hide from browsers that don't support media queries */
-  cursor:pointer;
-  position:absolute;
-  top:0;
-  right:0;
-  background:#34495E url(../img/nav.svg) no-repeat center center;
-  height:40px;
-  width:40px;
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+	background:#34495E url(../img/nav.svg) no-repeat center center;
+	height:40px;
+	width:40px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
 }
 {% endhighlight %}
-  
+	
 I've added these styles in the main area of the CSS, not inside any media queries. This is so that the menu can be styled in the main CSS area, and literally tweaked inside our media queries for easy management. It also benefits us again because if you were to style it inside a media query, older browsers would ignore it leaving it unstyled and randomly placed element - which is why it includes 'display:none;' by default. This method I've found to be the best.
 
 Using an [SVG](http://toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script/) again (pretty confident most browsers will support SVG and media queries, so let's use it) we create a scalable 'three-line' icon. This means we don't have to do any further optimisation for retina displays.
@@ -143,9 +142,9 @@ Going back to our media query, we need to tell it to show our mobile icon for ou
 
 {% highlight css %}
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .nav-mobile {
-    display:block;
-  }
+	.nav-mobile {
+		display:block;
+	}
 }
 {% endhighlight %}
 
@@ -153,12 +152,12 @@ This simply shows it to the user. But we now we to hide our dropdown list that's
 
 {% highlight css %}
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .nav-list {
-    display:none;
-  }
+	.nav-list {
+		display:none;
+	}
 }
 {% endhighlight %}
-  
+	
 Obviously I wouldn't use a separate media query for each one here, but you can see how it works and where we include the declarations.
 
 Now our button is visible, and our navigation list is hidden, let's move on...
@@ -173,12 +172,12 @@ I'm going to setup a really simple onclick handler to toggle a new 'nav-active' 
 {% highlight javascript %}
 // hasClass
 function hasClass(elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 }
 
 // toggleClass
 function toggleClass(elem, className) {
-  var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+	var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
     if (hasClass(elem, className)) {
         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
             newClass = newClass.replace(' ' + className + ' ', ' ');
@@ -189,18 +188,18 @@ function toggleClass(elem, className) {
     }
 }
 {% endhighlight %}
-  
+	
 I'll then use the toggleClass method in my onclick handler (using the querySelector again to grab the elements):
 
 {% highlight javascript %}
 var mobileNav = document.querySelector('.nav-mobile');
 var toggle = document.querySelector('.nav-list');
 mobileNav.onclick = function() {
-  toggleClass(this, 'nav-mobile-open');
-  toggleClass(toggle, 'nav-active');
+	toggleClass(this, 'nav-mobile-open');
+	toggleClass(toggle, 'nav-active');
 }
 {% endhighlight %}
-  
+	
 And that's it. JavaScript and mobile performance is amazing, no lagging/juttering as the navigation menu is opened or closed, and we've successfuly created a great foundation to extend a responsive navigation menu for any project.
 
 The great thing about mobile is they also interpret hover as a touch method, which means if you wanted to add hover capabilities to another nested menu (just like a secondary nested dropdown you could get away with using :hover pseudo selectors to display the nested content).
@@ -209,7 +208,7 @@ Here's the full script for the above tutorial:
 
 {% highlight javascript %}
 (function () {
-    
+		
     // Create mobile element
     var mobile = document.createElement('div');
     mobile.className = 'nav-mobile';
@@ -244,6 +243,6 @@ Here's the full script for the above tutorial:
 {% endhighlight %}
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav, 'Responsive Nav Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav, 'Responsive Nav Download']);">Download</a>
+	<a href="//toddmotto.com/labs/responsive-nav" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Nav, 'Responsive Nav Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/responsive-nav/responsive-nav.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Responsive Nav, 'Responsive Nav Download']);">Download</a>
 </div>

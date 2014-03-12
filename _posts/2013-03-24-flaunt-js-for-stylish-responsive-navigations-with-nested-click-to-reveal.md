@@ -2,7 +2,6 @@
 layout: post
 permalink: /flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal
 title: Flaunt.js for stylish responsive navigations with nested click-to-reveal
-path: 2013-03-24-flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal.md
 ---
 
 Flaunt.js is a jQuery script that allows you to create a responsive, nested navigation out the box. Flaunt was built to overcome responsive design challenges which faced a huge percentage of websites. This challenge was to show nested navigation items on click-demand, without the event taking you through to the page you've pressed...
@@ -10,9 +9,9 @@ Flaunt.js is a jQuery script that allows you to create a responsive, nested navi
 For instance, let's say 'Services' is a top level menu item, and the nested navigation are the list of services, once clicked on the 'Services' tab, this will then direct you to 'services.php' won't it. But how does someone visit an individual services page when the nested items are hidden, on a _touch_ device? They can't rely on :hover pseudo selectors for this - so let's look at what Flaunt does.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Flaunt, 'Flaunt Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/flaunt-js/flaunt-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Flaunt, 'Flaunt Download']);">Download</a>
-  <a href="//github.com/toddmotto/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Flaunt', 'Flaunt Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Flaunt, 'Flaunt Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/flaunt-js/flaunt-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Flaunt, 'Flaunt Download']);">Download</a>
+	<a href="//github.com/toddmotto/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Flaunt', 'Flaunt Fork']);">Fork</a>
 </div>
 
 Taking the same skeleton from my [earlier post on responsive navigation](http://toddmotto.com/building-an-html5-responsive-menu-with-media-queries-javascript), Flaunt is a script built so you can flaunt awesomely clever design on your site in seconds, whilst overcoming design/functionality hurdles.
@@ -23,54 +22,54 @@ Let's establish the markup to see how Flaunt will benefit us:
 {% highlight html %}
 <!-- Nav -->
 <nav class="nav">
-  <ul class="nav-list">
-    <li class="nav-item">
-      <a href="?=home">Home</a>
-      <ul class="nav-submenu">
-        <li class="nav-submenu-item">
-          <a href="?=submenu-1">Submenu item 1</a>
-        </li>
-        <li class="nav-submenu-item">
-          <a href="?=submenu-2">Submenu item 2</a>
-        </li>
-        <li class="nav-submenu-item">
-          <a href="?=submenu-3">Submenu item 3</a>
-        </li>
-        <li class="nav-submenu-item">
-          <a href="?=submenu-4">Submenu item 4</a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav-item">
-      <a href="?=about">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="?=services">Services</a>
-      <ul class="nav-submenu">
-        <li class="nav-submenu-item">
-          <a href="?=submenu-1">Submenu item 1</a>
-        </li>
-        <li class="nav-submenu-item">
-          <a href="?=submenu-2">Submenu item 2</a>
-        </li>
-        <li class="nav-submenu-item">
-          <a href="?=submenu-3">Submenu item 3</a>
-        </li>
-        <li class="nav-submenu-item">
-          <a href="?=submenu-4">Submenu item 4</a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav-item">
-      <a href="?=portfolio">Portfolio</a>
-    </li>
-    <li class="nav-item">
-      <a href="?=testimonials">Testimonials</a>
-    </li>
-    <li class="nav-item">
-      <a href="?=contact">Contact</a>
-    </li>
-  </ul>
+	<ul class="nav-list">
+		<li class="nav-item">
+			<a href="?=home">Home</a>
+			<ul class="nav-submenu">
+				<li class="nav-submenu-item">
+					<a href="?=submenu-1">Submenu item 1</a>
+				</li>
+				<li class="nav-submenu-item">
+					<a href="?=submenu-2">Submenu item 2</a>
+				</li>
+				<li class="nav-submenu-item">
+					<a href="?=submenu-3">Submenu item 3</a>
+				</li>
+				<li class="nav-submenu-item">
+					<a href="?=submenu-4">Submenu item 4</a>
+				</li>
+			</ul>
+		</li>
+		<li class="nav-item">
+			<a href="?=about">About</a>
+		</li>
+		<li class="nav-item">
+			<a href="?=services">Services</a>
+			<ul class="nav-submenu">
+				<li class="nav-submenu-item">
+					<a href="?=submenu-1">Submenu item 1</a>
+				</li>
+				<li class="nav-submenu-item">
+					<a href="?=submenu-2">Submenu item 2</a>
+				</li>
+				<li class="nav-submenu-item">
+					<a href="?=submenu-3">Submenu item 3</a>
+				</li>
+				<li class="nav-submenu-item">
+					<a href="?=submenu-4">Submenu item 4</a>
+				</li>
+			</ul>
+		</li>
+		<li class="nav-item">
+			<a href="?=portfolio">Portfolio</a>
+		</li>
+		<li class="nav-item">
+			<a href="?=testimonials">Testimonials</a>
+		</li>
+		<li class="nav-item">
+			<a href="?=contact">Contact</a>
+		</li>
+	</ul>
 </nav>
 <!-- /Nav -->
 {% endhighlight %}
@@ -82,7 +81,7 @@ First I'm going to take a plugin coding style to the approach, wrapping the jQue
 
 {% highlight javascript %}
 ;(function($) {
-  // Go jQuery
+	// Go jQuery
 })(jQuery);
 {% endhighlight %}
 
@@ -93,11 +92,11 @@ I'm going to take this frame, and add a DOM ready wrapper inside it also so it f
 {% highlight javascript %}
 ;(function($) {
 
-  // DOM ready
-  $(function() {
-    // Go jQuery
-  });
-  
+	// DOM ready
+	$(function() {
+		// Go jQuery
+	});
+	
 })(jQuery);
 {% endhighlight %}
 
@@ -121,21 +120,21 @@ Our newly created &lt;span&gt; and &lt;i&gt; elements will act as our clickable 
 
 {% highlight css %}
 .nav-click {
-  position:absolute;
-  top:0;
-  right:0;
-  display:none;
-  border-left:1px solid #8B2870;
-  height:49px;
-  width:50px;
-  cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+	display:none;
+	border-left:1px solid #8B2870;
+	height:49px;
+	width:50px;
+	cursor:pointer;
 }
 .nav-click i {
-  display:block;
-  height:48px;
-  width:48px;
-  background:url(../img/drop.svg) no-repeat center center;
-  background-size:20px;
+	display:block;
+	height:48px;
+	width:48px;
+	background:url(../img/drop.svg) no-repeat center center;
+	background-size:20px;
 }
 {% endhighlight %}
 
@@ -145,7 +144,7 @@ Now the elements are in place and good to ship, we need to add some functionalit
 
 {% highlight javascript %}
 $('.nav-mobile').click(function(){
-  $('.nav-list').toggle();
+	$('.nav-list').toggle();
 });
 {% endhighlight %}
 
@@ -163,7 +162,7 @@ $('.nav-list').on('click');
 
 {% highlight javascript %}
 $('.nav-list').on('click', '.nav-click', function(){
-  // Dynamic events
+	// Dynamic events
 });
 {% endhighlight %}
 
@@ -183,11 +182,11 @@ The above targets our dynamically created &lt;i&gt; element, which we flip upsid
 
 {% highlight css %}
 .nav-rotate {
-  -webkit-transform:rotate(180deg);
-  -moz-transform:rotate(180deg);
-  -ms-transform:rotate(180deg);
-  -o-transform:rotate(180deg);
-  transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
 }
 {% endhighlight %}
 
@@ -198,9 +197,9 @@ This navigation was meant to be built to overcome hover events on touch devices,
 
 {% highlight css %}
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .nav-item:hover .nav-submenu {
-    display:none;
-  }
+	.nav-item:hover .nav-submenu {
+		display:none;
+	}
 }
 {% endhighlight %}
 
@@ -212,9 +211,9 @@ I'll be honest, I ran into the above problem and only managed to fix it with the
 {% highlight javascript %}
 var clicks = $(this).data('clicks');
 if (!clicks) {
-  $(this).siblings('.nav-submenu').attr('style','display: block !important');
+	$(this).siblings('.nav-submenu').attr('style','display: block !important');
 } else {
-  $(this).siblings('.nav-submenu').removeAttr('style');
+	$(this).siblings('.nav-submenu').removeAttr('style');
 }
 $(this).data('clicks', !clicks);
 {% endhighlight %}
@@ -223,7 +222,7 @@ This effectively simulates odd and even clicks, allowing me to use an overpoweri
 
 {% highlight css %}
 .nav-submenu {
-  display:none !important;
+	display:none !important;
 }
 {% endhighlight %}
 
@@ -235,40 +234,40 @@ Putting the above together, you can see the final solution:
 {% highlight javascript %}
 ;(function($) {
 
-  // DOM ready
-  $(function() {
-    
-    // Append the mobile icon nav
-    $('.nav').append($('<div class="nav-mobile"></div>'));
-    
-    // Add a <span> to every .nav-item that has a <ul> inside
-    $('.nav-item').has('ul').prepend('<span class="nav-click"><i class="nav-arrow"></i></span>');
-    
-    // Click to reveal the nav
-    $('.nav-mobile').click(function(){
-      $('.nav-list').toggle();
-    });
-  
-    // Dynamic binding to on 'click'
-    $('.nav-list').on('click', '.nav-click', function(){
-    
-      // Toggle the nested nav
-      $(this).siblings('.nav-submenu').toggle();
-      
-      // Toggle the arrow using CSS3 transforms
-      $(this).children('.nav-arrow').toggleClass('nav-rotate');
-      
-    });
-      
-  });
-  
+	// DOM ready
+	$(function() {
+		
+		// Append the mobile icon nav
+		$('.nav').append($('<div class="nav-mobile"></div>'));
+		
+		// Add a <span> to every .nav-item that has a <ul> inside
+		$('.nav-item').has('ul').prepend('<span class="nav-click"><i class="nav-arrow"></i></span>');
+		
+		// Click to reveal the nav
+		$('.nav-mobile').click(function(){
+			$('.nav-list').toggle();
+		});
+	
+		// Dynamic binding to on 'click'
+		$('.nav-list').on('click', '.nav-click', function(){
+		
+			// Toggle the nested nav
+			$(this).siblings('.nav-submenu').toggle();
+			
+			// Toggle the arrow using CSS3 transforms
+			$(this).children('.nav-arrow').toggleClass('nav-rotate');
+			
+		});
+	    
+	});
+	
 })(jQuery);
 {% endhighlight %}
 
 Suggestions, improvements, you can comment or Fork the project.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Flaunt, 'Flaunt Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/flaunt-js/flaunt-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Flaunt, 'Flaunt Download']);">Download</a>
-  <a href="//github.com/toddmotto/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Flaunt', 'Flaunt Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Flaunt, 'Flaunt Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/flaunt-js/flaunt-js.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Flaunt, 'Flaunt Download']);">Download</a>
+	<a href="//github.com/toddmotto/flaunt-js" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Flaunt', 'Flaunt Fork']);">Fork</a>
 </div>

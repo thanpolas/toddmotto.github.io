@@ -2,7 +2,6 @@
 layout: post
 permalink: /revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris
 title: Revisiting SVG workflow for performance and progressive development with transparent data URIs
-path: 2013-05-30-revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris.md
 ---
 
 A few months ago I covered a range of [SVG techniques](//toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script) that proved to be a great progression for developers looking to 'get into' SVG development. For those who are new to web development or SVG in general, give it a good read and then drop back to this article to help take you to the next phase.
@@ -35,7 +34,7 @@ Time for a new idea:
 
 {% highlight javascript %}
 !function () {
-  function supportsSVG() { return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect }
+	function supportsSVG() { return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect }
     if (supportsSVG()) document.documentElement.className += ' svg'
     else document.documentElement.className += ' no-svg'
 }()
@@ -47,7 +46,7 @@ To be fair, if we're only going to use _svg_ progressive enhancement techniques,
 
 {% highlight javascript %}
 !function () {
-  function supportsSVG() { return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect }
+	function supportsSVG() { return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect }
     if (supportsSVG()) document.documentElement.className += ' svg'
 }()
 {% endhighlight %}
@@ -63,9 +62,9 @@ With the accompanying CSS for example:
 
 {% highlight css %}
 .chromium {
-  background:url(//ssl.google.com/imagepath.png) no-repeat;
-  width:250px;
-  height:250px;
+	background:url(//ssl.google.com/imagepath.png) no-repeat;
+	width:250px;
+	height:250px;
 }
 {% endhighlight %}
 
@@ -94,24 +93,24 @@ So far, I've covered a better SVG detect, and a better way to use icons and imag
 
 {% highlight html %}
 <html class=" svg">
-  <head>
-    <script>
-      !function () {
-        function supportsSVG() { return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect }
-          if (supportsSVG()) document.documentElement.className += ' svg'
-      }()
-    </script>
-    <style>
-      .chromium {
-        background:url(//ssl.google.com/imagepath.png) no-repeat;
-        width:250px;
-        height:250px;
-      }
-    </style>
-  </head>
-  <body>
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="chromium">
-  </body>
+	<head>
+		<script>
+			!function () {
+				function supportsSVG() { return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect }
+			    if (supportsSVG()) document.documentElement.className += ' svg'
+			}()
+		</script>
+		<style>
+			.chromium {
+				background:url(//ssl.google.com/imagepath.png) no-repeat;
+				width:250px;
+				height:250px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="chromium">
+	</body>
 </html>
 {% endhighlight %}
 
@@ -125,12 +124,12 @@ Now we add the SVG optimisation:
 
 {% highlight css %}
 .chromium {
-  background:url(//ssl.google.com/imagepath.png) no-repeat;
-  width:250px;
-  height:250px;
+	background:url(//ssl.google.com/imagepath.png) no-repeat;
+	width:250px;
+	height:250px;
 }
 .svg .chromium {
-  background:url(//ssl.google.com/imagepath.svg) no-repeat;
+	background:url(//ssl.google.com/imagepath.svg) no-repeat;
 }
 {% endhighlight %}
 
@@ -145,13 +144,13 @@ With the introduction of the new Chrome Pixel, x2 optimisation isn't enough - SV
 
 {% highlight css %}
 .chromium {
-  background:url(//ssl.google.com/imagepath.png) no-repeat;
-  width:250px;
-  height:250px;
+	background:url(//ssl.google.com/imagepath.png) no-repeat;
+	width:250px;
+	height:250px;
 }
 .svg .chromium {
-  background:url(//ssl.google.com/imagepath.svg) no-repeat;
-  background-size:250px 250px;
+	background:url(//ssl.google.com/imagepath.svg) no-repeat;
+	background-size:250px 250px;
 }
 {% endhighlight %}
 
@@ -165,13 +164,13 @@ I'm a recent convert to Sass, and I love it. It's really easy to optimise all yo
 
 {% highlight css %}
 .chromium {
-  background:url(//toddmotto.com/img/posts/chromium.png) no-repeat;
+	background:url(//toddmotto.com/img/posts/chromium.png) no-repeat;
     width:250px;
     height:250px;
-  .svg & {
-    background:url(//toddmotto.com/img/posts/chromium.svg) no-repeat;
-    background-size:250px 250px;
-  }
+	.svg & {
+		background:url(//toddmotto.com/img/posts/chromium.svg) no-repeat;
+		background-size:250px 250px;
+	}
 }
 {% endhighlight %}
 

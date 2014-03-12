@@ -2,7 +2,6 @@
 layout: post
 permalink: /psswrd-the-show-hide-password-javascript-plugin
 title: Psswrd, the show/hide password JavaScript plugin
-path: 2013-07-20-psswrd-the-show-hide-password-javascript-plugin.md
 ---
 
 Show/hide toggling for password inputs. Psswrd is a neat little script I've put together to aid in better user experience when users are completing your forms or actioning things inside web apps. For instance, instead of another irritating 'confirm password' field, we provide a 'show password' for them to double-check before signing up, logging in, filling out various 'secret questions', or whatever else you can think of.
@@ -10,9 +9,9 @@ Show/hide toggling for password inputs. Psswrd is a neat little script I've put 
 Psswrd is a small script (1KB minified) that does exactly that. It's also really easy to integrate. It might not be an everyday usage script, but it certainly has it's place. At the minute, there are no simple to integrate scripts that are written in raw JavaScript, most are jQuery dependent - so I wanted to mix it up and go all out on raw JS.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Psswrd', 'Psswrd Demo']);">Demo</a>
-  <a href="//github.com/toddmotto/psswrd/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Psswrd', 'Download Psswrd']);">Download</a>
-  <a href="//github.com/toddmotto/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Psswrd', 'Psswrd Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Psswrd', 'Psswrd Demo']);">Demo</a>
+	<a href="//github.com/toddmotto/psswrd/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Psswrd', 'Download Psswrd']);">Download</a>
+	<a href="//github.com/toddmotto/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Psswrd', 'Psswrd Fork']);">Fork</a>
 </div>
 
 ### Configuring Psswrd
@@ -247,7 +246,7 @@ I originally went for a _&lt;div&gt;_ for the text holder, but instead used the 
 Psswrd was built so you can have as many of the fields or even forms on the page, which means the possibilities are endless for whatever you're setting out to achieve.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Psswrd', 'Psswrd Demo']);">Demo</a>
-  <a href="//github.com/toddmotto/psswrd/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Psswrd', 'Download Psswrd']);">Download</a>
-  <a href="//github.com/toddmotto/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Psswrd', 'Psswrd Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Psswrd', 'Psswrd Demo']);">Demo</a>
+	<a href="//github.com/toddmotto/psswrd/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download Psswrd', 'Download Psswrd']);">Download</a>
+	<a href="//github.com/toddmotto/psswrd" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork Psswrd', 'Psswrd Fork']);">Fork</a>
 </div>

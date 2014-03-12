@@ -2,7 +2,6 @@
 layout: post
 permalink: /attaching-event-handlers-to-dynamically-created-javascript-elements
 title: Attaching event handlers to dynamically created JavaScript elements
-path: 2013-03-05-attaching-event-handlers-to-dynamically-created-javascript-elements.md
 ---
 
 When working with JavaScript, you can sometimes need to create new elements on-the-fly, and from that, you'll need to do something with that new element. It might be a click, which more often than not will need to execute a function.
@@ -10,8 +9,8 @@ When working with JavaScript, you can sometimes need to create new elements on-t
 The problem with dynamically created elements, is that they aren't born with the same event handlers as the existing elements. Let's say we have a list of items that you could click on to toggle/add a class name, when a new element is created and appended to that same list - it won't work - the event handler attachment is missing. This tutorial is going to cover a pure JavaScript way of dynamically attaching event handlers to newly created elements, so they merge in seamlessly with your other elements.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/js-event-handlers" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JS Event Handlers, 'JS Event Handlers Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/js-event-handlers/js-event-handlers.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JS Event Handlers, 'JS Event Handlers Download']);">Download</a>
+	<a href="//toddmotto.com/labs/js-event-handlers" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JS Event Handlers, 'JS Event Handlers Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/js-event-handlers/js-event-handlers.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JS Event Handlers, 'JS Event Handlers Download']);">Download</a>
 </div>
 
 ### Creating some markup
@@ -32,7 +31,7 @@ To create an onclick function is simple, we just target our element, and setup a
 {% highlight javascript %}
 var element = document.getElementById('id');
 element.onclick = function() {
-  // onclick stuff
+	// onclick stuff
 }
 {% endhighlight %}
 
@@ -42,7 +41,7 @@ It's good practice to setup functions separately and then call them like so, esp
 var element = document.getElementById('id');
 
 function myFunction() {
-  // onclick stuff
+	// onclick stuff
 }
 
 element.onclick = myFunction; // Assigned
@@ -57,7 +56,7 @@ First I'm going to setup querySelector, a native DOM selector, in a jQuery-style
 {% highlight javascript %}
 // querySelector, jQuery style
 var $ = function (selector) {
-  return document.querySelector(selector);
+	return document.querySelector(selector);
 };
 {% endhighlight %}
 
@@ -70,11 +69,11 @@ Using querySelector, let's target our #links ID, and then find the list elements
 
 {% highlight javascript %}
 var links = $('#links').getElementsByTagName('li');
-      
+			
 // For each <li> inside #links
 for (var i = 0; i < links.length; i++) {
-  var link = links[i];
-  link.onclick = myFunction;
+	var link = links[i];
+	link.onclick = myFunction;
 }
 {% endhighlight %}
 
@@ -82,8 +81,8 @@ That's great, but let's add a real function called dynamicEvent:
 
 {% highlight javascript %}
 function dynamicEvent() {
-  this.innerHTML = 'Dynamic event success.';
-  this.className += ' dynamic-success';
+	this.innerHTML = 'Dynamic event success.';
+	this.className += ' dynamic-success';
 }
 
 // Assign it like so (this will be inside the loop)
@@ -127,63 +126,63 @@ For anyone interested to see how the demo works, utilising the steps above, you 
 
 {% highlight javascript %}
 (function(){
-    
-  // querySelector, jQuery style
-  var $ = function (selector) {
-    return document.querySelector(selector);
-  };
-  
-  // Create function outside loop
-  function dynamicEvent() {
-    this.innerHTML = 'Dynamic event success.';
-    this.className += ' dynamic-success';
-  }
-  
-  // Iterate over #links <li>
-  // Use querySelector to target #links and then get tag names <li>
-  var links = $('#links').getElementsByTagName('li');
-  
-  // For each <li> inside #links
-  for (var i = 0; i < links.length; i++) {
-    var link = links[i];
-    
-    // <li> onclick, runAlert function
-    link.onclick = dynamicEvent;
-  }
-  
-  // Onsubmit
-  $('.generate').onsubmit = function() {
-  
-    // Grab the input value
-    var dynamicValue = $('.generate-input').value;
-    
-    // If empty value
-    if(!dynamicValue) {
-    
-      alert('Please enter something.');
-      
-    } else {
-    
-      // Change the submit value
-      $('.generate-submit').value = 'Click your item below!';
-      
-      // Create the links with the input value as innerHTML
-      var li = document.createElement('li');
-      li.className = 'dynamic-link';
-      li.innerHTML = dynamicValue;
-      
-      // Append it and attach the event (via onclick)
-      $('#links').appendChild(li);
-      li.onclick = dynamicEvent;
-    }
-    
-    // Prevent the form submitting
-    return false;
-  }
+		
+	// querySelector, jQuery style
+	var $ = function (selector) {
+		return document.querySelector(selector);
+	};
+	
+	// Create function outside loop
+	function dynamicEvent() {
+		this.innerHTML = 'Dynamic event success.';
+		this.className += ' dynamic-success';
+	}
+	
+	// Iterate over #links <li>
+	// Use querySelector to target #links and then get tag names <li>
+	var links = $('#links').getElementsByTagName('li');
+	
+	// For each <li> inside #links
+	for (var i = 0; i < links.length; i++) {
+		var link = links[i];
+		
+		// <li> onclick, runAlert function
+		link.onclick = dynamicEvent;
+	}
+	
+	// Onsubmit
+	$('.generate').onsubmit = function() {
+	
+		// Grab the input value
+		var dynamicValue = $('.generate-input').value;
+		
+		// If empty value
+		if(!dynamicValue) {
+		
+			alert('Please enter something.');
+			
+		} else {
+		
+			// Change the submit value
+			$('.generate-submit').value = 'Click your item below!';
+			
+			// Create the links with the input value as innerHTML
+			var li = document.createElement('li');
+			li.className = 'dynamic-link';
+			li.innerHTML = dynamicValue;
+			
+			// Append it and attach the event (via onclick)
+			$('#links').appendChild(li);
+			li.onclick = dynamicEvent;
+		}
+		
+		// Prevent the form submitting
+		return false;
+	}
 })();
 {% endhighlight %}
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/js-event-handlers" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JS Event Handlers, 'JS Event Handlers Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/js-event-handlers/js-event-handlers.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JS Event Handlers, 'JS Event Handlers Download']);">Download</a>
+	<a href="//toddmotto.com/labs/js-event-handlers" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JS Event Handlers, 'JS Event Handlers Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/js-event-handlers/js-event-handlers.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JS Event Handlers, 'JS Event Handlers Download']);">Download</a>
 </div>

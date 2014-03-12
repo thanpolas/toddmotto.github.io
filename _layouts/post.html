@@ -12,12 +12,7 @@ layout: default
         <div class="full-post__date">
           <p>{{ page.date | date: "%B %d, %Y" }}</p>
         </div>
-        <h1 class="full-post__title">
-          {{ page.title }}
-          <a href="//github.com/toddmotto/toddmotto.github.io/blob/master/_posts/{{ page.path }}">
-            Edit this page on GitHub
-          </a>
-        </h1>
+        <h1 class="full-post__title">{{ page.title }}</h1>
         {{ content }}
         <div class="social">
           <div class="social__button">

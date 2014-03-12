@@ -4,7 +4,6 @@ author: Todd Motto
 layout: post
 permalink: /jresize-plugin-for-one-window-responsive-development
 disqus: http://www.toddmotto.com/jresize-plugin-for-one-window-responsive-development
-path: 2012-10-28-jresize-plugin-for-one-window-responsive-development.md
 --- 
 
 jResize is a responsive web development tool, built in jQuery to assist the workflow of developers on responsive projects. There are various tools for responsive development, iframes at different widths embedded in the page, and the tedious resizing of the browser. So here’s a different approach which grabs all your HTML, and resizes it inside the browser when you click the width you want. It’s dead simple.
@@ -12,9 +11,9 @@ jResize is a responsive web development tool, built in jQuery to assist the work
 #### Updated! Use jResize in the browser too, without installation: [Browser Development][1]
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/responsive" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Dev Tool', 'Responsive Dev Tool Demo']);">Browser Version</a>
-  <a href="//toddmotto.com/labs/jresize" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jResize', 'jResize Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/jresize/jresize.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jResize', 'jResize Download']);">Download</a>
+	<a href="//toddmotto.com/labs/responsive" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Dev Tool', 'Responsive Dev Tool Demo']);">Browser Version</a>
+	<a href="//toddmotto.com/labs/jresize" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jResize', 'jResize Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/jresize/jresize.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jResize', 'jResize Download']);">Download</a>
 </div>
 
 Let’s talk you through the plugin.
@@ -128,11 +127,11 @@ Simply include jresize.js in your page (in the download) and call it like so:
 <script src="js/jresize.js"></script>
 <script>
 $(function() {
-  $.jResize({
-    viewPortSizes   : ['320px', '480px', '540px', '600px', '768px', '960px', '1024px', '1280px'], // ViewPort Widths
-    backgroundColor : '444', // HEX Code
-    fontColor       : 'FFF' // HEX Code
-  });
+	$.jResize({
+		viewPortSizes   : ['320px', '480px', '540px', '600px', '768px', '960px', '1024px', '1280px'], // ViewPort Widths
+		backgroundColor : '444', // HEX Code
+		fontColor       : 'FFF' // HEX Code
+	});
 });
 </script>
 {% endhighlight %}
@@ -142,8 +141,8 @@ $(function() {
 Nothing major, just thinking in terms of scrollbars. Mac OS X (which I use) tends not to have scrollbars that are visible or take up content space, so if you’re using a browser such as FireFox, or a Windows machine where scrollbars are standard, you might wish to widen each width accordingly (probably best to inspect element and get an exact width of the pixels, but usually around 15-20px extra to cater for scrolling).
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/responsive" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Dev Tool', 'Responsive Dev Tool Demo']);">Browser Version</a>
-  <a href="//toddmotto.com/labs/jresize" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jResize', 'jResize Demo']);">Demo</a>
-  <a href="//github.com/toddmotto/jResize/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jResize', 'jResize Download']);">Download</a>
-  <a href="//github.com/toddmotto/jResize" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jResize', 'jResize Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/responsive" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Responsive Dev Tool', 'Responsive Dev Tool Demo']);">Browser Version</a>
+	<a href="//toddmotto.com/labs/jresize" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo jResize', 'jResize Demo']);">Demo</a>
+	<a href="//github.com/toddmotto/jResize/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download jResize', 'jResize Download']);">Download</a>
+	<a href="//github.com/toddmotto/jResize" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork jResize', 'jResize Fork']);">Fork</a>
 </div>

@@ -2,7 +2,6 @@
 layout: post
 permalink: /using-grunt-and-chrome-workspaces-for-in-browser-development
 title: Using Grunt and Chrome Workspaces for in-browser development
-path: 2013-07-27-using-grunt-and-chrome-workspaces-for-in-browser-development.md
 ---
 
 After some great interest in why I [ditched Sublime Text 2](//twitter.com/toddmotto/status/360672131710844929) for the day to fully code inside Google Chrome, here's the promised screencast on how to do it yourself.
@@ -10,8 +9,8 @@ After some great interest in why I [ditched Sublime Text 2](//twitter.com/toddmo
 I'm using Sass/SCSS (.scss) and JavaScript, both of which compile, concat + minify and livereload the browser, ice cool. In the video I'm using Grunt and Chrome's Workspaces to manage all of this, enjoy!
 
 <div class="download-box">
-  <a href="//github.com/toddmotto/workspaces-grunt">Files on GitHub</a>
-  <a href="//github.com/toddmotto/workspaces-grunt/archive/master.zip">Download files</a>
+	<a href="//github.com/toddmotto/workspaces-grunt">Files on GitHub</a>
+	<a href="//github.com/toddmotto/workspaces-grunt/archive/master.zip">Download files</a>
 </div>
 
 Tip: if not default, change the video quality to 720p :)

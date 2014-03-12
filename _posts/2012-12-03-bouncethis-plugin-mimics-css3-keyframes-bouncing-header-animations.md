@@ -4,7 +4,6 @@ author: Todd Motto
 layout: post
 permalink: /bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations
 disqus: http://www.toddmotto.com/bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations
-path: 2012-12-03-bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations.md
 ---
 
 We all love those slick animated drop-down headers that gracefully drop into the page on-load. This is usually done via some CSS3 keyframes code, but here’s the jQuery version. Here I introduce bounceThis plugin, the cross-browser compatible, super slick and sharp bouncing headers CSS3 keyframes alternative. Who says your client using Internet Explorer can’t see their kick-ass new header?
@@ -16,9 +15,9 @@ Not all projects require some fancy effects, but if yours does, try out the boun
 Tested in: Chrome, Safari, FireFox, Opera, IE7, IE8, IE9. Good to go.
 
 <div class="download-box">
-  <a href="//www.toddmotto.com/labs/bouncethis" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
-  <a href="//www.toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
-  <a href="//github.com/toddmotto/bounceThis" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork bounceThis', 'bounceThis Fork']);">Fork</a>
+	<a href="//www.toddmotto.com/labs/bouncethis" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
+	<a href="//www.toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
+	<a href="//github.com/toddmotto/bounceThis" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork bounceThis', 'bounceThis Fork']);">Fork</a>
 </div>
 
 ### Markup and Usage
@@ -33,11 +32,11 @@ Let’s look at the options included and the setup:
 
 {% highlight javascript %}
 $(function() {
-  $('#header').bounceThis({
-    bounceHeight  : '20px',
-    dropDownSpeed : 300,
-    delay         : 400
-  });
+	$('#header').bounceThis({
+		bounceHeight  : '20px',
+		dropDownSpeed : 300,
+		delay         : 400
+	});
 });
 {% endhighlight %}
 
@@ -61,77 +60,77 @@ First we start off by creating the plugin, using a semi-colon as a safety net fo
 
 {% highlight javascript %}
 ;(function($) {
-    
-  $.fn.bounceThis = function (options) {
-    
-    // Create our default settings
-    var settings = {
-      bounceHeight: '20px',
-      dropDownSpeed: 300,
-      delay: 400
-    };
-    
-    // Load our settings
-    if(options) {
-      $.extend(settings, options);
-    }
-    
-    // Run it, run it
-    return this.each(function () {
-    
-      // Create a variable for $(this)
-      var $this = $(this),
-      
-        // Grab our item's height, passing 'true' on outerHeight includes margins
-        itemheight = $this.outerHeight(true);
-        
-      // Wrap the targeted element in a <div>
-      // This allows us to use absolute positioning
-      // On the child without losing the element's natural height
-      $this.wrap('<div class="bounceThis" />');
-      
-      // Target our newly created element, give it the exact height as the targeted element
-      // We do this to mimic it's physical space when animating
-      // Position it relative, to setup more relative positioning on the child element
-      $('.bounceThis').css({
-        height: itemheight,
-        position: 'relative'
-      });
-      
-      // Hide the element
-      $this.hide();
-      
-      // Remove from view whilst hidden, equivalent to element height
-      $this.animate({
-        top: "-" + itemheight
-      },
-        // After negative animation on the invisible element, add position relative
-        // Show the element to make it visible again, but offscreen still
-        function () {
-          $(this).css({
-            position: 'relative'
-          }).show();
-        }
-      );
-      
-      // Delay by user settings
-      // Animate at the declared bounceHeight
-      $this.delay(settings.delay).animate({
-        top: settings.bounceHeight
-      },
-      
-      // Animate it at our declared dropDownSpeed
-      // This speed applies to both animations
-      settings.dropDownSpeed,
+		
+	$.fn.bounceThis = function (options) {
+		
+		// Create our default settings
+		var settings = {
+			bounceHeight: '20px',
+			dropDownSpeed: 300,
+			delay: 400
+		};
+		
+		// Load our settings
+		if(options) {
+			$.extend(settings, options);
+		}
+		
+		// Run it, run it
+		return this.each(function () {
+		
+			// Create a variable for $(this)
+			var $this = $(this),
+			
+				// Grab our item's height, passing 'true' on outerHeight includes margins
+				itemheight = $this.outerHeight(true);
+				
+			// Wrap the targeted element in a <div>
+			// This allows us to use absolute positioning
+			// On the child without losing the element's natural height
+			$this.wrap('<div class="bounceThis" />');
+			
+			// Target our newly created element, give it the exact height as the targeted element
+			// We do this to mimic it's physical space when animating
+			// Position it relative, to setup more relative positioning on the child element
+			$('.bounceThis').css({
+				height: itemheight,
+				position: 'relative'
+			});
+			
+			// Hide the element
+			$this.hide();
+			
+			// Remove from view whilst hidden, equivalent to element height
+			$this.animate({
+				top: "-" + itemheight
+			},
+				// After negative animation on the invisible element, add position relative
+				// Show the element to make it visible again, but offscreen still
+				function () {
+					$(this).css({
+						position: 'relative'
+					}).show();
+				}
+			);
+			
+			// Delay by user settings
+			// Animate at the declared bounceHeight
+			$this.delay(settings.delay).animate({
+				top: settings.bounceHeight
+			},
+			
+			// Animate it at our declared dropDownSpeed
+			// This speed applies to both animations
+			settings.dropDownSpeed,
 
-      // Run the last animation to bring it to the top again
-      function () {
-        $this.animate({
-          top: 0
-        });
-      });
-    });
-  };
+			// Run the last animation to bring it to the top again
+			function () {
+				$this.animate({
+					top: 0
+				});
+			});
+		});
+	};
 })(jQuery);
 {% endhighlight %}
 
@@ -140,7 +139,7 @@ Most of the code is commented, but I feel the main parts here to talk about are 
 To animate the header we need to effectively &#8216;remove it&#8217;. This posed questions on how to tackle the issue of it&#8217;s physical space being removed. This is where we use jQuery wrap to wrap our element in a  and hook off the outerHeight(true) declaration to effectively clone it&#8217;s physical space. We then position it relative, to allow for no conflicts and more relative positioning inside, which allows us to animate the header nicely, and let it drop into it&#8217;s reserved space.
     
 <div class="download-box">
-  <a href="//www.toddmotto.com/labs/bouncethis" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
-  <a href="//www.toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
-  <a href="//github.com/toddmotto/bounceThis" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork bounceThis', 'bounceThis Fork']);">Fork</a>
+	<a href="//www.toddmotto.com/labs/bouncethis" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo bounceThis', 'bounceThis Demo']);">Demo</a>
+	<a href="//www.toddmotto.com/labs/bouncethis/bouncethis.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download bounceThis', 'bounceThis Download']);">Download</a>
+	<a href="//github.com/toddmotto/bounceThis" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork bounceThis', 'bounceThis Fork']);">Fork</a>
 </div>

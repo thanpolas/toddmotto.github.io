@@ -2,7 +2,6 @@
 layout: post
 permalink: /iide-immediate-invoked-data-expressions-data-init-and-using-html5-to-call-your-javascript/jquery
 title: IIDE, Immediate-Invoked-Data-Expressions, data-init and using HTML5 to call your JavaScript/jQuery
-path: 2013-05-28-iide-immediate-invoked-data-expressions-data-init-and-using-html5-to-call-your-javascript-jquery.md
 ---
 
 There's something that's been at the back of my mind ever since I've started writing JavaScript and jQuery, and I think I've finally got it down on paper - so I'm going to introduce a new method of writing your JavaScript which utilises some HTML5 technology.
@@ -16,9 +15,9 @@ Let's take a made up slider jQuery plugin:
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/slider.min.js"></script>
 <script>
-  $(function () {
-    $('#slider').mySlider()
-  })
+	$(function () {
+		$('#slider').mySlider()
+	})
 </script>
 {% endhighlight %}
 
@@ -34,9 +33,9 @@ So what is data-init? It's a way of calling your function when it exists, and al
 Instead of this:
 {% highlight html %}
 <script>
-  $(function () {
-    $('#slider').mySlider()
-  })
+	$(function () {
+		$('#slider').mySlider()
+	})
 </script>
 {% endhighlight %}
 
@@ -54,15 +53,15 @@ You may have heard of JSON, if not it stands for JavaScript Object Notation and 
 
 {% highlight javascript %}
 {"menu": {
-  "id": "file",
-  "value": "File",
-  "popup": {
-    "menuitem": [
-      {"value": "New", "onclick": "CreateNewDoc()"},
-      {"value": "Open", "onclick": "OpenDoc()"},
-      {"value": "Close", "onclick": "CloseDoc()"}
-    ]
-  }
+	"id": "file",
+	"value": "File",
+	"popup": {
+		"menuitem": [
+			{"value": "New", "onclick": "CreateNewDoc()"},
+			{"value": "Open", "onclick": "OpenDoc()"},
+			{"value": "Close", "onclick": "CloseDoc()"}
+		]
+	}
 }}
 {% endhighlight %}
 
@@ -70,11 +69,11 @@ It's derived from JavaScript for representing data structures and arrays and obj
 
 {% highlight html %}
 <div class="slides">
-  <img src="img/slides/img-1.jpg" alt="">
-  <img src="img/slides/img-2.jpg" alt="">
-  <img src="img/slides/img-3.jpg" alt="">
-  <img src="img/slides/img-4.jpg" alt="">
-  <img src="img/slides/img-5.jpg" alt="">
+	<img src="img/slides/img-1.jpg" alt="">
+	<img src="img/slides/img-2.jpg" alt="">
+	<img src="img/slides/img-3.jpg" alt="">
+	<img src="img/slides/img-4.jpg" alt="">
+	<img src="img/slides/img-5.jpg" alt="">
 </div>
 {% endhighlight %}
 
@@ -86,13 +85,13 @@ In comes JSON array of images inside an attribute (I've named this data-slides):
 
 {% highlight html %}
 <div class="" data-init="slides" data-slides='{
-  "imgs" : [
-    "img/slides/img-1.jpg",
-    "img/slides/img-2.jpg",
-    "img/slides/img-3.jpg",
-    "img/slides/img-4.jpg",
-    "img/slides/img-5.jpg"
-  ]
+	"imgs" : [
+		"img/slides/img-1.jpg",
+		"img/slides/img-2.jpg",
+		"img/slides/img-3.jpg",
+		"img/slides/img-4.jpg",
+		"img/slides/img-5.jpg"
+	]
 }'></div>
 {% endhighlight %}
 
@@ -102,13 +101,13 @@ I can then setup a script to create an image for each item in the data-&#42; arr
 
 {% highlight javascript %}
 (function ($) {
-  var slider = $('[data-init="slides"]')
-  if (slider.length) {
-    var slides = slider.data('slides').imgs
-    $.each(slides, function (index, value) {
-      slider.prepend('<img src="' + value + '" alt="">')
-    })
-  }
+	var slider = $('[data-init="slides"]')
+	if (slider.length) {
+		var slides = slider.data('slides').imgs
+		$.each(slides, function (index, value) {
+			slider.prepend('<img src="' + value + '" alt="">')
+		})
+	}
 })(jQuery)
 {% endhighlight %}
 
@@ -116,11 +115,11 @@ Which then outputs:
 
 {% highlight html %}
 <div class="" data-init="slides" data-slides='{"imgs" : ["img/slides/img-1.jpg","img/slides/img-2.jpg","img/slides/img-3.jpg","img/slides/img-4.jpg","img/slides/img-5.jpg"]}'>
-  <img src="img/slides/img-1.jpg" alt="">
-  <img src="img/slides/img-2.jpg" alt="">
-  <img src="img/slides/img-3.jpg" alt="">
-  <img src="img/slides/img-4.jpg" alt="">
-  <img src="img/slides/img-5.jpg" alt="">
+	<img src="img/slides/img-1.jpg" alt="">
+	<img src="img/slides/img-2.jpg" alt="">
+	<img src="img/slides/img-3.jpg" alt="">
+	<img src="img/slides/img-4.jpg" alt="">
+	<img src="img/slides/img-5.jpg" alt="">
 </div>
 {% endhighlight %}
 
@@ -129,17 +128,17 @@ We could move an entire plugin's configuration into a JSON data structure, for e
 
 {% highlight javascript %}
 <div class="" data-init="slides" data-slides='
-  {"slides" : {
-    "namespace" : "my-slides",
-    "class"     : "slide-item",
-    "imgs" : [
-      "img/slides/img-1.jpg",
-      "img/slides/img-2.jpg",
-      "img/slides/img-3.jpg",
-      "img/slides/img-4.jpg",
-      "img/slides/img-5.jpg"
-    ]
-  }
+	{"slides" : {
+		"namespace" : "my-slides",
+		"class"     : "slide-item",
+		"imgs" : [
+			"img/slides/img-1.jpg",
+			"img/slides/img-2.jpg",
+			"img/slides/img-3.jpg",
+			"img/slides/img-4.jpg",
+			"img/slides/img-5.jpg"
+		]
+	}
 }'>
 {% endhighlight %}
 
@@ -160,14 +159,14 @@ What they really should have done:
 
 {% highlight html %}
 <html>
-  <head>
-  <script src="js/vendor/jquery.min.js"></script>
-  <script src="js/fittext.min.js"></script>
-  </head>
-  <body data-init="fittext">
-    <h1 data-fittext='{"font-size" : "0.273"}'>FitText</h1>
-    <a href="#" data-fittext='{"max-font-size" : "2"}'>Download</a>
-  </body>
+	<head>
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/fittext.min.js"></script>
+	</head>
+	<body data-init="fittext">
+		<h1 data-fittext='{"font-size" : "0.273"}'>FitText</h1>
+		<a href="#" data-fittext='{"max-font-size" : "2"}'>Download</a>
+	</body>
 </html>
 {% endhighlight %}
 

@@ -4,7 +4,6 @@ author: Todd Motto
 layout: post
 permalink: /fluid-first-creating-a-future-proof-fluid-and-responsive-website
 disqus: http://www.toddmotto.com/fluid-first-creating-a-future-proof-fluid-and-responsive-website
-path: 2012-11-14-fluid-first-creating-a-future-proof-fluid-and-responsive-website.md
 ---
 
 Fluid-first is a way of thinking, then designing, then coding. It’s not media query heavy, it’s not thousands of lines of inherited and overwritten code. It’s a minimalistic approach to create scalable responsive websites with ease. Fluid-first I believe to be desktop-down building, which I much prefer over mobile-first. (Mobile-first is where you code your mobile styles first as a base layer). I want the full picture before I see the snapshot, so desktop down for me.
@@ -39,11 +38,11 @@ When using our media queries, you might be using/seeing something like this to a
 
 {% highlight css %}
 @media only screen and (min-width: 320px) {
-  .wrapper {width:320px}
+	.wrapper {width:320px}
 }
 
 @media only screen and (min-width: 480px) {
-  .wrapper {width:480px}
+	.wrapper {width:480px}
 }
 {% endhighlight %}
 
@@ -51,9 +50,9 @@ None of the above uses a fluid-first approach. We should never manipulate our wr
 
 {% highlight css %}
 .wrapper {
-  max-width:1280px;
-  width:95%;
-  margin:0 auto;  
+	max-width:1280px;
+	width:95%;
+	margin:0 auto;	
 }
 {% endhighlight %}
 
@@ -80,28 +79,28 @@ Here’s an example markup, you’ll see how little we change the code using med
 {% highlight html %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Fluid-first</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
-    <style>
-    .wrapper {max-width:1280px;width:95%;margin:0 auto;}
-    .column {width:50%;float:left;background:#F1F1F1;}
-    @media only screen and (min-width: 320px) {.column {width:100%;}}
-    @media only screen and (min-width: 786px) {.column {width:50%;}}
-    </style>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fluid-first</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+		<style>
+		.wrapper {max-width:1280px;width:95%;margin:0 auto;}
+		.column {width:50%;float:left;background:#F1F1F1;}
+		@media only screen and (min-width: 320px) {.column {width:100%;}}
+		@media only screen and (min-width: 786px) {.column {width:50%;}}
+		</style>
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="column">
-        <p>Fluid-first</p>
-      </div>
-      <div class="column">
-        <p>Fluid-first</p>
-      </div>
-    </div>
-  </body>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="column">
+				<p>Fluid-first</p>
+			</div>
+			<div class="column">
+				<p>Fluid-first</p>
+			</div>
+		</div>
+	</body>
 </html>
 {% endhighlight %}
 

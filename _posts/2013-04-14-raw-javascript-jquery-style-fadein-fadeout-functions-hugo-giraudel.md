@@ -2,14 +2,13 @@
 layout: post
 permalink: /raw-javascript-jquery-style-fadein-fadeout-functions-hugo-giraudel
 title: Raw JavaScript, jQuery-style fadeIn and fadeOut functions from @HugoGiraudel
-path: 2013-04-14-raw-javascript-jquery-style-fadein-fadeout-functions-hugo-giraudel.md
 ---
 
 Today's article is from [Hugo Giraudel](http://hugogiraudel.com). For those who don't know Hugo, he describes himself as a CSS goblin and JavaScript dabbler. He's going to take you through some raw JavaScript, jQuery-style fadeIn and fadeOut functions - take it away!
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/javascript-fade" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JavaScript Fade, 'JavaScript Fade Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/javascript-fade/javascript-fade.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JavaScript Fade, 'JavaScript Fade Download']);">Download</a>
+	<a href="//toddmotto.com/labs/javascript-fade" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JavaScript Fade, 'JavaScript Fade Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/javascript-fade/javascript-fade.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JavaScript Fade, 'JavaScript Fade Download']);">Download</a>
 </div>
 
 --
@@ -38,7 +37,7 @@ To progressively reduce the element opacity, we will need to use a timer. Every 
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var fading = window.setInterval(func, interval);
+	var fading = window.setInterval(func, interval);
 }
 {% endhighlight %}
 
@@ -48,11 +47,11 @@ If you divide the interval by the duration, you get the amount of opacity which 
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var opacity = 1,
-    interval = 50,
-    gap = interval / ms;
-    
-  var fading = window.setInterval(func, interval);
+	var opacity = 1,
+		interval = 50,
+		gap = interval / ms;
+		
+	var fading = window.setInterval(func, interval);
 }
 {% endhighlight %}
 
@@ -60,13 +59,13 @@ Now, we have to define the function that will actually decrease opacity. Since t
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var opacity = 1,
-    interval = 50,
-    gap = interval / ms;
-    
-    function func() {  }
-    
-    var fading = window.setInterval(func, interval);
+	var opacity = 1,
+		interval = 50,
+		gap = interval / ms;
+		
+		function func() {  }
+		
+		var fading = window.setInterval(func, interval);
 }
 {% endhighlight %}
 
@@ -74,16 +73,16 @@ I've introduced a new function called _func()_, which decreases the element opac
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var opacity = 1,
-    interval = 50,
-    gap = interval / ms;
-    
-  function func() { 
-    opacity -= gap;
-    el.style.opacity = opacity;
-  }
-  
-  var fading = window.setInterval(func, interval);
+	var opacity = 1,
+		interval = 50,
+		gap = interval / ms;
+		
+	function func() { 
+		opacity -= gap;
+		el.style.opacity = opacity;
+	}
+	
+	var fading = window.setInterval(func, interval);
 
 }
 {% endhighlight %}
@@ -92,21 +91,21 @@ Almost done! We have to make it stop when it reaches _0_ so that it doesn't keep
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var opacity = 1,
-    interval = 50,
-    gap = interval / ms;
-    
-  function func() {
-    opacity -= gap;
-    el.style.opacity = opacity;
-    
-    if(opacity <= 0) {
-      window.clearInterval(fading);
-    }
-  }
-  
-  var fading = window.setInterval(func, interval);
-  
+	var opacity = 1,
+		interval = 50,
+		gap = interval / ms;
+		
+	function func() {
+		opacity -= gap;
+		el.style.opacity = opacity;
+		
+		if(opacity <= 0) {
+			window.clearInterval(fading);
+		}
+	}
+	
+	var fading = window.setInterval(func, interval);
+	
 }
 {% endhighlight %}
 
@@ -114,21 +113,21 @@ Last but not least, we have to remove the item from the flow (which is different
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var opacity = 1,
-    interval = 50,
-    gap = interval / ms;
-    
-  function func() { 
-    opacity -= gap;
-    el.style.opacity = opacity;
-    
-    if(opacity <= 0) {
-      window.clearInterval(fading); 
-      el.style.display = 'none';
-    }
-  }
-  
-  var fading = window.setInterval(func, interval);
+	var opacity = 1,
+		interval = 50,
+		gap = interval / ms;
+		
+	function func() { 
+		opacity -= gap;
+		el.style.opacity = opacity;
+		
+		if(opacity <= 0) {
+			window.clearInterval(fading); 
+			el.style.display = 'none';
+		}
+	}
+	
+	var fading = window.setInterval(func, interval);
 
 }
 {% endhighlight %}
@@ -138,7 +137,7 @@ Our function is finished. Here is how we can use it:
 {% highlight javascript %}
 var el = document.getElementById('myElement');
 el.onclick = function(e) {
-  fadeOut(750, this);
+	fadeOut(750, this);
 }
 {% endhighlight %}
 
@@ -148,24 +147,24 @@ The fadeIn() is pretty much the same thing so I want explain it as I did for the
 
 {% highlight javascript %}
 function fadeOut(ms, el) {
-  var opacity = 0,
-    interval = 50,
-    gap = interval / ms;
-    
-  el.style.display = 'block';
-  el.style.opacity = opacity;
-  
-  function func() { 
-    opacity += gap;
-    el.style.opacity = opacity;
-    
-    if(opacity >= 1) {
-      window.clearInterval(fading);
-    }
-  }
-  
-  var fading = window.setInterval(func, interval);
-  
+	var opacity = 0,
+		interval = 50,
+		gap = interval / ms;
+		
+	el.style.display = 'block';
+	el.style.opacity = opacity;
+	
+	function func() { 
+		opacity += gap;
+		el.style.opacity = opacity;
+		
+		if(opacity >= 1) {
+			window.clearInterval(fading);
+		}
+	}
+	
+	var fading = window.setInterval(func, interval);
+	
 }
 {% endhighlight %}
 
@@ -178,26 +177,26 @@ The fact is: both functions look pretty much the same. For the sake of brevity, 
 {% highlight javascript %}
 function fade(type, ms, el) {
 
-  function func() {
-  
-  }
-  
-  var fading = window.setInterval(func, interval);
+	function func() {
+	
+	}
+	
+	var fading = window.setInterval(func, interval);
 
 }
 {% endhighlight %}
 
 Now, a few things depend on if the transition is in or out, like the default opacity, the incrementation/decrementation, the display applied, and so on. Let's start with getting the type. Since there are more things going on when it's a fadeIn, I created a boolean depending on if the type is in or not in.
-  
+	
 {% highlight javascript %}
 function fade(type, ms, el) {
-  var isIn = type === 'in',
-    opacity = isIn ? 0 : 1,
-    interval = 50,
-    gap = interval / duration;
-    
-  ...
-  
+	var isIn = type === 'in',
+		opacity = isIn ? 0 : 1,
+		interval = 50,
+		gap = interval / duration;
+		
+	...
+	
 }
 {% endhighlight %}
 
@@ -205,9 +204,9 @@ The other variables do not change except the opacity which is equals to _0_ if i
 
 {% highlight javascript %}
 if(isIn === true) {
-  opacity = 0;
+	opacity = 0;
 } else {
-  opacity = 1;
+	opacity = 1;
 }
 {% endhighlight %}
 
@@ -215,18 +214,18 @@ Do you remember we have to set the display to 'block' and the opacity to 0 if it
 
 {% highlight javascript %}
 function fade(type, ms, el) {
-  var isIn = type === 'in',
-    opacity = isIn ? 0 : 1,
-    interval = 50,
-    gap = interval / duration;
-  
-  if(isIn) {
-    el.style.display = 'block';
-    el.style.opacity = opacity;
-  }
-  
-  ...
-  
+	var isIn = type === 'in',
+		opacity = isIn ? 0 : 1,
+		interval = 50,
+		gap = interval / duration;
+	
+	if(isIn) {
+		el.style.display = 'block';
+		el.style.opacity = opacity;
+	}
+	
+	...
+	
 }
 {% endhighlight %}
 
@@ -235,14 +234,14 @@ Now the animation internal function. It decrements 'opacity' by 'gap' if it's a 
 {% highlight javascript %}
 function fade(type, ms, el) {
 
-  ...
-  
-  function func() {
-    opacity = isIn ? opacity + gap : opacity - gap;
-    el.style.opacity = opacity;
-  }
-  
-  ...
+	...
+	
+	function func() {
+		opacity = isIn ? opacity + gap : opacity - gap;
+		el.style.opacity = opacity;
+	}
+	
+	...
 
 }
 {% endhighlight %}
@@ -251,26 +250,26 @@ We still have two things left: if the opacity is below 0, we set the element to 
 
 {% highlight javascript %}
 function fade(type, ms, el) {
-  var isIn = type === 'in',
-    opacity = isIn ? 0 : 1,
-    interval = 50,
-    gap = interval / duration;
-    
-  if(isIn) {
-    el.style.display = 'block';
-    el.style.opacity = opacity;
-  }
-  
-  function func() {
-    opacity = isIn ? opacity + gap : opacity - gap;
-    el.style.opacity = opacity;
-    
-    if(opacity <= 0) el.style.display = 'none'
-    if(opacity <= 0 || opacity >= 1) window.clearInterval(fading);
-  }
-  
-  var fading = window.setInterval(func, interval);
-  
+	var isIn = type === 'in',
+		opacity = isIn ? 0 : 1,
+		interval = 50,
+		gap = interval / duration;
+		
+	if(isIn) {
+		el.style.display = 'block';
+		el.style.opacity = opacity;
+	}
+	
+	function func() {
+		opacity = isIn ? opacity + gap : opacity - gap;
+		el.style.opacity = opacity;
+		
+		if(opacity <= 0) el.style.display = 'none'
+		if(opacity <= 0 || opacity >= 1) window.clearInterval(fading);
+	}
+	
+	var fading = window.setInterval(func, interval);
+	
 }
 {% endhighlight %}
 
@@ -279,10 +278,10 @@ Voila! We have a single function handling both fadeIn() and fadeOut().
 {% highlight javascript %}
 var el = document.getElementById('my-element');
 el.onclick = function(e) {
-  fade('out', 500, this);
+	fade('out', 500, this);
 }
 document.onclick = function(e) {
-  fade('in', 1000, el);
+	fade('in', 1000, el);
 }
 {% endhighlight %}
 
@@ -302,10 +301,10 @@ So everytime we change opacity, we have to use this. Not great huh? What about p
 
 {% highlight javascript %}
 function fade(type, ms, el, IE) {
-  var isIn = type === 'in',
-    opacity = isIn ? 0 : 1,
-    interval = 50,
-    gap = interval / duration;
+	var isIn = type === 'in',
+		opacity = isIn ? 0 : 1,
+		interval = 50,
+		gap = interval / duration;
         
     if(isIn) {
          el.style.display = 'block';
@@ -351,8 +350,8 @@ var classname = document.querySelector('.classname');
 {% endhighlight %}
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/javascript-fade" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JavaScript Fade, 'JavaScript Fade Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/javascript-fade/javascript-fade.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JavaScript Fade, 'JavaScript Fade Download']);">Download</a>
+	<a href="//toddmotto.com/labs/javascript-fade" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo JavaScript Fade, 'JavaScript Fade Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/javascript-fade/javascript-fade.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download JavaScript Fade, 'JavaScript Fade Download']);">Download</a>
 </div>
 
 That's pretty much it guys! Please, be sure to ask any question or even propose something better. ;)

@@ -2,7 +2,6 @@
 layout: post
 permalink: /nofi-detecting-no-wifi-callbacks-for-offline-states-with-html5
 title: NoFi, detecting no WiFi, callbacks for offline states with HTML5
-path: 2013-10-28-nofi-detecting-no-wifi-callbacks-for-offline-states-with-html5.md
 ---
 
 An HTML5 API buried inside the `navigator` Object called `onLine` is where the inspiration for this little tool came from. NoFi detects no WiFi (yes, it also includes non-WiFi, your cables) and allows you to run custom callbacks when the offline event is fired.
@@ -10,9 +9,9 @@ An HTML5 API buried inside the `navigator` Object called `onLine` is where the i
 The plugin's only small but may well help with your website/application development.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/nofi" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo nofi', 'nofi Demo']);">Demo</a>
-  <a href="//github.com/toddmotto/nofi/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download nofi', 'Download nofi']);">Download</a>
-  <a href="//github.com/toddmotto/nofi" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork nofi', 'nofi Fork']);">Fork</a>
+	<a href="//toddmotto.com/labs/nofi" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo nofi', 'nofi Demo']);">Demo</a>
+	<a href="//github.com/toddmotto/nofi/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download nofi', 'Download nofi']);">Download</a>
+	<a href="//github.com/toddmotto/nofi" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork nofi', 'nofi Fork']);">Fork</a>
 </div>
 
 ### HTML and setup

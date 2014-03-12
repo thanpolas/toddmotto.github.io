@@ -2,25 +2,24 @@
 layout: post
 permalink: /progressively-enhanced-svg-sprite-icons
 title: Progressively enhanced SVG sprite icons
-path: 2013-03-01-progressively-enhanced-svg-sprite-icons.md
 ---
 
 You may remember a while back, I coded up some nice CSS3 social media icons, to which I have had to remove from my website due to the fact I cannot run PHP on this Jekyll server, or even wanted to quickly convert them to HTML. Time would be better spent taking action into enhancing those icons, and creating some much better ones with better practices, with performance and retina displays in mind.
 
 Here's what I've learned since creating those previous icons:
 <ul class="post-list">
-  <li>Progressive enhancement techniques with JavaScript</li>
-  <li>Using an OOCSS method for creating the buttons</li>
-  <li>Better CSS techniques, enhanced performance</li>
-  <li>Graphic optimisation to limit HTTP requests, increase speed using CSS sprites</li>
-  <li>Not relying on 'hacky' techniques</li>
+	<li>Progressive enhancement techniques with JavaScript</li>
+	<li>Using an OOCSS method for creating the buttons</li>
+	<li>Better CSS techniques, enhanced performance</li>
+	<li>Graphic optimisation to limit HTTP requests, increase speed using CSS sprites</li>
+	<li>Not relying on 'hacky' techniques</li>
 </ul>
 
 So that's where this article is headed, I'm going to talk you through the process of creating the new buttons, and how I've adapted from my previous post.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/svg-icons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SVG Icons, 'SVG Icons Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/svg-icons/svg-icons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SVG Icons, 'SVG Icons Download']);">Download</a>
+	<a href="//toddmotto.com/labs/svg-icons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SVG Icons, 'SVG Icons Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/svg-icons/svg-icons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SVG Icons, 'SVG Icons Download']);">Download</a>
 </div>
 
 ### Progressive enhancement techniques with JavaScript
@@ -70,13 +69,13 @@ When you get your hands on CSS3, it's amazing, you can make everything super-sli
 
 {% highlight css %}
 .buttonName {
-  
+	
 }
 .buttonName:hover {
-  
+	
 }
 .buttonName:active {
-  
+	
 }
 {% endhighlight %}
 
@@ -85,7 +84,7 @@ After each CSS3 declaration on each button name, the CSS was huge. But at the ti
 This is done like so:
 {% highlight css %}
 .s-icon:hover {
-  opacity:0.7;
+	opacity:0.7;
 }
 {% endhighlight %}
 
@@ -94,12 +93,12 @@ Let's look at the full picture though, here's how we can construct an icon now:
 {% highlight css %}
 .s-icon,
 .no-svg .s-icon {
-  background-image:url(../img/icons.png);
-  background-repeat:no-repeat;
-  display:inline-block;
-  height:32px;
-  width:32px;
-  border-radius:3px;
+	background-image:url(../img/icons.png);
+	background-repeat:no-repeat;
+	display:inline-block;
+	height:32px;
+	width:32px;
+	border-radius:3px;
 }
 {% endhighlight %}
 
@@ -108,7 +107,7 @@ You can see I've added the no-svg, and the generic .s-icon declaration, this jus
 To achieve our progressively enhanced icons, we need to add the .svg class to the CSS, and feed off the SVG background:
 {% highlight css %}
 .svg .s-icon {
-  background-image:url(../img/icons.svg);
+	background-image:url(../img/icons.svg);
 }
 {% endhighlight %}
 
@@ -120,12 +119,12 @@ We then manipulate the sprite for each item very easily. To keep CSS sprites man
 Here's an example of two icons:
 {% highlight css %}
 .s-icon-twitter {
-  background-color:#00C4FC;
-  background-position:0px 0px;
+	background-color:#00C4FC;
+	background-position:0px 0px;
 }
 .s-icon-dribbble {
-  background-color:#EE7BFF;
-  background-position:-32px 0px;
+	background-color:#EE7BFF;
+	background-position:-32px 0px;
 }
 {% endhighlight %}
 
@@ -133,6 +132,6 @@ Here's an example of two icons:
 The image downscaling technique, a good idea at the time but with terrible output. I say this because of a few things. Creating x2 images is such a bad solution to overcoming retina displays, then downscaling the image to achieve a good 'retina' image. It's a drag on performance, a cheap technique which was popularised at the time, but SVG is the real future of website graphics, creating infinitely scalable graphics that are super-futureproof. Image downscaling is not future proof at all, and when a proper solution comes along, previous techniques will be obselete and not even part of any standard.
 
 <div class="download-box">
-  <a href="//toddmotto.com/labs/svg-icons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SVG Icons, 'SVG Icons Demo']);">Demo</a>
-  <a href="//toddmotto.com/labs/svg-icons/svg-icons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SVG Icons, 'SVG Icons Download']);">Download</a>
+	<a href="//toddmotto.com/labs/svg-icons" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo SVG Icons, 'SVG Icons Demo']);">Demo</a>
+	<a href="//toddmotto.com/labs/svg-icons/svg-icons.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download SVG Icons, 'SVG Icons Download']);">Download</a>
 </div>

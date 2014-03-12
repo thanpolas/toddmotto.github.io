@@ -2,7 +2,6 @@
 layout: post
 permalink: /help-drive-the-future-of-html5blank-the-globally-recognised-wordpress-boilerplate
 title: Help drive the future of @html5blank, the globally recognised WordPress boilerplate
-path: 2013-06-19-help-drive-the-future-of-html5blank-the-globally-recognised-wordpress-boilerplate.md
 ---
 
 Just under a year ago I released [HTML5 Blank](//html5blank.com), an HTML5 WordPress boilerplate for kickstarting projects. It started as a bit of fun to start my frequent WordPress projects, and since it's release has gained massive popularity within the web development industry and is ranked the 200,000th top site worldwide, seems crazy for a one-page landing site. It's also been downloaded thousands and thousands of times, [improved](https://github.com/toddmotto/html5blank/blob/master/CHANGELOG.md) very frequently (thank you community!), and coming up to 500 watchers on the GitHub project.

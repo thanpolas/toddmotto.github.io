@@ -4,7 +4,6 @@ author: Todd Motto
 layout: post
 permalink: /viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget
 disqus: http://www.toddmotto.com/viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget
-path: 2012-12-16-viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget.md
 ---
 
 Dynamically adjusted screen dimensions, retina detection and device pixel ratio. When working on website projects that are responsive, it’s imperative to easily know the exact ViewPort dimensions for calculating media query breakpoints. And what comes with responsive design nowadays? Retina and HiDPi displays.
@@ -14,8 +13,8 @@ Simply include this small JavaScript script in your page whilst working on proje
 Important: Unless you're going to run this function alongside jQuery (inside a DOM ready function wrapper), you'll need to place the script before the closing &lt;/body&gt; tag.
 
 <div class="download-box">
-  <a href="//www.toddmotto.com/labs/viewport-retina" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo ViewPort Resizer', 'ViewPort Resizer Demo']);">Demo</a>
-  <a href="//www.toddmotto.com/labs/viewport-retina/viewport-retina.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download ViewPort Resizer', 'ViewPort Resizer Download']);">Download</a>
+	<a href="//www.toddmotto.com/labs/viewport-retina" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo ViewPort Resizer', 'ViewPort Resizer Demo']);">Demo</a>
+	<a href="//www.toddmotto.com/labs/viewport-retina/viewport-retina.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download ViewPort Resizer', 'ViewPort Resizer Download']);">Download</a>
 </div>
 
 ### The JavaScript
@@ -25,42 +24,42 @@ Here’s a look at the script, wrapped in an immediately-invoked anonymous funct
 {% highlight javascript %}
 (function() {
 
-  // Create the ViewPort detector
-  var viewDetector = document.createElement('div');
-  document.getElementsByTagName('body')[0].insertBefore(viewDetector).id = 'viewport-detector';
-  
-  // Load and Resize events
-  window.onresize = dynamicResizer;
-  window.onload = dynamicResizer;
+	// Create the ViewPort detector
+	var viewDetector = document.createElement('div');
+	document.getElementsByTagName('body')[0].insertBefore(viewDetector).id = 'viewport-detector';
+	
+	// Load and Resize events
+	window.onresize = dynamicResizer;
+	window.onload = dynamicResizer;
 
-  function dynamicResizer() {
-    var docWidth = window.innerWidth,
-      docHeight = window.innerHeight;
-    spanDimensions.innerHTML = docWidth + " x " + docHeight;
-  }
-  
-  // Create <span class="dimensions"> and append
-  var spanDimensions = document.createElement('span');
-  spanDimensions.className = 'dimensions';
-  document.getElementById('viewport-detector').appendChild(spanDimensions);
-  
-  // Create <span class="retina"> and append
-  var spanRetina = document.createElement('span');
-  spanRetina.className = 'retina';
-  document.getElementById('viewport-detector').appendChild(spanRetina);
-  
-  // Create <span class="pixel-ratio"> and append
-  var spanPixels = document.createElement('span');
-  spanPixels.className = 'pixel-ratio';
-  document.getElementById('viewport-detector').appendChild(spanPixels);
-  spanPixels.innerHTML = 'Pixel Ratio: ' + window.devicePixelRatio;
-  
-  // Retina detect
-  if(window.devicePixelRatio >= 2) {
-    spanRetina.innerHTML = 'Retina Device';
-  } else {
-    spanRetina.innerHTML = 'No Retina Device';
-  }
+	function dynamicResizer() {
+		var docWidth = window.innerWidth,
+			docHeight = window.innerHeight;
+		spanDimensions.innerHTML = docWidth + " x " + docHeight;
+	}
+	
+	// Create <span class="dimensions"> and append
+	var spanDimensions = document.createElement('span');
+	spanDimensions.className = 'dimensions';
+	document.getElementById('viewport-detector').appendChild(spanDimensions);
+	
+	// Create <span class="retina"> and append
+	var spanRetina = document.createElement('span');
+	spanRetina.className = 'retina';
+	document.getElementById('viewport-detector').appendChild(spanRetina);
+	
+	// Create <span class="pixel-ratio"> and append
+	var spanPixels = document.createElement('span');
+	spanPixels.className = 'pixel-ratio';
+	document.getElementById('viewport-detector').appendChild(spanPixels);
+	spanPixels.innerHTML = 'Pixel Ratio: ' + window.devicePixelRatio;
+	
+	// Retina detect
+	if(window.devicePixelRatio >= 2) {
+		spanRetina.innerHTML = 'Retina Device';
+	} else {
+		spanRetina.innerHTML = 'No Retina Device';
+	}
 })();
 {% endhighlight %}
 
@@ -97,6 +96,6 @@ You’ll need the ViewPort meta tag (supplied in the download) to get the width 
 Place the ViewPort meta tag in the head of your document and remember – this script needs to be inside the body tag, not in the head.
 
 <div class="download-box">
-  <a href="//www.toddmotto.com/labs/viewport-retina" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo ViewPort Resizer', 'ViewPort Resizer Demo']);">Demo</a>
-  <a href="//www.toddmotto.com/labs/viewport-retina/viewport-retina.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download ViewPort Resizer', 'ViewPort Resizer Download']);">Download</a>
+	<a href="//www.toddmotto.com/labs/viewport-retina" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo ViewPort Resizer', 'ViewPort Resizer Demo']);">Demo</a>
+	<a href="//www.toddmotto.com/labs/viewport-retina/viewport-retina.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download ViewPort Resizer', 'ViewPort Resizer Download']);">Download</a>
 </div>
