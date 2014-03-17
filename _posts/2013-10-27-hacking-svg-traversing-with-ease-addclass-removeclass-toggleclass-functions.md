@@ -5,6 +5,10 @@ title: Hacking SVG, traversing with ease - addClass, removeClass, toggleClass fu
 path: 2013-10-27-hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions.md
 ---
 
+### Update: I've turned this into a small JavaScript module named [Lunar](https://github.com/toddmotto/lunar) and pushed to GitHub, I'd advise using that instead as it doesn't extend native DOM APIs and also has accompanying unit tests :)
+
+----
+
 I encountered how painful traversing inline SVG can be when working on a recent project, simple DOM APIs such as adding, removing and toggling classes just aren't there, or supported by tools such as jQuery (yes, I even tried jQuery).
 
 Inline SVG is SVG in the DOM, rendered from it's XML. Here's a quick look at example inline SVG which would sit anywhere in the DOM:
