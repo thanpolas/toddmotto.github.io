@@ -7,7 +7,7 @@ layout: page
   <img data-shuffle>
 </div>
 
-I'm lead front-end engineer at [Appsbroker](//www.appsbroker.com), a Developer Expert at Google, [conference speaker](https://speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) evangelist.
+I'm lead front-end engineer at [Appsbroker](//www.appsbroker.com), a [Developer Expert](https://developers.google.com/experts) at Google, [conference speaker](https://speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) evangelist.
 
 By day I'm part of a software engineering team at Appsbroker where we build custom web applications for large organisations. We're the UK's leading Google Enterprise partner and EMEA partner of the year 2012, using the latest HTML5 and JavaScript technology with tools such as [AngularJS](//angularjs.org).
 
