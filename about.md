@@ -19,11 +19,8 @@ Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on
 
 Have so far taught an [AngularJS half-day workshop](//speakerdeck.com/toddmotto/angularjs-in-one-day) at Google in San Francisco. Next April I'm speaking at the [Future of Web Design](//futureofwebdesign.com/london-2014/schedule/day-2) (FOWD) conference in London.
 
-### Contact
-
-To get in touch about anything, email me on <a href="http://www.google.com/recaptcha/mailhide/d?k=01rmKaZ2nEzUNTlBeJwIA-NA==&amp;c=de1XRgcu-NxBLsqf8jeHz_Fq-2QrJf1ZcDAozNqFuu8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501rmKaZ2nEzUNTlBeJwIA-NA\75\75\46c\75de1XRgcu-NxBLsqf8jeHz_Fq-2QrJf1ZcDAozNqFuu8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">[show email]</a> or [tweet](//twitter.com/toddmotto) me. I'm not currently looking for job opportunities or other arrangements.
-
 ### Timeline
+* 03.04.2014: Accepted by Google as a Google Developer Expert ([GDE](//developers.google.com/experts))
 * 25.09.2013: Visited Google in San Francisco teaching a half-day AngularJS workshop [slides](//speakerdeck.com/toddmotto/angularjs-in-one-day)
 * 23.09.2013: Re-engineered [Conditionizr 4](//conditionizr.com) with 5 public APIs and architecture rewrite
 * 22.09.2013: Represented Intel at HTML5 Dev Conf in San Francisco evangelising the [HTML5 Hub](//html5hub.com)
@@ -37,9 +34,13 @@ To get in touch about anything, email me on <a href="http://www.google.com/recap
 * 16.09.2012: Launched [HTML5 Blank](//html5blank.com) for WordPress, recognised by Adobe
 
 ### Interviews
-* 09.10.2013: [SND](//www.snd.org/2013/10/the-guts-todd-motto-on-developing-rolling-stones-the-geeks-on-the-front-lines)
-* 23.09.2013: [Advertising Age](//adage.com/article/digital/intel-hub-targets-developers-subsidizing-web-publishers/244296)
-* 12.09.2013: [Web Developer 2](//www.webdeveloper2.com/2013/09/interview-1-todd-motto)
+* 06.04.2014: [SitePoint: Demystifying JavaScript with Todd Motto](//sitepoint.com/demystifying-javascript-todd-motto)
+* 09.10.2013: [Society for News Design: Intel/Rolling Stone](//www.snd.org/2013/10/the-guts-todd-motto-on-developing-rolling-stones-the-geeks-on-the-front-lines)
+* 23.09.2013: [Advertising Age: Intel/Rolling Stone](//adage.com/article/digital/intel-hub-targets-developers-subsidizing-web-publishers/244296)
 
 ### Licensing
 Please check out the [Licensing](/licensing) page.
+
+### Contact
+
+To get in touch about anything, email me on <a href="http://www.google.com/recaptcha/mailhide/d?k=01rmKaZ2nEzUNTlBeJwIA-NA==&amp;c=de1XRgcu-NxBLsqf8jeHz_Fq-2QrJf1ZcDAozNqFuu8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501rmKaZ2nEzUNTlBeJwIA-NA\75\75\46c\75de1XRgcu-NxBLsqf8jeHz_Fq-2QrJf1ZcDAozNqFuu8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">[show email]</a> or [tweet](//twitter.com/toddmotto) me. I'm not currently looking for job opportunities or other arrangements.
