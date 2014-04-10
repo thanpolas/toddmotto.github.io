@@ -27,6 +27,18 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
 <ul class="events">
   <li>
     <p class="events__type">
+      Talk, <span>09.04.2014</span>
+    </p>
+    <p class="events__title">
+      <a href="//toddmotto.com/talks/fowd-2014">Demystifying JavaScript</a>, 
+      <a href="//futureofwebdesign.com/london-2014/schedule/day-2" target="_blank">
+        Future of Web Design
+      </a>, 
+      London
+    </p>
+  </li>
+  <li>
+    <p class="events__type">
       Talk, <span>08.03.2014</span>
     </p>
     <p class="events__title">
