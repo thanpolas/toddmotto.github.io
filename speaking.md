@@ -10,12 +10,24 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
 <ul class="events">
   <li>
     <p class="events__type">
-      Talk, <span>09.04.2014</span>
+      Workshop, <span>29/09 - 01/10</span>
     </p>
     <p class="events__title">
-      Demystifying JavaScript, 
-      <a href="//futureofwebdesign.com/london-2014/schedule/day-2" target="_blank">
-        Future of Web Design
+      AngularJS (workshop title TBC)
+      <a href="//futureofwebapps.com/london-2014" target="_blank">
+        Future of Web Apps 2014
+      </a>, 
+      London
+    </p>
+  </li>
+  <li>
+    <p class="events__type">
+      Talk, <span>29/09 - 01/10</span>
+    </p>
+    <p class="events__title">
+      AngularJS (title TBC)
+      <a href="//futureofwebapps.com/london-2014" target="_blank">
+        Future of Web Apps 2014
       </a>, 
       London
     </p>
@@ -30,7 +42,7 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
       Talk, <span>09.04.2014</span>
     </p>
     <p class="events__title">
-      <a href="//toddmotto.com/talks/fowd-2014">Demystifying JavaScript</a>, 
+      <a href="//speakerdeck.com/toddmotto/demystifying-javascript-you-dont-need-jquery">Demystifying JavaScript</a>, 
       <a href="//futureofwebdesign.com/london-2014/schedule/day-2" target="_blank">
         Future of Web Design
       </a>, 
