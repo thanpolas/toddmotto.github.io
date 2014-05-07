@@ -10,11 +10,11 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
 <ul class="events">
   <li>
     <p class="events__type">
-      Workshop, <span>29/09 - 01/10</span>
+      Workshop, <span>29.09.2014</span>
     </p>
     <p class="events__title">
-      AngularJS (workshop title TBC)
-      <a href="//futureofwebapps.com/london-2014" target="_blank">
+      AngularJS in one day: building the modern web
+      <a href="//futureofwebapps.com/london-2014/schedule/workshops" target="_blank">
         Future of Web Apps 2014
       </a>, 
       London
@@ -22,11 +22,11 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
   </li>
   <li>
     <p class="events__type">
-      Talk, <span>29/09 - 01/10</span>
+      Talk, <span>01.10.2014</span>
     </p>
     <p class="events__title">
       AngularJS (title TBC)
-      <a href="//futureofwebapps.com/london-2014" target="_blank">
+      <a href="//futureofwebapps.com/london-2014/schedule/day-1" target="_blank">
         Future of Web Apps 2014
       </a>, 
       London
