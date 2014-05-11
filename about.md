@@ -13,13 +13,10 @@ By day I'm part of a software engineering team at Appsbroker where we build cust
 
 I created [Conditionizr](//conditionizr.com) (.NET Magazine's Open Source Project of the Year finalist), a standalone JavaScript tool that detects front-end environments and returns an Object with boolean values on given test states. You can use Conditionizr with various public APIs to make your cross platform/device/browser development much easier and manageable. These APIs include adding your own tests, dynamic polyfills (eradicating conditional comments), callbacks for specific environment tests.
 
-
 Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on-the-frontlines) to bring an HTML5 experience to life. Many other brands have recognised and used/shared my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
 
-
-Have so far taught an [AngularJS half-day workshop](//speakerdeck.com/toddmotto/angularjs-in-one-day) at Google in San Francisco. Next April I'm speaking at the [Future of Web Design](//futureofwebdesign.com/london-2014/schedule/day-2) (FOWD) conference in London.
-
 ### Timeline
+* 15.04.2014: Future of Web Design conference talk, [Demystifying JavaScript: you don't need jQuery](//toddmotto.com/talks/fowd-2014)
 * 03.04.2014: Accepted by Google as a Google Developer Expert ([GDE](//developers.google.com/experts))
 * 25.09.2013: Visited Google in San Francisco teaching a half-day AngularJS workshop [slides](//speakerdeck.com/toddmotto/angularjs-in-one-day)
 * 23.09.2013: Re-engineered [Conditionizr 4](//conditionizr.com) with 5 public APIs and architecture rewrite
