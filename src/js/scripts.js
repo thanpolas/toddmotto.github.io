@@ -11,7 +11,7 @@
     var path = options.path || '';
     var src = options.src || [];
     if (selector) {
-      selector.src = path + src[Math.floor(Math.random() * src.length)];
+      selector.src = path + src[Math.floor(Math.random() * src.length)] + '.jpg';
     }
   };
 
@@ -19,23 +19,24 @@
     selector: '[data-shuffle]',
     path: 'img/shuffle/',
     src: [
-      'html5devconf.jpg',
-      'cloudplatform.jpg',
-      'careers.jpg',
-      'startupweekend.jpg',
-      'slidesprep.jpg',
-      'golf.jpg',
-      'lanzarote.jpg',
-      'html5hub.jpg',
-      'waterski.jpg',
-      'watersurf.jpg',
-      'phonejs.jpg',
-      'baybridge.jpg',
-      'tweeting.jpg',
-      'londonweb.jpg',
-      'wifi.jpg',
-      'southampton-stairs.jpg',
-      'startup-close.jpg'
+      'html5devconf',
+      'inteldevconf',
+      'cloudplatform',
+      'careers',
+      'startupweekend',
+      'slidesprep',
+      'golf',
+      'lanzarote',
+      'html5hub',
+      'waterski',
+      'watersurf',
+      'phonejs',
+      'baybridge',
+      'tweeting',
+      'londonweb',
+      'wifi',
+      'southampton-stairs',
+      'startup-close'
     ]
   });
 
