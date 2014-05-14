@@ -28,7 +28,7 @@ forEach(collection[, callback[, context]]);
 
 // example
 var myArray = ['A', 'B', 'C', 'D'];
-forEach(myArray, function (index, value) {
+forEach(myArray, function (value, index) {
 	// `this` will reference myArray: []
 }, myArray); // note third param changing execution context
 {% endhighlight %}
@@ -38,12 +38,12 @@ You can loop over an Array or NodeList using a standard `for` loop, however, Nod
 
 {% highlight javascript %}
 // Array:
-forEach(['A', 'B', 'C', 'D'], function (index, value) {
+forEach(['A', 'B', 'C', 'D'], function (value, index) {
 	console.log(index); // 0, 1, 2, 3
 	console.log(value); // A, B, C, D
 });
 // NodeList:
-forEach(document.querySelectorAll('div'), function (index, value) {
+forEach(document.querySelectorAll('div'), function (value, index) {
 	console.log(index); // 0, 1, 2, 3
 	console.log(value); // <div>, <div>, <div>...
 });
@@ -90,7 +90,7 @@ var forEach = function (collection, callback, scope) {
     }
   } else {
     for (var i = 0; i < collection.length; i++) {
-      callback.call(scope, i, collection[i]);
+      callback.call(scope, collection[i], i, collection);
     }
   }
 };
