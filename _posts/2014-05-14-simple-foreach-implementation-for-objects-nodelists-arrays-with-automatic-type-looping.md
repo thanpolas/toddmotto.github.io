@@ -13,6 +13,11 @@ Wouldn't it be nice to just forget about what type of collection we're looping, 
 
 So I did...
 
+<div class="download-box">
+  <a href="//github.com/toddmotto/foreach/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download foreach', 'Download foreach']);">Download</a>
+  <a href="//github.com/toddmotto/foreach" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork foreach', 'foreach Fork']);">Fork on GitHub</a>
+</div>
+
 ### forEach.js
 
 `forEach.js` is a simple script, it's not part of a library or even a module, it's just a function, here's it's syntax and a quick example using an `Array`:
@@ -90,3 +95,8 @@ var forEach = function (collection, callback, scope) {
   }
 };
 {% endhighlight %}
+
+<div class="download-box">
+  <a href="//github.com/toddmotto/foreach/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Click', 'Download foreach', 'Download foreach']);">Download</a>
+  <a href="//github.com/toddmotto/foreach" onclick="_gaq.push(['_trackEvent', 'Click', 'Fork foreach', 'foreach Fork']);">Fork on GitHub</a>
+</div>
