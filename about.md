@@ -16,6 +16,7 @@ I created [Conditionizr](//conditionizr.com) (.NET Magazine's Open Source Projec
 Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on-the-frontlines) to bring an HTML5 experience to life. Many other brands have recognised and used/shared my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
 
 ### Timeline
+* 07.05.2014: [Intel XDK interview](//www.youtube.com/watch?v=5L_gW1K7vqg) at HTML5 Dev Conf
 * 15.04.2014: Future of Web Design conference talk, [Demystifying JavaScript: you don't need jQuery](//toddmotto.com/talks/fowd-2014)
 * 03.04.2014: Accepted by Google as a Google Developer Expert ([GDE](//developers.google.com/experts))
 * 25.09.2013: Visited Google in San Francisco teaching a half-day AngularJS workshop [slides](//speakerdeck.com/toddmotto/angularjs-in-one-day)
