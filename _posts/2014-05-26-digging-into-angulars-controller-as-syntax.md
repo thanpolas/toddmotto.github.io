@@ -195,7 +195,7 @@ app.controller('MainCtrl', function ($scope) {
 });
 {% endhighlight %}
 
-Let's change some execution context:
+Let's change some execution context using `angular.bind()`:
 
 {% highlight javascript %}
 app.controller('MainCtrl', function ($scope) {
