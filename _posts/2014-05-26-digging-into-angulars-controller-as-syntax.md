@@ -60,11 +60,11 @@ To reflect `this.title` in the DOM, we need to ride off our instance:
 
 {% highlight html %}
 <div ng-controller="MainCtrl as main">
-  {{ main.title }}
+   {% raw %}{{ main.title }}{% endraw %}
 </div>
 {% endhighlight %}
 
-Namespacing the scopes is a great move I think, it cleans up Angular _massively_. I've always disliked the "floating variables" such as `{{ title }}`, I much prefer hitting the instance with `{{ main.title }}`.
+Namespacing the scopes is a great move I think, it cleans up Angular _massively_. I've always disliked the "floating variables" such as `{% raw %}{{ title }}{% endraw %}`, I much prefer hitting the instance with `{% raw %}{{ main.title }}{% endraw %}`.
 
 ### Nested scopes
 
@@ -74,25 +74,25 @@ Take this for example:
 
 {% highlight html %}
 <div ng-controller="MainCtrl">
-  {{ title }}
+  {% raw %}{{ title }}{% endraw %}
   <div class="AnotherCtrl">
-    {{ title }}
+    {% raw %}{{ title }}{% endraw %}
     <div class="YetAnotherCtrl">
-      {{ title }}
+      {% raw %}{{ title }}{% endraw %}
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-Firstly, we're going to get interpolation issues as `{{ title }}` will be very confusing to use and most likely one scope will take precidence over another. We also don't know which one that might be. Whereas if we did this things are far clearer and variables can be accessed properly across scopes:
+Firstly, we're going to get interpolation issues as `{% raw %}{{ title }}{% endraw %}` will be very confusing to use and most likely one scope will take precidence over another. We also don't know which one that might be. Whereas if we did this things are far clearer and variables can be accessed properly across scopes:
 
 {% highlight html %}
 <div ng-controller="MainCtrl as main">
-  {{ main.title }}
+  {% raw %}{{ main.title }}{% endraw %}
   <div class="AnotherCtrl as another">
-    {{ another.title }}
+    {% raw %}{{ another.title }}{% endraw %}
     <div class="YetAnotherCtrl as yet">
-      {{ yet.title }}
+      {% raw %}{{ yet.title }}{% endraw %}
     </div>
   </div>
 </div>
@@ -102,14 +102,14 @@ I can also access parent scopes without doing this:
 
 {% highlight html %}
 <div ng-controller="MainCtrl">
-  {{ title }}
+  {% raw %}{{ title }}{% endraw %}
   <div class="AnotherCtrl">
-    Scope title: {{ title }}
-    Parent title: {{ $parent.title }}
+    Scope title: {% raw %}{{ title }}{% endraw %}
+    Parent title: {% raw %}{{ $parent.title }}{% endraw %}
     <div class="YetAnotherCtrl">
-      {{ title }}
-      Parent title: {{ $parent.title }}
-      Parent parent title: {{ $parent.$parent.title }}
+      {% raw %}{{ title }}{% endraw %}
+      Parent title: {% raw %}{{ $parent.title }}{% endraw %}
+      Parent parent title: {% raw %}{{ $parent.$parent.title }}{% endraw %}
     </div>
   </div>
 </div>
@@ -119,14 +119,14 @@ And make things more logical:
 
 {% highlight html %}
 <div ng-controller="MainCtrl as main">
-  {{ main.title }}
+  {% raw %}{{ main.title }}{% endraw %}
   <div class="AnotherCtrl as another">
-    Scope title: {{ another.title }}
-    Parent title: {{ main.title }}
+    Scope title: {% raw %}{{ another.title }}{% endraw %}
+    Parent title: {% raw %}{{ main.title }}{% endraw %}
     <div class="YetAnotherCtrl as yet">
-      Scope title: {{ yet.title }}
-      Parent title: {{ another.title }}
-      Parent parent title: {{ main.title }}
+      Scope title: {% raw %}{{ yet.title }}{% endraw %}
+      Parent title: {% raw %}{{ another.title }}{% endraw %}
+      Parent parent title: {% raw %}{{ main.title }}{% endraw %}
     </div>
   </div>
 </div>
