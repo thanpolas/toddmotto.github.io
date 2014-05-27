@@ -204,7 +204,7 @@ app.controller('MainCtrl', function ($scope) {
   $scope.$watch(angular.bind(this, function () {
     return this.title; // `this` IS the `this` above!!
   }), function (newVal, oldVal) {
-    now we will pickup changes to newVal and oldVal
+    // now we will pickup changes to newVal and oldVal
   });
 });
 {% endhighlight %}
