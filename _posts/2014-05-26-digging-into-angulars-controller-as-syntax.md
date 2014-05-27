@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /digging-into-angulars-controller-as-syntax
-title: Digging into Angular’s "Controller as" syntax
+title: Digging into Angular’s “Controller as” syntax
 path: 2014-05-26-digging-into-angulars-controller-as-syntax.md
 ---
 
