@@ -156,7 +156,7 @@ app.filter('startsWithA', function () {
 });
 {% endhighlight %}
 
-There are _two_ different things happening here! First, `item` previously is now `items`, which is our Array passed in from the `ng-repeat`. The second thing is that we return a _new_ Array. Of course we can use ES5 methods like `Array.prototype.map()`, but this is simpler to understand visually. Annotated:
+There are _two_ different things happening here! First, `item` previously is now `items`, which is our Array passed in from the `ng-repeat`. The second thing is that we need to return a _new_ Array. Annotated:
 
 {% highlight javascript %}
 app.filter('startsWithA', function () {
@@ -176,6 +176,18 @@ app.filter('startsWithA', function () {
     }
     // boom, return the Array after iteration's complete
     return filtered;
+  };
+});
+{% endhighlight %}
+
+ES5 version using `Array.prototype.filter` for a super clean filter:
+
+{% highlight javascript %}
+app.filter('startsWithA', function () {
+  return function (items) {
+    return items.filter(function (item) {
+      return /a/i.test(item.name.substring(0, 1));
+    });
   };
 });
 {% endhighlight %}
