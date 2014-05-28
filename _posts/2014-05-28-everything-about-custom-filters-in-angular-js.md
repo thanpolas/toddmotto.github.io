@@ -228,7 +228,7 @@ The most important thing to remember here is _how_ we're passing in arguments! N
 
 We'd then get something like this:
 
-c
+{% highlight javascript %}
 app.filter('startsWithLetter', function () {
   return function (items, letter, number, somethingElse, anotherThing) {
     // do a crazy loop
