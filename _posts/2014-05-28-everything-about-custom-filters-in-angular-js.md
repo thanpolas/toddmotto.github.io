@@ -13,7 +13,7 @@ I think it's best to understand what we even want to learn. To do that, we need 
 Filter 1 just filters a single piece of Model data (not a loop or anything fancy) and spits it out into the View for us. This could be something like a date:
 
 {% highlight html %}
-<p>{{ 1400956671914 | date: 'dd-MM-yyyy' }}</p>
+<p>{% raw %}{{ 1400956671914 | date: 'dd-MM-yyyy' }}{% endraw %}</p>
 {% endhighlight %}
 
 When rendered, the DOM would look like this:
@@ -87,7 +87,7 @@ Then we declare it in the HTML:
 <div ng-app="app">
   <div ng-controller="PersonCtrl as person">
     <p>
-      {{ person.username | makeUppercase }}
+      {% raw %}{{ person.username | makeUppercase }}{% endraw %}
     </p>
   </div>
 </div>
@@ -124,7 +124,7 @@ We can setup a normal `ng-repeat` on it:
 {% highlight html %}
 <ul>
   <li ng-repeat="friend in person.friends">
-    {{ friend }}
+    {% raw %}{{ friend }}{% endraw %}
   </li>
 </ul>
 {% endhighlight %}
@@ -134,7 +134,7 @@ Add a filter called `startsWithA`, where we only want to show names in the Array
 {% highlight html %}
 <ul>
   <li ng-repeat="friend in person.friends | startsWithA">
-    {{ friend }}
+    {% raw %}{{ friend }}{% endraw %}
   </li>
 </ul>
 {% endhighlight %}
@@ -192,7 +192,7 @@ Pretty much the same as the above, but we can pass arguments into the functions 
 <input type="text" ng-model="letter">
 <ul>
   <li ng-repeat="friend in person.friends | startsWithLetter:letter">
-    {{ friend }}
+    {% raw %}{{ friend }}{% endraw %}
   </li>
 </ul>
 {% endhighlight %}
@@ -221,7 +221,7 @@ The most important thing to remember here is _how_ we're passing in arguments! N
 <input type="text" ng-model="letter">
 <ul>
   <li ng-repeat="friend in person.friends | startsWithLetter:letter:number:somethingElse:anotherThing">
-    {{ friend }}
+    {% raw %}{{ friend }}{% endraw %}
   </li>
 </ul>
 {% endhighlight %}
@@ -276,7 +276,7 @@ Then the repeat:
 <div ng-controller="PersonCtrl as person">
   <ul>
     <li ng-repeat="friend in person.friends | filter:person.startsWithW">
-      {{ friend }}
+      {% raw %}{{ friend }}{% endraw %}
     </li>
   </ul>
 </div>
