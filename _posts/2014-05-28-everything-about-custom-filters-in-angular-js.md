@@ -28,7 +28,7 @@ Let's take my full name for example, if I wanted to quickly filter it and make i
 
 Angular has a `.filter()` method for each Module, which means we can write our own custom filters. Let's look at a stripped down filter:
 
-{% highlight html %}
+{% highlight javascript %}
 app.filter('', function () {
   return function () {
     return;
@@ -42,7 +42,7 @@ The returned function gets invoked each time Angular calls the filter, which mea
 
 Let's fill it in with some data:
 
-{% highlight html %}
+{% highlight javascript %}
 app.filter('makeUppercase', function () {
   return function (item) {
     return item.toUpperCase();
@@ -52,7 +52,7 @@ app.filter('makeUppercase', function () {
 
 So what do these mean? I'll annotate:
 
-{% highlight html %}
+{% highlight javascript %}
 // filter method, creating `makeUppercase` a globally
 // available filter in our `app` module
 app.filter('makeUppercase', function () {
