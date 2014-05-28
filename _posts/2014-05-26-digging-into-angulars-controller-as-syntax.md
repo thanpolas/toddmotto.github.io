@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /digging-into-angulars-controller-as-syntax
-title: Digging into Angulars "Controller as" syntax
+title: Digging into Angular’s “Controller as” syntax
 path: 2014-05-26-digging-into-angulars-controller-as-syntax.md
 ---
 
@@ -204,7 +204,7 @@ app.controller('MainCtrl', function ($scope) {
   $scope.$watch(angular.bind(this, function () {
     return this.title; // `this` IS the `this` above!!
   }), function (newVal, oldVal) {
-    now we will pickup changes to newVal and oldVal
+    // now we will pickup changes to newVal and oldVal
   });
 });
 {% endhighlight %}

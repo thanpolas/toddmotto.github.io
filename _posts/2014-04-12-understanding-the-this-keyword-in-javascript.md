@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /understanding-the-this-keyword-in-javascript
-title: Understanding the "this" keyword in JavaScript
+title: Understanding the “this” keyword in JavaScript
 path: 2014-04-12-understanding-the-this-keyword-in-javascript.md
 ---
 

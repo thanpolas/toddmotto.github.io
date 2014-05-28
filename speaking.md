@@ -32,6 +32,30 @@ I love teaching and speaking about JavaScript, HTML5 and AngularJS. If you'd lik
       London
     </p>
   </li>
+  <li>
+    <p class="events__type">
+      Talk, <span>04.11.2014</span>
+    </p>
+    <p class="events__title">
+      (title TBC)
+      <a href="//atthefrontend.dk" target="_blank">
+        At The Frontend
+      </a>, 
+      Copenhagen, Denmark
+    </p>
+  </li>
+  <li>
+    <p class="events__type">
+      Talk (x2), <span>05.11.2014 - 07.11.2014</span>
+    </p>
+    <p class="events__title">
+      (title TBC)
+      <a href="//oredev.org" target="_blank">
+        Øredev
+      </a>, 
+      Sweden
+    </p>
+  </li>
 </ul>
 
 #### Past
