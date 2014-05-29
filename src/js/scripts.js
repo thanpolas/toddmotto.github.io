@@ -41,19 +41,6 @@
   });
 
   /**
-   * Nav
-   */
-  var nav = document.querySelector('.nav__icon');
-  var device = function () {
-    return 'ontouchstart' in window ? 'touchstart' : 'click';
-  };
-  var toggleNav = function (event) {
-    this.parentNode.setAttribute('data-state', this.parentNode.getAttribute('data-state') === 'open' ? 'closed' : 'open');
-    event.preventDefault();
-  };
-  nav.addEventListener(device(), toggleNav, false);
-
-  /**
    * BSA
    */
   var bsa = document.createElement('script');

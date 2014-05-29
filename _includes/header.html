@@ -3,43 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-
     <base href="/assets/">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Lead front-end engineer helping others build a better web. HTML5, JavaScript, AngularJS, CSS3.">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <meta name="description" content="JavaScript, AngularJS and HTML5 engineer helping build a better web.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//plus.google.com/+ToddMotto" rel="author">
     <link href="css/style.min.css" rel="stylesheet">
-
   </head>
-  <body class="clear{% if page.class %} {{ page.class }}{% endif %}">
+  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
 
-    <header class="header">
-      <div class="wrapper">
+    <div class="sidebar clear">
+      <div class="sidebar__profile">
+        <a href="/">
+          <img src="img/todd.jpg">
+        </a>
+        <h1 class="sidebar__profile-name">
+          Todd Motto
+        </h1>
+        <div class="sidebar__profile-bio clear">
+          <p>
+            Lead front-end <a href="//twitter.com/appsbroker">@appsbroker</a>. <br>
+            Developer Expert <a href="//twitter.com/google">@google</a>. <br>
+            JavaScript and HTML5 <br>
+            software engineer.
+          </p>
+        </div>
+        <div class="sidebar__profile-social">
+          <a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true">
+            Follow @toddmotto
+          </a>
+        </div>
+        <nav class="sidebar__profile-nav">
+          <ul>
+            <li>
+              <a href="/">
+                Posts
+              </a>
+            </li><!--
+            --><li>
+              <a href="/about">
+                About
+              </a>
+            </li><!--
+            --><li>
+              <a href="/speaking">
+                Speaking
+              </a>
+            </li><!--
+            --><li>
+              <a href="//github.com/toddmotto">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </nav>
         <div id="carbonads-container">
           <div class="carbonad">
             <div id="azcarbon"></div>
           </div>
         </div>
-        <div id="bsap_1277686" class="bsarocks bsap_6b437ea62f74be534e3b9d72fcdeb8ff"></div>
-        <div class="header__profile">
-          <a href="/">
-            <img src="img/todd.jpg">
-          </a>
-        </div>
-        <nav class="nav" data-state="closed">
-          <a href="#" class="nav__icon">
-            <i class="fa fa-bars"></i>
-          </a>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/downloads">Downloads</a></li>
-            <li><a href="/session">Sessions</a></li>
-          </ul>
-        </nav>
       </div>
-    </header>
+    </div>

@@ -1,3 +1,102 @@
 .main {
+  margin: 0 0 0 340px;
+}
+.posts {
 
+}
+/* ul */.posts__list {
+  li {
+    a {
+      display: block;
+      padding: 20px 25px;
+    }
+  }
+}
+.posts__title {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+.posts__date {
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  padding: 0 0 10px;
+}
+.post,
+.page {
+  padding: 0 35px 15px;
+  h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    margin: 10px 0 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+    font-style: italic;
+  }
+  ul {
+    li {
+      a {
+        font-weight: 900;
+      }
+    }
+  }
+}
+.post__title,
+.page__title {
+  font-size: 30px;
+  margin: 35px 0 0;
+}
+.page__title {
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+.post__meta {
+  margin: 5px 0 25px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+  p {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+  }
+}
+.post__meta-edit {
+  position: relative;
+  display: inline-block;
+  background: #f5f6f5;
+  color: #444;
+  padding: 2px 8px 2px 25px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 900;
+  i {
+    font-size: 14px;
+    @include position(absolute, 4px 0 0 7px);
+  }
+}
+.download-box {
+  margin: 0 0 15px;
+  a {
+    @include vendor(border-radius, 3px);
+    display: inline-block;
+    background: #444;
+    color: #fff;
+    padding: 8px 20px;
+    font-weight: 900;
+    margin: 0 10px 0 0;
+  }
+}
+.about {
+
+}
+.about__talk {
+  float: left;
+  margin: 25px 20px 10px 0;
+  img {
+    border-radius: 3px;
+  }
 }

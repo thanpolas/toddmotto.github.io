@@ -1,10 +1,11 @@
 ---
 title: About
 layout: page
+class: about
 ---
 
 <div class="about__talk">
-  <img data-shuffle>
+  <img src="img/shuffle/html5devconf.jpg">
 </div>
 
 I'm lead front-end engineer at [Appsbroker](//www.appsbroker.com), a [Developer Expert](https://developers.google.com/experts) at Google, [conference speaker](https://speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) evangelist.
@@ -37,8 +38,7 @@ Partnered with Intel and [Rolling Stone](//rollingstone.com/feature/the-geeks-on
 * 23.09.2013: [Advertising Age: Intel/Rolling Stone](//adage.com/article/digital/intel-hub-targets-developers-subsidizing-web-publishers/244296)
 
 ### Licensing
-Please check out the [Licensing](/licensing) page.
+All code MIT licensed.
 
 ### Contact
-
 Want me to talk at your event/conference? Want to talk about something? Email me on <a href="http://www.google.com/recaptcha/mailhide/d?k=01rmKaZ2nEzUNTlBeJwIA-NA==&amp;c=de1XRgcu-NxBLsqf8jeHz_Fq-2QrJf1ZcDAozNqFuu8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501rmKaZ2nEzUNTlBeJwIA-NA\75\75\46c\75de1XRgcu-NxBLsqf8jeHz_Fq-2QrJf1ZcDAozNqFuu8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">[show email]</a> or [tweet](//twitter.com/toddmotto) me. I'm not currently looking for job opportunities or other arrangements. For code queries or support, please go to StackOverflow as I'll likely be unable to respond to individual queries.
