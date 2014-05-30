@@ -1,3 +1,4 @@
+/*! Echo v1.5.0 | (c) 2014 @toddmotto | MIT license | github.com/toddmotto/echo */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -21,7 +22,7 @@
     return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
   };
 
-  var _throttle = function () {
+  var debounce = function () {
     clearTimeout(poll);
     poll = setTimeout(exports.render, throttle);
   };
@@ -45,11 +46,11 @@
     callback = opts.callback || callback;
     exports.render();
     if (document.addEventListener) {
-      root.addEventListener('scroll', _throttle, false);
-      root.addEventListener('load', _throttle, false);
+      root.addEventListener('scroll', debounce, false);
+      root.addEventListener('load', debounce, false);
     } else {
-      root.attachEvent('onscroll', _throttle);
-      root.attachEvent('onload', _throttle);
+      root.attachEvent('onscroll', debounce);
+      root.attachEvent('onload', debounce);
     }
   };
 
@@ -87,9 +88,9 @@
 
   exports.detach = function () {
     if (document.removeEventListener) {
-      root.removeEventListener('scroll', _throttle);
+      root.removeEventListener('scroll', debounce);
     } else {
-      root.detachEvent('onscroll', _throttle);
+      root.detachEvent('onscroll', debounce);
     }
     clearTimeout(poll);
   };
