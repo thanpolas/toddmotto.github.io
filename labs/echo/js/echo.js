@@ -10,6 +10,8 @@
 
   'use strict';
 
+  var exports = {};
+
   var callback = function () {};
 
   var offset, poll, unload;
