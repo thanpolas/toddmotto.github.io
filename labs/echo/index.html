@@ -168,24 +168,25 @@
     </div>
     <!-- /main -->
 
-    <!-- Echo.js -->
+    <!-- echo.js -->
     <script src="js/echo.js"></script>
     <script>
-    Echo.init({
-      offset: '0',
-      throttle: '250'
+    echo.init({
+      offset: 100,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+        console.log(element, 'has been', op + 'ed')
+      }
     });
     </script>
 
-    <!-- Analytics (Demo only) -->
     <script>
       var _gaq=[['_setAccount','UA-20440416-10'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src='//www.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-
-    <!-- Carbon Ads Script (Demo only) -->
     <script src="http://www.toddmotto.com/ads/ads.js"></script>
 
   </body>
