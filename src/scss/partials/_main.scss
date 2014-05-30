@@ -1,8 +1,9 @@
 .main {
   margin: 0 0 0 340px;
 }
+.post,
 .posts {
-
+  max-width: 800px;
 }
 /* ul */.posts__list {
   li {
@@ -99,4 +100,30 @@
   img {
     border-radius: 3px;
   }
+}
+.pagination {
+  background: #f5f6f5;
+  color: #444;
+  a,
+  span {
+    @include vendor(border-radius, 3px);
+    padding: 15px 25px;
+    display: inline-block;
+ }
+ a {
+  color: #444;
+  background: #f5f6f5;
+  &:hover {
+    background: darken(#f5f6f5, 5%);
+  }
+ }
+}
+.pagination--previous {
+  float: left;
+  width: 50%;
+}
+.pagination--next {
+  text-align: right;
+  float: right;
+  width: 50%;
 }
