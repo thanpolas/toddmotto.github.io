@@ -1,18 +1,17 @@
-/*! Echo v1.5.0 | (c) 2014 @toddmotto | MIT license | github.com/toddmotto/echo */
 window.Echo = (function (global, document, undefined) {
 
   'use strict';
 
   /**
-   * store
-   * @type {Array}
+   * callback - initialized to a no-op so that no validations on it's presence need to be made
+   * @type {Function}
    */
-  var store = [];
+  var callback = function(){};
 
   /**
-   * offset, throttle, poll vars
+   * offset, throttle, poll, unload vars
    */
-  var offset, throttle, poll;
+  var offset, throttle, poll, unload;
 
   /**
    *  _inView
@@ -20,9 +19,9 @@ window.Echo = (function (global, document, undefined) {
    * @param {Element} element Image element
    * @returns {Boolean} Is element in viewport
    */
-  var _inView = function (element) {
-    var coords = element.getBoundingClientRect();
-    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + offset);
+  var _inView = function (element, view) {
+    var box = element.getBoundingClientRect();
+    return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
   };
 
   /**
@@ -31,24 +30,37 @@ window.Echo = (function (global, document, undefined) {
    * @private
    */
   var _pollImages = function () {
-    var length = store.length;
-    if (length > 0) {
-      for (var i = 0; i < length; i++) {
-        var self = store[i];
-        if (self && _inView(self)) {
-          self.src = self.getAttribute('data-echo');
-          store.splice(i, 1);
-          length = store.length;
-          i--;
+    var src,
+        i,
+        elem,
+        view,
+        nodes = document.querySelectorAll('img[data-echo]'),
+        length = nodes.length;
+    view = {
+      l: 0 - offset.l,
+      t: 0 - offset.t,
+      b: (window.innerHeight || document.documentElement.clientHeight) + offset.b,
+      r: (window.innerWidth || document.documentElement.clientWidth) + offset.r
+    };
+    for(i=0; i<length; i++) {
+      elem = nodes[i];
+      if(_inView(elem, view)) {
+        if(unload) {
+          elem.setAttribute('data-echo-placeholder', elem.src);
         }
+        elem.src = elem.getAttribute('data-echo');
+        if(!unload) {
+          elem.removeAttribute('data-echo');
+        }
+        callback(elem, 'load');
+      } else if(unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+        elem.src = src;
+        elem.removeAttribute('data-echo-placeholder');
+        callback(elem, 'unload');
       }
-    } else {
-      if (document.removeEventListener) {
-        global.removeEventListener('scroll', _throttle);
-      } else {
-        global.detachEvent('onscroll', _throttle);
-      }
-      clearTimeout(poll);
+    }
+    if(!length) {
+      detach();
     }
   };
 
@@ -63,20 +75,37 @@ window.Echo = (function (global, document, undefined) {
 
   /**
    * init Module init function
-   * @param {Object} [obj] Passed in Object with options
-   * @param {Number|String} [obj.throttle]
-   * @param {Number|String} [obj.offset]
+   * @param {Object} [opts] Passed in Object with options
+   * @param {Number|String} [opts.throttle]
+   * @param {Number|String} [opts.offset]
+   * @param {Number|String} [opts.offsetBottom]
+   * @param {Number|String} [opts.offsetTop]
+   * @param {Number|String} [opts.offsetLeft]
+   * @param {Number|String} [opts.offsetRight]
+   * @param {Boolean} [opts.unload]
+   * @param {Function} [opts.callback]
    */
-  var init = function (obj) {
+  var init = function (opts) {
 
-    var nodes = document.querySelectorAll('[data-echo]');
-    var opts = obj || {};
-    offset = parseInt(opts.offset || 0);
-    throttle = parseInt(opts.throttle || 250);
+    opts = opts || {};
+    var offsetAll = opts.offset || 0;
+    var offsetVertical = opts.offsetVertical || offsetAll;
+    var offsetHorizontal = opts.offsetHorizontal || offsetAll;
 
-    for (var i = 0; i < nodes.length; i++) {
-      store.push(nodes[i]);
+    function optionToInt(opt, fallback) {
+      return parseInt(opt || fallback, 10);
     }
+
+    offset = {
+      t: optionToInt(opts.offsetTop, offsetVertical),
+      b: optionToInt(opts.offsetBottom, offsetVertical),
+      l: optionToInt(opts.offsetLeft, offsetHorizontal),
+      r: optionToInt(opts.offsetRight, offsetHorizontal)
+    };
+    throttle = optionToInt(opts.throttle, 250);
+    unload = !!opts.unload;
+    callback = opts.callback || callback;
+
 
     _pollImages();
 
@@ -91,11 +120,24 @@ window.Echo = (function (global, document, undefined) {
   };
 
   /**
+   * detach remove listeners
+   */
+  var detach = function() {
+    if (document.removeEventListener) {
+      global.removeEventListener('scroll', _throttle);
+    } else {
+      global.detachEvent('onscroll', _throttle);
+    }
+    clearTimeout(poll);
+  };
+
+  /**
    * return Public methods
    * @returns {Object}
    */
   return {
     init: init,
+    detach: detach,
     render: _pollImages
   };
 
