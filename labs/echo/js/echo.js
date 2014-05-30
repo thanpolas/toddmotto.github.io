@@ -45,11 +45,11 @@
     callback = opts.callback || callback;
     exports.render();
     if (document.addEventListener) {
-      global.addEventListener('scroll', throttle, false);
-      global.addEventListener('load', throttle, false);
+      root.addEventListener('scroll', throttle, false);
+      root.addEventListener('load', throttle, false);
     } else {
-      global.attachEvent('onscroll', throttle);
-      global.attachEvent('onload', throttle);
+      root.attachEvent('onscroll', throttle);
+      root.attachEvent('onload', throttle);
     }
   };
 
@@ -87,9 +87,9 @@
 
   exports.detach = function () {
     if (document.removeEventListener) {
-      global.removeEventListener('scroll', throttle);
+      root.removeEventListener('scroll', throttle);
     } else {
-      global.detachEvent('onscroll', throttle);
+      root.detachEvent('onscroll', throttle);
     }
     clearTimeout(poll);
   };
