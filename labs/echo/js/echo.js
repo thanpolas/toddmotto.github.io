@@ -14,14 +14,14 @@
 
   var callback = function () {};
 
-  var offset, poll, unload;
+  var offset, poll, throttle, unload;
 
   var inView = function (element, view) {
     var box = element.getBoundingClientRect();
     return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
   };
 
-  var throttle = function () {
+  var _throttle = function () {
     clearTimeout(poll);
     poll = setTimeout(exports.render, throttle);
   };
@@ -45,11 +45,11 @@
     callback = opts.callback || callback;
     exports.render();
     if (document.addEventListener) {
-      root.addEventListener('scroll', throttle, false);
-      root.addEventListener('load', throttle, false);
+      root.addEventListener('scroll', _throttle, false);
+      root.addEventListener('load', _throttle, false);
     } else {
-      root.attachEvent('onscroll', throttle);
-      root.attachEvent('onload', throttle);
+      root.attachEvent('onscroll', _throttle);
+      root.attachEvent('onload', _throttle);
     }
   };
 
@@ -87,9 +87,9 @@
 
   exports.detach = function () {
     if (document.removeEventListener) {
-      root.removeEventListener('scroll', throttle);
+      root.removeEventListener('scroll', _throttle);
     } else {
-      root.detachEvent('onscroll', throttle);
+      root.detachEvent('onscroll', _throttle);
     }
     clearTimeout(poll);
   };
