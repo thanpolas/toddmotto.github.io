@@ -46,6 +46,7 @@ Based on our newly aquired knowledge from the above, you wouldn't expect this to
 typeof []; // object
 typeof {}; // object
 typeof ''; // string
+typeof new Date() // object
 typeof 1; // number
 typeof function () {}; // function
 typeof /test/i; // object
@@ -101,6 +102,7 @@ Which means if we run out test again using all JS types:
 Object.prototype.toString.call([]); // [object Array]
 Object.prototype.toString.call({}); // [object Object]
 Object.prototype.toString.call(''); // [object String]
+Object.prototype.toString.call(new Date()); // [object Date]
 Object.prototype.toString.call(1); // [object Number]
 Object.prototype.toString.call(function () {}); // [object Function]
 Object.prototype.toString.call(/test/i); // [object RegExp]
@@ -142,6 +144,7 @@ I put together all the above methods into a micro-library called [Axis.js](//git
 axis.isArray([]); // true
 axis.isObject({}); // true
 axis.isString(''); // true
+axis.isDate(new Date()); // true
 axis.isRegExp(/test/i); // true
 axis.isFunction(function () {}); // true
 axis.isBoolean(true); // true
