@@ -77,10 +77,10 @@ var person = [];
 var myPerson = {
   getName: function () {
     return 'Todd';
-  };
+  }
 };
 if (typeof person === 'object') {
-  person.getName(); // ReferenceError: person is not defined
+  person.getName(); // Uncaught TypeError: undefined is not a function 
 }
 {% endhighlight %}
 
