@@ -75,9 +75,9 @@ Take this for example:
 {% highlight html %}
 <div ng-controller="MainCtrl">
   {% raw %}{{ title }}{% endraw %}
-  <div class="AnotherCtrl">
+  <div ng-controller="AnotherCtrl">
     {% raw %}{{ title }}{% endraw %}
-    <div class="YetAnotherCtrl">
+    <div ng-controller="YetAnotherCtrl">
       {% raw %}{{ title }}{% endraw %}
     </div>
   </div>
@@ -89,9 +89,9 @@ Firstly, we're going to get interpolation issues as `{% raw %}{{ title }}{% endr
 {% highlight html %}
 <div ng-controller="MainCtrl as main">
   {% raw %}{{ main.title }}{% endraw %}
-  <div class="AnotherCtrl as another">
+  <div ng-controller="AnotherCtrl as another">
     {% raw %}{{ another.title }}{% endraw %}
-    <div class="YetAnotherCtrl as yet">
+    <div ng-controller="YetAnotherCtrl as yet">
       {% raw %}{{ yet.title }}{% endraw %}
     </div>
   </div>
@@ -103,10 +103,10 @@ I can also access parent scopes without doing this:
 {% highlight html %}
 <div ng-controller="MainCtrl">
   {% raw %}{{ title }}{% endraw %}
-  <div class="AnotherCtrl">
+  <div ng-controller="AnotherCtrl">
     Scope title: {% raw %}{{ title }}{% endraw %}
     Parent title: {% raw %}{{ $parent.title }}{% endraw %}
-    <div class="YetAnotherCtrl">
+    <div ng-controller="YetAnotherCtrl">
       {% raw %}{{ title }}{% endraw %}
       Parent title: {% raw %}{{ $parent.title }}{% endraw %}
       Parent parent title: {% raw %}{{ $parent.$parent.title }}{% endraw %}
@@ -120,10 +120,10 @@ And make things more logical:
 {% highlight html %}
 <div ng-controller="MainCtrl as main">
   {% raw %}{{ main.title }}{% endraw %}
-  <div class="AnotherCtrl as another">
+  <div ng-controller="AnotherCtrl as another">
     Scope title: {% raw %}{{ another.title }}{% endraw %}
     Parent title: {% raw %}{{ main.title }}{% endraw %}
-    <div class="YetAnotherCtrl as yet">
+    <div ng-controller="YetAnotherCtrl as yet">
       Scope title: {% raw %}{{ yet.title }}{% endraw %}
       Parent title: {% raw %}{{ another.title }}{% endraw %}
       Parent parent title: {% raw %}{{ main.title }}{% endraw %}
