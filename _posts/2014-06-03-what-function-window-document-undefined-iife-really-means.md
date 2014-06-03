@@ -43,9 +43,9 @@ var logMyName = function (name) {
 logMyName('Todd');
 {% endhighlight %}
 
-We get to declare it by choice.
+We get to _invoke_ it by choice, and wherever we want/can scope providing.
 
-The reason "IIFE" was coined was because they're immediately-invoked function expressions. Which means we can't call them again, just once like this:
+The reason "IIFE" was coined was because they're immediately-invoked function expressions. Which means they're immediately called at runtime - also we can't call them again they run just once like this:
 
 {% highlight javascript %}
 var logMyName = (function (name) {
@@ -53,7 +53,7 @@ var logMyName = (function (name) {
 })('Todd');
 {% endhighlight %}
 
-The secret sauce here is this, which I've assigned to a variable in the previous example.
+The secret sauce here is this, (which I've assigned to a variable in the previous example):
 
 {% highlight javascript %}
 (function () {
@@ -61,7 +61,7 @@ The secret sauce here is this, which I've assigned to a variable in the previous
 })();
 {% endhighlight %}
 
-The extra pair of parenthesis is necessary as this doesn't work:
+The extra pair of parentheses _is_ necessary as this doesn't work:
 
 {% highlight javascript %}
 function () {
