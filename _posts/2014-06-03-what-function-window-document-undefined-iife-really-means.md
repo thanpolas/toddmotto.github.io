@@ -136,7 +136,7 @@ undefined = true;
 
 ### Minifying
 
-Minifying your local variables is where the IIFE pattern's awesomeness really kicks in. Local variables aren't really needed if they're passed in, so we can call them what we like.
+Minifying your local variables is where the IIFE pattern's awesomeness really kicks in. Local variable names aren't really needed if they're passed in, so we can call them what we like.
 
 Changing this:
 
