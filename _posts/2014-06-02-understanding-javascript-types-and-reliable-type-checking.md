@@ -96,7 +96,7 @@ Object.prototype.toString.call();
 
 Here we declare the `Object.prototype`, where we can access the `toString` method. From here I can change it's context using `.call()` and pass in anything I want. Underneath this does some crazy stuff and returns me a _true_ type of the Object inside square brackets `[object #####]`.
 
-Which means if we run out test again using all JS types:
+Which means if we run our test again using all JS types:
 
 {% highlight javascript %}
 Object.prototype.toString.call([]); // [object Array]
