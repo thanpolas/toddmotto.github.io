@@ -94,9 +94,11 @@ There's a really simple way, though to look at it looks like a hack:
 Object.prototype.toString.call();
 {% endhighlight %}
 
-Here we declare the `Object.prototype`, where we can access the `toString` method. From here I can change it's context using `.call()` and pass in anything I want. Underneath this does some crazy stuff and returns me a _true_ type of the Object inside square brackets `[object #####]`.
+The `.toString()` method is accessed using `Object.prototype` because every object descending from `Object` prototypically inherits it. By default, we get `[object Object]` when calling `{}.toString()` (an `Object`).
 
-Which means if we run out test again using all JS types:
+We can use `.call()` to change the `this` context (as it converts its argument to a value of type) and, for example, if we use `.call(/test/i)` (a Regular Expression) then `[object Object]` becomes `[object RegExp]`.
+
+Which means if we run our test again using all JS types:
 
 {% highlight javascript %}
 Object.prototype.toString.call([]); // [object Array]
@@ -122,14 +124,14 @@ if (getType(person) === '[object Object]') {
 }
 {% endhighlight %}
 
-To keep things DRY and save writing `=== '[object Object]'` or whatever out each time, we can create methods to simply reference:
+To keep things DRY and save writing `=== '[object Object]'` or whatever out each time, we can create methods to simply reference. I've used `.slice(8, -1);` inside the `getType` function to remove the unecessary `[object ` and `]` parts of the String:
 
 {% highlight javascript %}
 var getType = function (elem) {
-  return Object.prototype.toString.call(elem);
+  return Object.prototype.toString.call(elem).slice(8, -1);
 };
 var isObject = function (elem) {
-  return getType(elem) === '[object Object]';
+  return getType(elem) === 'object';
 };
 if (isObject(person)) {
   person.getName();
@@ -151,6 +153,43 @@ axis.isBoolean(true); // true
 axis.isNumber(1); // true
 axis.isNull(null); // true
 axis.isUndefined(); // true
+{% endhighlight %}
+
+The code powering that does some cool stuff for those interested:
+
+{% highlight javascript %}
+/*! axis v1.1.0 | (c) 2014 @toddmotto | github.com/toddmotto/axis */
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory;
+  } else {
+    root.axis = factory();
+  }
+})(this, function () {
+
+  'use strict';
+
+  var exports = {};
+
+  var types = 'Array Object String Date RegExp Function Boolean Number Null Undefined'.split(' ');
+
+  var type = function () {
+    return Object.prototype.toString.call(this).slice(8, -1);
+  };
+
+  for (var i = types.length; i--;) {
+    exports['is' + types[i]] = (function (self) {
+      return function (elem) {
+        return type.call(elem) === self;
+      };
+    })(types[i]);
+  }
+
+  return exports;
+
+});
 {% endhighlight %}
 
 <div class="download-box">
