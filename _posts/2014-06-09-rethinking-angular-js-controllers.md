@@ -143,7 +143,7 @@ app.controller('InboxCtrl',
 
   InboxFactory.getMessages().then(function (data) {
     InboxFactory.messages = data;
-    this.messages = InboxFactory;
+    this.messages = InboxFactory.messages;
   }.bind(this)); // use angular.bind for < IE9
 
 });
@@ -156,13 +156,13 @@ You might have noticed a little something, which is a way to tie common assets i
 {% highlight javascript %}
 InboxFactory.getMessages().then(function (data) {
   InboxFactory.messages = data;
-  this.messages = InboxFactory;
+  this.messages = InboxFactory.messages;
 }.bind(this));
 {% endhighlight %}
 
 I might not persist the Model _in_ the Controller, but I create a _reference_ to my Model, using the `this.messages = [];` is a perfect example of this as the Model cannot talk to the View directly, use the Controller only as a middleman.
 
-What I do is bind the promise result to `InboxFactory.messages = data;`, which assigns the value to the Model, then I assign my local Controller copy to the Model. This means that when the Factory updates the Model, the Controller updates, and when the Controller updates the Model, the Factory updates. It's a circle of binding love.
+What I do is bind the promise result to `InboxFactory.messages = data;`, which assigns the promise value to the Model, then I assign my local Controller copy to the Model using `this.messages = InboxFactory.messages;`. This means that when the Factory updates the Model, the Controller updates, and when the Controller updates the Model, the Factory updates. It's a circle of binding love.
 
 ### What is the Model?
 
@@ -172,9 +172,11 @@ We kind of agreed on a mix of both and that there are many options and opinions.
 
 Jasmine/Karma unit testing is made much easier as well, we can test the Factory to ensure it's hitting all it's endpoints, fetching and updating the local data - and when testing the Controller we can go in knowing our Factory is bulletproof which will help us track down errors faster, and make our Controller tests even slimmer.
 
-### When to $scope
+### Using $scope
 
 If you need to use `$scope`, you'll likely need to listen to an event or emit one, or `$watch` for Model changes. Based on the above, this isn't a good idea to tie Model behaviour into the Controller again. Using `Controller as` allows us to inject the $scope, but think about how you can abstract the same behaviour into a Factory.
+
+The `$scope` Object can be dependency injected into the Controller and used if needed.
 
 ### Rules for the Controller going forward:
 
