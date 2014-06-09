@@ -47,10 +47,10 @@ app.controller('InboxCtrl',
 Of course this is a more extreme example, there might be some reuse of the `$http`, but here we're totally abusing the Controller and using it to hold, create and maintain the Model state, as well as littering our Factories and other Services. This has massive impact across _many_ things:
 
 * Makes code reuse very difficult
-* Is very tightly coupled to a single Controller
+* Tightly couples our code to a single Controller
 * Makes testing very difficult
 * Isn't separating the Model and Controller
-* Encourages more bad habits
+* Inconsistent implementations across Controllers
 
 This results in the Controller becoming a bloated playground which can quickly spiral out of control into an intangible mess.
 
