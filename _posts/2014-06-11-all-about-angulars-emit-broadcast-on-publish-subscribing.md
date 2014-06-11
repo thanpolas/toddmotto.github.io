@@ -36,9 +36,9 @@ The simplest way to emulate parent and child scopes are to use Controllers. Each
 
 {% highlight html %}
 <div ng-controller="ParentCtrl as parent" class="ng-scope">
-  {{ parent.data }}
+  {% raw %}{{ parent.data }}{% endraw %}
   <div ng-controller="SiblingOneCtrl as sib1" class="ng-scope">
-      {{ sib1.data }}
+      {% raw %}{{ sib1.data }}{% endraw %}
   </div>
 </div>
 {% endhighlight %}
