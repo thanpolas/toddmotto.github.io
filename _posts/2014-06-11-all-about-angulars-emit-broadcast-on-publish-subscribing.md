@@ -1,8 +1,8 @@
 ---
 layout: post
-permalink: /all-about-angular-emit-broadcast-on-publish-subscribing
-title: All about Angular $emit, $broadcast, $on publish/subscribing
-path: 2014-06-11-all-about-angular-emit-broadcast-on-publish-subscribing.md
+permalink: /all-about-angulars-emit-broadcast-on-publish-subscribing
+title: All about Angular’s $emit, $broadcast, $on publish/subscribing
+path: 2014-06-11-all-about-angulars-emit-broadcast-on-publish-subscribing.md
 ---
 
 Angular's `$emit`, `$broadcast` and `$on` fall under the common "publish/subscribe" design pattern, or can do, in which you'd publish an event and subscribe/unsubscribe to it somewhere else. The Angular event system is brilliant, it makes things flawless and easy to do (as you'd expect!) but the concept behind it isn't so simple to master and you can often be left wondering why things don't work as you thought they might.
