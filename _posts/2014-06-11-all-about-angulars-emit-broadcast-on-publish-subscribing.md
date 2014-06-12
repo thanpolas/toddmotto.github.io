@@ -106,7 +106,7 @@ If things weren't complicated enough, let's through in `$rootScope` as well. `$r
 
 #### $rootScope.$emit versus $rootScope.$broadcast
 
-The `$rootScope` Object has the identical `$emit`, `$broadcast`, `$on` methods, but they work slightly differently to how `$scope` implements them. As `$rootScope` has no `$parent`, using an `$emit` would be pointless. Instead, `$rootScope.$emit` will fire an event for all `$rootScope.$on` listeners _only_. The interesting part is that `$rootScope.$broadcast` will notify all `$rootScope.$on` _as well as_ `$scope.$on` listeners, subtle but very important different if you want to avoid issues in your application.
+The `$rootScope` Object has the identical `$emit`, `$broadcast`, `$on` methods, but they work slightly differently to how `$scope` implements them. As `$rootScope` has no `$parent`, using an `$emit` would be pointless. Instead, `$rootScope.$emit` will fire an event for all `$rootScope.$on` listeners _only_. The interesting part is that `$rootScope.$broadcast` will notify all `$rootScope.$on` _as well as_ `$scope.$on` listeners, subtle but very important difference if you want to avoid issues in your application.
 
 #### $rootScope examples
 
