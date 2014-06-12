@@ -9,9 +9,9 @@ Angular's `$emit`, `$broadcast` and `$on` fall under the common "publish/subscri
 
 For those who are new to Angular and haven't used or seen `$emit`, `$broadcast` or `$on`, let's clarify what they do before we look at `$scope` and `$rootScope` event and scope relationships and how to utilise the event system correctly - as well as understand what's really going on.
 
-### $emit up, $broadcast down
+### $scope.$emit up, $scope.$broadcast down
 
-Using `$emit` will fire an event _up_ the `$scope`. Using `$broadcast` will fire an event _down_ the `$scope`. Using `$on` is how we listen for these events. A quick example:
+Using `$scope.$emit` will fire an event _up_ the `$scope`. Using `$scope.$broadcast` will fire an event _down_ the `$scope`. Using `$scope.$on` is how we listen for these events. A quick example:
 
 {% highlight javascript %}
 // firing an event upwards
@@ -28,7 +28,7 @@ $scope.$on('myCustomEvent', function (event, data) {
 });
 {% endhighlight %}
 
-### Using $scope ($emit/$broadcast)
+### $scope.($emit/$broadcast)
 
 The key thing to remember when using `$scope` to fire your events, is that they will communicate only with _immediate_ parent or child scopes only! Scopes aren't always child and parent. We might have sibling scopes. Using `$scope` to fire an event will miss out sibling scopes, and just carry on up! _They do not go sideways!_
 
@@ -100,15 +100,13 @@ $scope.$parent.$broadcast('myevent', 'Some data');
 
 What this does is jump up to `ParentCtrl` and then fire the `$broadcast` from there. 
 
-### Using $rootScope ($emit/$broadcast)
+### $rootScope.($emit/$broadcast)
 
-If things weren't complicated enough, let's through in `$rootScope` as well. `$rootScope` is the parent of _all_ scopes, which makes every newly created `$scope` a descendent! I mentioned above about how `$scope` is limited to direct scopes, `$rootScope` is how we could communicate across all scopes at once, which will fit certain scenarios better than others..
+If things weren't complicated enough, let's through in `$rootScope` as well. `$rootScope` is the parent of _all_ scopes, which makes every newly created `$scope` a descendent! I mentioned above about how `$scope` is limited to direct scopes, `$rootScope` is how we could communicate across scopes with ease. Doing this will fit certain scenarios better than others. It's not as simple as up or down the scopes though, unfortunately...
 
 #### $rootScope.$emit versus $rootScope.$broadcast
 
-The `$rootScope` Object has the identical`$emit`, `$broadcast`, `$on` properties, but they work slightly differently
-
-`$rootScope.$emit` will send an event for all `$rootScope.$on` listeners _only_. Using `$rootScope.$broadcast` will notify all `$rootScope.$on` _as well as_ `$scope.$on` listeners.
+The `$rootScope` Object has the identical `$emit`, `$broadcast`, `$on` methods, but they work slightly differently to how `$scope` implements them. As `$rootScope` has no `$parent`, using an `$emit` would be pointless. Instead, `$rootScope.$emit` will fire an event for all `$rootScope.$on` listeners _only_. The interesting part is that `$rootScope.$broadcast` will notify all `$rootScope.$on` _as well as_ `$scope.$on` listeners, subtle but very important different if you want to avoid issues in your application.
 
 #### $rootScope examples
 
