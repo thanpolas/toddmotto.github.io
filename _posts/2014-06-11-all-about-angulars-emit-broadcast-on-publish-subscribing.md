@@ -102,9 +102,15 @@ What this does is jump up to `ParentCtrl` and then fire the `$broadcast` from th
 
 ### Using $rootScope ($emit/$broadcast)
 
-If things weren't complicated enough, let's through in `$rootScope` as well. `$rootScope` is the parent of _all_ scopes, which makes every newly created `$scope` a descendent! I mentioned above about how `$scope` is limited to direct scopes, `$rootScope` is how we can communicate across all scopes at once, which will fit certain scenarios better than others.
+If things weren't complicated enough, let's through in `$rootScope` as well. `$rootScope` is the parent of _all_ scopes, which makes every newly created `$scope` a descendent! I mentioned above about how `$scope` is limited to direct scopes, `$rootScope` is how we could communicate across all scopes at once, which will fit certain scenarios better than others..
 
-Using `$rootScope` is identical in syntax to `$scope`, we can do `$rootScope.$emit`, `$rootScope.$broadcast`, and finally `$rootScope.$on` for callbacks. The difference is `$rootScope` beams its way through all our scope listeners - which means all scopes get hit from a `$broadcast` or `$emit` regardless of their scope hierarchy.
+#### $rootScope.$emit versus $rootScope.$broadcast
+
+The `$rootScope` Object has the identical`$emit`, `$broadcast`, `$on` properties, but they work slightly differently
+
+`$rootScope.$emit` will send an event for all `$rootScope.$on` listeners _only_. Using `$rootScope.$broadcast` will notify all `$rootScope.$on` _as well as_ `$scope.$on` listeners.
+
+#### $rootScope examples
 
 Let's take an even deeper hierarchy:
 
@@ -125,14 +131,22 @@ Let's take an even deeper hierarchy:
 
 The above has _3_ [lexical scopes](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope) (where parent scopes are accessible in the current scope, kind of hurts your brain to think about it in terms of DOM scoping, but the concepts are there) and _4_ Angular scopes, `ParentCtrl`, `SiblingOneCtrl`, `SiblingTwoCtrl` and `ChildCtrl`. Two sibling scopes.
 
-Using `$scope.$emit` inside `ChildCtrl` would result in `SiblingTwoCtrl` and `ParentCtrl` only being notified, as the event doesn't hit sibling scopes only _direct_ ancestors (completely ignoring `SiblingOneCtrl`). If we used `$rootScope`, however, then we can target all our scopes in the hierarchy in the direction of the event:
+Using `$scope.$emit` inside `ChildCtrl` would result in `SiblingTwoCtrl` and `ParentCtrl` only being notified, as the event doesn't hit sibling scopes only _direct_ ancestors (completely ignoring `SiblingOneCtrl`). If we used `$rootScope`, however, then we can target `$rootScope` listeners as well.
 
 {% highlight javascript %}
 app.controller('SiblingOneCtrl',
   function SiblingOneCtrl ($rootScope) {
 
-  $rootScope.$on('rootchild', function (event, data) {
-    console.log(data); // 'Woohoo!'
+  $rootScope.$on('rootScope:emit', function (event, data) {
+    console.log(data); // 'Emit!'
+  });
+  
+  $scope.$on('rootScope:broadcast', function (event, data) {
+    console.log(data); // 'Broadcast!'
+  });
+  
+  $rootScope.$on('rootScope:broadcast', function (event, data) {
+    console.log(data); // 'Broadcast!'
   });
 
 });
@@ -140,12 +154,11 @@ app.controller('SiblingOneCtrl',
 app.controller('ChildCtrl',
   function ChildCtrl ($rootScope) {
 
-  $rootScope.$emit('rootchild', 'Woohoo!'); // going up!
+  $rootScope.$emit('rootScope:emit', 'Emit!'); // $rootScope.$on
+  $rootScope.$broadcast('rootScope:broadcast', 'Broadcast'); // $rootScope.$on && $scope.$on
 
 });
 {% endhighlight %}
-
-Interestingly we can also fire an event with `$rootScope` and listen with `$scope`, but again this will only be direct ancestors of that scope. If you fire with `$rootScope`, listen with `$rootScope` - same with `$scope`.
 
 ### Unsubscribing from events
 
