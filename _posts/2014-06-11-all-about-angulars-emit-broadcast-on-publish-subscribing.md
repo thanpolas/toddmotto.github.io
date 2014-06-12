@@ -203,10 +203,12 @@ When using `$rootScope.$on`, we need to unbind those listeners each time the `$s
 app.controller('ParentCtrl',
   function ParentCtrl ($scope) {
 
-  var myListener = $scope.$on('child', function (event, data) {
-    // do something
+  // $rootScope $on
+  var myListener = $rootScope.$on('child', function (event, data) {
+    //
   });
 
+  // $scope $destroy
   $scope.$on('$destroy', myListener);
 
 });
