@@ -195,6 +195,23 @@ app.controller('ParentCtrl',
 });
 {% endhighlight %}
 
+#### $rootScope $destroy
+
+When using `$rootScope.$on`, we need to unbind those listeners each time the `$scope` is destroyed. `$scope.$on` listeners are automatically unbound, but we'll need to call the above closure manually on the `$destroy` event:
+
+{% highlight javascript %}
+app.controller('ParentCtrl',
+  function ParentCtrl ($scope) {
+
+  var myListener = $scope.$on('child', function (event, data) {
+    // do something
+  });
+
+  $scope.$on('$destroy', myListener);
+
+});
+{% endhighlight %}
+
 ### Cancelling events
 
 If you choose to use `$emit`, one of your other `$scope` listeners can cancel it, so prevent it bubbling further. Using `$broadcast` has the opposite effect in which it _cannot_ be cancelled!
