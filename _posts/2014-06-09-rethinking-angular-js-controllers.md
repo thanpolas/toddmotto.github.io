@@ -76,7 +76,7 @@ app.controller('InboxCtrl',
 
   InboxFactory.getMessages().then(function (data) {
     InboxFactory.messages = data;
-    $scope.messages = InboxFactory;
+    $scope.messages = InboxFactory.messages;
   });
 
 });
