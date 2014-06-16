@@ -361,6 +361,8 @@ Output:
 
 <iframe width="100%" height="300" src="http://jsfiddle.net/toddmotto/pmh4s/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+You can see that we passed the greeting data to a filter via the pipe (|) character, applying the reverse filter to the greeting data.
+
 And it's usage inside an _ng-repeat_:
 
 {% highlight html%}
@@ -545,7 +547,7 @@ myApp.controller('EmailsCtrl', ['$scope', function ($scope) {
 }]);
 {% endhighlight %}
 
-No we need to plug it into our HTML. This is where we'll use declarative bindings to _declare_ what the application will do - to create our first piece of dynamic HTML. We're going to be using Angular's built-in _ng-repeat_ directive, which will iterate over data and render an output with absolutely no callbacks or state changes, it's all for free:
+Now we need to plug it into our HTML. This is where we'll use declarative bindings to _declare_ what the application will do - to create our first piece of dynamic HTML. We're going to be using Angular's built-in _ng-repeat_ directive, which will iterate over data and render an output with absolutely no callbacks or state changes, it's all for free:
 
 {% highlight html %}
 <ul>
@@ -597,10 +599,10 @@ Now we'll move onto _DOM Methods_, these are also Directives and simulate functi
 
 {% highlight html %}
 <a href="" ng-click="toggle = !toggle">Toggle nav</a>
-  <ul ng-show="toggle">
-    <li>Link 1</li>
-    <li>Link 2</li>
-    <li>Link 3</li>
+<ul ng-show="toggle">
+  <li>Link 1</li>
+  <li>Link 2</li>
+  <li>Link 3</li>
 </ul>
 {% endhighlight %}
 
