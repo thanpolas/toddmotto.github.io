@@ -24,7 +24,7 @@ app.controller('MainCtrl', function MainCtrl ($scope, SomeFactory) {
 
 I'm not entirely sure what the implications are from Brian's advice, so far I've not experienced any drawbacks with the applications themselves or writing unit tests.
 
-Initially I opted for those approach as our workflow changed and we were using Grunt (now Gulp) file concats and minifications - of which we immediately split things into fresh files for everything to keep things modular and clean. The easiest way to grab the module we needed was using a variable, because chaining our module then method calls were a little unclean.
+Initially I opted for this approach as my workflow changed to use Grunt (aaand now Gulp) file concats and minifications - of which I immediately split things into individual files for everything to keep things modular and clean. The easiest way to grab the module namespace I needed was using a variable, because chaining our module between files proved difficult, not to mention jsHint being a pain about semi-colons (can't put them or you'll break the chain) amongst other things.
 
 ### Using chains
 
@@ -91,7 +91,7 @@ app.controller('MainCtrl', MainCtrl);
 
 ### Introducing an IIFE
 
-In the global scope the above could cause some confusion for Angular as it picks up functions as Controllers if the names match, so to avoid this we can hide it inside an IIFE.
+In the global scope the above could cause some confusion for Angular as it picks up functions as Controllers if the names match (as well as it being a global function which we should aim to avoid), so to resolve this I can drop it inside an IIFE which we're quite used to seeing:
 
 {% highlight javascript %}
 (function () {
@@ -104,7 +104,9 @@ In the global scope the above could cause some confusion for Angular as it picks
 })();
 {% endhighlight %}
 
-Better! Now we integrate into Angular and nothing is public. But what about the `app` variable referencing my Module? I think `app` is pretty naff anyway, but it's simple and I don't need to change it per project as it's pretty generic. But maybe it's _too_ generic and needs a change. So a module name in the way Brian recommends would be best.
+Better! It's looking more of a "module" now rather than a syntax-driven app, and nothing is public.
+
+But what about the `app` variable referencing my Module? I think `app` is pretty naff anyway, but it's simple and I don't need to change it per project as it's pretty generic. But maybe it's _too_ generic and needs a change. So a module name in the way Brian recommends would be best.
 
 Let's assume a module is setup, I can then bolt into it:
 
@@ -180,9 +182,15 @@ Chaining gets quite long though, let's neaten things up, add a `use strict` stat
 })();
 {% endhighlight %}
 
-Very clean, shows my _intent_ whilst being very visible. I know exactly what this file contains and how to lookup the functions powering the module methods. I can scroll to the bottom of any file and see this. With function hoisting you could even add them to the top, but I prefer not too. Generally name the method you're passing into as similar as possible as your Angular's extension name to avoid confusion, things like `.controller('UserCtrl', myCoolUserFunc);` will not help anybody.
+Very clean, shows my _intent_ whilst being very visible. It _kind of_ treats the Angular integration as some kind of exports/return - which I really like.
 
-The other thing I like about this is it makes my Angular application seem more like _my_ application too, rather than it being fully encapsulated inside a tonne of Angular's syntax as we've seen before.
+I also know exactly what this file contains based on the functions powering the module methods, as well as being able to scroll to the bottom of any file and see what's happening under the hood.
+
+With function hoisting you could even add them to the top, but I prefer not too.
+
+_Tip_: Generally name the method you're passing into as similar as possible as your Angular's extension name to avoid confusion, things like `.controller('UserCtrl', myCoolUserFunc);` will not help anybody.
+
+The other thing I like about this is it makes my Angular application seem more like _my_ application too, rather than it being fully encapsulated inside a tonne of Angular's syntax as we've seen before. It feels more like a JavaScript module.
 
 Unless creating a (fairly) small module, you might want to keep all files separate if you're automating file concats:
 
@@ -254,7 +262,7 @@ angular
   /**
    * I can have stuff here and no other scope can see it!
    * though you can't refer to any Angular stuff like $scope
-   * but for Objects or Arrays you could get clever wiht
+   * but for Objects or Arrays you could get clever with
    */
 
   function MainCtrl ($scope, SomeFactory) {
