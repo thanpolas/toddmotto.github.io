@@ -76,7 +76,7 @@ app.controller('InboxCtrl',
 
   InboxFactory.getMessages().then(function (data) {
     InboxFactory.messages = data;
-    $scope.messages = InboxFactory;
+    $scope.messages = InboxFactory.messages;
   });
 
 });
@@ -185,7 +185,7 @@ The `$scope` Object can be dependency injected into the Controller and used if n
 * Controllers only bring logic together
 * Controller drives Model _changes_, and View _changes_. Keyword; drives, not creates/persists, it triggers them!
 * Delegate shared properties inside the Controller, creating a copy and binding to both Controller and Factory
-* Use "Controller as" ([read the article]())
+* Use "Controller as" ([read the article](http://toddmotto.com/digging-into-angulars-controller-as-syntax/))
 * Keep things simple, I prefer XXXXCtrl and XXXXFactory, I know exactly what the two do, we don't need fancy names for things
 * Keep names consistent across shared methods, such as `this.something = MyFactory.something;` otherwise it becomes confusing
 * Factories hold the Model, change, get, update, and persist the Model changes
