@@ -277,3 +277,51 @@ angular
 
 })();
 {% endhighlight %}
+
+### Notes on minification
+
+If you're stuck adding Angular dependency injection Arrays manually, you'll have no problem continuing with this approach, you'll need to use `MainCtrl.$inject = ['$scope', 'SomeFactory']` inside your IIFE. Alternatively use `.controller('MainCtrl, ['$scope', 'SomeFactory', MainCtrl]);`. If you're not yet utilising the power of a front-end tooling system such as Gulp/Grunt, I _highly_ recommend doing so as using an [automation task](https://github.com/olov/ng-annotate) such as `ng-min` or `ng-annotate` will take the manual dependency injection Array off your hands, a huge time saver.
+
+Previously I've used `ng-min` by Brian, but we found a few quirks with it amongst other Gulp tasks so moved across to `ng-annotate` which appears to pack more punch and features. In the issues it look they'll be [joining forces](https://github.com/btford/ngmin/issues/93) in the future as well. For now, I'm sticking with `ng-annotate` which you'll need to tell it where to annotate your dependency injected Objects:
+
+{% highlight javascript %}
+(function () {
+
+  'use strict';
+
+  /* ngInject */
+  function MainCtrl ($scope, SomeFactory) {
+    this.doSometing = function () {
+      SomeFactory.doSomething();
+    };
+  }
+
+  angular
+    .module('app')
+    .controller('MainCtrl', MainCtrl);
+
+})();
+{% endhighlight %}
+
+That will then output the `$inject` annotation:
+
+{% highlight javascript %}
+(function () {
+
+  'use strict';
+
+  /* ngInject */
+  function MainCtrl ($scope, SomeFactory) {
+    this.doSometing = function () {
+      SomeFactory.doSomething();
+    };
+  }
+  
+  MainCtrl.$inject = ['$scope', 'SomeFactory'];
+
+  angular
+    .module('app')
+    .controller('MainCtrl', MainCtrl);
+
+})();
+{% endhighlight %}
