@@ -289,7 +289,7 @@ Previously I've used `ng-min` by Brian, but we found a few quirks with it amongs
 
   'use strict';
 
-  /* ngInject */
+  /* @ngInject */
   function MainCtrl ($scope, SomeFactory) {
     this.doSometing = function () {
       SomeFactory.doSomething();
@@ -310,7 +310,34 @@ That will then output the `$inject` annotation:
 
   'use strict';
 
-  /* ngInject */
+  /* @ngInject */
+  function MainCtrl ($scope, SomeFactory) {
+    this.doSometing = function () {
+      SomeFactory.doSomething();
+    };
+  }
+  
+  MainCtrl.$inject = ['$scope', 'SomeFactory'];
+
+  angular
+    .module('app')
+    .controller('MainCtrl', MainCtrl);
+
+})();
+{% endhighlight %}
+
+I use `jsDoc` commenting and the above comment sits in flawlessly:
+
+{% highlight javascript %}
+(function () {
+
+  'use strict';
+
+  /**
+   * @class MainCtrl
+   * @classdesc Main Controller for doing awesome things
+   * @ngInject
+   */
   function MainCtrl ($scope, SomeFactory) {
     this.doSometing = function () {
       SomeFactory.doSomething();
