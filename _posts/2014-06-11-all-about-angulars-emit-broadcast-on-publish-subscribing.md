@@ -102,7 +102,7 @@ What this does is jump up to `ParentCtrl` and then fire the `$broadcast` from th
 
 ### $rootScope.($emit/$broadcast)
 
-If things weren't complicated enough, let's through in `$rootScope` as well. `$rootScope` is the parent of _all_ scopes, which makes every newly created `$scope` a descendent! I mentioned above about how `$scope` is limited to direct scopes, `$rootScope` is how we could communicate across scopes with ease. Doing this will fit certain scenarios better than others. It's not as simple as up or down the scopes though, unfortunately...
+If things weren't complicated enough, let's throw in `$rootScope` as well. `$rootScope` is the parent of _all_ scopes, which makes every newly created `$scope` a descendent! I mentioned above about how `$scope` is limited to direct scopes, `$rootScope` is how we could communicate across scopes with ease. Doing this will fit certain scenarios better than others. It's not as simple as up or down the scopes though, unfortunately...
 
 #### $rootScope.$emit versus $rootScope.$broadcast
 
