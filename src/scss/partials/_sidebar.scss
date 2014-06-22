@@ -1,7 +1,7 @@
 .sidebar {
+  @include position(fixed, 0px 0 0px 0px);
   text-align: center;
   background: #f5f6f5;
-  @include position(fixed, 0px 0 0px 0px);
   height: 100%;
   width: 340px;
 }
@@ -10,12 +10,12 @@
   a {
     display: inline-block;
   }
-  img {
-    display: inline-block;
-    @include vendor(border-radius, 50%);
-    width: 100px;
-    height: 100px;
-  }
+}
+.sidebar__profile-img {
+  @include vendor(border-radius, 50%);
+  display: inline-block;
+  width: 100px;
+  height: 100px;
 }
 .sidebar__profile-name {
   font-size: 30px;
