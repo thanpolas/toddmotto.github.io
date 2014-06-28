@@ -809,6 +809,7 @@ Happy coding.
 - [All about custom Angular filters](http://toddmotto.com/everything-about-custom-filters-in-angular-js)
 - [Controller as syntax](http://toddmotto.com/digging-into-angulars-controller-as-syntax)
 - [$scope and $rootScope event system $emit, $broadcast and $on](http://toddmotto.com/all-about-angulars-emit-broadcast-on-publish-subscribing)
+- [Modular IIFE modules](http://toddmotto.com/minimal-angular-module-syntax-approach-using-an-iife)
 - This post, translated in [French!](http://vfsvp.fr/article/apprendre-angular-en-un-jour-le-guide-ultime)
 - This post, on [SpeakerDeck in slides](https://speakerdeck.com/toddmotto/angularjs-in-one-day)
 - [Code your own Directive](http://toddmotto.com/creating-an-angularjs-directive-from-one-of-your-existing-plugins-scripts) from a custom script or plugin
