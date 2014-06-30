@@ -2,6 +2,8 @@
 
 The Jekyll build for [toddmotto.com](http://toddmotto.com), built on [FireShell](//github.com/toddmotto/fireshell).
 
+> Be warned when forking this, the Grunt setup for this project kind of sucks. You'll spin up a local Jekyll server and it takes a few seconds to compile it, so you'll need to refresh a few times. CSS/JS/HTML compilation is slow but does the job.
+
 Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of Todd Motto.
 
 * Site: [toddmotto.com](http://toddmotto.com)
