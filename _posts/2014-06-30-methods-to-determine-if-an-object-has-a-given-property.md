@@ -171,7 +171,7 @@ We can use `typeof` as well.
 
 #### What does it mean?
 
-The standard `typeof` operator returns a `Boolean`, and we can evaluate it against something, such as `undefined` - which indicates it exists.
+The standard `typeof` operator returns a `String` ([not a very reliable one](http://toddmotto.com/understanding-javascript-types-and-reliable-type-checking)), and we can evaluate it against something, such as `!== 'undefined'` - which indicates it exists.
 
 {% highlight javascript %}
 if (typeof toddObject.name !== undefined) {
