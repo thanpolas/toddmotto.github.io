@@ -6,7 +6,7 @@ path: 2014-07-02-web-components-concepts-shadow-dom-imports-templates-custom-ele
 ---
 
 Web Components, the future of the web, inspired from attending [Google I/O](https://twitter.com/toddmotto/status/482624009553465344) I decided to pick up Web Components and actually build something. Since learning the basics around a year ago, it's changed and advanced a lot! Thought I'd write a post on it and share [my first web component](//github.com/toddmotto/fluidvids-polymer) yesterday (built with Polymer).
-
+b
 But first, before Polymer talk, we'll look at Web Components in this post, what it means for the web and how it completely changes things and our outlook on building for the web platform from today.
 
 Gone are the days of actually creating HTML structures and "pages" (what're those?). The web is becoming "all about components", and those components are completely up to us thanks to Web Components.
@@ -85,7 +85,7 @@ And we were done:
 <user-profile></user-profile>
 {% endhighlight %}
 
-##### Bye bye <element>
+##### Bye bye `<element>`
 
 Use of `<element>` was [deprecated](http://lists.w3.org/Archives/Public/public-webapps/2013JulSep/0287.html) towards the end of 2013, which means we need to do this from now on, which I think I prefer, it offers a lot more control:
 
