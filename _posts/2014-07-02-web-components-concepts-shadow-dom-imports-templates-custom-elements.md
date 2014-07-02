@@ -49,7 +49,7 @@ document.body.appendChild(template);
 You'll notice that this is just JavaScript, no new APIs or anything confusing. Nice! For me, a `<template>` is useless without it's good buddy _Custom Elements_. We need this to do something useful with the tech, things are all global and disgusting as of now.
 
 #### Custom Elements
-Custom Elements allow us to define (you guessed it), our own element. This can be anything, but before you go crazy, let's take a leaf from Polymer's book. Polymer.js restricts your custom elements to being two words, such as `<two-words>`, to avoid any potential naming clashes with future HTML implementations - I think that's a good idea as well.
+Custom Elements allow us to define (you guessed it), our own element. This can be anything, but before you go crazy, your elements must have a dash, presumably to avoid any potential naming clashes with future HTML implementations - I think that's a good idea as well.
 
 So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Inside that we can add our `<template>`.
 
