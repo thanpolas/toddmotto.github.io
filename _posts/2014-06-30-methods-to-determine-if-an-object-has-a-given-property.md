@@ -174,12 +174,12 @@ We can use `typeof` as well.
 The standard `typeof` operator returns a `String` ([not a very reliable one](http://toddmotto.com/understanding-javascript-types-and-reliable-type-checking)), and we can evaluate it against something, such as `!== 'undefined'` - which indicates it exists.
 
 {% highlight javascript %}
-if (typeof toddObject.name !== undefined) {
+if (typeof toddObject.name !== 'undefined') {
   // do something
 }
 {% endhighlight %}
 
-It looks a little ugly, as well as being quite long to write out if we were to make multiple checks using this method. Also, `null` would fall under this check unless using `!= undefined` (single `=`) as `null == undefined` anyway.
+It looks a little ugly, as well as being quite long to write out if we were to make multiple checks using this method. Also, `null` would fall under this check unless using `!= 'undefined'` (single `=`) as `null == undefined` anyway.
 
 #### Gotchas
 
