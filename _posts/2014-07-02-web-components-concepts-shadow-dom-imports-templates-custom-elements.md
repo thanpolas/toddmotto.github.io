@@ -19,7 +19,7 @@ Google are innovating in this area like no tomorrow with [Polymer.js](www.polyme
 
 Before we get over excited about this stuff though, let's actually understand what the [Web Components spec](http://www.w3.org/TR/components-intro) really means. First thing's first, Web Components are a collection of building blocks, not a single thing. Let's look at each block to see what's up.
 
-Let's look at what makes up the next generation of the web platform. This will be a very high level view, otherwise this post could end up being three days worth of reading!
+This will be a very high level view, otherwise this post could end up being three days worth of reading!
 
 #### Templates
 Templates are where we define reusable code, we even get an element for it with `<template>`. The first time you use it, don't panic - it's invisible in the visible interface output, until you view source you won't know anything is even there. It's merely a declarative element to create a new template for... anything you like.
