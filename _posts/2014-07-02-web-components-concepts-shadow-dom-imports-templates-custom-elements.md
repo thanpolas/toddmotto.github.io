@@ -51,7 +51,7 @@ You'll notice that this is just JavaScript, no new APIs or anything confusing. N
 #### Custom Elements
 Custom Elements allow us to define (you guessed it), our own element. This can be anything, but before you go crazy, your elements must have a dash, presumably to avoid any potential naming clashes with future HTML implementations - I think that's a good idea as well.
 
-So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Inside that we can add our `<template>`.
+So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Inside that we can add our `<template>`. Read on, as `<element>` was recently deprecated and thus needs a JavaScript implementation, but this is the older way:
 
 {% highlight html %}
 <element>
@@ -79,11 +79,35 @@ Give the `<element>` a `name=""` attribute to define the custom element's new fo
 </element>
 {% endhighlight %}
 
-And we're done:
+And we were done:
 
 {% highlight html %}
 <user-profile></user-profile>
 {% endhighlight %}
+
+##### Bye bye <element>
+
+Use of `<element>` was [deprecated](http://lists.w3.org/Archives/Public/public-webapps/2013JulSep/0287.html) towards the end of 2013, which means we need to do this from now on, which I think I prefer, it offers a lot more control:
+
+{% highlight html %}
+<template id="profileTemplate">
+  <div class="profile">
+    <img src="" class="profile__img">
+    <div class="profile__name"></div>
+    <div class="profile__social"></div>
+  </div>
+</template>
+<script>
+var MyElementProto = Object.create(HTMLElement.prototype);
+window.MyElement = document.registerElement('user-profile', {
+  prototype: MyElementProto
+});
+</script>
+{% endhighlight %}
+
+New elements must inherit from the `HTMLElement.prototype`. More on the above setup and callbacks etc [here](https://github.com/webcomponents/hello-world-element/blob/master/src/hello-world.html), cheers [Zeno](//twitter.com/zenorocha).
+
+##### This article was written before I saw `<element>` had been deprecated, so look for the JavaScript implementation of upcoming features.
 
 ##### Extending and inheriting
 What if we wanted to extend an existing element, such as an `<h1>` tag? There will be many cases of this, such as riding off an existing element and creating a "special" version of it, rather than a totally new element. We introduce the `extends=""` attribute here to declare where we're extending, and a simple `is=""` attribute for telling our existing element that it "is" something else. Pretty simple, I guess.
