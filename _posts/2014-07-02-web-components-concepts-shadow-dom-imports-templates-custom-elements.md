@@ -36,7 +36,7 @@ An example of a `<template>` to populate a profile section for a user:
 </template>
 {% endhighlight %}
 
-With some JavaScript, and append it to the `<body>`:
+Sprinkle some JavaScript to populate it, and append it to the `<body>`:
 
 {% highlight javascript %}
 var template = document.querySelector('#profileTemplate');
