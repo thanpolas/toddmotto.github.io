@@ -46,12 +46,12 @@ template.querySelector('.profile__social').textContent = 'Follow me on Twitter';
 document.body.appendChild(template);
 {% endhighlight %}
 
-You'll notice that this is just JavaScript, no new APIs or anything confusing. Nice! For me, a `<template>` is useless without it's good buddy _Custom Elements_. We need this to do something useful with the tech, things are all global and disgusting too.
+You'll notice that this is just JavaScript, no new APIs or anything confusing. Nice! For me, a `<template>` is useless without it's good buddy _Custom Elements_. We need this to do something useful with the tech, things are all global and disgusting as of now.
 
 #### Custom Elements
 Custom Elements allow us to define (you guessed it), our own element. This can be anything, but before you go crazy, let's take a leaf from Polymer's book. Polymer.js restricts your custom elements to being two words, such as `<two-words>`, to avoid any potential naming clashes with future HTML implementations - I think that's a good idea as well.
 
-So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Inside that we can add our element.
+So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Inside that we can add our `<template>`.
 
 {% highlight html %}
 <element>
@@ -65,7 +65,7 @@ So, with our custom element, how do we do it? Simple really, we get the `<elemen
 </element>
 {% endhighlight %}
 
-Give it a `name=""` attribute to define the custom elements new found life:
+Give the `<element>` a `name=""` attribute to define the custom element's new found life:
 
 {% highlight html %}
 <element name="user-profile">
@@ -182,7 +182,7 @@ All encapsulated, tested, I could just pass in values via attributes and job don
 
 #### Decorators
 
-Decorates are part of Web Components, but actually have _no spec_ (according to the [spec](http://www.w3.org/TR/components-intro/#decorator-section)). Apparently they might look something like this, with their intention to enhance or override the presentation of an existing element. So ignore them for now, I guess.
+Decorators are part of Web Components, but actually have _no spec_ (according to the [spec](http://www.w3.org/TR/components-intro/#decorator-section)). Apparently they might look something like this, with their intention to enhance or override the presentation of an existing element. So ignore them for now, I guess.
 
 {% highlight html %}
 <decorator id="details-open">
