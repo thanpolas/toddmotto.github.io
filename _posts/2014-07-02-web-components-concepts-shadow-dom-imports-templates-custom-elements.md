@@ -130,7 +130,7 @@ Using `extends=""` as an attribute on `<element>` was the way to do it before it
 So what next? Enter the shadows...
 
 #### ShadowDOM
-ShadowDOM _is_ as cool as it sounds, and provides a DOM encapsulation within DOM. Whaaat? Essentially, nested document fragments, that are shadow-y... In ShadowDOM, we're observing nested DOM trees/hierarchies. Typically in web documents, there is one DOM. Think about DOM hosting DOM, which hosts more DOM. To look it, you'll see something like this in Chrome inspector (note `#shadow-root`):
+ShadowDOM _is_ as cool as it sounds, and provides a DOM encapsulation within DOM. Whaaat? Essentially, nested document fragments, that are shadow-y... In ShadowDOM, we're observing nested DOM trees/hierarchies. Typically in web documents, there is one DOM. Think about DOM hosting DOM, which hosts more DOM. You'll see something like this in Chrome inspector (note `#shadow-root`, which is completely encapsulated DOM):
 
 {% highlight html %}
 ▾<user-profile>
