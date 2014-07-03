@@ -130,7 +130,18 @@ Using `extends=""` as an attribute on `<element>` was the way to do it before it
 So what next? Enter the shadows...
 
 #### ShadowDOM
-ShadowDOM _is_ as cool as it sounds, and provides a DOM encapsulation within DOM. Whaaat? Essentially, nested document fragments, that are shadow-y... In ShadowDOM, we're observing nested DOM trees/hierarchies. Typically in web documents, there is one DOM. Think about DOM hosting DOM, which hosts more DOM.
+ShadowDOM _is_ as cool as it sounds, and provides a DOM encapsulation within DOM. Whaaat? Essentially, nested document fragments, that are shadow-y... In ShadowDOM, we're observing nested DOM trees/hierarchies. Typically in web documents, there is one DOM. Think about DOM hosting DOM, which hosts more DOM. To look it, you'll see something like this in Chrome inspector (note `#shadow-root`):
+
+{% highlight html %}
+▾<user-profile>
+  ▾#shadow-root (user-agent)
+  <div class="profile">
+    <img src="" class="profile__img">
+    <div class="profile__name"></div>
+    <div class="profile__social"></div>
+  </div>
+ </user-profile>
+{% endhighlight %}
 
 There are a few different concepts with Shadow DOM, for me, it's that there is no "global" Object, no `window`, I can create a new document root. The "host" of my this new document root is either referred to as the root or host. We can create new ShadowDOM by invoking `.createShadowRoot();` on an element.
 
