@@ -51,7 +51,7 @@ You'll notice that this is just JavaScript, no new APIs or anything confusing. N
 #### Custom Elements
 Custom Elements allow us to define (you guessed it), our own element. This can be anything, but before you go crazy, your elements must have a dash, presumably to avoid any potential naming clashes with future HTML implementations - I think that's a good idea as well.
 
-So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Inside that we can add our `<template>`. Read on, as `<element>` was recently deprecated and thus needs a JavaScript implementation, but this is the older way:
+So, with our custom element, how do we do it? Simple really, we get the `<element>` element, so meta. Well, we _had_ the `<element>` element. Read on, as `<element>` was recently deprecated and thus needs a JavaScript implementation, but this is the older way:
 
 {% highlight html %}
 <element>
@@ -65,7 +65,7 @@ So, with our custom element, how do we do it? Simple really, we get the `<elemen
 </element>
 {% endhighlight %}
 
-Give the `<element>` a `name=""` attribute to define the custom element's new found life:
+This example is still deprecated but worth showing. We would've given `<element>` a `name=""` attribute to define the custom element:
 
 {% highlight html %}
 <element name="user-profile">
@@ -77,17 +77,14 @@ Give the `<element>` a `name=""` attribute to define the custom element's new fo
     </div>
   </template>
 </element>
-{% endhighlight %}
 
-And we were done:
-
-{% highlight html %}
+// usage
 <user-profile></user-profile>
 {% endhighlight %}
 
-##### Bye bye `<element>`
+##### So what's replacing `<element>`?
 
-Use of `<element>` was [deprecated](http://lists.w3.org/Archives/Public/public-webapps/2013JulSep/0287.html) towards the end of 2013, which means we need to do this from now on, which I think I prefer, it offers a lot more control:
+Use of `<element>` was [deprecated](http://lists.w3.org/Archives/Public/public-webapps/2013JulSep/0287.html) towards the end of 2013, which means we simply use the JavaScript API instead, which I think offers more flexibility and less bloat on the markup:
 
 {% highlight html %}
 <template id="profileTemplate">
@@ -101,28 +98,34 @@ Use of `<element>` was [deprecated](http://lists.w3.org/Archives/Public/public-w
 var MyElementProto = Object.create(HTMLElement.prototype);
 window.MyElement = document.registerElement('user-profile', {
   prototype: MyElementProto
+  // other props
 });
 </script>
 {% endhighlight %}
 
 New elements must inherit from the `HTMLElement.prototype`. More on the above setup and callbacks etc [here](https://github.com/webcomponents/hello-world-element/blob/master/src/hello-world.html), cheers [Zeno](//twitter.com/zenorocha).
 
-##### This article was written before I saw `<element>` had been deprecated, so look for the JavaScript implementation of upcoming features.
-
 ##### Extending and inheriting
-What if we wanted to extend an existing element, such as an `<h1>` tag? There will be many cases of this, such as riding off an existing element and creating a "special" version of it, rather than a totally new element. We introduce the `extends=""` attribute here to declare where we're extending, and a simple `is=""` attribute for telling our existing element that it "is" something else. Pretty simple, I guess.
+What if we wanted to extend an existing element, such as an `<h1>` tag? There will be many cases of this, such as riding off an existing element and creating a "special" version of it, rather than a totally new element. We introduce the `{ extends: '' }` property to declare where what element we're extending. Using an extended element is simple, drop the `is=""` attribute on an existing element and it'll inherit it's new extension. Pretty simple, I guess.
 
 {% highlight html %}
-<element extends="h1" name="funky-heading">
-  <template>
-    // include random, funky things
-  </template>
-</element>
+<template>
+  // include random, funky things
+</template>
+<script>
+var MyElementProto = Object.create(HTMLElement.prototype);
+window.MyElement = document.registerElement('funky-heading', {
+  prototype: MyElementProto,
+  extends: 'h1' // extends declared here
+});
+</script>
 
 <h1 is="funky-heading">
   Page title
 </h1>
 {% endhighlight %}
+
+Using `extends=""` as an attribute on `<element>` was the way to do it before it was deprecated.
 
 So what next? Enter the shadows...
 
@@ -138,16 +141,21 @@ ShadowDOM already exists in the wild today though, as soon as you use `<input ty
 ShadowDOM gives us _true_ encapsulation, with scoped components. CSS is _scoped_ (wow, although we tried this with `<style scoped>` but Blink have since removed it from the core to make way for Web Components). This means any CSS we write inside ShadowDOM only affects the DOM of that particular ShadowDOM!
 
 {% highlight html %}
-<element extends="h1" name="funky-heading">
-  <template>
-    <style>
-    :host {
-      border: 1px solid red;
-    }
-    </style>
-    // stuff
-  </template>
-</element>
+<template>
+  <style>
+  :host {
+    border: 1px solid red;
+  }
+  </style>
+  // stuff
+</template>
+<script>
+var MyElementProto = Object.create(HTMLElement.prototype);
+window.MyElement = document.registerElement('funky-heading', {
+  prototype: MyElementProto,
+  extends: 'h1'
+});
+</script>
 {% endhighlight %}
 
 This also means each document can also have a unique `id`, and we can avoid crazy naming conventions for scaling our apps/websites (a minor bonus).
@@ -155,21 +163,25 @@ This also means each document can also have a unique `id`, and we can avoid craz
 We can also put scripts in there too and talk to the current element:
 
 {% highlight html %}
-<element extends="h1" name="funky-heading">
-  <template>
-    <style>
-    :host {
-      border: 1px solid red;
-    }
-    </style>
-    // stuff
-  </template>
-  <script>
-  (function () {
-    // stuff with JS...
-  })();
-  </script>
-</element>
+<template>
+  <style>
+  :host {
+    border: 1px solid red;
+  }
+  </style>
+  // stuff
+</template>
+<script>
+(function () {
+  // stuff with JS...
+})();
+
+var MyElementProto = Object.create(HTMLElement.prototype);
+window.MyElement = document.registerElement('funky-heading', {
+  prototype: MyElementProto,
+  extends: 'h1'
+});
+</script>
 {% endhighlight %}
 
 JavaScript events that are fired, also are encapsulated to the ShadowDOM tree.
@@ -206,7 +218,7 @@ All encapsulated, tested, I could just pass in values via attributes and job don
 
 #### Decorators
 
-Decorators are part of Web Components, but actually have _no spec_ (according to the [spec](http://www.w3.org/TR/components-intro/#decorator-section)). Apparently they might look something like this, with their intention to enhance or override the presentation of an existing element. So ignore them for now, I guess.
+Decorators are part of Web Components, but actually have _no spec_ (according to the [spec](http://www.w3.org/TR/components-intro/#decorator-section)). Apparently they might look something like this, with their intention to enhance or override the presentation of an existing element. So ignore them for now, I guess _(see Addy's comment on Decorators, they might even disappear from Web Components entirely)_.
 
 {% highlight html %}
 <decorator id="details-open">
@@ -224,12 +236,15 @@ Decorators are part of Web Components, but actually have _no spec_ (according to
 
 Yes. Web Components are going to be a little while before fully landing and being the next generation of the web, but they're certainly making fast traction. We can get to grips with the technology and concepts now and start building using a framework such as Polymer - which polyfills things for modern browsers to let us use Web Components now.
 
-An example of using Polymer to define an element. Here, we simply swap out `<element>` for `<polymer-elememt>` and that's it.
+An example of using Polymer to define an element. Here, we simply swap out (_was_) `<element>` for `<polymer-elememt>` and that's it.
 {% highlight html %}
 <polymer-element name="my-element">
   <template>
     // take it away!
   </template>
+  <script>
+    Polymer('my-element', {});
+  </script>
 </polymer-element>
 
 <my-element></my-element>
