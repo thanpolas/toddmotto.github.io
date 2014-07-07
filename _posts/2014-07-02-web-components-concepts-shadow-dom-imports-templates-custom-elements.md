@@ -13,7 +13,7 @@ Gone are the days of actually creating HTML structures and "pages" (what're thos
 
 We aren't really at a stage where we can use Web Components to it's fullest, browser support is still ongoing implementations and IE are [in consideration](http://status.modern.ie) of the entire spec (blows a single fanfare). But it's coming together, give it a few years and we'll get there. Or do we have to wait that long?...
 
-Google are innovating in this area like no tomorrow with [Polymer.js](www.polymer-project.org), a polyfill and platform (that provides additional features such as data-binding, event callbacks and much more) for those missing pieces in modern browsers that don't fully support Web Components.
+Google are innovating in this area like no tomorrow with [Polymer.js](http://www.polymer-project.org), a polyfill and platform (that provides additional features such as data-binding, event callbacks and much more) for those missing pieces in modern browsers that don't fully support Web Components.
 
 ### Building blocks of Web Components
 
