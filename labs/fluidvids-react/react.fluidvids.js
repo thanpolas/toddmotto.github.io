@@ -23,12 +23,3 @@ var FluidVid = React.createClass({
 
   }
 });
-
-React.renderComponent(
-  <FluidVid src="http://player.vimeo.com/video/23919731" />,
-  document.querySelector('.fluidvids-vimeo')
-);
-React.renderComponent(
-  <FluidVid src="http://www.youtube.com/embed/JMl8cQjBfqk" />,
-  document.querySelector('.fluidvids-youtube')
-);
