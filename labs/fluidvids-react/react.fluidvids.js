@@ -1,34 +1,34 @@
 /**
-     * @jsx React.DOM
-     */
-    var FluidVid = React.createClass({
-      getRatio: function (width, height) {
-        return ((parseInt(height, 10) / parseInt(width, 10)) * 100) + '%';
-      },
-      render: function() {
+ * @jsx React.DOM
+ */
+var FluidVid = React.createClass({
+  getRatio: function (width, height) {
+    return ((parseInt(height, 10) / parseInt(width, 10)) * 100) + '%';
+  },
+  render: function() {
 
-        var src = this.props.src || '';
-        var width = this.props.width || 1600;
-        var height = this.props.height || 900;
+    var src = this.props.src || '';
+    var width = this.props.width || 1600;
+    var height = this.props.height || 900;
 
-        var ratio = {
-          paddingTop: this.getRatio(width, height)
-        };
+    var ratio = {
+      paddingTop: this.getRatio(width, height)
+    };
 
-        return (
-          <div className={ 'fluidvids' } style={ ratio }>
-            <iframe src={ src } width={ width } height={ height } frameBorder={ 0 }></iframe>
-          </div>
-        );
-
-      }
-    });
-
-    React.renderComponent(
-      <FluidVid src="http://player.vimeo.com/video/23919731" />,
-      document.querySelector('.fluidvids-vimeo')
+    return (
+      <div className={ 'fluidvids' } style={ ratio }>
+        <iframe src={ src } width={ width } height={ height } frameBorder={ 0 }></iframe>
+      </div>
     );
-    React.renderComponent(
-      <FluidVid src="http://www.youtube.com/embed/JMl8cQjBfqk" />,
-      document.querySelector('.fluidvids-youtube')
-    );
+
+  }
+});
+
+React.renderComponent(
+  <FluidVid src="http://player.vimeo.com/video/23919731" />,
+  document.querySelector('.fluidvids-vimeo')
+);
+React.renderComponent(
+  <FluidVid src="http://www.youtube.com/embed/JMl8cQjBfqk" />,
+  document.querySelector('.fluidvids-youtube')
+);
