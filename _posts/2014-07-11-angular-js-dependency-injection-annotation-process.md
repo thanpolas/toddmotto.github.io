@@ -9,7 +9,7 @@ For those familiar with Angular's dependency injection (DI), this post will dive
 
 So, how does this work in AngularJS?
 
-Until now, I've kind of let it be a black box - it just works and I use it. But after a stint of looking through the source code, I think I've cracked how it all works underneath - and the implementation is _so_ clever and simple - it's definitely worth looking into. I've also learned a few things about how (flexible?) JavaScript is.
+Until now, I've kind of let it be a black box - it just works and I use it. But after a stint of looking through the source code, I think I've cracked how it all works underneath - and the implementation is _so_ clever and simple - it's definitely worth looking into. I've also learned a few things along the way!
 
 ### Dependency injection in Angular
 
