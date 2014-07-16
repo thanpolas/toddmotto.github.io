@@ -379,4 +379,72 @@ The above `annotate` function invokes the `withoutDependencies` function without
 
 That's it! This doesn't cover how Angular physically "injects" the actual dependencies, but how it resolves the dependency names internally, I thought it was really clever, and learned a thing or two from the source. Here's the end result in a [jsFiddle](http://jsfiddle.net/toddmotto/fgFWL), inspect the `console` to see it working.
 
-You can also check the [Angular source](https://code.angularjs.org/1.3.0-beta.7/angular.js), search for `function annotate` to find the real implementation, and `function invoke` to see where the `.apply()` call takes place.
+### Best route for performance?
+
+Based on the following conditions in the [Angular source](https://code.angularjs.org/1.3.0-beta.7/angular.js), using `$inject` would be best for performance! I've annotated the good parts of the function:
+
+{% highlight javascript %}
+function annotate(fn, strictDi, name) {
+  var $inject,
+      fnText,
+      argDecl,
+      last;
+ 
+  // if the function passed in is a function, let's roll with it...
+  // ...there are two things that can happen inside here, either we're using $inject or
+  // we aren't using $inject, which means we'll manually need to get the dependencies
+  // from the arguments
+  if (typeof fn === 'function') {
+
+    // !($inject = fn.$inject) checks for the presence
+    // of fn.$inject and assigns it to the $inject variable, if this is true
+    // there is no further action needed, and $inject is returned
+    // which is a very fast operation
+    if (!($inject = fn.$inject)) {
+
+      // if fn.$inject doesn't exist, it's bad news and we're going to need to
+      // do some manual work reading the dependencies from the arguments, so they
+      // need to be spelled correctly against the proper names or they'll be an
+      // unknown provider
+      $inject = [];
+      if (fn.length) {
+        if (strictDi) {
+          if (!isString(name) || !name) {
+            name = fn.name || anonFn(fn);
+          }
+          throw $injectorMinErr('strictdi',
+            '{0} is not using explicit annotation and cannot be invoked in strict mode', name);
+        }
+        fnText = fn.toString().replace(STRIP_COMMENTS, '');
+        argDecl = fnText.match(FN_ARGS);
+        forEach(argDecl[1].split(FN_ARG_SPLIT), function(arg){
+          arg.replace(FN_ARG, function(all, underscore, name){
+            $inject.push(name);
+          });
+        });
+      }
+      // here after we're done, it completes what we wanted before this 
+      // operation, the fn.$inject, so it just assigns $inject to the function
+      // and $inject gets returned below
+      fn.$inject = $inject;
+    }
+  } else if (isArray(fn)) {
+    // if the function isn't a function, but is an Array containing a function
+    // we need to remove it from the Array and send the leftover portion of the
+    // Array back as $inject
+
+    // calculate the Array length
+    last = fn.length - 1;
+    assertArgFn(fn[last], 'fn');
+
+    // use slice which returns the portion of the Array minus the final item
+    $inject = fn.slice(0, last);
+  } else {
+    assertArgFn(fn, 'fn', true);
+  }
+  // returns $inject from one of the methods above!
+  return $inject;
+}
+{% endhighlight %}
+
+Want to dig in more? Search for this `function annotate` to find this implementation, and `function invoke` to see where the `.apply()` call takes place and how the two hang together.
