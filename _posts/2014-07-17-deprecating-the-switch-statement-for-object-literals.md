@@ -30,7 +30,7 @@ console.log(drink); // 'Coke'
 
 It's similar to `if` and `else` statements, but it should evaluate a single value - inside the `switch` we use a `case` to evaluate against each value.
 
-When you start seeing lots of `else if` statements, something is likely wrong:
+When you start seeing lots of `else if` statements, something is likely wrong and generally you shoud use something like `switch` as it's more suited for the purpose and intention. Here's some `else if` abuse:
 
 {% highlight javascript %}
 function getDrink (type) {
