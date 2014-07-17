@@ -14,16 +14,18 @@ Let's look at a usual `switch` statement:
 
 {% highlight javascript %}
 var type = 'coke';
+var drink;
 switch(type) {
 case: 'coke':
-  type = 'Coke';
+  drink = 'Coke';
   break;
 case: 'pepsi':
-  type = 'Pepsi';
+  drink = 'Pepsi';
   break;
 default:
-  type = 'Unknown drink!';
+  drink = 'Unknown drink!';
 }
+console.log(drink); // 'Coke'
 {% endhighlight %}
 
 It's similar to `if` and `else` statements, but it should evaluate a single value - inside the `switch` we use a `case` to evaluate against each value.
