@@ -175,6 +175,38 @@ function getDrink (type) {
 
 This wraps the two Object lookups inside parenthesis `( )`, treating them as an expression. The result of the expression is then invoked. If `drinks[type]` isn't found in the lookup, it'll default to `drinks['default']`, simple!
 
+We don't _have_ to always `return` inside the function either, we can change references to any variable then return it:
+
+{% highlight javascript %}
+function getDrink (type) {
+  var drink;
+  var drinks = {
+    'coke': function () {
+      drink = 'Coke';
+    },
+    'pepsi': function () {
+      drink = 'Pepsi';
+    },
+    'lemonade': function () {
+      drink = 'Lemonade';
+    },
+    'default': function () {
+      drink = 'Default item';
+    }
+  };
+    
+  // invoke it
+  (drinks[type] || drinks['default'])();
+    
+  // return a String with chosen drink
+  return 'The drink I chose was ' + drink;
+}
+
+var drink = getDrink('coke');
+// The drink I chose was Coke
+console.log(drink);
+{% endhighlight %}
+
 ### Summing up
 
 Object literals are a more natural control of flow in JavaScript, `switch` is a bit old and clunky and prone to difficult debugging errors. Object's are more extensible, maintainable, and we can test them a lot better. They're also part of a design pattern and very commonly used day to day in other programming tasks. Object literals can contain functions as well as any other [Object type](//toddmotto.com/understanding-javascript-types-and-reliable-type-checking), which makes them really flexible! Each function in the literal has function scope too, so we can return the closure from the parent function we invoke (in this case `getDrink` returns the closure);
