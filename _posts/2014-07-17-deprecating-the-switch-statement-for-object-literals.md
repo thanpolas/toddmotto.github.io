@@ -209,6 +209,52 @@ console.log(drink);
 
 These are very basic solutions, and the Object literals hold a `function` that returns a `String`, in the case you only need a `String`, you _could_ use a `String` as the key's value - some of the time the functions will contain logic, which will get returned from the function. If you're mixing functions with strings, it might be easier to use a function at all times to save looking up the `type` and invoking if it's a function - we don't want to attempt invoking a `String`.
 
+### Object Literal "fall through"
+
+With `switch` cases, we can let them fall through (which means more than one case can apply to a specific piece of code):
+
+{% highlight javascript %}
+var type = 'coke';
+var snack;
+switch(type) {
+case: 'coke':
+case: 'pepsi':
+  snack = 'Drink';
+  break;
+case: 'cookies':
+case: 'crisps':
+  snack = 'Food';
+  break;
+default:
+  drink = 'Unknown type!';
+}
+console.log(snack); // 'Drink'
+{% endhighlight %}
+
+We let `coke` and `pepsi` "fall through" by not adding a `break` statement. Doing this for Object Literals is simple and more declarative - as well as being less prone to error. Our code suddenly becomes much more structured, readable and reusable:
+
+{% highlight javascript %}
+function getSnack (type) {
+  var snack;
+  function isDrink () {
+    return snack = 'Drink';
+  }
+  function isFood () {
+    return snack = 'Food';
+  }
+  var snacks = {
+    'coke': isDrink,
+    'pepsi': isDrink,
+    'cookies': isFood,
+    'crisps': isFood,
+  };
+  return snacks[type]();
+}
+
+var snack = getSnack('coke');
+console.log(snack); // 'Drink'
+{% endhighlight %}
+
 ### Summing up
 
 Object literals are a more natural control of flow in JavaScript, `switch` is a bit old and clunky and prone to difficult debugging errors. Object's are more extensible, maintainable, and we can test them a lot better. They're also part of a design pattern and very commonly used day to day in other programming tasks. Object literals can contain functions as well as any other [Object type](//toddmotto.com/understanding-javascript-types-and-reliable-type-checking), which makes them really flexible! Each function in the literal has function scope too, so we can return the closure from the parent function we invoke (in this case `getDrink` returns the closure);
