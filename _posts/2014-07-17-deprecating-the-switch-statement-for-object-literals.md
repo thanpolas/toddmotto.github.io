@@ -16,10 +16,10 @@ Let's look at a usual `switch` statement:
 var type = 'coke';
 var drink;
 switch(type) {
-case: 'coke':
+case 'coke':
   drink = 'Coke';
   break;
-case: 'pepsi':
+case 'pepsi':
   drink = 'Pepsi';
   break;
 default:
@@ -217,12 +217,12 @@ With `switch` cases, we can let them fall through (which means more than one cas
 var type = 'coke';
 var snack;
 switch(type) {
-case: 'coke':
-case: 'pepsi':
+case 'coke':
+case 'pepsi':
   snack = 'Drink';
   break;
-case: 'cookies':
-case: 'crisps':
+case 'cookies':
+case 'crisps':
   snack = 'Food';
   break;
 default:
