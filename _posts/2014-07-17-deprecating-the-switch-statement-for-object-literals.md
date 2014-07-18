@@ -56,9 +56,9 @@ This implementation is too loose, there is room for error, plus it's a very verb
 
 ### Problems with switch
 
-There are multiple issues with `switch`, even Douglas Crockford recommends not using it. The main one is the fact you need to keep adding the aforementioned `break;` statement. If you forget one of them, the cases will fall through - you'll have likely forgotten to add it because it's not very "JavaScripty", nor is the procedural style `switch` statement.
+There are multiple issues with `switch`, from it's procedural control flow to it's non-standard-looking way it handles code blocks, the rest of JavaScript uses curly braces yet switch does not. Syntactically, it's not one of JavaScript's best, nor is its design. We're forced to manually add `break;` statements within each `case`, which can lead to difficult debugging and nested errors further down the case should we forget! Douglas Crockford has written and spoken about it numerous times, his recommendations are to treat it with caution.
 
-I find the `switch` statement very odd that it doesn't use the curly braces we're used to using with things like `if` and `else` too, it's syntax is rather... ugly to say the least. Especially when compared to the Object literals that we love...
+We often use Object lookups for things in JavaScript, often for things we would never contemplate using `switch` for - so why not use an Object literal to replace `switch`? Objects are much more flexible, have better readability and maintainability and we don't need to manually `break;` each "case". They're a lot friendlier on new JavaScript developers as well, as they're standard Objects.
 
 ### Object Literal lookups
 
