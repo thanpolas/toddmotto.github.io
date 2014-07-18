@@ -15,7 +15,7 @@ Interestingly enough I get asked about the IIFE (immediately-invoked function ex
 
 So why not write a post about it? ;-)
 
-First, this doesn't a series of different things. From the top:
+First, this does a series of different things. From the top:
 
 ### Scope
 
