@@ -83,7 +83,17 @@ var drink = getDrink('coke');
 console.log(drink);
 {% endhighlight %}
 
-We've saved a few lines of code from the swtich, and to me the data is a lot cleaner in presentation.
+We've saved a few lines of code from the swtich, and to me the data is a lot cleaner in presentation. We can even simplify it further, without a default case:
+
+{% highlight javascript %}
+function getDrink (type) {
+  return 'The drink I chose was ' + {
+    'coke': 'Coke',
+    'pepsi': 'Pepsi',
+    'lemonade': 'Lemonade'
+  }[type];
+}
+{% endhighlight %}
 
 We might, however, need more complex code than a `String`, which could hang inside a function. For sake of brevity and easy to understand examples, I'll just return the above strings from the newly created function:
 
