@@ -85,7 +85,7 @@ var drink = getDrink('coke');
 console.log(drink);
 {% endhighlight %}
 
-We've saved a few lines of code from the swtich, and to me the data is a lot cleaner in presentation. We can even simplify it further, without a default case:
+We've saved a few lines of code from the switch, and to me the data is a lot cleaner in presentation. We can even simplify it further, without a default case:
 
 {% highlight javascript %}
 function getDrink (type) {
