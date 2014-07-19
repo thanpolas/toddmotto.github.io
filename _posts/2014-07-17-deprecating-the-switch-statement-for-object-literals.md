@@ -64,7 +64,28 @@ We often use Object lookups for things in JavaScript, often for things we would 
 
 We use Object's all the time, either as constructors or literals. Often, we use them for Object lookup purposes, to get values from Object properties.
 
-Let's setup a simple Object literal that we can host some information on:
+Let's setup a simple Object literal that returns a `String` value only.
+
+{% highlight javascript %}
+function getDrink (type) {
+  var drink;
+  var drinks = {
+    'coke': 'Coke',
+    'pepsi': 'Pepsi',
+    'lemonade': 'Lemonade',
+    'default': 'Default item'
+  };
+  return 'The drink I chose was ' + (drinks[type] || drinks['default']);
+}
+
+var drink = getDrink('coke');
+// The drink I chose was Coke
+console.log(drink);
+{% endhighlight %}
+
+We've saved a few lines of code from the swtich, and to me the data is a lot cleaner in presentation.
+
+We might, however, need more complex code than a `String`, which could hang inside a function. For sake of brevity and easy to understand examples, I'll just return the above strings from the newly created function:
 
 {% highlight javascript %}
 var type = 'coke';
@@ -82,15 +103,15 @@ var drinks = {
 };
 {% endhighlight %}
 
-Then we can call the Object literal's function:
+The difference is we need to call the Object literal's function:
 
 {% highlight javascript %}
 drinks[type]();
 {% endhighlight %}
 
-This is by far better syntax, more maintainable and readable. We also don't have to worry about `break;` statements and cases falling through - it's just a plain Object!
+More maintainable and readable. We also don't have to worry about `break;` statements and cases falling through - it's just a plain Object.
 
-Usually, we would delegate the work that `switch` would have done into a single function, so let's do the same here and turn an Object literal lookup it into a usable function:
+Usually, we would put a `switch` inside a function and get a `return` value, so let's do the same here and turn an Object literal lookup it into a usable function:
 
 {% highlight javascript %}
 function getDrink (type) {
