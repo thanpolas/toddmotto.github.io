@@ -60,6 +60,8 @@ There are multiple issues with `switch`, from it's procedural control flow to it
 
 We often use Object lookups for things in JavaScript, often for things we would never contemplate using `switch` for - so why not use an Object literal to replace `switch`? Objects are much more flexible, have better readability and maintainability and we don't need to manually `break;` each "case". They're a lot friendlier on new JavaScript developers as well, as they're standard Objects.
 
+As the number of "cases" increases, the performance of the object (hash table) gets better than the average cost of the switch (the order of the cases matter). The object approach is a hash table lookup, and the switch has to evaluate each case until it hits a match and a break.
+
 ### Object Literal lookups
 
 We use Object's all the time, either as constructors or literals. Often, we use them for Object lookup purposes, to get values from Object properties.
