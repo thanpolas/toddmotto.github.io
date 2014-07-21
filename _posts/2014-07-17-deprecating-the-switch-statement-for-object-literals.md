@@ -290,4 +290,6 @@ console.log(snack); // 'Drink'
 
 ### Summing up
 
-Object literals are a more natural control of flow in JavaScript, `switch` is a bit old and clunky and prone to difficult debugging errors. Object's are more extensible, maintainable, and we can test them a lot better. They're also part of a design pattern and very commonly used day to day in other programming tasks. Object literals can contain functions as well as any other [Object type](//toddmotto.com/understanding-javascript-types-and-reliable-type-checking), which makes them really flexible! Each function in the literal has function scope too, so we can return the closure from the parent function we invoke (in this case `getDrink` returns the closure);
+Object literals are a more natural control of flow in JavaScript, `switch` is a bit old and clunky and prone to difficult debugging errors. Object's are more extensible, maintainable, and we can test them a lot better. They're also part of a design pattern and very commonly used day to day in other programming tasks. Object literals can contain functions as well as any other [Object type](//toddmotto.com/understanding-javascript-types-and-reliable-type-checking), which makes them really flexible! Each function in the literal has function scope too, so we can return the closure from the parent function we invoke (in this case `getDrink` returns the closure).
+
+Some more interesting comments and feedback on [Reddit](http://www.reddit.com/r/javascript/comments/2b4s6r/deprecating_the_switch_statement_for_object).
