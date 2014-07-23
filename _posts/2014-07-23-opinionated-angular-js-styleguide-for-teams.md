@@ -451,6 +451,7 @@ Manually specifiying the dependency injection arrays costs too much time.
 function SomeService ($scope) {
 
 }
+// manually declaring is time wasting
 SomeService.$inject = ['$scope'];
 angular
   .module('app')
@@ -481,6 +482,8 @@ Will produce:
 function SomeService ($scope) {
 
 }
+// automated
+SomeService.$inject = ['$scope'];
 angular
   .module('app')
   .factory('SomeService', SomeService);
