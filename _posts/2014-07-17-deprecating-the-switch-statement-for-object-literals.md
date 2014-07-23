@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /deprecating-the-switch-statement-for-object-literals
-title: Deprecating the switch statement for Object literals
+title: Replacing switch statements with Object literals
 path: 2014-07-17-deprecating-the-switch-statement-for-object-literals.md
 ---
 
@@ -16,10 +16,10 @@ Let's look at a usual `switch` statement:
 var type = 'coke';
 var drink;
 switch(type) {
-case: 'coke':
+case 'coke':
   drink = 'Coke';
   break;
-case: 'pepsi':
+case 'pepsi':
   drink = 'Pepsi';
   break;
 default:
@@ -56,15 +56,48 @@ This implementation is too loose, there is room for error, plus it's a very verb
 
 ### Problems with switch
 
-There are multiple issues with `switch`, even Douglas Crockford recommends not using it. The main one is the fact you need to keep adding the aforementioned `break;` statement. If you forget one of them, the cases will fall through - you'll have likely forgotten to add it because it's not very "JavaScripty", nor is the procedural style `switch` statement.
+There are multiple issues with `switch`, from it's procedural control flow to it's non-standard-looking way it handles code blocks, the rest of JavaScript uses curly braces yet switch does not. Syntactically, it's not one of JavaScript's best, nor is its design. We're forced to manually add `break;` statements within each `case`, which can lead to difficult debugging and nested errors further down the case should we forget! Douglas Crockford has written and spoken about it numerous times, his recommendations are to treat it with caution.
 
-I find the `switch` statement very odd that it doesn't use the curly braces we're used to using with things like `if` and `else` too, it's syntax is rather... ugly to say the least. Especially when compared to the Object literals that we love...
+We often use Object lookups for things in JavaScript, often for things we would never contemplate using `switch` for - so why not use an Object literal to replace `switch`? Objects are much more flexible, have better readability and maintainability and we don't need to manually `break;` each "case". They're a lot friendlier on new JavaScript developers as well, as they're standard Objects.
+
+As the number of "cases" increases, the performance of the object (hash table) gets better than the average cost of the switch (the order of the cases matter). The object approach is a hash table lookup, and the switch has to evaluate each case until it hits a match and a break.
 
 ### Object Literal lookups
 
 We use Object's all the time, either as constructors or literals. Often, we use them for Object lookup purposes, to get values from Object properties.
 
-Let's setup a simple Object literal that we can host some information on:
+Let's setup a simple Object literal that returns a `String` value only.
+
+{% highlight javascript %}
+function getDrink (type) {
+  var drink;
+  var drinks = {
+    'coke': 'Coke',
+    'pepsi': 'Pepsi',
+    'lemonade': 'Lemonade',
+    'default': 'Default item'
+  };
+  return 'The drink I chose was ' + (drinks[type] || drinks['default']);
+}
+
+var drink = getDrink('coke');
+// The drink I chose was Coke
+console.log(drink);
+{% endhighlight %}
+
+We've saved a few lines of code from the switch, and to me the data is a lot cleaner in presentation. We can even simplify it further, without a default case:
+
+{% highlight javascript %}
+function getDrink (type) {
+  return 'The drink I chose was ' + {
+    'coke': 'Coke',
+    'pepsi': 'Pepsi',
+    'lemonade': 'Lemonade'
+  }[type];
+}
+{% endhighlight %}
+
+We might, however, need more complex code than a `String`, which could hang inside a function. For sake of brevity and easy to understand examples, I'll just return the above strings from the newly created function:
 
 {% highlight javascript %}
 var type = 'coke';
@@ -82,15 +115,15 @@ var drinks = {
 };
 {% endhighlight %}
 
-Then we can call the Object literal's function:
+The difference is we need to call the Object literal's function:
 
 {% highlight javascript %}
 drinks[type]();
 {% endhighlight %}
 
-This is by far better syntax, more maintainable and readable. We also don't have to worry about `break;` statements and cases falling through - it's just a plain Object!
+More maintainable and readable. We also don't have to worry about `break;` statements and cases falling through - it's just a plain Object.
 
-Usually, we would delegate the work that `switch` would have done into a single function, so let's do the same here and turn an Object literal lookup it into a usable function:
+Usually, we would put a `switch` inside a function and get a `return` value, so let's do the same here and turn an Object literal lookup it into a usable function:
 
 {% highlight javascript %}
 function getDrink (type) {
@@ -209,6 +242,54 @@ console.log(drink);
 
 These are very basic solutions, and the Object literals hold a `function` that returns a `String`, in the case you only need a `String`, you _could_ use a `String` as the key's value - some of the time the functions will contain logic, which will get returned from the function. If you're mixing functions with strings, it might be easier to use a function at all times to save looking up the `type` and invoking if it's a function - we don't want to attempt invoking a `String`.
 
+### Object Literal "fall through"
+
+With `switch` cases, we can let them fall through (which means more than one case can apply to a specific piece of code):
+
+{% highlight javascript %}
+var type = 'coke';
+var snack;
+switch(type) {
+case 'coke':
+case 'pepsi':
+  snack = 'Drink';
+  break;
+case 'cookies':
+case 'crisps':
+  snack = 'Food';
+  break;
+default:
+  drink = 'Unknown type!';
+}
+console.log(snack); // 'Drink'
+{% endhighlight %}
+
+We let `coke` and `pepsi` "fall through" by not adding a `break` statement. Doing this for Object Literals is simple and more declarative - as well as being less prone to error. Our code suddenly becomes much more structured, readable and reusable:
+
+{% highlight javascript %}
+function getSnack (type) {
+  var snack;
+  function isDrink () {
+    return snack = 'Drink';
+  }
+  function isFood () {
+    return snack = 'Food';
+  }
+  var snacks = {
+    'coke': isDrink,
+    'pepsi': isDrink,
+    'cookies': isFood,
+    'crisps': isFood,
+  };
+  return snacks[type]();
+}
+
+var snack = getSnack('coke');
+console.log(snack); // 'Drink'
+{% endhighlight %}
+
 ### Summing up
 
-Object literals are a more natural control of flow in JavaScript, `switch` is a bit old and clunky and prone to difficult debugging errors. Object's are more extensible, maintainable, and we can test them a lot better. They're also part of a design pattern and very commonly used day to day in other programming tasks. Object literals can contain functions as well as any other [Object type](//toddmotto.com/understanding-javascript-types-and-reliable-type-checking), which makes them really flexible! Each function in the literal has function scope too, so we can return the closure from the parent function we invoke (in this case `getDrink` returns the closure);
+Object literals are a more natural control of flow in JavaScript, `switch` is a bit old and clunky and prone to difficult debugging errors. Object's are more extensible, maintainable, and we can test them a lot better. They're also part of a design pattern and very commonly used day to day in other programming tasks. Object literals can contain functions as well as any other [Object type](//toddmotto.com/understanding-javascript-types-and-reliable-type-checking), which makes them really flexible! Each function in the literal has function scope too, so we can return the closure from the parent function we invoke (in this case `getDrink` returns the closure).
+
+Some more interesting comments and feedback on [Reddit](http://www.reddit.com/r/javascript/comments/2b4s6r/deprecating_the_switch_statement_for_object).
