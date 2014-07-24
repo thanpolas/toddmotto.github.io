@@ -11,7 +11,7 @@ From my experience with Angular and working in teams, here's my opinionated styl
 
 ### Module definitions
 
-Angular modules can be declared in various ways, either stored in a variable or using the getter syntax. Use the getter syntax at all times.
+Angular modules can be declared in various ways, either stored in a variable or using the getter syntax. Use the getter syntax at all times ([angular recommended](https://docs.angularjs.org/guide/module)).
 
 ###### Bad:
 {% highlight javascript %}
