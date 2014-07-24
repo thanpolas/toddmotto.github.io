@@ -407,6 +407,8 @@ Keep naming conventions for files consistent, don't invent fancy names for thing
 |   |-- AnotherDirective.js
 {% endhighlight %}
 
+Depending on the size of your code base, a "feature-driven" approach may be better to split into functionality chunks.
+
 ### Naming conventions and conflicts
 
 Angular provides us many Objects such as `$scope` and `$rootScope` that are prefixed with `$`. This incites they're public and can be used. We also get shipped with things such as `$$listeners`, which are available on the Object but are considered private methods.
