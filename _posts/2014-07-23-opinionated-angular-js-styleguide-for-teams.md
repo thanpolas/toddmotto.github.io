@@ -16,8 +16,8 @@ Angular modules can be declared in various ways, either stored in a variable or 
 ###### Bad:
 {% highlight javascript %}
 var app = angular.module('app', []);
-app.controller()
-app.factory()
+app.controller();
+app.factory();
 {% endhighlight %}
 
 ###### Good:
@@ -54,13 +54,14 @@ angular
 
 Define a module once using `angular.module('app', [])` setter, then use the `angular.module('app')` getter elsewhere (such as other files).
 
-To avoid polluting the global namespace, wrap all your functions during compilation/concatenation inside an IIFE which will produce something like this:
+To avoid polluting the global namespace, wrap all your functions during _compilation/concatenation_ inside an IIFE which will produce something like this:
 
 ###### Even better:
 {% highlight javascript %}
 (function () {
   angular.module('app', []);
   
+  // MainCtrl.js
   function MainCtrl () {
   
   }
@@ -68,6 +69,17 @@ To avoid polluting the global namespace, wrap all your functions during compilat
   angular
     .module('app')
     .controller('MainCtrl', MainCtrl);
+    
+  // AnotherCtrl.js
+  function AnotherCtrl () {
+  
+  }
+  
+  angular
+    .module('app')
+    .controller('AnotherCtrl', AnotherCtrl);
+    
+  // and so on...
     
 })();
 {% endhighlight %}
