@@ -353,6 +353,9 @@ angular
   .controller('MainCtrl', MainCtrl);
 {% endhighlight %}
 
+##### Route changes and ajax spinners
+While the routes are being resolved we want to show the user something to indicate progress. Angular will fire the `$routeChangeStart` event as we navigate away from the page, which we can show some form of loading and ajax spinner, which can then be removed on the `$routeChangeSuccess` event ([see docs](https://docs.angularjs.org/api/ngRoute/service/$route)).
+
 ### Avoid $scope.$watch
 
 Using `$scope.$watch` should be avoided unless there are no others options. It's less performant than binding an expression to something like `ng-change`, a list of supported events are in the Angular docs.
