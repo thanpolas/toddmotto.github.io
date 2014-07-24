@@ -54,6 +54,25 @@ angular
 
 Define a module once using `angular.module('app', [])` setter, then use the `angular.module('app')` getter elsewhere (such as other files).
 
+To avoid polluting the global namespace, wrap all your functions during compilation/concatenation inside an IIFE which will produce something like this:
+
+###### Even better:
+{% highlight javascript %}
+(function () {
+  angular.module('app', []);
+  
+  function MainCtrl () {
+  
+  }
+  
+  angular
+    .module('app')
+    .controller('MainCtrl', MainCtrl);
+    
+})();
+{% endhighlight %}
+
+
 ### Controllers
 
 Controllers are classes and can use a `controllerAs` syntax or generic `controller` syntax. Use the `controllerAs` syntax always as it aids in nested scoping and controller instance reference.
