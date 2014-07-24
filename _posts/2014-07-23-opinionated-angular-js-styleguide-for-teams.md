@@ -115,6 +115,9 @@ The `controllerAs` syntax uses the `this` keyword inside controllers instead of 
 {% highlight javascript %}
 function MainCtrl ($scope) {
   $scope.someObject = {};
+  $scope.doSomething = function () {
+  
+  };
 }
 angular
   .module('app')
@@ -141,11 +144,16 @@ angular
 {% highlight javascript %}
 function MainCtrl () {
   this.someObject = {};
+  this.doSomething = function () {
+  
+  };
 }
 angular
   .module('app')
   .controller('MainCtrl', MainCtrl);
 {% endhighlight %}
+
+These just show examples of Objects/functions inside Controllers, however we don't want to put logic in controllers...
 
 ##### Avoid controller logic
 
