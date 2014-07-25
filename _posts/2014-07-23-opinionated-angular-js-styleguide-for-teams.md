@@ -5,13 +5,13 @@ title: Opinionated AngularJS styleguide for teams
 path: 2014-07-23-opinionated-angular-js-styleguide-for-teams.md
 ---
 
-After reading [Google's AngularJS guidelines](http://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html), I felt they were a little too incomplete and also guided towards using the Closure library.
+After reading [Google's AngularJS guidelines](//google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html), I felt they were a little too incomplete and also guided towards using the Closure library. They [also state](//blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html) _"We don't think this makes sense for all projects that use AngularJS, and we'd love to see our community of developers come up with a more general Style that's applicable to AngularJS projects large and small"_, so here goes.
 
-From my experience with Angular and working in teams, here's my opinionated styleguide for syntax, building and structuring Angular applications.
+From my experience with Angular, [several talks](//speakerdeck.com/toddmotto) and working in teams, here's my opinionated styleguide for syntax, building and structuring Angular applications.
 
 ### Module definitions
 
-Angular modules can be declared in various ways, either stored in a variable or using the getter syntax. Use the getter syntax at all times ([angular recommended](https://docs.angularjs.org/guide/module)).
+Angular modules can be declared in various ways, either stored in a variable or using the getter syntax. Use the getter syntax at all times ([angular recommended](//docs.angularjs.org/guide/module)).
 
 ###### Bad:
 {% highlight javascript %}
