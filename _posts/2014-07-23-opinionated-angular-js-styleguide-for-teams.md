@@ -105,6 +105,33 @@ Controllers are classes and can use a `controllerAs` syntax or generic `controll
 </div>
 {% endhighlight %}
 
+Binding these `ng-controller` attributes couples the declarations tightly with our DOM, and also means we can only use that controller for that specific view (there are rare cases we might use the some view with different controllers). Use the router to couple the controller declarations with the relevant views by telling each `route` what controller to instantiate.
+
+###### Best:
+{% highlight html %}
+<!-- main.html -->
+<div>
+  {% raw %}{{ main.someObject }}{% endraw %}
+</div>
+<!-- main.html -->
+
+<script>
+// ...
+function config ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl',
+    controllerAs: 'main'
+  });
+}
+angular
+  .module('app')
+  .config(config);
+//...
+</script>
+{% endhighlight %}
+
 This avoids using `$parent` to access any parent controllers from a child controller, simple hit the `main` reference and you've got it. This could avoid things such as `$parent.$parent` calls.
 
 ##### controllerAs this keyword
