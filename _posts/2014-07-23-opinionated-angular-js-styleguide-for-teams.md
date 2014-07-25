@@ -56,7 +56,7 @@ Define a module once using `angular.module('app', [])` setter, then use the `ang
 
 To avoid polluting the global namespace, wrap all your functions during _compilation/concatenation_ inside an IIFE which will produce something like this:
 
-###### Even better:
+###### Best:
 {% highlight javascript %}
 (function () {
   angular.module('app', []);
@@ -153,7 +153,9 @@ angular
 
 You can also use the `prototype` Object to create controller classes, but this becomes messy very quickly as each dependency injected provider needs a reference bound to the `constructor` Object.
 
-###### Bad:
+###### Bad and Good:
+Good for inheritance, bad (verbose) for general use.
+
 {% highlight javascript %}
 function MainCtrl ($scope) {
   this.someObject = {};
@@ -166,6 +168,8 @@ angular
   .module('app')
   .controller('MainCtrl', MainCtrl);
 {% endhighlight %}
+
+If you're using `prototype` and don't know why, then it's bad. If you are using `prototype` to inherit from other controllers, then that's good. For general use, the `prototype` pattern can be verbose.
 
 ###### Good:
 {% highlight javascript %}
