@@ -5,7 +5,7 @@ title: Ultimate guide to learning AngularJS in one day
 path: 2013-10-02-ultimate-guide-to-learning-angular-js-in-one-day.md
 ---
 
-<h5>Mastered this? Try my <span style="text-decoration: underline;">[Opinionated AngularJS styleguide for teams](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams)</span></h5>
+<h5>Mastered this? Try my <a href="//toddmotto.com/opinionated-angular-js-styleguide-for-teams" style="text-decoration: underline;">Opinionated AngularJS styleguide for teams</a></h5>
 
 ### What is AngularJS?
 Angular is a client-side MVC/MVVM framework built in JavaScript, essential for modern single page web applications (and even websites). This post is a full end to end crash course from my experiences, advice and best practices I've picked up from using it.
