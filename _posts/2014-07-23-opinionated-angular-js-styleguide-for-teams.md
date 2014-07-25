@@ -400,6 +400,38 @@ angular
   .controller('MainCtrl', MainCtrl);
 {% endhighlight %}
 
+We can go one better, however and create a `resolve` property on our own Controllers to couple the resolves with the Controllers and avoid logic in the router.
+
+###### Best:
+{% highlight javascript %}
+// config with resolve pointing to relevant controller
+function config ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl',
+    controllerAs: 'main',
+    resolve: MainCtrl.resolve
+  });
+}
+// controller as usual
+function MainCtrl (SomeService) {
+  // resolved!
+  this.something = SomeService.something;
+}
+// create the resolved property
+MainCtrl.resolve = {
+  doSomething: function (SomeService) {
+    return SomeService.doSomething();
+  }
+};
+
+angular
+  .module('app')
+  .controller('MainCtrl', MainCtrl)
+  .config(config);
+{% endhighlight %}
+
 ##### Route changes and ajax spinners
 While the routes are being resolved we want to show the user something to indicate progress. Angular will fire the `$routeChangeStart` event as we navigate away from the page, which we can show some form of loading and ajax spinner, which can then be removed on the `$routeChangeSuccess` event ([see docs](https://docs.angularjs.org/api/ngRoute/service/$route)).
 
