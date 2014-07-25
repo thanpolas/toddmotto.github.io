@@ -327,6 +327,38 @@ angular
   .directive('SomeDirective', SomeDirective);
 {% endhighlight %}
 
+Any DOM manipulation should take place inside a directive, and only directives. Any code reusability should be encapsulated (behavioural and markup related) too.
+
+##### Naming conventions
+
+Custom directives should _not_ be `ng-*` prefixed to prevent future core overrides if your directive name happens to land in Angular (such as when `ng-focus` landed, there were many custom directives called this beforehand). It also makes it more confusing to know which are core directives and which are custom.
+
+###### Bad:
+{% highlight javascript %}
+function ngFocus (SomeService) {
+
+  return {};
+
+}
+angular
+  .module('app')
+  .directive('ngFocus', ngFocus);
+{% endhighlight %}
+
+###### Good:
+{% highlight javascript %}
+function focusFire (SomeService) {
+
+  return {};
+
+}
+angular
+  .module('app')
+  .directive('focusFire', focusFire);
+{% endhighlight %}
+
+Directives are the _only_ providers that we have the first letter as lowercase, this is due to strict naming conventions in the way Angular translates `camelCase` to hyphenated, so `focusFire` will become `<input focus-fire>` when used on an element.
+
 ##### Usage restriction
 
 If you need to support IE8, you'll want to avoid using the comments syntax for declaring where a directive will sit. Really, this syntax should be avoided anyway - there are no real benefits of using it - it just adds confusion of what is a comment and what isn't.
