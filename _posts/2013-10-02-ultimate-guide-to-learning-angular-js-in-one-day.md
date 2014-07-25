@@ -5,11 +5,13 @@ title: Ultimate guide to learning AngularJS in one day
 path: 2013-10-02-ultimate-guide-to-learning-angular-js-in-one-day.md
 ---
 
+##### Mastered this? Try my [Opinionated AngularJS styleguide for teams](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams)
+
 ### What is AngularJS?
-Angular is a client-side MVC/MVVM framework built in JavaScript, essential for modern single page web applications (and even websites). It's a huge leap into the future of HTML and what HTML5 brings, and is a breath of fresh air when dealing with the modern web. This post is a full end to end crash course from my experiences, advice and best practices I've picked up from using it.
+Angular is a client-side MVC/MVVM framework built in JavaScript, essential for modern single page web applications (and even websites). This post is a full end to end crash course from my experiences, advice and best practices I've picked up from using it.
 
 ### Terminology
-Angular has a short term learning curve, and it's mainly getting to grips with the terminology and "thinking MVC". MVC meaning _Model-View-Controller_. Here are the higher level and essential APIs that Angular comes with and some terminology.
+Angular has a initial short learning curve, you'll find it's up and down after mastering the basics. It's mainly getting to grips with the terminology and "thinking MVC". MVC stands for _Model-View-Controller_. Here are the higher level and essential APIs that Angular comes with, and some terminology.
 
 #### MVC
 You've probably heard of MVC, used in many programming languages as a means of structuring/architecting applications/software. Here's a quick breakdown of meanings:
