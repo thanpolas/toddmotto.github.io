@@ -105,7 +105,7 @@ Controllers are classes and can use a `controllerAs` syntax or generic `controll
 </div>
 {% endhighlight %}
 
-Binding these `ng-controller` attributes couples the declarations tightly with our DOM, and also means we can only use that controller for that specific view (there are rare cases we might use the some view with different controllers). Use the router to couple the controller declarations with the relevant views by telling each `route` what controller to instantiate.
+Binding these `ng-controller` attributes couples the declarations tightly with our DOM, and also means we can only use that controller for that specific view (there are rare cases we might use the same view with different controllers). Use the router to couple the controller declarations with the relevant views by telling each `route` what controller to instantiate.
 
 ###### Best:
 {% highlight html %}
