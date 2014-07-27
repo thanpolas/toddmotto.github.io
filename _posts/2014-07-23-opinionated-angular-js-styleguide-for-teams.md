@@ -5,6 +5,8 @@ title: Opinionated AngularJS styleguide for teams
 path: 2014-07-23-opinionated-angular-js-styleguide-for-teams.md
 ---
 
+<h5>Official styleguide repo <a href="//github.com/toddmotto/angularjs-styleguide" style="text-decoration: underline;">now on GitHub</a>, all future styleguide updates will be here!</h5>
+
 After reading [Google's AngularJS guidelines](//google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html), I felt they were a little too incomplete and also guided towards using the Closure library. They [also state](//blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html) _"We don't think this makes sense for all projects that use AngularJS, and we'd love to see our community of developers come up with a more general Style that's applicable to AngularJS projects large and small"_, so here goes.
 
 From my experience with Angular, [several talks](//speakerdeck.com/toddmotto) and working in teams, here's my opinionated styleguide for syntax, building and structuring Angular applications.
