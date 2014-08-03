@@ -193,6 +193,16 @@ var divs = [].slice.call(document.querySelectorAll('div'));
 
 ... But I wouldn't advise it, this can cause issues with other libraries, even though it's sexier and shorter, use the long version and you'll be writing more bulletproof code.
 
+#### ECMAScript 6 Array.from()
+The new ECMAScript 6 Harmony standard introduces the `Array.from` method which makes Array-like Objects (such as the NodeList) and other iterable Objects (such as an `Object` or `String`) to Array conversion a breeze.
+
+{% highlight javascript %}
+var divs = document.querySelectorAll('div');
+var arr = Array.from(divs); // Array of <div>s
+{% endhighlight %}
+
+More on the [Array.from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) method.
+
 #### Looping through NodeLists on-the-fly
 
 For some time I thought it was pretty cool to do this, which takes the Prototypal methods one step further:
