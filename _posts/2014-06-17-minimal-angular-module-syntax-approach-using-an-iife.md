@@ -186,7 +186,7 @@ Very clean, shows my _intent_ whilst being very visible. It _kind of_ treats the
 
 I also know exactly what this file contains based on the functions powering the module methods, as well as being able to scroll to the bottom of any file and see what's happening under the hood.
 
-With function hoisting you could even add them to the top, but I prefer not too.
+With function hoisting you could even add them to the top, but I prefer not to.
 
 _Tip_: Generally name the method you're passing into as similar as possible as your Angular's extension name to avoid confusion, things like `.controller('UserCtrl', myCoolUserFunc);` will not help anybody.
 
