@@ -211,7 +211,7 @@ function MainCtrl (SomeService) {
 }
 angular
   .module('app')
-  .controller('MainCtrl', MainCtrl);
+  .controller('MainCtrl', ['SomeService', MainCtrl]);
 {% endhighlight %}
 
 This maximises reusability, encapsulated functionality and makes testing far easier and persistent.
